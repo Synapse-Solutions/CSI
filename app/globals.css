@@ -26,3 +26,31 @@ body {
     text-wrap: balance;
   }
 }
+
+body,
+html {
+  /* Customize scrollbar */
+  scrollbar-width: thin; /* "auto" or "thin" for Firefox */
+  scrollbar-color: #383d4d #1e1f26; /* thumb color and track color */
+
+  /* WebKit (Chrome, Safari, etc.) scrollbar customization */
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    border-radius: 10px;
+    &-corner {
+      background-color: #1e1f26;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #383d4d; /* Thumb color */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #1e1f26; /* Border color */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #1e1f26; /* Track color */
+    border-radius: 10px; /* Rounded corners */
+  }
+}
