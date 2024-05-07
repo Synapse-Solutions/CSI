@@ -7,6 +7,7 @@ import React, { useState } from "react";
 
 export default function page() {
   const [formSelected, setFormSelected] = useState<string | null>(null);
+  const [hoverSection, setHoverSection] = useState<number | null>(null);
   const handleFormSelect = (formType: string) => {
     setFormSelected(formType);
     // Scroll to the form section with animation
@@ -26,41 +27,73 @@ export default function page() {
   return (
     <div className="text-black overflow-hidden">
       <Navbar />
-      <div className="h-[150px]"></div>
-      <div className="relative w-screen h-[85vh]">
-        <Image
-          src={"/admission_left.webp"}
-          height={1000}
-          width={1000}
-          alt="image"
-          className="w-[60%] h-full absolute top-0 left-0"
-        />
-        <Image
+      <div className="h-[120px]"></div>
+      <div className="relative w-screen h-[95vh]">
+        <div className="w-[60%] h-full absolute top-0 left-0 overflow-hidden z-20">
+          <Image
+            src={"/admission_left.webp"}
+            height={1000}
+            width={1000}
+            alt="image"
+            className={`w-full h-full absolute top-0 left-0 duration-300 ease-in-out ${
+              hoverSection === 1 && "scale-125 "
+            }`}
+          />
+        </div>
+        <div className="w-[100%] h-full overflow-hidden">
+          <Image
+            src={"/admission_right.webp"}
+            height={1000}
+            width={1000}
+            alt="image"
+            className={`w-full h-full  duration-300 ease-in-out ${
+              hoverSection === 2 && "scale-125 "
+            }`}
+          />
+        </div>
+        {/* <Image
           src={"/admission_right.webp"}
           height={1000}
           width={1000}
           alt="image"
-          className="w-[100%] h-full"
-        />
+          className={`w-[100%] h-full duration-300 ease-in-out`}
+        /> */}
         <div className="flex absolute z-20 top-[5%] w-full h-full text-white">
-          <div className="w-1/2 flex flex-col items-center justify-between h-full py-[3%] pb-[5%]">
+          <div
+            onMouseEnter={() => setHoverSection(1)}
+            onMouseLeave={() => setHoverSection(null)}
+            className="w-1/2 flex flex-col items-center justify-between h-full py-[3%] pb-[5%]"
+          >
             <h1 className="text-[40px] ">
               For <span className="font-bold">Teachers</span>
             </h1>
-            <div onClick={() => handleFormSelect("teacher")}>
+            <button
+              onClick={() => handleFormSelect("teacher")}
+              className="uppercase rounded-full px-10 py-2 border-[1px] border-white"
+            >
+              Get To know more
+            </button>
+            {/* <div onClick={() => handleFormSelect("teacher")}>
               <ButtonComponent text="GET  TO KNOW MORE" />
-            </div>
+            </div> */}
           </div>
-          <div className="w-1/2 flex flex-col items-center justify-between h-full py-[3%] pb-[5%]">
+          <div
+            onMouseEnter={() => setHoverSection(2)}
+            onMouseLeave={() => setHoverSection(null)}
+            className="w-1/2 flex flex-col items-center justify-between h-full py-[3%] pb-[5%]"
+          >
             <h1 className="text-[40px] ">
               For <span className="font-bold"> Parents</span>
             </h1>
-            {/* <button className="uppercase rounded-full px-10 py-2 border-[1px] border-white">
+            <button
+              onClick={() => handleFormSelect("parent")}
+              className="uppercase rounded-full px-10 py-2 border-[1px] border-white"
+            >
               Get To know more
-            </button> */}
-            <div onClick={() => handleFormSelect("parent")}>
+            </button>
+            {/* <div onClick={() => handleFormSelect("parent")}>
               <ButtonComponent text="GET  TO KNOW MORE" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
