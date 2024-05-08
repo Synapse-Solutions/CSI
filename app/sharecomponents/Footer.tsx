@@ -10,9 +10,9 @@ export default function Footer() {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      className="w-screen p-[5%] flex text-white justify-between"
+      className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px]"
     >
-      <div className="w-[50%]">
+      <div className="w-full xl:w-[50%] pt-[50px] xl:pt-0">
         <Image
           src={"/logo.webp"}
           height={300}
@@ -21,7 +21,7 @@ export default function Footer() {
           alt="logo"
         />
         <h1 className="font-bold text-[25px] mt-5">Quick Links</h1>
-        <div className="flex gap-10 mt-5">
+        <div className="flex gap-3 xl:gap-10 mt-5 ">
           <p>Programs</p>
           <p>See the Campus</p>
           <p>Admissions</p>
@@ -55,7 +55,7 @@ export default function Footer() {
           © Central School International 2024 | Terms & Privacy 
         </p>
       </div>
-      <div className="w-[30%] flex flex-col items-center justify-center gap-10">
+      <div className="w-full xl:w-[30%] flex flex-col items-center justify-center gap-10 mt-20 xl:mt-0">
         <p className="text-center">
           The care, safety and wellbeing of all children and vulnerable people
           is a core and fundamental responsibility for our community.

@@ -27,16 +27,20 @@ export default function page() {
   return (
     <div className="text-black overflow-hidden">
       <Navbar />
-      <div className="h-[120px]"></div>
-      <div className="relative w-screen h-[95vh]">
-        <div className="w-[60%] h-full absolute top-0 left-0 overflow-hidden z-20">
+      <div className="xl:h-[120px]"></div>
+      <div className="hidden xl:block relative w-screen h-[105vh]">
+        <div
+          className={` h-full ${
+            hoverSection === 1 ? "w-[60%]" : "w-[60%]"
+          } absolute top-0 left-0 overflow-hidden z-20`}
+        >
           <Image
             src={"/admission_left.webp"}
             height={1000}
             width={1000}
             alt="image"
             className={`w-full h-full absolute top-0 left-0 duration-300 ease-in-out ${
-              hoverSection === 1 && "scale-125 "
+              hoverSection === 1 && "scale-125"
             }`}
           />
         </div>
@@ -51,13 +55,7 @@ export default function page() {
             }`}
           />
         </div>
-        {/* <Image
-          src={"/admission_right.webp"}
-          height={1000}
-          width={1000}
-          alt="image"
-          className={`w-[100%] h-full duration-300 ease-in-out`}
-        /> */}
+
         <div className="flex absolute z-20 top-[5%] w-full h-full text-white">
           <div
             onMouseEnter={() => setHoverSection(1)}
@@ -68,8 +66,8 @@ export default function page() {
               For <span className="font-bold">Teachers</span>
             </h1>
             <button
-              onClick={() => handleFormSelect("teacher")}
-              className="uppercase rounded-full px-10 py-2 border-[1px] border-white"
+              onClick={() => handleFormSelect("parent")}
+              className="uppercase rounded-full px-10 py-2 border-[1px] border-white hover:text-[#0C8777] hover:bg-white"
             >
               Get To know more
             </button>
@@ -86,14 +84,48 @@ export default function page() {
               For <span className="font-bold"> Parents</span>
             </h1>
             <button
-              onClick={() => handleFormSelect("parent")}
-              className="uppercase rounded-full px-10 py-2 border-[1px] border-white"
+              onClick={() => handleFormSelect("teacher")}
+              className="uppercase rounded-full px-10 py-2 border-[1px] border-white hover:text-[#2f4a93] hover:bg-white"
             >
               Get To know more
             </button>
             {/* <div onClick={() => handleFormSelect("parent")}>
               <ButtonComponent text="GET  TO KNOW MORE" />
             </div> */}
+          </div>
+        </div>
+      </div>
+      <div className=" xl:hidden w-screen h-[80vh] bg-[#0e8777]">
+        <div className=" w-full flex flex-col h-full justify-evenly  text-white">
+          <div
+            onMouseEnter={() => setHoverSection(1)}
+            onMouseLeave={() => setHoverSection(null)}
+            className=" flex gap-10 flex-col items-center justify-between  py-[3%] pb-[5%]"
+          >
+            <h1 className="text-[20px] xl:text-[40px] ">
+              For <span className="font-bold">Teachers</span>
+            </h1>
+            <button
+              onClick={() => handleFormSelect("parent")}
+              className="uppercase text-[14px] rounded-full px-10 py-2 border-[1px] border-white hover:text-[#0C8777] hover:bg-white"
+            >
+              Get To know more
+            </button>
+          </div>
+          <div
+            onMouseEnter={() => setHoverSection(2)}
+            onMouseLeave={() => setHoverSection(null)}
+            className=" flex flex-col gap-10 items-center justify-between  py-[3%] pb-[5%]"
+          >
+            <h1 className="text-[20px] xl:text-[40px] ">
+              For <span className="font-bold"> Parents</span>
+            </h1>
+            <button
+              onClick={() => handleFormSelect("teacher")}
+              className="uppercase text-[14px] rounded-full px-10 py-2 border-[1px] border-white hover:text-[#2f4a93] hover:bg-white"
+            >
+              Get To know more
+            </button>
           </div>
         </div>
       </div>
@@ -116,8 +148,8 @@ export default function page() {
             For <span className="font-bold">Parents</span>
           </h1>
           <div className="mt-20 w-full flex flex-col items-center">
-            <div className="flex gap-10 w-full">
-              <div className="w-1/2 flex flex-col gap-5">
+            <div className="flex flex-col xl:flex-row gap-10 w-full">
+              <div className="w-full xl:w-1/2 flex flex-col gap-5">
                 <input
                   type="text"
                   placeholder="Name"
@@ -144,7 +176,7 @@ export default function page() {
                   className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
                 />
               </div>
-              <div className="w-1/2 flex flex-col gap-5">
+              <div className="w-full xl:w-1/2 flex flex-col gap-5">
                 <textarea
                   rows={7}
                   placeholder="Name"
@@ -182,8 +214,8 @@ export default function page() {
             For <span className="font-bold">Teachers</span>
           </h1>
           <div className="mt-20 w-full flex flex-col items-center">
-            <div className="flex gap-10 w-full">
-              <div className="w-1/2 flex flex-col gap-5">
+            <div className="flex flex-col xl:flex-row gap-10 w-full">
+              <div className="w-full xl:w-1/2 flex flex-col gap-5">
                 <input
                   type="text"
                   placeholder="Name"
@@ -210,7 +242,7 @@ export default function page() {
                   className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
                 />
               </div>
-              <div className="w-1/2 flex flex-col gap-5">
+              <div className="w-full xl:w-1/2 flex flex-col gap-5">
                 <textarea
                   rows={7}
                   placeholder="Name"

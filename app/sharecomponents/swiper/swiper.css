@@ -16,7 +16,7 @@ li {
   position: -webkit-sticky;
   position: sticky;
   left: 0;
-  width: min(50vw, 450px);
+  /* width: min(50vw, 450px); */
   display: inline-block;
   text-align: center;
   /* background-color: #16171f;  */

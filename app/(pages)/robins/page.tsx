@@ -8,14 +8,14 @@ export default function page() {
   return (
     <div className="text-black overflow-hidden">
       <Navbar />
-      <div className="h-[calc(100vh)] flex flex-row w-screen items-center justify-center gap-20">
+      <div className="h-[calc(100vh)] px-[40px] flex flex-col xl:flex-row w-screen items-center justify-center gap-20">
         <Image
           src={"/vector_smart_object_4.webp"}
           height={200}
           width={200}
           alt="vector"
         />
-        <div className="w-[30%]">
+        <div className="xl:w-[30%]">
           <h1 className="text-[35px] font-bold">CSI Robins</h1>
           <h1 className="text-[35px] font-bold text-[#355496]">
             Helping Young Minds take Flight
@@ -28,7 +28,7 @@ export default function page() {
         </div>
       </div>
       <div>
-        <div className="mt-16">
+        <div className="xl:mt-16">
           <div className="w-[100%] lg:hidden flex flex-col items-center">
             <ServicesCard
               title="Value Centered"
@@ -55,7 +55,7 @@ export default function page() {
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] " />
             <div className="flex flex-col items-center w-[15%] xl:w-[15%] 2xl:w-[10%]">
               <div className="bg-[#355496] rounded-full w-[20px] h-[20px] flex items-center justify-center"></div>
-              <div className="w-[5px] h-[calc(30vh)] bg-[#355496]"></div>
+              <div className="w-[5px] h-[50vh] 2xl:h-[calc(30vh)] bg-[#355496]"></div>
             </div>
 
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] ">
@@ -75,7 +75,7 @@ export default function page() {
             </div>
             <div className="flex flex-col items-center w-[15%] xl:w-[15%] 2xl:w-[10%]">
               <div className="bg-[#355496] rounded-full w-[20px] h-[20px] flex items-center justify-center"></div>
-              <div className="w-[5px] h-[calc(30vh)] bg-[#355496]"></div>
+              <div className="w-[5px] h-[50vh] 2xl:h-[calc(30vh)] bg-[#355496]"></div>
             </div>
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%]" />
           </div>
@@ -83,7 +83,7 @@ export default function page() {
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] " />
             <div className="flex flex-col items-center w-[15%] xl:w-[15%] 2xl:w-[10%]">
               <div className="bg-[#355496] rounded-full w-[20px] h-[20px] flex items-center justify-center"></div>
-              <div className="w-[5px] h-[calc(30vh)] bg-[#355496]"></div>
+              <div className="w-[5px] h-[50vh] 2xl:h-[calc(30vh)] bg-[#355496]"></div>
             </div>
 
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] ">
@@ -103,7 +103,7 @@ export default function page() {
             </div>
             <div className="flex flex-col items-center w-[15%] xl:w-[15%] 2xl:w-[10%]">
               <div className="bg-[#355496] rounded-full w-[20px] h-[20px] flex items-center justify-center"></div>
-              <div className="w-[5px] h-[calc(30vh)] bg-[#355496]"></div>
+              <div className="w-[5px] h-[50vh] 2xl:h-[calc(30vh)] bg-[#355496]"></div>
             </div>
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%]" />
           </div>
@@ -111,7 +111,7 @@ export default function page() {
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%]" />
             <div className="flex flex-col items-center w-[15%] xl:w-[15%] 2xl:w-[10%]">
               <div className="bg-[#355496] rounded-full w-[20px] h-[20px] flex items-center justify-center"></div>
-              {/* <div className="w-[5px] h-[calc(30vh)] bg-[#355496]"></div> */}
+              {/* <div className="w-[5px] h-[50vh] 2xl:h-[calc(30vh)] bg-[#355496]"></div> */}
             </div>
 
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%]">
