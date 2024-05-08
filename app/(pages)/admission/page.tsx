@@ -31,7 +31,7 @@ export default function page() {
       <div className="hidden xl:block relative w-screen h-[105vh]">
         <div
           className={` h-full ${
-            hoverSection === 1 ? "w-[60%]" : "w-[60%]"
+            hoverSection === 1 ? "w-[60%] overflow-hidden" : "w-[60%]"
           } absolute top-0 left-0 overflow-hidden z-20`}
         >
           <Image
@@ -40,7 +40,7 @@ export default function page() {
             width={1000}
             alt="image"
             className={`w-full h-full absolute top-0 left-0 duration-300 ease-in-out ${
-              hoverSection === 1 && "scale-125"
+              hoverSection === 1 && "scale-105 mt-[-50px] h-[107%]"
             }`}
           />
         </div>
@@ -51,7 +51,7 @@ export default function page() {
             width={1000}
             alt="image"
             className={`w-full h-full  duration-300 ease-in-out ${
-              hoverSection === 2 && "scale-125 "
+              hoverSection === 2 && "scale-105 "
             }`}
           />
         </div>
