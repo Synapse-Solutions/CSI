@@ -134,64 +134,68 @@ export default function page() {
         id="teacher"
         className={`w-full items-center justify-center mt-40 ${
           formSelected === "teacher" ? "flex" : "hidden"
-        } transition-opacity duration-500 ease-in-out`}
+        } transition-opacity duration-500 ease-in-out `}
       >
-        <div className="border border-[#323692] rounded-xl px-[5%] w-[80%] text-[#323692] py-[5%] relative">
+        <div className="relative md:h-auto w-[calc(90vw)]">
           <Image
-            src={"/birds_form_1.png"}
-            width={500}
-            height={500}
+            src={"/parent_form.png"}
+            width={1500}
+            height={1500}
             alt="birds"
-            className="absolute -top-[120px] right-[20%] h-[200px] w-auto object-contain"
+            className="h-full w-full object-contain hidden md:block"
           />
-          <h1 className="text-[40px] text-center">
-            For <span className="font-bold">Parents</span>
-          </h1>
-          <div className="mt-20 w-full flex flex-col items-center">
-            <div className="flex flex-col xl:flex-row gap-10 w-full">
-              <div className="w-full xl:w-1/2 flex flex-col gap-5">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
-                />
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
-                />
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
-                />
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
-                />
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
-                />
-              </div>
-              <div className="w-full xl:w-1/2 flex flex-col gap-5">
-                <textarea
-                  rows={7}
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
-                ></textarea>
-                <textarea
-                  rows={3}
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
-                ></textarea>
+          <div className="md:absolute border border-[#323692] rounded-xl md:border-0 pb-20 relative top-0 flex items-center justify-center h-full w-full left-0 px-[20%] pt-[20%]">
+            <div className="w-full ">
+              <h1 className="text-[40px] text-center">
+                For <span className="font-bold">Parents</span>
+              </h1>
+              <div className="mt-20 w-full flex flex-col items-center">
+                <div className="flex flex-col md:flex-row gap-10 w-full">
+                  <div className="w-full md:w-1/2 flex flex-col gap-5">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 flex flex-col gap-5">
+                    <textarea
+                      rows={7}
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
+                    ></textarea>
+                    <textarea
+                      rows={3}
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#d6d7e9]"
+                    ></textarea>
+                  </div>
+                </div>
+                <button className="bg-[#7073b3] w-[50%] mt-10 rounded py-3 text-white">
+                  Submit
+                </button>
               </div>
             </div>
-            <button className="bg-[#7073b3] w-[50%] mt-10 rounded py-3 text-white">
-              Submit
-            </button>
           </div>
         </div>
       </div>
@@ -199,65 +203,69 @@ export default function page() {
       <div
         id="parent"
         className={`w-full items-center justify-center mt-40 ${
-          formSelected === "parent" ? "flex" : "hidden"
-        } transition-opacity duration-500 ease-in-out`}
+          formSelected === "parent" ? "flex" : "flex"
+        } transition-opacity duration-500 ease-in-out relative`}
       >
-        <div className="border border-[#028676] rounded-xl px-[5%] w-[80%] text-[#028676] py-[5%] relative">
+        <div className="relative md:h-auto w-[calc(90vw)]">
           <Image
-            src={"/birds_form_1.png"}
-            width={500}
-            height={500}
+            src={"/teacher_form.png"}
+            width={1500}
+            height={1500}
             alt="birds"
-            className="absolute -top-[120px] right-[20%] h-[200px] w-auto object-contain"
+            className="h-full w-full object-contain hidden md:block"
           />
-          <h1 className="text-[40px] text-center">
-            For <span className="font-bold">Teachers</span>
-          </h1>
-          <div className="mt-20 w-full flex flex-col items-center">
-            <div className="flex flex-col xl:flex-row gap-10 w-full">
-              <div className="w-full xl:w-1/2 flex flex-col gap-5">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
-                />
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
-                />
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
-                />
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
-                />
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
-                />
-              </div>
-              <div className="w-full xl:w-1/2 flex flex-col gap-5">
-                <textarea
-                  rows={7}
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
-                ></textarea>
-                <textarea
-                  rows={3}
-                  placeholder="Name"
-                  className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
-                ></textarea>
+          <div className="md:absolute border border-[#028676] rounded-xl md:border-0 pb-20 relative top-0 flex items-center justify-center h-full w-full left-0 px-[20%] pt-[20%]">
+            <div className="w-full ">
+              <h1 className="text-[40px] text-center">
+                For <span className="font-bold">Teachers</span>
+              </h1>
+              <div className="mt-20 w-full flex flex-col items-center">
+                <div className="flex flex-col md:flex-row gap-10 w-full">
+                  <div className="w-full md:w-1/2 flex flex-col gap-5">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#028676] rounded p-3 bg-[#cce7e4]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 flex flex-col gap-5">
+                    <textarea
+                      rows={7}
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
+                    ></textarea>
+                    <textarea
+                      rows={3}
+                      placeholder="Name"
+                      className="w-full border outline-[#323692] rounded p-3 bg-[#cce7e4]"
+                    ></textarea>
+                  </div>
+                </div>
+                <button className="bg-[#4eaba0] w-[50%] mt-10 rounded py-3 text-white">
+                  Submit
+                </button>
               </div>
             </div>
-            <button className="bg-[#4eaba0] w-[50%] mt-10 rounded py-3 text-white">
-              Submit
-            </button>
           </div>
         </div>
       </div>
