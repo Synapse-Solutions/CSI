@@ -122,9 +122,9 @@ export default function page() {
           </p>
         </div>
       </div>
-      <div className="flex justify-between relative overflow-hidden w-screen">
+      <div className=" justify-between relative overflow-hidden w-screen">
         <div className="w-full">
-          <div className="absolute left-0 top-[50%] w-1/2 px-[10%]">
+          <div className="hidden xl:block absolute left-0 top-[50%] w-1/2 px-[10%]">
             <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
               The CSI Take Flight Program
             </h1>
@@ -140,8 +140,19 @@ export default function page() {
             height={1000}
             width={1000}
             alt="iamge"
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain my-20 xl:my-0"
           />
+        </div>
+        <div className="px-[10%] xl:hidden">
+          <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
+            The CSI Take Flight Program
+          </h1>
+          <p className="mt-10 text-[22px]">
+            the take flight program offers CSI Robins the opportunity to engage
+            in multiple projects based roles all designed to improve their
+            cognition, social and emotional intelligence and confidence. these
+            roles include:
+          </p>
         </div>
       </div>
       <div className="mt-20 flex flex-wrap justify-between px-[5%]">
@@ -155,7 +166,7 @@ export default function page() {
               height={400}
               width={400}
               alt="image"
-              className="h-[300px] w-auto object-contain"
+              className="h-[300px] w-auto object-contain hover:scale-110 duration-300 ease-in-out transition-all cursor-pointer"
             />
             <button className="border-[1px] border-gray-400 rounded-full px-5 py-2 hover:border-[#028676] hover:border-1">
               <p>
@@ -186,7 +197,7 @@ export default function page() {
             className="w-full h-auto object-contain my-10 xl:my-0"
           />
         </div>
-        <div className=" px-[10%]">
+        <div className="xl:hidden px-[10%]">
           <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
             The CSI Co-Curricular Program
           </h1>
@@ -209,7 +220,7 @@ export default function page() {
               height={400}
               width={400}
               alt="image"
-              className="h-[200px] w-auto object-contain"
+              className="h-[200px] w-auto object-contain hover:scale-110 duration-300 ease-in-out transition-all cursor-pointer"
             />
 
             <p
@@ -240,14 +251,14 @@ export default function page() {
         {array_two.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col gap-5 items-center w-[100%] md:w-[50%] xl:w-[33%] mt-20"
+            className="flex flex-col gap-5 items-center w-[100%] md:w-[50%] xl:w-[33%] mt-20 "
           >
             <Image
               src={item.image}
               height={400}
               width={400}
               alt="image"
-              className="h-[300px] w-auto object-contain"
+              className="h-[300px] w-auto object-contain hover:scale-110 duration-300 ease-in-out transition-all cursor-pointer"
             />
 
             <p

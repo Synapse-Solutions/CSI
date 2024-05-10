@@ -40,7 +40,7 @@ export default function page() {
             width={1000}
             alt="image"
             className={`w-full h-full absolute top-0 left-0 duration-300 ease-in-out ${
-              hoverSection === 1 && "scale-105 mt-[-50px] h-[107%]"
+              hoverSection === 1 && "scale-105 mt-[-50px] h-[109%]"
             }`}
           />
         </div>

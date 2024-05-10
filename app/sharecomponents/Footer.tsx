@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -19,7 +20,7 @@ export default function Footer() {
       className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative"
     >
       {pathname === "/learning-program" && (
-        <div className="w-screen flex z-10 absolute -top-[350px] left-0 xl:block hidden">
+        <div className="w-screen xl:flex z-10 absolute -top-[350px] left-0 hidden">
           <Image
             src={"/Animation003.GIF"}
             height={1500}
@@ -39,10 +40,14 @@ export default function Footer() {
         />
         <h1 className="font-bold text-[25px] mt-5">Quick Links</h1>
         <div className="flex gap-3 xl:gap-10 mt-5 ">
-          <p>Programs</p>
-          <p>See the Campus</p>
-          <p>Admissions</p>
-          <p>Clarity by CSI</p>
+          <Link href={"/learning-program"}>
+            <p className="hover:text-[#028676]">Programs</p>
+          </Link>
+          <p className="hover:text-[#028676]">See the Campus</p>
+          <Link href={"/learning-program"}>
+            <p className="hover:text-[#028676]">Admissions</p>
+          </Link>
+          <p className="hover:text-[#028676]">Clarity by CSI</p>
         </div>
         <h1 className="font-bold text-[25px] mt-5">Follow Us</h1>
         <div className="flex gap-10 mt-5">

@@ -72,8 +72,9 @@ export default function Navbar() {
       >
         <div className="flex w-[80%] items-center justify-between">
           <div className="w-[40%] 2xl:w-[30%] flex justify-between">
-            <h1 className="hover:text-[#028676] cursor-pointer">Programs</h1>
-
+            <Link href={"/learning-program"}>
+              <h1 className="hover:text-[#028676] cursor-pointer">Programs</h1>
+            </Link>
             <h1 className="hover:text-[#028676] cursor-pointer">
               See The campus
             </h1>
