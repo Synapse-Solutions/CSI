@@ -8,7 +8,7 @@ export default function page() {
   return (
     <div className="text-black overflow-hidden">
       <Navbar />
-      <div className="h-[calc(100vh)] px-[40px] flex flex-col xl:flex-row w-screen items-center justify-center gap-20">
+      <div className="h-[calc(70vh)] px-[40px] flex flex-col xl:flex-row w-screen items-center justify-center gap-20">
         <Image
           src={"/vector_smart_object_4.webp"}
           height={200}
@@ -28,7 +28,7 @@ export default function page() {
         </div>
       </div>
       <div>
-        <div className="xl:mt-16">
+        <div className="">
           <div className="w-[100%] lg:hidden flex flex-col items-center">
             <ServicesCard
               title="Value Centered"

@@ -24,13 +24,13 @@ const array = [
 ];
 export default function Navbar() {
   const pathname = usePathname();
-  let color = pathname !== "/" ? "#355496" : "#fff";
 
   const [isHeaderShow, setIsHeaderShow] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isHambergerShow, setIsHambergerShow] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
+  let color = pathname !== "/" ? "#355496" : !isHeaderShow ? "#fff" : "#355496";
   let lastScrollTop = 0;
   useEffect(() => {
     const handleScroll = () => {
@@ -70,7 +70,7 @@ export default function Navbar() {
         }}
         className={`hidden lg:flex justify-center fixed top-0 left-0 w-full h-[120px] items-center text-[${color}] uppercase z-50`}
       >
-        <div className="flex w-[80%] items-center justify-between">
+        <div className="flex w-[80%] items-center justify-between ">
           <div className="w-[40%] 2xl:w-[30%] flex justify-between">
             <Link href={"/learning-program"}>
               <h1 className="hover:text-[#028676] cursor-pointer">Programs</h1>

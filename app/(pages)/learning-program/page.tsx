@@ -110,12 +110,12 @@ export default function page() {
   return (
     <div className="pt-[120px] text-black w-screen overflow-hidden">
       <Navbar />
-      <div className="flex flex-col w-full items-center mt-20 ">
+      <div className="xl:hidden flex flex-col w-full items-center mt-20 ">
         <div className="w-[80%] xl:w-[50%]">
           <h1 className="text-[25px] text-center xl:text-[35px] font-bold">
             The CSI Extended Learning Program
           </h1>
-          <p className="text-center mt-5">
+          <p className="text-center mt-5 text-[18px] xl:text-[22px]">
             At CSI, learning takes place both inside & Outside the classroom.
             Our extended learning program makes Sure that our students learn
             through play, projects, co-curriculars and athletics.
@@ -124,6 +124,19 @@ export default function page() {
       </div>
       <div className=" justify-between relative overflow-hidden w-screen">
         <div className="w-full">
+          <div className="hidden absolute top-0 left-0 xl:flex flex-col w-full items-center ">
+            <div className="mt-20  w-[80%] xl:w-[50%]">
+              <h1 className="text-[25px] text-center xl:text-[35px] font-bold">
+                The CSI Extended Learning Program
+              </h1>
+              <p className="text-center mt-5 text-[18px] xl:text-[22px]">
+                At CSI, learning takes place both inside & Outside the
+                classroom. Our extended learning program makes Sure that our
+                students learn through play, projects, co-curriculars and
+                athletics.
+              </p>
+            </div>{" "}
+          </div>
           <div className="hidden xl:block absolute left-0 top-[50%] w-1/2 px-[10%]">
             <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
               The CSI Take Flight Program

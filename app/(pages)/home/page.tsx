@@ -1,4 +1,5 @@
 "use client";
+import BirdCard from "@/app/sharecomponents/BirdCard";
 import Navbar from "@/app/sharecomponents/Navbar";
 import HeroSection from "@/app/sharecomponents/homeHeroSection/HeroSection";
 import Swiper from "@/app/sharecomponents/swiper/Swiper";
@@ -70,7 +71,8 @@ export default function Home() {
                   activeHoverIndex === 1 ? "block" : "hidden"
                 }`}
               >
-                <Link href={"/robins"}>
+                <BirdCard title="CSI Eagles" image="vector_1" />
+                {/* <Link href={"/robins"}>
                   <Image
                     src={"/Frame-2.png"}
                     height={500}
@@ -78,7 +80,7 @@ export default function Home() {
                     className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
                     alt="02"
                   />
-                </Link>
+                </Link> */}
               </div>
               <h1 className="absolute top-0 -left-5 xl:-left-[60px]  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Eagles
@@ -103,7 +105,8 @@ export default function Home() {
                   activeHoverIndex === 2 ? "block" : "hidden"
                 }`}
               >
-                <Link href={"/robins"}>
+                <BirdCard title="CSI Larks" image="vector_2" />
+                {/* <Link href={"/robins"}>
                   <Image
                     src={"/Frame.png"}
                     height={500}
@@ -111,7 +114,7 @@ export default function Home() {
                     className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
                     alt="02"
                   />
-                </Link>
+                </Link> */}
               </div>
               <h1 className="absolute top-0 -left-[30px]  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Larks
@@ -125,7 +128,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="absolute top-[45%] xl:top-[64%]  h-[100px] w-[150px]  left-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[45%] xl:top-[60%]  h-[100px] w-[150px]  left-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
             <div
               className="h-[100px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(3)}
@@ -136,7 +139,8 @@ export default function Home() {
                   activeHoverIndex === 3 ? "block" : "hidden"
                 }`}
               >
-                <Link href={"/robins"}>
+                <BirdCard title="CSI Sparrows" image="vector_3" />
+                {/* <Link href={"/robins"}>
                   <Image
                     src={"/Frame-1.png"}
                     height={500}
@@ -144,7 +148,7 @@ export default function Home() {
                     className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
                     alt="02"
                   />
-                </Link>
+                </Link> */}
               </div>
 
               <Image
@@ -170,7 +174,8 @@ export default function Home() {
                   activeHoverIndex === 4 ? "block" : "hidden"
                 }`}
               >
-                <Link href={"/robins"}>
+                <BirdCard title=" CSI Robins" image="vector_4" />
+                {/* <Link href={"/robins"}>
                   <Image
                     src={"/frame_93.webp"}
                     height={500}
@@ -178,10 +183,10 @@ export default function Home() {
                     className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
                     alt="02"
                   />
-                </Link>
+                </Link> */}
               </div>
               <h1 className="  text-black font-bold text-[12px] xl:text-[20px]">
-                CSI Larks
+                CSI Robins
               </h1>
               <Image
                 src={"/03.webp"}

@@ -31,11 +31,11 @@ export default function Footer() {
           src={"/logo.webp"}
           height={300}
           width={300}
-          className="h-[100px] w-auto object-contain"
+          className="h-[80px] w-auto object-contain"
           alt="logo"
         />
-        <h1 className="font-bold text-[25px] mt-5">Quick Links</h1>
-        <div className="flex gap-3 xl:gap-10 mt-5 ">
+        <h1 className="font-bold text-[22px] mt-5">Quick Links</h1>
+        <div className="flex gap-3 xl:gap-10 mt-5 text-[15px]">
           <Link href={"/learning-program"}>
             <p className="hover:text-[#028676]">Programs</p>
           </Link>
@@ -45,31 +45,31 @@ export default function Footer() {
           </Link>
           <p className="hover:text-[#028676]">Clarity by CSI</p>
         </div>
-        <h1 className="font-bold text-[25px] mt-5">Follow Us</h1>
-        <div className="flex gap-10 mt-5">
+        <h1 className="font-bold text-[22px] mt-5">Follow Us</h1>
+        <div className="flex gap-5 mt-5">
           <Image
             src={"/linkedinlogo.webp"}
             height={100}
             width={100}
-            className="h-[50px] w-auto object-contain"
+            className="h-[30px] w-auto object-contain"
             alt="logo"
           />
           <Image
             src={"/facebooklogo.webp"}
             height={100}
             width={100}
-            className="h-[50px] w-auto object-contain"
+            className="h-[30px] w-auto object-contain"
             alt="logo"
           />
           <Image
             src={"/instagramlogo.webp"}
             height={100}
             width={100}
-            className="h-[50px] w-auto object-contain"
+            className="h-[30px] w-auto object-contain"
             alt="logo"
           />
         </div>
-        <p className="mt-5">
+        <p className="mt-5 text-[14px]">
           © Central School International 2024 | Terms & Privacy 
         </p>
       </div>
@@ -78,13 +78,13 @@ export default function Footer() {
           The care, safety and wellbeing of all children and vulnerable people
           is a core and fundamental responsibility for our community.
         </p>
-        <Image
+        {/* <Image
           src={"/sun.webp"}
           height={400}
           width={400}
           className="h-[150px] w-auto object-contain"
           alt="logo"
-        />
+        /> */}
       </div>
     </div>
   );
