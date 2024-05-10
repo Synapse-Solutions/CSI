@@ -1,17 +1,34 @@
+"use client";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 export default function Footer() {
+  const pathname = usePathname();
   return (
     <div
       style={{
-        backgroundImage: "url(/Footer.png)",
+        backgroundImage:
+          pathname === "/learning-program"
+            ? "url(/footer_learning.webp)"
+            : "url(/Footer.png)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px]"
+      className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative"
     >
+      {pathname === "/learning-program" && (
+        <div className="w-screen flex z-10 absolute -top-[350px] left-0 xl:block hidden">
+          <Image
+            src={"/Animation003.GIF"}
+            height={1500}
+            width={1500}
+            alt="tree"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      )}
       <div className="w-full xl:w-[50%] pt-[50px] xl:pt-0">
         <Image
           src={"/logo.webp"}
