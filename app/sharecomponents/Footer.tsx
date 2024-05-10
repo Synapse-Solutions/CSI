@@ -20,7 +20,7 @@ export default function Footer() {
       className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative"
     >
       {pathname === "/learning-program" && (
-        <div className="w-screen xl:flex z-10 absolute -top-[350px] left-0 hidden">
+        <div className="w-screen xl:flex z-10 absolute xl:-top-[230px] 2xl:-top-[320px] left-0 hidden">
           <Image
             src={"/Animation003.GIF"}
             height={1500}
@@ -30,7 +30,7 @@ export default function Footer() {
           />
         </div>
       )}
-      <div className="w-full xl:w-[50%] pt-[50px] xl:pt-0">
+      <div className="w-full xl:w-[50%] pt-[50px] xl:pt-0 z-20 ">
         <Image
           src={"/logo.webp"}
           height={300}

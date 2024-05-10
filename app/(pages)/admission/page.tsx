@@ -191,7 +191,7 @@ export default function page() {
                     ></textarea>
                   </div>
                 </div>
-                <button className="bg-[#7073b3] w-[50%] mt-10 rounded py-3 text-white">
+                <button className="bg-[#7073b3] hover:bg-[#585ca8] w-[50%] mt-10 rounded py-3 text-white">
                   Submit
                 </button>
               </div>
@@ -203,7 +203,7 @@ export default function page() {
       <div
         id="parent"
         className={`w-full items-center justify-center mt-40 ${
-          formSelected === "parent" ? "flex" : "flex"
+          formSelected === "parent" ? "flex" : "hidden"
         } transition-opacity duration-500 ease-in-out relative`}
       >
         <div className="relative md:h-auto w-[calc(90vw)]">
@@ -261,7 +261,7 @@ export default function page() {
                     ></textarea>
                   </div>
                 </div>
-                <button className="bg-[#4eaba0] w-[50%] mt-10 rounded py-3 text-white">
+                <button className="bg-[#4eaba0] hover:bg-[#51c4b4] w-[50%] mt-10 rounded py-3 text-white">
                   Submit
                 </button>
               </div>
