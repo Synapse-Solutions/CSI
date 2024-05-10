@@ -3,6 +3,7 @@ import Navbar from "@/app/sharecomponents/Navbar";
 import HeroSection from "@/app/sharecomponents/homeHeroSection/HeroSection";
 import Swiper from "@/app/sharecomponents/swiper/Swiper";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function Home() {
@@ -58,7 +59,7 @@ export default function Home() {
             className="h-auto w-full"
             alt="tree"
           />
-          <div className="absolute top-[14%] left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[14%] xl:top-[18%] 2xl:top-[20%] left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(1)}
@@ -69,13 +70,15 @@ export default function Home() {
                   activeHoverIndex === 1 ? "block" : "hidden"
                 }`}
               >
-                <Image
-                  src={"/Frame-2.png"}
-                  height={500}
-                  width={500}
-                  className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
-                  alt="02"
-                />
+                <Link href={"/robins"}>
+                  <Image
+                    src={"/Frame-2.png"}
+                    height={500}
+                    width={500}
+                    className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
+                    alt="02"
+                  />
+                </Link>
               </div>
               <h1 className="absolute top-0 -left-5 xl:-left-[60px]  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Eagles
@@ -100,13 +103,15 @@ export default function Home() {
                   activeHoverIndex === 2 ? "block" : "hidden"
                 }`}
               >
-                <Image
-                  src={"/Frame.png"}
-                  height={500}
-                  width={500}
-                  className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
-                  alt="02"
-                />
+                <Link href={"/robins"}>
+                  <Image
+                    src={"/Frame.png"}
+                    height={500}
+                    width={500}
+                    className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
+                    alt="02"
+                  />
+                </Link>
               </div>
               <h1 className="absolute top-0 -left-[30px]  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Larks
@@ -131,13 +136,15 @@ export default function Home() {
                   activeHoverIndex === 3 ? "block" : "hidden"
                 }`}
               >
-                <Image
-                  src={"/Frame-1.png"}
-                  height={500}
-                  width={500}
-                  className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
-                  alt="02"
-                />
+                <Link href={"/robins"}>
+                  <Image
+                    src={"/Frame-1.png"}
+                    height={500}
+                    width={500}
+                    className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
+                    alt="02"
+                  />
+                </Link>
               </div>
 
               <Image
@@ -163,13 +170,15 @@ export default function Home() {
                   activeHoverIndex === 4 ? "block" : "hidden"
                 }`}
               >
-                <Image
-                  src={"/frame_93.webp"}
-                  height={500}
-                  width={500}
-                  className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
-                  alt="02"
-                />
+                <Link href={"/robins"}>
+                  <Image
+                    src={"/frame_93.webp"}
+                    height={500}
+                    width={500}
+                    className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
+                    alt="02"
+                  />
+                </Link>
               </div>
               <h1 className="  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Larks

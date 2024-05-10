@@ -270,7 +270,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="mt-[10%] flex items-end">
+      {/* <div className="mt-[10%] flex items-end">
         <Image
           src={"/tree_1.webp"}
           height={500}
@@ -292,8 +292,9 @@ export default function page() {
           alt="tree"
           className="w-[50px] h-auto object-contain ml-[70%] mb-[-20px]"
         />
-      </div>
-      <div className="">
+      </div> */}
+      <div className="xl:h-[250px]"></div>
+      <div className="mt-20">
         <Footer />
       </div>
     </div>
