@@ -1,10 +1,18 @@
+"use client";
 import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import ServicesCard from "@/app/sharecomponents/ServicesCard";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function page() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <div className="text-black overflow-hidden">
       <Navbar />
@@ -13,9 +21,10 @@ export default function page() {
           src={"/vector_smart_object_4.webp"}
           height={200}
           width={200}
+          data-aos="fade-right"
           alt="vector"
         />
-        <div className="xl:w-[30%]">
+        <div data-aos="fade-left" className="xl:w-[30%]">
           <h1 className="text-[35px] font-bold">CSI Robins</h1>
           <h1 className="text-[35px] font-bold text-[#355496]">
             Helping Young Minds take Flight
@@ -124,11 +133,12 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between px-[10%]">
+      <div className="flex justify-between px-[10%] mt-20">
         <Image
           src={"/child.webp"}
           height={500}
           width={500}
+          data-aos="zoom-in"
           alt="child"
           className="w-[26%] h-auto object-contain"
         />
@@ -136,6 +146,8 @@ export default function page() {
           src={"/child.webp"}
           height={500}
           width={500}
+          data-aos="zoom-in"
+          data-aos-delay="500"
           alt="child"
           className="w-[26%] h-auto object-contain"
         />
@@ -143,6 +155,8 @@ export default function page() {
           src={"/child.webp"}
           height={500}
           width={500}
+          data-aos="zoom-in"
+          data-aos-delay="1000"
           alt="child"
           className="w-[26%] h-auto object-contain"
         />

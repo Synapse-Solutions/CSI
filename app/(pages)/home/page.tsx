@@ -1,5 +1,6 @@
 "use client";
 import BirdCard from "@/app/sharecomponents/BirdCard";
+import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import HeroSection from "@/app/sharecomponents/homeHeroSection/HeroSection";
 import Swiper from "@/app/sharecomponents/swiper/Swiper";
@@ -198,6 +199,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="pt-[180px]">
+        <Footer />
       </div>
     </div>
   );
