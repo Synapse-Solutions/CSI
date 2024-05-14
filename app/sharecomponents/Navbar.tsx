@@ -24,13 +24,23 @@ const array = [
 ];
 export default function Navbar() {
   const pathname = usePathname();
+  console.log("🚀 ~ Navbar ~ pathname:", pathname);
 
   const [isHeaderShow, setIsHeaderShow] = useState(false);
+  console.log("🚀 ~ Navbar ~ isHeaderShow:", isHeaderShow);
   const [isMobile, setIsMobile] = useState(false);
   const [isHambergerShow, setIsHambergerShow] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
-  let color = pathname !== "/" ? "#355496" : !isHeaderShow ? "#fff" : "#355496";
+  let color =
+    pathname === "/" && !isHeaderShow
+      ? "white"
+      : pathname !== "/"
+      ? "#355496"
+      : !isHeaderShow
+      ? "white"
+      : "#355496";
+  console.log("🚀 ~ Navbar ~ color:", color);
   let lastScrollTop = 0;
   useEffect(() => {
     const handleScroll = () => {
@@ -67,8 +77,9 @@ export default function Navbar() {
           backgroundColor: isHeaderShow ? "white" : "transparent",
           transition: "background-color 1s ease",
           opacity: 1,
+          color: color,
         }}
-        className={`hidden lg:flex justify-center fixed top-0 left-0 w-full h-[120px] items-center text-[${color}] uppercase z-50`}
+        className={`hidden lg:flex justify-center fixed top-0 left-0 w-full h-[120px] items-center  uppercase z-50`}
       >
         <div className="flex w-[80%] items-center justify-between ">
           <div className="w-[40%] 2xl:w-[30%] flex justify-between">
