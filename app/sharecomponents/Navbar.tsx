@@ -24,10 +24,8 @@ const array = [
 ];
 export default function Navbar() {
   const pathname = usePathname();
-  console.log("🚀 ~ Navbar ~ pathname:", pathname);
 
   const [isHeaderShow, setIsHeaderShow] = useState(false);
-  console.log("🚀 ~ Navbar ~ isHeaderShow:", isHeaderShow);
   const [isMobile, setIsMobile] = useState(false);
   const [isHambergerShow, setIsHambergerShow] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -40,7 +38,6 @@ export default function Navbar() {
       : !isHeaderShow
       ? "white"
       : "#355496";
-  console.log("🚀 ~ Navbar ~ color:", color);
   let lastScrollTop = 0;
   useEffect(() => {
     const handleScroll = () => {
