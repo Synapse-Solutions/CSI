@@ -240,7 +240,7 @@ export default function page() {
               style={{
                 color: index % 2 ? "#028676" : "#355496",
               }}
-              className="text-[#028676] font-bold text-[25px] "
+              className="text-[#028676] font-bold text-[25px] 2xl:text-[32px]"
             >
               {item.title}
             </p>
@@ -278,7 +278,7 @@ export default function page() {
               style={{
                 color: index % 2 ? "#028676" : "#355496",
               }}
-              className="text-[#028676] font-bold text-[25px] uppercase"
+              className="text-[#028676] font-bold text-[25px] uppercase 2xl:text-[32px]"
             >
               {item.title}
             </p>
