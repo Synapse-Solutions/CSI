@@ -16,7 +16,7 @@ export default function page() {
   return (
     <div className="text-black overflow-hidden">
       <Navbar />
-      <div className="h-[calc(70vh)] px-[40px] flex flex-col xl:flex-row w-screen items-center justify-center gap-20">
+      <div className="h-[calc(70vh)] px-[40px] flex flex-col xl:flex-row w-screen items-center justify-center gap-20 mt-20 2xl:mt-0">
         <Image
           src={"/vector_smart_object_4.webp"}
           height={200}
@@ -24,9 +24,9 @@ export default function page() {
           data-aos="fade-right"
           alt="vector"
         />
-        <div data-aos="fade-left" className="xl:w-[30%]">
-          <h1 className="text-[35px] font-bold">CSI Robins</h1>
-          <h1 className="text-[35px] font-bold text-[#355496]">
+        <div data-aos="fade-left" className="xl:w-[40%] 2xl:w-[30%]">
+          <h1 className="text-[28px] 2xl:text-[35px] font-bold">CSI Robins</h1>
+          <h1 className="text-[28px] 2xl:text-[35px] font-bold text-[#355496]">
             Helping Young Minds take Flight
           </h1>
           <p className="mt-10">

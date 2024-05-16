@@ -18,8 +18,8 @@ const array = [
     link: "/admission",
   },
   {
-    name: "Contact",
-    link: "/contact",
+    name: "Programs",
+    link: "/learning-program",
   },
 ];
 export default function Navbar() {

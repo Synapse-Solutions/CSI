@@ -68,7 +68,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute -top-[180px]  xl:-top-[280px] left-0 xl:left-[50px] w-[400px] ${
+                className={`absolute -top-[180px]  xl:-top-[280px] -left-[30px] xl:left-[50px] w-[400px] ${
                   activeHoverIndex === 1 ? "block" : "hidden"
                 }`}
               >
@@ -102,7 +102,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute -top-[180px]  xl:-top-[280px] -left-[50px] xl:left-[50px] w-[400px] ${
+                className={`absolute -top-[180px]  xl:-top-[280px] -left-[120px] xl:left-[50px] w-[400px] ${
                   activeHoverIndex === 2 ? "block" : "hidden"
                 }`}
               >
@@ -136,7 +136,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute z-20 -top-[150px] xl:-top-[280px] -left-[50px] xl:left-[50px] w-[400px] ${
+                className={`absolute z-20 -top-[150px] xl:-top-[280px] -left-[100px] xl:left-[50px] w-[400px] ${
                   activeHoverIndex === 3 ? "block" : "hidden"
                 }`}
               >
@@ -171,7 +171,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute -top-[150px] xl:-top-[280px] -left-[150px] xl:left-[50px] w-[400px] ${
+                className={`absolute -top-[150px] xl:-top-[280px] -left-[190px] xl:left-[50px] w-[400px] ${
                   activeHoverIndex === 4 ? "block" : "hidden"
                 }`}
               >

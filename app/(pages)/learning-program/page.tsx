@@ -112,7 +112,7 @@ export default function page() {
       <Navbar />
       <div className="xl:hidden flex flex-col w-full items-center mt-20 ">
         <div className="w-[80%] xl:w-[50%]">
-          <h1 className="text-[25px] text-center xl:text-[35px] font-bold">
+          <h1 className="text-[25px] text-center 2xl:text-[35px] font-bold">
             The CSI Extended Learning Program
           </h1>
           <p className="text-center mt-5 text-[18px] xl:text-[22px]">
@@ -124,12 +124,12 @@ export default function page() {
       </div>
       <div className=" justify-between relative overflow-hidden w-screen">
         <div className="w-full">
-          <div className="hidden absolute top-0 left-0 xl:flex flex-col w-full items-center ">
+          <div className="hidden absolute -top-[80px] 2xl:top-0 left-0 xl:flex flex-col w-full items-center ">
             <div className="mt-20  w-[80%] xl:w-[50%]">
-              <h1 className="text-[25px] text-center xl:text-[35px] font-bold">
+              <h1 className="text-[25px] text-center 2xl:text-[35px] font-bold">
                 The CSI Extended Learning Program
               </h1>
-              <p className="text-center mt-5 text-[18px] xl:text-[22px]">
+              <p className="text-center mt-5 text-[18px] 2xl:text-[22px]">
                 At CSI, learning takes place both inside & Outside the
                 classroom. Our extended learning program makes Sure that our
                 students learn through play, projects, co-curriculars and
@@ -138,10 +138,10 @@ export default function page() {
             </div>{" "}
           </div>
           <div className="hidden xl:block absolute left-0 top-[50%] w-1/2 px-[10%]">
-            <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
+            <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
               The CSI Take Flight Program
             </h1>
-            <p className="mt-10 text-[22px]">
+            <p className="mt-10 text-[18px] 2xl:text-[22px]">
               the take flight program offers CSI Robins the opportunity to
               engage in multiple projects based roles all designed to improve
               their cognition, social and emotional intelligence and confidence.
@@ -157,10 +157,10 @@ export default function page() {
           />
         </div>
         <div className="px-[10%] xl:hidden">
-          <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
+          <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Take Flight Program
           </h1>
-          <p className="mt-10 text-[22px]">
+          <p className="mt-10 text-[18px] 2xl:text-[22px]">
             the take flight program offers CSI Robins the opportunity to engage
             in multiple projects based roles all designed to improve their
             cognition, social and emotional intelligence and confidence. these
@@ -191,11 +191,11 @@ export default function page() {
       </div>
       <div className="justify-between xl:relative overflow-hidden w-screen">
         <div className="w-full">
-          <div className="absolute xl:block hidden right-0 top-[50%] w-1/2 px-[10%]">
-            <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
+          <div className="absolute xl:block hidden right-0 top-20 2xl:top-[50%] w-1/2 px-[10%]">
+            <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
               The CSI Co-Curricular Program
             </h1>
-            <p className="mt-10 text-[22px]">
+            <p className="mt-10 text-[18px] 2xl:text-[22px]">
               Our Extensive co curricular program builds upon our take flight
               program and allows students to make further gains through project
               and play based learning. our program also centers around the
@@ -211,10 +211,10 @@ export default function page() {
           />
         </div>
         <div className="xl:hidden px-[10%]">
-          <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
+          <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Co-Curricular Program
           </h1>
-          <p className="mt-10 text-[22px]">
+          <p className="mt-10 text-[18px] 2xl:text-[22px]">
             Our Extensive co curricular program builds upon our take flight
             program and allows students to make further gains through project
             and play based learning. our program also centers around the
@@ -249,10 +249,10 @@ export default function page() {
       </div>
       <div className="flex w-full mt-[10%]">
         <div className="xl:w-[60%] px-[10%]">
-          <h1 className="text-[25px] text-[#028676] xl:text-[38px] font-bold">
+          <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Take Flight Program
           </h1>
-          <p className="mt-10 text-[22px]">
+          <p className="mt-10 text-[18px] 2xl:text-[22px]">
             the take flight program offers CSI Robins the opportunity to engage
             in multiple projects based roles all designed to improve their
             cognition, social and emotional intelligence and confidence. these

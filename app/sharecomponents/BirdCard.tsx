@@ -14,10 +14,10 @@ export default function BirdCard(props: Props) {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain p-5 text-white"
+      className="cursor-pointer h-[180px] xl:h-[230px] w-[calc(88vw)] xl:w-[400px] object-contain p-5 text-white"
     >
-      <h1 className="mt-2 text-[17px]">{props.title}</h1>
-      <p className="text-[14px] mt-3">
+      <h1 className="mt-2 text-[13px] md:text-[17px]">{props.title}</h1>
+      <p className="text-[10px] md:text-[14px] mt-3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
         accusamus delectus quas quibusdam hic voluptatem fugit labore odit?
         Pariatur, nulla!
