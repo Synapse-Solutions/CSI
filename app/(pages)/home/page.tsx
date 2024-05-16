@@ -72,7 +72,7 @@ export default function Home() {
                   activeHoverIndex === 1 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title="CSI Eagles" image="vector_1" />
+                <BirdCard title="CSI Eagles" image="vector_2" />
                 {/* <Link href={"/robins"}>
                   <Image
                     src={"/Frame-2.png"}
@@ -106,7 +106,7 @@ export default function Home() {
                   activeHoverIndex === 2 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title="CSI Larks" image="vector_2" />
+                <BirdCard title="CSI Larks" image="frame_4x" />
                 {/* <Link href={"/robins"}>
                   <Image
                     src={"/Frame.png"}
