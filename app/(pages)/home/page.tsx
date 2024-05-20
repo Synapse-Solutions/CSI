@@ -6,7 +6,9 @@ import HeroSection from "@/app/sharecomponents/homeHeroSection/HeroSection";
 import Swiper from "@/app/sharecomponents/swiper/Swiper";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const scrollRef = React.useRef<HTMLDivElement>(null);
@@ -15,7 +17,11 @@ export default function Home() {
   function handleMouseEnterLast(index: number) {
     setActiveHoverIndex(index);
   }
-
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
   function handleMouseLeaveLast(event: any) {
     // const divElement = event.currentTarget.querySelector("div");
     // if (divElement) {
@@ -52,7 +58,7 @@ export default function Home() {
         </div>
         <div className="bg-[#EEEEEE] hidden xl:block w-screen h-[50%] absolute -bottom-[10%] left-0 z-0"></div>
       </div>
-      <div className="w-full my-[150px] xl:mt-[15%]">
+      <div data-aos="fade-right" className="w-full my-[150px] xl:mt-[15%]">
         <div className="h-auto w-[90vw] xl:w-[calc(70vw)] relative">
           <Image
             src={"/tree.webp"}

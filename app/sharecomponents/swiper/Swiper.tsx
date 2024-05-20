@@ -1,112 +1,204 @@
-import React from "react";
-import "./swiper.css";
-import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+import "./swiper.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// import required modules
+import { Navigation, Autoplay } from "swiper/modules";
+import Image from "next/image";
 const array = [
   {
     title: "The CSI \n Advantage",
     image: "/s_01.webp",
+    description:
+      "The CSI Advantage: Cutting edge skills, optimism about the future, a worldview centered on tolerance and hope, confidence in themselves and competence in core academic areas – this is the advantage that CSI students have once they graduate from a holistic learning journey crafted for them at CSI.",
   },
   {
     title: "International \n Expertise",
     image: "/s_02.webp",
+    description:
+      "International Expertise: At CSI, we believe that your children deserve the absolute best when it comes to their education. Which is why at CSI we have learnt from international experts from Singapore and Britain to bring to your child an education which is world class in nature. From our sports program to our teacher-student ratios, your child’s education has been designed to make them compete with the world’s best and brightest.",
   },
   {
     title: "Rigorous \n Teacher \n Training",
     image: "/s_03.webp",
+    description:
+      " Rigorous Teacher Training: CSI teachers go through an academically rigorous training process. Our teachers are trained by Trehaus Singapore who are world leaders in early years education and by Cambridge International. Our ongoing in-house professional development programme ensures that our teachers are abreast with the current best practices from around the world and benefit from research and development in education.",
   },
   {
     title: "A 21st Century \n Education",
     image: "/s_04.webp",
+    description:
+      " A 21st Century Education: The 21st century has created unique and never before seen challenges. These challenges have in turn created the need for a new form of education that provides students with the skills, competencies and character qualities needed to succeed in the dynamic, competitive and global marketplace of today and the future. At CSI, we ensure that our students are prepared to thrive and prosper both today and tomorrow.",
   },
   {
     title: "World Class \n Athletics",
     image: "/s_05.webp",
+    description:
+      "World Class Athletics: Sports are crucial for both the mental development of a child as well as academic performance. This is why CSI has created a dedicated sports program for its students using state of the art facilities on CSI campuses.",
   },
   {
     title: "Anchored in \n Culture and \n Values",
     image: "/s_06.webp",
+    description:
+      "Anchored in Culture and Values: We believe that education is something far more profound that just academic competence. At CSI, we are committed to providing an education that nurtures students and helps them build on the cultural contexts and value frameworks from which they come. At CSI, education is rooted in appreciating, celebrating and further exploring the culture and values of our students.",
   },
   {
     title: "Focused on \n  Effective \n Communication",
     image: "/s_07.webp",
+    description:
+      " Focused on Effective Communication: The ability to communicate effectively has become a critical need in the 21st Century. At CSI we provide an education that emphasizes communication skills in our students. To this end we also offer foreign languages to ensure that our students develop advanced linguistic reasoning ability.",
   },
   {
     title: "Extended  \n Learning \n Program",
     image: "/s_08.webp",
+    description:
+      " Extended Learning Program: Project and Play Based Learning has been proven to substantially improve students’ academic performance. Our Extended Learning Program is composed of our Co-Curricular, Athletics, and Take Flight Programs and is designed to help your child grow holistically. From stargazing to swimming, CSI offers a comprehensive Extended Learning Program for all of our students.",
   },
   {
     title: "Parent-school \n Community",
     image: "/s_09.webp",
+    description:
+      "Parent-School Community: At CSI we see parents as equal partners in their children’s schooling. We believe that students thrive in a learning environment which is created by the existence of a vibrant community of parents, teachers, and students. From parent ambassadors to summer camps, at CSI we are characterized by our dynamic and empowering Parent-School Community.",
   },
 ];
-export default function Swiper() {
-  const listRef = React.useRef<HTMLUListElement>(null);
-
-  const scrollLeft = () => {
-    const isMobile = window.innerWidth < 768 ? true : false;
-    if (listRef.current) {
-      listRef.current.scrollBy({
-        left: isMobile ? 350 : 450, // Adjust this value as needed
-        behavior: "smooth",
-      });
+export default function SwiperCompoenent() {
+  const [selectedIndex, setSelectedIndex] = useState<any>(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
     }
-  };
-  const scrollRight = () => {
-    const isMobile = window.innerWidth < 768 ? true : false;
-    if (listRef.current) {
-      listRef.current.scrollBy({
-        left: isMobile ? -350 : -450, // Adjust this value as needed
-        behavior: "smooth",
-      });
-    }
-  };
+  }, []);
   return (
-    <ul ref={listRef} className="overflow-hidden ml-[50px] xl:ml-0">
-      <Image
-        src={"/CaretLeft.png"}
-        height={50}
-        width={50}
-        alt="left"
-        className="absolute top-[50%] left-[8%] xl:left-[28.8%] cursor-pointer z-[1000]"
-        onClick={scrollLeft}
-      />
-      <Image
-        src={"/CaretRight.png"}
-        height={50}
-        width={50}
-        alt="left"
-        className="absolute top-[50%] xl:top-[50%] left-[80%] xl:left-[94%] 2xl:left-[97%] cursor-pointer z-[1000]"
-        onClick={scrollRight}
-      />
-      {array.map((item, index) => (
-        <li key={index} className="w-[350px] 2xl:w-[450px]">
-          <div className="border border-black bg-white rounded mr-[50px]">
-            <Image
-              alt="image"
-              src={item.image}
-              height={500}
-              width={500}
-              className="w-full max-h-[160px] 2xl:max-h-[260px] object-contain mt-10 2xl:mt-20"
-            />
-            <div className="px-10 mt-5 w-full flex flex-col items-start ">
-              <div className="h-[150px] 2xl:h-[200px]">
-                {item.title.split("\n").map((line, i) => (
-                  <h1
-                    key={i}
-                    className="font-bold text-black text-[20px] 2xl:text-[30px] text-start "
-                  >
-                    {line}
-                  </h1>
-                ))}
-              </div>
-              <button className="bg-[#028676] hover:bg-[#25524c] text-[14px] 2xl:text-[20px] rounded-full text-white px-10 py-3 mb-5 2xl:mb-10">
-                See More
-              </button>
-            </div>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className=" ml-[50px] xl:ml-0 bg-transparent w-[100%] relative"
+    >
+      <div
+        style={{
+          opacity: isHovered ? 1 : 0,
+          transition: "opacity 1s ease",
+        }}
+        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-10 z-10 cursor-pointer"
+      >
+        <Image
+          src={"/left_arr.webp"}
+          width={30}
+          height={30}
+          alt="arrow"
+          className="h-[20px] w-auto object-contain"
+        />
+      </div>
+      <div
+        style={{
+          opacity: isHovered ? 1 : 0,
+          transition: "opacity 1s ease",
+        }}
+        className="bg-[#EEEEEE] hover:bg-[#028676] h-[50px] w-[50px] rounded-full flex items-center justify-center right_arrow absolute top-[45%] right-10 z-10 cursor-pointer"
+      >
+        <Image
+          src={"/left_arr.webp"}
+          width={30}
+          height={30}
+          alt="arrow"
+          className="h-[20px] w-auto object-contain rotate-180"
+        />
+      </div>
+
+      <Swiper
+        slidesPerView={isMobile ? 1 : 3}
+        // spaceBetween={50}
+        modules={[Navigation, Autoplay]}
+        navigation={{
+          nextEl: ".left_arrow",
+          prevEl: ".right_arrow",
+        }}
+        className="bg-transparent"
+        autoplay={{
+          delay: 2000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        }}
+      >
+        {array.map((item, index) => (
+          <SwiperSlide
+            key={index}
+            className="w-[350px] 2xl:w-[450px] bg-transparent"
+          >
+            <>
+              {selectedIndex === index ? (
+                <div
+                  style={{}}
+                  className={`bg-[#028676] h-[90%]  w-[90%] rounded-md p-3 transition-all duration-1000 ease-in-out transform ${
+                    selectedIndex !== null
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-95"
+                  }`}
+                >
+                  <div className="h-[50px] w-full flex justify-end px-5">
+                    <p
+                      onClick={() => setSelectedIndex(null)}
+                      className="text-white font-bold text-[20px] cursor-pointer"
+                    >
+                      ╳
+                    </p>
+                  </div>
+
+                  <p className="text-white mt-10 px-10 font-bold text-[20px] text-start">
+                    {item.description.split(":")[0] + ":"}
+                  </p>
+                  <p className="text-white mt-2 px-10 text-[17px] text-start">
+                    {item.description.split(":")[1]}
+                  </p>
+                </div>
+              ) : (
+                <div className="shadow-md bg-white rounded mr-[50px] h-[90%]">
+                  <div className="w-full max-h-[160px] 2xl:max-h-[260px] overflow-hidden mt-10 2xl:mt-20">
+                    <Image
+                      alt="image"
+                      src={item.image}
+                      height={500}
+                      width={500}
+                      className="w-full h-full object-contain  hover:scale-125 duration-1000 ease-in-out "
+                    />
+                  </div>
+                  <div className="px-10 mt-5 w-full flex flex-col items-start ">
+                    <div className="h-[150px] 2xl:h-[200px]">
+                      {item.title.split("\n").map((line, i) => (
+                        <h1
+                          key={i}
+                          className="font-bold text-black text-[20px] 2xl:text-[30px] text-start "
+                        >
+                          {line}
+                        </h1>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => setSelectedIndex(index)}
+                      className="bg-[#028676] hover:bg-[#25524c] text-[14px] 2xl:text-[20px] rounded-full text-white px-10 py-3 mb-5 2xl:mb-10"
+                    >
+                      See More
+                    </button>
+                  </div>
+                </div>
+              )}
+            </>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }

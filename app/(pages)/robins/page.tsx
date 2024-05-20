@@ -30,9 +30,10 @@ export default function page() {
             Helping Young Minds take Flight
           </h1>
           <p className="mt-10">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer
+            CSI Robins is our early years program. Designed by world leaders
+            Trehaus Singapore, the CSI Robins Program wll ensure that your
+            child's development is gentle, holistic and informed by the best
+            practices.
           </p>
         </div>
       </div>
@@ -41,23 +42,23 @@ export default function page() {
           <div className="w-[100%] lg:hidden flex flex-col items-center">
             <ServicesCard
               title="Value Centered"
-              description="Your brand's identity and user experience are paramount to your success. We design products that are useful, enjoyable to use, and align seamlessly with your business objectives. With Synapse Solutions, you can create digital experiences that engage users at every touchpoint, driving meaningful interactions and fostering long-term relationships."
+              description="CSI Robins nurtures not only academic excellence but also key personal values. Our curriculum fosters integrity, respect, and empathy, helping children develop a strong moral compass and a character grounded in community values."
             />
             <ServicesCard
-              title="Mobile App Development"
-              description="The best apps are the ones that prioritize the user experience. From sleek interfaces to seamless navigation, we design apps using React Native and Firebase to ensure users keep coming back for more."
+              title="Informed By Research"
+              description="Our early years program is built on the latest educational research, designed in collaboration with Trehaus Singapore. We utilize advanced pedagogical strategies to support optimal cognitive and social development."
             />
             <ServicesCard
               title="Holistic"
-              description="With our team of expert developers at your side, you can rest assured that your online presence is in capable hands. Whether you need a custom website, a robust web application, or anything in between, we've got you covered."
+              description="CSI Robins embraces a holistic educational approach, enriching traditional academics with music, arts, physical activities, and social learning. This broad-based curriculum supports all facets of a child's development."
             />
             <ServicesCard
               title="Focused on care and nature"
-              description="The journey doesn't end once your digital product is launched. Continuously operational software is required to ensure smooth business processes. Our team stays on top of updates, bug fixes, and technical support."
+              description="Care and interaction with nature are fundamental to our learning environment. Children at CSI Robins experience daily engagement with natural settings, fostering a deep connection with the environment and emphasizing eco-conscious values."
             />
             <ServicesCard
               title="Play And Project Based"
-              description="The journey doesn't end once your digital product is launched. Continuously operational software is required to ensure smooth business processes. Our team stays on top of updates, bug fixes, and technical support."
+              description="Our curriculum emphasizes play and project-based learning, encouraging creativity and practical problem solving. Children learn through hands-on activities and collaborative projects, boosting their communication skills and enthusiasm for learning."
             />
           </div>
           <div className="lg:flex justify-center hidden ">
@@ -71,7 +72,7 @@ export default function page() {
               <ServicesCard
                 rightSideCard={true}
                 title="Value Centered"
-                description="The best apps are the ones that prioritize the user experience. From sleek interfaces to seamless navigation, we design apps using React Native and Firebase to ensure users keep coming back for more."
+                description="CSI Robins nurtures not only academic excellence but also key personal values. Our curriculum fosters integrity, respect, and empathy, helping children develop a strong moral compass and a character grounded in community values."
               />
             </div>
           </div>
@@ -79,7 +80,7 @@ export default function page() {
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] justify-end h-auto  flex">
               <ServicesCard
                 title="Informed By Research"
-                description="Your brand's identity and user experience are paramount to your success. We design products that are useful, enjoyable to use, and align seamlessly with your business objectives. With Synapse Solutions, you can create digital experiences that engage users at every touchpoint, driving meaningful interactions and fostering long-term relationships."
+                description="Our early years program is built on the latest educational research, designed in collaboration with Trehaus Singapore. We utilize advanced pedagogical strategies to support optimal cognitive and social development."
               />
             </div>
             <div className="flex flex-col items-center w-[15%] xl:w-[15%] 2xl:w-[10%]">
@@ -99,7 +100,7 @@ export default function page() {
               <ServicesCard
                 rightSideCard={true}
                 title="Holistic"
-                description="The best apps are the ones that prioritize the user experience. From sleek interfaces to seamless navigation, we design apps using React Native and Firebase to ensure users keep coming back for more."
+                description="CSI Robins embraces a holistic educational approach, enriching traditional academics with music, arts, physical activities, and social learning. This broad-based curriculum supports all facets of a child's development."
               />
             </div>
           </div>
@@ -107,7 +108,7 @@ export default function page() {
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] justify-end h-auto  flex">
               <ServicesCard
                 title="Focused on care and nature"
-                description="With our team of expert developers at your side, you can rest assured that your online presence is in capable hands. Whether you need a custom website, a robust web application, or anything in between, we've got you covered."
+                description="Care and interaction with nature are fundamental to our learning environment. Children at CSI Robins experience daily engagement with natural settings, fostering a deep connection with the environment and emphasizing eco-conscious values."
               />
             </div>
             <div className="flex flex-col items-center w-[15%] xl:w-[15%] 2xl:w-[10%]">
@@ -127,7 +128,7 @@ export default function page() {
               <ServicesCard
                 rightSideCard={true}
                 title="Play And Project Based"
-                description="The journey doesn't end once your digital product is launched. Continuously operational software is required to ensure smooth business processes. Our team stays on top of updates, bug fixes, and technical support."
+                description="Our curriculum emphasizes play and project-based learning, encouraging creativity and practical problem solving. Children learn through hands-on activities and collaborative projects, boosting their communication skills and enthusiasm for learning."
               />
             </div>
           </div>

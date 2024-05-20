@@ -137,7 +137,7 @@ export default function page() {
           formSelected === "teacher" ? "flex" : "hidden"
         } transition-opacity duration-500 ease-in-out `}
       >
-        <div className="relative md:h-auto w-[calc(80vw)]">
+        <div className="relative md:h-auto w-[calc(90vw)] md:w-[calc(50vw)]">
           <Image
             src={"/parent_form.png"}
             width={1500}
@@ -207,7 +207,7 @@ export default function page() {
           formSelected === "parent" ? "flex" : "hidden"
         } transition-opacity duration-500 ease-in-out relative`}
       >
-        <div className="relative md:h-auto w-[calc(80vw)]">
+        <div className="relative md:h-auto w-[calc(90vw)] md:w-[calc(50vw)]">
           <Image
             src={"/teacher_form.png"}
             width={1500}
