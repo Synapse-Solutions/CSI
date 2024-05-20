@@ -15,12 +15,12 @@ export default function ServicesCard({
   return (
     <div
       data-aos={!rightSideCard ? "fade-right" : "fade-left"}
-      className=" w-[calc(90vw)] md:w-[calc(40vw)] xl:w-[calc(40vw)] 2xl:w-[calc(38vw)] 2xl:px-10 py-10 relative xl:h-[calc(52vh)] 2xl:h-[calc(30vh)] text-center"
+      className=" w-[calc(90vw)] md:w-[calc(40vw)] xl:w-[calc(40vw)] 2xl:w-[calc(38vw)] 2xl:px-10 pb-10 relative xl:h-[calc(52vh)] 2xl:h-[calc(30vh)] text-center"
     >
       <h1 className="text-[26px] 2xl:text-[32px] font-bold text-[#355496]">
         {title}
       </h1>
-      <p className="text-[18px] 2xl:text-[22px] mt-7">{description}</p>
+      <p className=" mt-7">{description}</p>
     </div>
   );
 }
