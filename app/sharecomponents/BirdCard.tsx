@@ -4,6 +4,7 @@ import React from "react";
 interface Props {
   image: string;
   title: string;
+  link: string;
 }
 export default function BirdCard(props: Props) {
   return (
@@ -23,7 +24,7 @@ export default function BirdCard(props: Props) {
         Pariatur, nulla!
       </p>
       <div className="w-full text-end mt-3 flex justify-end">
-        <Link href="/robins">
+        <Link href={props.link}>
           <p className="bg-white text-black rounded-[30px] px-2 hover:bg-[#dbd5d5] cursor-pointer text-[12px] hover:scale-105">
             Read more
           </p>

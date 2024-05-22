@@ -78,7 +78,7 @@ export default function Home() {
                   activeHoverIndex === 1 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title="CSI Eagles" image="vector_2" />
+                <BirdCard title="CSI Eagles" image="vector_2" link="/eagles" />
                 {/* <Link href={"/robins"}>
                   <Image
                     src={"/Frame-2.png"}
@@ -112,7 +112,7 @@ export default function Home() {
                   activeHoverIndex === 2 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title="CSI Larks" image="frame_4x" />
+                <BirdCard title="CSI Larks" image="frame_4x" link="/larks" />
                 {/* <Link href={"/robins"}>
                   <Image
                     src={"/Frame.png"}
@@ -146,7 +146,11 @@ export default function Home() {
                   activeHoverIndex === 3 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title="CSI Sparrows" image="vector_3" />
+                <BirdCard
+                  title="CSI Sparrows"
+                  image="vector_3"
+                  link="/sparrows"
+                />
                 {/* <Link href={"/robins"}>
                   <Image
                     src={"/Frame-1.png"}
@@ -181,7 +185,7 @@ export default function Home() {
                   activeHoverIndex === 4 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title=" CSI Robins" image="vector_4" />
+                <BirdCard title=" CSI Robins" image="vector_4" link="/robins" />
                 {/* <Link href={"/robins"}>
                   <Image
                     src={"/frame_93.webp"}
