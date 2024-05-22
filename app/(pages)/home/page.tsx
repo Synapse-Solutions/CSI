@@ -92,13 +92,15 @@ export default function Home() {
               <h1 className="absolute top-0 -left-5 xl:-left-[60px]  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Eagles
               </h1>
-              <Image
-                src={"/02.webp"}
-                height={150}
-                width={150}
-                className="h-[50px] xl:h-[150px] w-auto object-contain cursor-pointer"
-                alt="02"
-              />
+              <Link href={"/eagles"}>
+                <Image
+                  src={"/02.webp"}
+                  height={150}
+                  width={150}
+                  className="h-[50px] xl:h-[150px] w-auto object-contain cursor-pointer"
+                  alt="02"
+                />
+              </Link>
             </div>
           </div>
           <div className="absolute top-[25%] xl:top-[28%] 2xl:top-[33%] left-[43%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
@@ -126,13 +128,15 @@ export default function Home() {
               <h1 className="absolute top-0 -left-[30px]  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Larks
               </h1>
-              <Image
-                src={"/01.webp"}
-                height={120}
-                width={120}
-                className="h-[50px] xl:h-[120px] w-auto object-contain cursor-pointer"
-                alt="02"
-              />
+              <Link href={"/larks"}>
+                <Image
+                  src={"/01.webp"}
+                  height={120}
+                  width={120}
+                  className="h-[50px] xl:h-[120px] w-auto object-contain cursor-pointer"
+                  alt="02"
+                />
+              </Link>
             </div>
           </div>
           <div className="absolute top-[45%] xl:top-[55%] 2xl:top-[60%] h-[100px] w-[150px]  left-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
@@ -161,14 +165,15 @@ export default function Home() {
                   />
                 </Link> */}
               </div>
-
-              <Image
-                src={"/04.webp"}
-                height={100}
-                width={100}
-                className="h-[50px] xl:h-[100px] w-auto object-contain cursor-pointer"
-                alt="02"
-              />
+              <Link href={"/sparrows"}>
+                <Image
+                  src={"/04.webp"}
+                  height={100}
+                  width={100}
+                  className="h-[50px] xl:h-[100px] w-auto object-contain cursor-pointer"
+                  alt="02"
+                />
+              </Link>
               <h1 className="  text-black font-bold text-[12px] xl:text-[17px]">
                 CSI Sparrows
               </h1>
@@ -199,13 +204,15 @@ export default function Home() {
               <h1 className="  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Robins
               </h1>
-              <Image
-                src={"/03.webp"}
-                height={80}
-                width={80}
-                className="h-[50px] xl:h-[80px] w-auto object-contain cursor-pointer"
-                alt="02"
-              />
+              <Link href={"/robins"}>
+                <Image
+                  src={"/03.webp"}
+                  height={80}
+                  width={80}
+                  className="h-[50px] xl:h-[80px] w-auto object-contain cursor-pointer"
+                  alt="02"
+                />
+              </Link>
             </div>
           </div>
         </div>
