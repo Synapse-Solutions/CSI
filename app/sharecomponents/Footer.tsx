@@ -17,12 +17,10 @@ export default function Footer() {
       className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative"
     >
       <div className="w-screen xl:flex z-10 absolute xl:-top-[230px] 2xl:-top-[320px] left-0 hidden">
-        <Image
-          src={"/Animation003.GIF"}
-          height={1500}
-          width={1500}
+        <img
+          src="/Animation003.GIF"
           alt="tree"
-          className="w-full h-auto object-contain"
+          style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
         />
       </div>
 
