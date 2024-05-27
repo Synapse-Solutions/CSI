@@ -18,7 +18,7 @@ export default function Footer() {
     >
       <div className="w-screen xl:flex z-10 absolute xl:-top-[230px] 2xl:-top-[320px] left-0 hidden">
         <img
-          src="/Animation003.GIF"
+          src="/Animation003.gif"
           alt="tree"
           style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
         />
