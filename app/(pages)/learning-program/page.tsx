@@ -148,12 +148,20 @@ export default function page() {
               these roles include:
             </p>
           </div>
-            <img
+          {/* <img
               src="/ANIMATION2.GIF"
               alt="image"
               style={{ width: '100%', height: 'auto', objectFit: 'contain', marginTop: '5rem', marginBottom: '5rem' }}
               className="xl:my-0"
-            />
+            /> */}
+          <Image
+            src={"/ANIMATION2.GIF"}
+            width={1500}
+            height={1500}
+            className="w-full h-auto object-contain"
+            unoptimized={true}
+            alt="animation"
+          />
         </div>
         <div className="px-[10%] xl:hidden">
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
@@ -201,12 +209,18 @@ export default function page() {
               importance of well being and mindfulness. activities offered are:
             </p>
           </div>
-            <img
-              src="/Animation002.GIF"
-              alt="image"
-              style={{ width: '100%', height: 'auto', objectFit: 'contain', marginTop: '2.5rem', marginBottom: '2.5rem' }}
-              className="xl:my-0"
-            />    
+          <img
+            src="/Animation002.GIF"
+            alt="image"
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "contain",
+              marginTop: "2.5rem",
+              marginBottom: "2.5rem",
+            }}
+            className="xl:my-0"
+          />
         </div>
         <div className="xl:hidden px-[10%]">
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
