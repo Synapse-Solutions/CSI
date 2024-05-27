@@ -155,7 +155,7 @@ export default function page() {
               className="xl:my-0"
             /> */}
           <Image
-            src={"/ANIMATION2.GIF"}
+            src={"/ANIMATION2.gif"}
             width={1500}
             height={1500}
             className="w-full h-auto object-contain"
@@ -210,7 +210,7 @@ export default function page() {
             </p>
           </div>
           <img
-            src="/Animation002.GIF"
+            src="/Animation002.gif"
             alt="image"
             style={{
               width: "100%",
