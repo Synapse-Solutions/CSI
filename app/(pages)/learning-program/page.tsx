@@ -142,7 +142,7 @@ export default function page() {
               The CSI Take Flight Program
             </h1>
             <p className="mt-10 text-[18px] 2xl:text-[22px]">
-              the take flight program offers CSI Robins the opportunity to
+              The take flight program offers CSI Robins the opportunity to
               engage in multiple projects based roles all designed to improve
               their cognition, social and emotional intelligence and confidence.
               these roles include:
