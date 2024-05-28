@@ -5,7 +5,10 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <div className="image-wrap w-screen flex items-center justify-center h-[calc(50vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
-      <img src="/home_hero.png" className="animate_img" />
+      <img
+        src="/home_hero.png"
+        className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
+      />
       <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center">
         <div className="flex flex-col">
           <h1 className="text-[#028676] text-[25px] xl:text-[45px]">
