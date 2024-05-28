@@ -115,7 +115,7 @@ export default function page() {
           <h1 className="text-[25px] text-center 2xl:text-[35px] font-bold">
             The CSI Extended Learning Program
           </h1>
-          <p className="text-center mt-5 text-[18px] xl:text-[22px]">
+          <p className="text-center mt-5 text-[18px] xl:text-[18px]">
             At CSI, learning takes place both inside & Outside the classroom.
             Our extended learning program makes Sure that our students learn
             through play, projects, co-curriculars and athletics.
@@ -129,7 +129,7 @@ export default function page() {
               <h1 className="text-[25px] text-center 2xl:text-[35px] font-bold">
                 The CSI Extended Learning Program
               </h1>
-              <p className="text-center mt-5 text-[18px] 2xl:text-[22px]">
+              <p className="text-center mt-5 text-[18px] 2xl:text-[18px]">
                 At CSI, learning takes place both inside & Outside the
                 classroom. Our extended learning program makes Sure that our
                 students learn through play, projects, co-curriculars and
@@ -141,7 +141,7 @@ export default function page() {
             <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
               The CSI Take Flight Program
             </h1>
-            <p className="mt-10 text-[18px] 2xl:text-[22px]">
+            <p className="mt-10 text-[18px] 2xl:text-[18px]">
               The take flight program offers CSI Robins the opportunity to
               engage in multiple projects based roles all designed to improve
               their cognition, social and emotional intelligence and confidence.
@@ -167,8 +167,8 @@ export default function page() {
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Take Flight Program
           </h1>
-          <p className="mt-10 text-[18px] 2xl:text-[22px]">
-            the take flight program offers CSI Robins the opportunity to engage
+          <p className="mt-10 text-[18px] 2xl:text-[18px]">
+            The take flight program offers CSI Robins the opportunity to engage
             in multiple projects based roles all designed to improve their
             cognition, social and emotional intelligence and confidence. these
             roles include:
@@ -202,7 +202,7 @@ export default function page() {
             <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
               The CSI Co-Curricular Program
             </h1>
-            <p className="mt-10 text-[18px] 2xl:text-[22px]">
+            <p className="mt-10 text-[18px] 2xl:text-[18px]">
               Our Extensive co curricular program builds upon our take flight
               program and allows students to make further gains through project
               and play based learning. our program also centers around the
@@ -226,7 +226,7 @@ export default function page() {
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Co-Curricular Program
           </h1>
-          <p className="mt-10 text-[18px] 2xl:text-[22px]">
+          <p className="mt-10 text-[18px] 2xl:text-[18px]">
             Our Extensive co curricular program builds upon our take flight
             program and allows students to make further gains through project
             and play based learning. our program also centers around the
@@ -264,8 +264,8 @@ export default function page() {
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Take Flight Program
           </h1>
-          <p className="mt-10 text-[18px] 2xl:text-[22px]">
-            the take flight program offers CSI Robins the opportunity to engage
+          <p className="mt-10 text-[18px] 2xl:text-[18px]">
+            The take flight program offers CSI Robins the opportunity to engage
             in multiple projects based roles all designed to improve their
             cognition, social and emotional intelligence and confidence. these
             roles include:
