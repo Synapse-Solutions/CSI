@@ -92,7 +92,7 @@ export default function SwiperCompoenent() {
           opacity: isHovered ? 1 : 0,
           transition: "opacity 1s ease",
         }}
-        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-10 z-10 cursor-pointer"
+        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-[-15px] z-10 cursor-pointer"
       >
         <Image
           src={"/left_arr.webp"}
