@@ -92,7 +92,7 @@ export default function SwiperCompoenent() {
           opacity: isHovered ? 1 : 0,
           transition: "opacity 1s ease",
         }}
-        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-10 z-10 cursor-pointer"
+        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-[-15px] z-10 cursor-pointer"
       >
         <Image
           src={"/left_arr.webp"}
@@ -165,14 +165,19 @@ export default function SwiperCompoenent() {
                   </p>
                 </div>
               ) : (
-                <div className="shadow-md bg-white rounded mr-[50px] h-[90%]">
-                  <div className="w-full max-h-[160px] 2xl:max-h-[260px] overflow-hidden mt-10 2xl:mt-20">
+                <div
+                  style={{
+                    boxShadow: "0 0 5px 0px #CCC",
+                  }}
+                  className=" bg-white rounded mr-[50px] h-[90%]"
+                >
+                  <div className="w-full h-[210px] max-h-[280px] mt-10 2xl:mt-20">
                     <Image
                       alt="image"
                       src={item.image}
                       height={500}
                       width={500}
-                      className="w-full h-full object-contain  hover:scale-125 duration-1000 ease-in-out "
+                      className="w-auto  h-[160px] bg-red-400 max-h-[230px] object-contain  hover:scale-125 duration-1000 ease-in-out "
                     />
                   </div>
                   <div className="px-10 mt-5 w-full flex flex-col items-start ">
