@@ -20,11 +20,17 @@ jobs:
    steps:
      - uses: actions/checkout@v2
      - uses: actions/setup-node@v3
-     - uses: amondnet/vercel-action@v25
        with:
          node-version: '20'
          registry-url: https://registry.npmjs.org/
 
+     - uses: amondnet/vercel-action@v25
+      with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          vercel-args: '--prod' #Optional
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
+       
      - name: "Deploy application"
        run: |
          prodRun=""
