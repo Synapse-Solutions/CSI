@@ -45,9 +45,9 @@ export default function Home() {
         <div className="w-full xl:w-[30%] px-[5%] pt-[10%] text-black">
           <h1 className="font-bold text-[40px] ">The CSI Way</h1>
           <p>
-            CSi’s Approach takes the best from international best practics,
+            {/* CSi’s Approach takes the best from international best practics,
             local expertise & the latest in research to deliver an education
-            best suited for 21st century.
+            best suited for 21st century. */}
           </p>
         </div>
         <div
