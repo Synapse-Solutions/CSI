@@ -8,19 +8,19 @@ export default function Footer() {
   const pathname = usePathname();
   return (
     <div
-      style={{
-        backgroundImage: "url(/footer_learning.webp)",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
-      className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative"
+      // style={{
+      //   backgroundImage: "url(/footer_learning.webp)",
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundPosition: "center",
+      // }}
+      className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative bg-[#355496]"
     >
-      <div className="w-screen xl:flex z-10 absolute xl:-top-[230px] 2xl:-top-[320px] left-0 hidden">
+      <div className="w-screen flex z-10 absolute bottom-[90%] left-0 ">
         <img
           src="/Animation003.gif"
           alt="tree"
-          style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+          style={{ width: "100%", height: "auto", objectFit: "contain" }}
         />
       </div>
 

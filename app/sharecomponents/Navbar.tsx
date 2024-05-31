@@ -163,7 +163,7 @@ export default function Navbar() {
               alt="logo"
               width={200}
               height={200}
-              className="cursor-pointer hover:animate-pulse h-[80px] w-auto object-contain"
+              className="cursor-pointer hover:animate-pulse h-[60px] w-auto object-contain"
             />
           </Link>
           <Image
