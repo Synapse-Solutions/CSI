@@ -148,16 +148,42 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="lg:hidden fixed top-[calc(8vh)] right-5 z-30">
-        <Image
-          src={"/options.webp"}
-          alt="logo"
-          width={50}
-          height={30}
-          onClick={() => setIsHambergerShow(true)}
-          className="cursor-pointer hover:animate-pulse h-[30px] w-auto object-contain"
-          style={{ filter: pathname === "robins" ? "invert(1)" : "" }}
-        />
+      <div className="lg:hidden fixed top-0 right-0 z-30 w-full overflow-hidden">
+        <div
+          style={{
+            backgroundColor: isHeaderShow ? "white" : "transparent",
+            transition: "background-color 1s ease",
+            borderBottom: isHeaderShow ? "1px solid grey" : "",
+          }}
+          className="py-10 h-[130px] flex justify-between items-center px-10"
+        >
+          <Link href={"/"}>
+            <Image
+              src={"/blue_logo.webp"}
+              alt="logo"
+              width={200}
+              height={200}
+              className="cursor-pointer hover:animate-pulse h-[80px] w-auto object-contain"
+            />
+          </Link>
+          <Image
+            src={"/options.webp"}
+            alt="logo"
+            width={50}
+            height={30}
+            onClick={() => setIsHambergerShow(true)}
+            className="cursor-pointer hover:animate-pulse h-[30px] w-auto object-contain"
+            style={{
+              filter: isHeaderShow
+                ? ""
+                : pathname == "/"
+                ? "invert(1)"
+                : pathname === "/admission"
+                ? "invert(1)"
+                : "",
+            }}
+          />
+        </div>
       </div>
       {isHambergerShow && (
         <div
