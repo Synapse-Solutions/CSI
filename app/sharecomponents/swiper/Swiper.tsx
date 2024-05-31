@@ -85,14 +85,14 @@ export default function SwiperCompoenent() {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className=" ml-[50px] xl:ml-0 bg-transparent w-[100%] relative"
+      className=" ml-[25px] xl:ml-0 bg-transparent w-[100%] relative"
     >
       <div
         style={{
           opacity: isHovered ? 1 : 0,
           transition: "opacity 1s ease",
         }}
-        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-[-15px] z-10 cursor-pointer"
+        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-[15px] z-10 cursor-pointer"
       >
         <Image
           src={"/left_arr.webp"}
@@ -107,7 +107,7 @@ export default function SwiperCompoenent() {
           opacity: isHovered ? 1 : 0,
           transition: "opacity 1s ease",
         }}
-        className="bg-[#EEEEEE] hover:bg-[#028676] h-[50px] w-[50px] rounded-full flex items-center justify-center right_arrow absolute top-[45%] right-10 z-10 cursor-pointer"
+        className="bg-[#EEEEEE] hover:bg-[#028676] h-[50px] w-[50px] rounded-full flex items-center justify-center right_arrow absolute top-[45%] right-20 z-10 cursor-pointer"
       >
         <Image
           src={"/left_arr.webp"}
@@ -167,17 +167,21 @@ export default function SwiperCompoenent() {
               ) : (
                 <div
                   style={{
-                    boxShadow: "0 0 5px 0px #CCC",
+                    boxShadow: "0 0 5px 1px #CCC",
                   }}
-                  className=" bg-white rounded mr-[50px] h-[90%]"
+                  className=" bg-white rounded mr-[50px] h-[90%] "
                 >
-                  <div className="w-full h-[210px] max-h-[280px] mt-10 2xl:mt-20">
+                  <div className="w-full h-[160px] 2xl:h-[260px] overflow-hidden mt-10 2xl:mt-20 flex items-center">
                     <Image
                       alt="image"
                       src={item.image}
                       height={500}
                       width={500}
-                      className="w-auto  h-[160px] bg-red-400 max-h-[230px] object-contain  hover:scale-125 duration-1000 ease-in-out "
+                      objectFit="contain"
+                      style={{
+                        objectFit: "contain",
+                      }}
+                      className="w-[80%] h-[140px] 2xl:h-[240px] object-contain  hover:scale-125 duration-1000 ease-in-out "
                     />
                   </div>
                   <div className="px-10 mt-5 w-full flex flex-col items-start ">
