@@ -16,7 +16,7 @@ export default function page() {
   return (
     <div className="text-black overflow-hidden">
       <Navbar />
-      <div className="h-[calc(70vh)] px-[40px] flex flex-col xl:flex-row w-screen items-center justify-center gap-20 mt-20 2xl:mt-0">
+      <div className="md:h-[calc(70vh)] px-[40px] mb-[50px] md:mb-0 flex flex-col xl:flex-row w-screen items-center justify-center gap-20 mt-[150px] xl:mt-20 2xl:mt-0">
         <Image
           src={"/04.webp"}
           height={200}
@@ -157,7 +157,7 @@ export default function page() {
           personal growth go hand in hand.
         </p>
       </div>
-      <div className="mt-[10%] flex items-end">
+      <div className="mt-[20%] hidden md:flex  items-end">
         <Image
           src={"/tree_1.webp"}
           height={500}

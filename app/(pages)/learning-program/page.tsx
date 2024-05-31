@@ -298,7 +298,7 @@ export default function page() {
         ))}
       </div>
 
-      <div className="xl:mt-[400px]">
+      <div className="mt-[150px] xl:mt-[400px]">
         <Footer />
       </div>
     </div>

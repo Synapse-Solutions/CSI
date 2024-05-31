@@ -144,7 +144,7 @@ export default function page() {
             alt="birds"
             className="h-full w-full object-contain hidden md:block"
           />
-          <div className="md:absolute border border-[#323692] rounded-xl md:border-0 pb-20 relative top-0 flex items-center justify-center h-full w-full left-0 px-[20%] pt-[20%]">
+          <div className="md:absolute border border-[#323692] rounded-xl md:border-0 pb-20 relative top-0 flex items-center justify-center h-full w-full left-0 px-10 md:px-[20%] pt-[20%]">
             <div className="w-full ">
               <h1 className="text-[40px] text-center">
                 For <span className="font-bold">Parents</span>
@@ -214,7 +214,7 @@ export default function page() {
             alt="birds"
             className="h-full w-full object-contain hidden md:block"
           />
-          <div className="md:absolute border border-[#028676] rounded-xl md:border-0 pb-20 relative top-0 flex items-center justify-center h-full w-full left-0 px-[20%] pt-[20%]">
+          <div className="md:absolute border border-[#028676] rounded-xl md:border-0 pb-20 relative top-0 flex items-center justify-center h-full w-full left-0 px-10 md:px-[20%] pt-[20%]">
             <div className="w-full ">
               <h1 className="text-[40px] text-center">
                 For <span className="font-bold">Teachers</span>
