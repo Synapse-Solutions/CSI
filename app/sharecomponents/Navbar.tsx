@@ -85,10 +85,12 @@ export default function Navbar() {
             <Link href={"/learning-program"}>
               <h1 className="hover:text-[#028676] cursor-pointer">Programs</h1>
             </Link>
-            <h1 className="hover:text-[#028676] cursor-pointer">
-              See The campus
-            </h1>
-            <Link href={"/admission"}>
+            <Link href={"/coming-soon"}>
+              <h1 className="hover:text-[#028676] cursor-pointer">
+                See The campus
+              </h1>
+            </Link>
+            <Link href={"/coming-soon"}>
               <h1 className="hover:text-[#028676] cursor-pointer">
                 Admissions
               </h1>
@@ -111,14 +113,18 @@ export default function Navbar() {
           </div>
           <div className="w-[40%] 2xl:w-[30%]  flex justify-between">
             <div className="flex-1">
-              <h1 className="hover:text-[#028676] cursor-pointer">
-                Clarity By csi
-              </h1>
+              <Link href={"/coming-soon"}>
+                <h1 className="hover:text-[#028676] cursor-pointer">
+                  Clarity By csi
+                </h1>
+              </Link>
             </div>
             <div className="flex-1">
-              <h1 className="hover:text-[#028676] cursor-pointer">
-                inquire today
-              </h1>
+              <Link href={"/coming-soon"}>
+                <h1 className="hover:text-[#028676] cursor-pointer">
+                  inquire today
+                </h1>
+              </Link>
             </div>
             <div className="flex gap-10">
               <Image
@@ -155,15 +161,15 @@ export default function Navbar() {
             transition: "background-color 1s ease",
             borderBottom: isHeaderShow ? "1px solid grey" : "",
           }}
-          className="py-10 h-[130px] flex justify-between items-center px-10"
+          className="py-5 h-[120px] flex justify-between items-center px-7"
         >
           <Link href={"/"}>
             <Image
-              src={"/blue_logo.webp"}
+              src={"/logo_blue.webp"}
               alt="logo"
               width={200}
               height={200}
-              className="cursor-pointer hover:animate-pulse h-[60px] w-auto object-contain"
+              className="cursor-pointer hover:animate-pulse h-[50px] w-auto object-contain"
             />
           </Link>
           <Image

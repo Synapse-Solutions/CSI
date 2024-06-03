@@ -7,15 +7,7 @@ import React from "react";
 export default function Footer() {
   const pathname = usePathname();
   return (
-    <div
-      // style={{
-      //   backgroundImage: "url(/footer_learning.webp)",
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundPosition: "center",
-      // }}
-      className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative bg-[#355496]"
-    >
+    <div className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative bg-[#355496]">
       <div className="w-screen flex z-10 absolute bottom-[90%] left-0 ">
         <img
           src="/Animation003.gif"
@@ -24,7 +16,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="w-full xl:w-[50%] pt-[50px] xl:pt-0 z-20 ">
+      <div className="w-full xl:w-[50%] pt-[50px] md:pt-0 z-20 ">
         <Image
           src={"/logo.webp"}
           height={300}

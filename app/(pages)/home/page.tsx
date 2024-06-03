@@ -78,18 +78,15 @@ export default function Home() {
                   activeHoverIndex === 1 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title="CSI Eagles" image="vector_2" link="/eagles" />
-                {/* <Link href={"/robins"}>
-                  <Image
-                    src={"/Frame-2.png"}
-                    height={500}
-                    width={500}
-                    className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
-                    alt="02"
-                  />
-                </Link> */}
+                <BirdCard
+                  title="CSI Eagles"
+                  bgColor="00889C"
+                  description="CSI Eagles is dedicated to preparing students for higher education and beyond with a robust O and A level program that builds strong academic foundations and key life skills."
+                  image="vector_2"
+                  link="/eagles"
+                />
               </div>
-              <h1 className="absolute top-0 -left-5 xl:-left-[60px]  text-black font-bold text-[12px] xl:text-[20px]">
+              <h1 className="absolute -top-[20px] xl:top-0 -left-5 xl:-left-[60px]  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Eagles
               </h1>
               <Link href={"/eagles"}>
@@ -114,16 +111,13 @@ export default function Home() {
                   activeHoverIndex === 2 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title="CSI Larks" image="frame_4x" link="/larks" />
-                {/* <Link href={"/robins"}>
-                  <Image
-                    src={"/Frame.png"}
-                    height={500}
-                    width={500}
-                    className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
-                    alt="02"
-                  />
-                </Link> */}
+                <BirdCard
+                  title="CSI Larks"
+                  bgColor="009C93"
+                  description="CSI Larks is our middle school program, blending international best practices with contextual learning that respects students’ backgrounds and promotes personal and academic growth."
+                  image="frame_4x"
+                  link="/larks"
+                />
               </div>
               <h1 className="absolute top-0 -left-[30px]  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Larks
@@ -152,18 +146,11 @@ export default function Home() {
               >
                 <BirdCard
                   title="CSI Sparrows"
+                  bgColor="0086B7"
                   image="vector_3"
                   link="/sparrows"
+                  description="CSI Sparrows is our primary program tailored by Cambridge specialists for Pakistani students, building strong academic foundations and fostering a love for learning."
                 />
-                {/* <Link href={"/robins"}>
-                  <Image
-                    src={"/Frame-1.png"}
-                    height={500}
-                    width={500}
-                    className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
-                    alt="02"
-                  />
-                </Link> */}
               </div>
               <Link href={"/sparrows"}>
                 <Image
@@ -190,16 +177,13 @@ export default function Home() {
                   activeHoverIndex === 4 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard title=" CSI Robins" image="vector_4" link="/robins" />
-                {/* <Link href={"/robins"}>
-                  <Image
-                    src={"/frame_93.webp"}
-                    height={500}
-                    width={500}
-                    className="cursor-pointer h-[150px] xl:h-[230px] w-auto xl:w-[400px] object-contain"
-                    alt="02"
-                  />
-                </Link> */}
+                <BirdCard
+                  title=" CSI Robins"
+                  bgColor="00889C"
+                  description="CSI Robins is our early years program, crafted by Trehaus Singapore. It ensures a gentle, holistic development for your child, guided by best practices."
+                  image="vector_4"
+                  link="/robins"
+                />
               </div>
               <h1 className="  text-black font-bold text-[12px] xl:text-[20px]">
                 CSI Robins
