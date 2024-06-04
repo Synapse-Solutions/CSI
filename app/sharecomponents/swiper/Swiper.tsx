@@ -73,6 +73,7 @@ export default function SwiperCompoenent() {
   const [selectedIndex, setSelectedIndex] = useState<any>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [fadeAnimation, setFadeAnimation] = useState("");
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -136,12 +137,13 @@ export default function SwiperCompoenent() {
         {array.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="w-[350px] 2xl:w-[450px] bg-transparent"
+            className={`w-[350px] 2xl:w-[450px] bg-transparent `}
+            data-aos={fadeAnimation}
           >
             <>
               {selectedIndex === index ? (
                 <div
-                  className={`bg-[#028676] h-[100%] mt-[40px] 2xl:mt-[80px]  w-[90%] rounded-md p-3 transition-all duration-1000 ease-in-out transform `}
+                  className={`bg-[#028676] h-[100%] mt-[40px] 2xl:mt-[80px]  w-[90%] rounded-md p-3 duration-500 `}
                 >
                   <div className="h-[50px] w-full flex justify-end px-5">
                     <p
@@ -191,7 +193,10 @@ export default function SwiperCompoenent() {
                       ))}
                     </div>
                     <button
-                      onClick={() => setSelectedIndex(index)}
+                      onClick={() => {
+                        setSelectedIndex(index);
+                        setFadeAnimation;
+                      }}
                       className="bg-[#028676] hover:bg-[#25524c] text-[14px] 2xl:text-[20px] rounded-full text-white px-10 py-3 mb-5 2xl:mb-10"
                     >
                       See More
