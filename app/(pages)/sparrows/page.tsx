@@ -45,12 +45,12 @@ export default function page() {
           <div className="w-[100%] lg:hidden flex flex-col items-center">
             <ServicesCard
               title="Customized Curriculum"
-              shortDesc=" Education That Fits Every Child"
+              shortDesc="Education That Fits Every Child"
               description="Our curriculum is custom-designed to address the specific learning styles and cultural contexts of our students. By focusing on individual strengths and challenges, we ensure a more personalized and effective education."
             />
             <ServicesCard
               title="Engaging Learning Environment"
-              shortDesc=" Active and Fun Learning"
+              shortDesc="Active and Fun Learning"
               description="Learning at CSI Sparrows is dynamic and interactive. We use a variety of teaching methods including games, storytelling, and digital media to keep students engaged and excited about learning."
             />
             <ServicesCard
@@ -80,7 +80,7 @@ export default function page() {
               <ServicesCard
                 rightSideCard={true}
                 title="Customized Curriculum"
-                shortDesc=" Education That Fits Every Child"
+                shortDesc="Education That Fits Every Child"
                 description="Our curriculum is custom-designed to address the specific learning styles and cultural contexts of our students. By focusing on individual strengths and challenges, we ensure a more personalized and effective education."
               />
             </div>
@@ -89,7 +89,7 @@ export default function page() {
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] justify-end h-auto  flex">
               <ServicesCard
                 title="Engaging Learning Environment"
-                shortDesc=" Active and Fun Learning"
+                shortDesc="Active and Fun Learning"
                 description="Learning at CSI Sparrows is dynamic and interactive. We use a variety of teaching methods including games, storytelling, and digital media to keep students engaged and excited about learning."
               />
             </div>

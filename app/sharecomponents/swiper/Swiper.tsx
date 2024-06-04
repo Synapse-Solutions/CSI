@@ -141,12 +141,7 @@ export default function SwiperCompoenent() {
             <>
               {selectedIndex === index ? (
                 <div
-                  style={{}}
-                  className={`bg-[#028676] h-[100%]  w-[90%] rounded-md p-3 transition-all duration-1000 ease-in-out transform ${
-                    selectedIndex !== null
-                      ? "opacity-100 scale-100"
-                      : "opacity-0 scale-95"
-                  }`}
+                  className={`bg-[#028676] h-[100%] mt-[40px] 2xl:mt-[80px]  w-[90%] rounded-md p-3 transition-all duration-1000 ease-in-out transform `}
                 >
                   <div className="h-[50px] w-full flex justify-end px-5">
                     <p
@@ -157,7 +152,7 @@ export default function SwiperCompoenent() {
                     </p>
                   </div>
 
-                  <p className="text-white mt-5 2xl:mt-10 px-5 2xl:px-10 font-bold text-[20px] text-start">
+                  <p className="text-white mt-5 2xl:mt-10 px-5 2xl:px-10 font-bold text-[15px] 2xl:text-[20px] text-start">
                     {item.description.split(":")[0] + ":"}
                   </p>
                   <p className="text-white mt-2 px-5 2xl:px-10 text-[13px] 2xl:text-[17px] text-start">

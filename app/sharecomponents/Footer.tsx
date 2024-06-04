@@ -29,11 +29,15 @@ export default function Footer() {
           <Link href={"/learning-program"}>
             <p className="hover:text-[#028676]">Programs</p>
           </Link>
-          <p className="hover:text-[#028676]">See the Campus</p>
-          <Link href={"/learning-program"}>
+          <Link href={"/coming-soon"}>
+            <p className="hover:text-[#028676]">See the Campus</p>
+          </Link>
+          <Link href={"/coming-soon"}>
             <p className="hover:text-[#028676]">Admissions</p>
           </Link>
-          <p className="hover:text-[#028676]">Clarity by CSI</p>
+          <Link href={"/coming-soon"}>
+            <p className="hover:text-[#028676]">Clarity by CSI</p>
+          </Link>
         </div>
         <h1 className="font-bold text-[22px] mt-5">Follow Us</h1>
         <div className="flex gap-5 mt-5">

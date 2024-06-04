@@ -43,12 +43,12 @@ export default function page() {
           <div className="w-[100%] lg:hidden flex flex-col items-center">
             <ServicesCard
               title="Academically Rigorous"
-              shortDesc=" Rigor and Excellence in Education"
+              shortDesc="Rigor and Excellence in Education"
               description="Experience a curriculum designed to challenge and inspire, with a focus on deep understanding and mastery of subjects critical for academic and professional success."
             />
             <ServicesCard
               title="Skill Development"
-              shortDesc=" Beyond the Books: Skills for the Future"
+              shortDesc="Beyond the Books: Skills for the Future"
               description="Develop critical thinking, problem-solving, and communication skills through our innovative teaching approaches, ensuring you are ready for both academic pursuits and real-world challenges."
             />
             <ServicesCard
@@ -78,7 +78,7 @@ export default function page() {
               <ServicesCard
                 rightSideCard={true}
                 title="Academically Rigorous"
-                shortDesc=" Rigor and Excellence in Education"
+                shortDesc="Rigor and Excellence in Education"
                 description="Experience a curriculum designed to challenge and inspire, with a focus on deep understanding and mastery of subjects critical for academic and professional success."
               />
             </div>
@@ -87,7 +87,7 @@ export default function page() {
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] justify-end h-auto  flex">
               <ServicesCard
                 title="Skill Development"
-                shortDesc=" Beyond the Books: Skills for the Future"
+                shortDesc="Beyond the Books: Skills for the Future"
                 description="Develop critical thinking, problem-solving, and communication skills through our innovative teaching approaches, ensuring you are ready for both academic pursuits and real-world challenges."
               />
             </div>

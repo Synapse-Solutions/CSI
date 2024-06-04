@@ -42,12 +42,12 @@ export default function page() {
           <div className="w-[100%] lg:hidden flex flex-col items-center">
             <ServicesCard
               title="Academically Rigorous"
-              shortDesc=" Excellence in Education"
+              shortDesc="Excellence in Education"
               description="Our curriculum, developed in collaboration with Cambridge, is rigorous and designed to challenge students, setting a robust foundation for their future studies and ensuring they meet international academic standards."
             />
             <ServicesCard
               title="Local and Global Insights"
-              shortDesc=" Learning That Reflects Your World"
+              shortDesc="Learning That Reflects Your World"
               description="We tailor our academic approach to include local relevance in a global framework, ensuring students receive an education that is both globally competitive and locally pertinent."
             />
             <ServicesCard
@@ -62,7 +62,7 @@ export default function page() {
             />
             <ServicesCard
               title="Cultural Competence"
-              shortDesc=" Embracing Diversity"
+              shortDesc="Embracing Diversity"
               description="We emphasize cultural awareness and sensitivity, preparing students to operate successfully in a diverse global society through exposure to various cultures and perspectives."
             />
           </div>
@@ -77,7 +77,7 @@ export default function page() {
               <ServicesCard
                 rightSideCard={true}
                 title="Academically Rigorous"
-                shortDesc=" Excellence in Education"
+                shortDesc="Excellence in Education"
                 description="Our curriculum, developed in collaboration with Cambridge, is rigorous and designed to challenge students, setting a robust foundation for their future studies and ensuring they meet international academic standards."
               />
             </div>
@@ -86,7 +86,7 @@ export default function page() {
             <div className="w-[35%] xl:w-[35%] 2xl:w-[40%] justify-end h-auto  flex">
               <ServicesCard
                 title="Local and Global Insights"
-                shortDesc=" Learning That Reflects Your World"
+                shortDesc="Learning That Reflects Your World"
                 description="We tailor our academic approach to include local relevance in a global framework, ensuring students receive an education that is both globally competitive and locally pertinent."
               />
             </div>

@@ -134,34 +134,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between px-[10%] mt-20">
-        <Image
-          src={"/child.webp"}
-          height={500}
-          width={500}
-          data-aos="zoom-in"
-          alt="child"
-          className="w-[26%] h-auto object-contain"
-        />
-        <Image
-          src={"/child.webp"}
-          height={500}
-          width={500}
-          data-aos="zoom-in"
-          data-aos-delay="500"
-          alt="child"
-          className="w-[26%] h-auto object-contain"
-        />
-        <Image
-          src={"/child.webp"}
-          height={500}
-          width={500}
-          data-aos="zoom-in"
-          data-aos-delay="1000"
-          alt="child"
-          className="w-[26%] h-auto object-contain"
-        />
-      </div>
+
       <div className="mt-[20%] hidden md:flex items-end">
         <Image
           src={"/tree_1.webp"}

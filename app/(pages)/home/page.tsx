@@ -34,13 +34,14 @@ export default function Home() {
       <div className="relative z-10">
         <HeroSection />
       </div>
-      <Image
+      {/* <Image
         src={"/color_bar.webp"}
         height={100}
         width={2000}
         className="h-[50px] w-screen"
         alt="bar"
-      />
+      /> */}
+      <div className="h-[50px] w-full bg-[#355496]"></div>
       <div className="flex flex-col xl:flex-row bg-white overflow-visible relative">
         <div className="w-full xl:w-[30%] px-[5%] pt-[10%] text-black">
           <h1 className="font-bold text-[40px] ">The CSI Way</h1>
@@ -79,6 +80,7 @@ export default function Home() {
                 }`}
               >
                 <BirdCard
+                  onClickCross={() => setActiveHoverIndex(null)}
                   title="CSI Eagles"
                   bgColor="00889C"
                   description="CSI Eagles is dedicated to preparing students for higher education and beyond with a robust O and A level program that builds strong academic foundations and key life skills."
@@ -112,6 +114,7 @@ export default function Home() {
                 }`}
               >
                 <BirdCard
+                  onClickCross={() => setActiveHoverIndex(null)}
                   title="CSI Larks"
                   bgColor="009C93"
                   description="CSI Larks is our middle school program, blending international best practices with contextual learning that respects students’ backgrounds and promotes personal and academic growth."
@@ -145,6 +148,7 @@ export default function Home() {
                 }`}
               >
                 <BirdCard
+                  onClickCross={() => setActiveHoverIndex(null)}
                   title="CSI Sparrows"
                   bgColor="0086B7"
                   image="vector_3"
@@ -178,6 +182,7 @@ export default function Home() {
                 }`}
               >
                 <BirdCard
+                  onClickCross={() => setActiveHoverIndex(null)}
                   title=" CSI Robins"
                   bgColor="00889C"
                   description="CSI Robins is our early years program, crafted by Trehaus Singapore. It ensures a gentle, holistic development for your child, guided by best practices."

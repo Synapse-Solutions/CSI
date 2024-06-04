@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -7,9 +8,9 @@ interface Props {
   link: string;
   bgColor: string;
   description: string;
+  onClickCross: any;
 }
 export default function BirdCard(props: Props) {
-  console.log("PROPS:", props.bgColor);
   return (
     <>
       <div
@@ -19,8 +20,17 @@ export default function BirdCard(props: Props) {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="md:block hidden cursor-pointer h-[180px] xl:h-[230px] w-[calc(88vw)] xl:w-[400px] object-contain p-5 text-white"
+        className="md:block hidden cursor-pointer h-[180px] xl:h-[250px] w-[calc(88vw)] xl:w-[400px] object-contain p-5 text-white relative"
       >
+        <div className="absolute top-7 right-3">
+          <Image
+            onClick={props.onClickCross}
+            src={"/X.png"}
+            height={20}
+            width={20}
+            alt="x"
+          />
+        </div>
         <h1 className="mt-2 text-[13px] md:text-[17px]">{props.title}</h1>
         <p className="text-[10px] md:text-[14px] mt-3">{props.description}</p>
         <div className="w-full text-end mt-3 flex justify-end">

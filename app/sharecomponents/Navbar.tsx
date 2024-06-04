@@ -72,13 +72,17 @@ export default function Navbar() {
       <div
         style={{
           backgroundColor: isHeaderShow ? "white" : "transparent",
-          transition: "background-color 1s ease",
+          transition: `background-color 1s ease${
+            isHeaderShow ? ", border 1s ease" : ""
+          }`,
+          borderBottom: isHeaderShow ? "1px solid gray" : "",
+
           opacity: 1,
           color: color,
         }}
-        className={`hidden lg:flex justify-center fixed top-0 left-0 w-full h-[120px] items-center  uppercase z-50 ${
-          isHeaderShow ? "border-b border-gray-300" : ""
-        }`}
+        className={`hidden lg:flex justify-center fixed top-0 left-0 w-full h-[120px] items-center  uppercase z-50 
+         
+        `}
       >
         <div className="flex w-[80%] items-center justify-between ">
           <div className="w-[40%] 2xl:w-[30%] flex justify-between">
