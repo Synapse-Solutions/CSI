@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import Image from "next/image";
 
-const images = ["/b001.png", "/home_hero_1.webp"];
+const images = ["/b001.png", "/b004.webp"];
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -35,7 +35,7 @@ export default function HeroSection() {
           className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
         />
       )}
-      {currentImageIndex !== 1 && (
+      {currentImageIndex !== 1 ? (
         <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center">
           <div className="flex flex-col items-center">
             <Image
@@ -62,6 +62,16 @@ export default function HeroSection() {
               </button>
             </a>
           </div>
+        </div>
+      ) : (
+        <div className="absolute top-0 left-0 w-full flex h-full ">
+          <Image
+            src={"/sc4.webp"}
+            height={1000}
+            width={1000}
+            alt="sc4"
+            className="h-full w-full"
+          />
         </div>
       )}
     </div>

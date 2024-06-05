@@ -154,10 +154,10 @@ export default function SwiperCompoenent() {
                     </p>
                   </div>
 
-                  <p className="text-white mt-5 2xl:mt-10 px-5 2xl:px-10 font-bold text-[15px] 2xl:text-[20px] text-start">
+                  <p className="text-white px-5 font-bold text-[15px] 2xl:text-[20px] text-start">
                     {item.description.split(":")[0] + ":"}
                   </p>
-                  <p className="text-white mt-2 px-5 2xl:px-10 text-[13px] 2xl:text-[17px] text-start">
+                  <p className="text-white mt-2 px-5  text-[13px] 2xl:text-[17px] text-start">
                     {item.description.split(":")[1]}
                   </p>
                 </div>
@@ -166,7 +166,7 @@ export default function SwiperCompoenent() {
                   style={{
                     boxShadow: "0 0 5px 1px #CCC",
                   }}
-                  className=" bg-white rounded mr-[50px] h-[90%] "
+                  className=" bg-white rounded mr-[50px] max-h-[570px]"
                 >
                   <div className="w-full h-[160px] 2xl:h-[260px] overflow-hidden mt-10 2xl:mt-20 flex items-center">
                     <Image

@@ -8,10 +8,10 @@
 .animate_img {
   width: 100%;
   position: absolute;
-  animation: move 40s ease infinite; /* Animation properties */
-  -ms-animation: move 40s ease infinite; /* Microsoft Edge */
-  -webkit-animation: move 40s ease infinite; /* Safari and Chrome */
-  -moz-animation: move 40s ease infinite; /* Firefox */
+  animation: move 70s ease infinite; /* Animation properties */
+  -ms-animation: move 70s ease infinite; /* Microsoft Edge */
+  -webkit-animation: move 70s ease infinite; /* Safari and Chrome */
+  -moz-animation: move 70s ease infinite; /* Firefox */
 }
 
 @-webkit-keyframes move {
