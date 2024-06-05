@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import Image from "next/image";
 
-const images = ["/b001.png", "/b004.webp"];
+const images = ["/b001.webp", "/b004.webp"];
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -24,7 +24,10 @@ export default function HeroSection() {
           href="https://summerscsi.com/"
           target="_blank"
         >
-          <img
+          <Image
+            height={1500}
+            width={1500}
+            alt="image"
             src={images[currentImageIndex]}
             className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
           />
@@ -65,13 +68,19 @@ export default function HeroSection() {
         </div>
       ) : (
         <div className="absolute top-0 left-0 w-full flex h-full ">
-          <Image
-            src={"/sc4.webp"}
-            height={1000}
-            width={1000}
-            alt="sc4"
+          <a
             className="h-full w-full"
-          />
+            href="https://summerscsi.com/"
+            target="_blank"
+          >
+            <Image
+              src={"/sc4.webp"}
+              height={1000}
+              width={1000}
+              alt="sc4"
+              className="h-full w-full"
+            />
+          </a>
         </div>
       )}
     </div>
