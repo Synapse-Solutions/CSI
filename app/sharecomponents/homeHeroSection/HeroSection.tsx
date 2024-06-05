@@ -17,10 +17,10 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="image-wrap w-screen flex items-center justify-center h-[calc(50vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
+    <div className="image-wrap w-screen flex items-center justify-center h-[calc(60vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
       {currentImageIndex === 1 ? (
         <a
-          className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
+          className="animate_img h-[calc(60vh)] xl:h-[calc(100vh)]"
           href="https://summerscsi.com/"
           target="_blank"
         >
@@ -29,17 +29,17 @@ export default function HeroSection() {
             width={1500}
             alt="image"
             src={images[currentImageIndex]}
-            className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
+            className="animate_img h-[calc(60vh)] xl:h-[calc(100vh)]"
           />
         </a>
       ) : (
         <img
           src={images[currentImageIndex]}
-          className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
+          className="animate_img h-[calc(60vh)] xl:h-[calc(100vh)]"
         />
       )}
       {currentImageIndex !== 1 ? (
-        <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center">
+        <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center mt-[70px] xl:mt-0">
           <div className="flex flex-col items-center">
             <Image
               src={"/icons.png"}
@@ -61,7 +61,7 @@ export default function HeroSection() {
             />
             <a href="https://summerscsi.com/" target="_blank">
               <button className="bg-[#028676] rounded-full px-10 py-3 text-white flex items-center justify-center mt-10">
-                Join Our Summer Camp!
+                Join Our Summer School!
               </button>
             </a>
           </div>

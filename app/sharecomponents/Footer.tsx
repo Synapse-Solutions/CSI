@@ -30,7 +30,7 @@ export default function Footer() {
             <p className="hover:text-[#028676]">Programs</p>
           </Link>
           <Link href={"/coming-soon"}>
-            <p className="hover:text-[#028676]">Summer School</p>
+            <p className="hover:text-[#028676]">See The campus</p>
           </Link>
           <Link href={"/coming-soon"}>
             <p className="hover:text-[#028676]">Admissions</p>
