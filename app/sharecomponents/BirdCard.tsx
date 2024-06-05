@@ -42,7 +42,7 @@ export default function BirdCard(props: Props) {
         </div>
       </div>
       <div
-        className={`md:hidden cursor-pointer h-[180px] xl:h-[230px] rounded-[12px] w-[calc(88vw)] xl:w-[400px] object-contain p-5 text-white bg-[#${props.bgColor}]`}
+        className={`md:hidden cursor-pointer h-[180px] xl:h-[230px] rounded-[12px] w-[calc(80vw)] z-[9999999] xl:w-[400px] object-contain p-5 text-white ${props.bgColor}`}
       >
         <h1 className="mt-2 text-[13px] md:text-[17px]">{props.title}</h1>
         <p className="text-[10px] md:text-[14px] mt-3">{props.description}</p>

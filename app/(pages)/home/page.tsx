@@ -82,7 +82,7 @@ export default function Home() {
                 <BirdCard
                   onClickCross={() => setActiveHoverIndex(null)}
                   title="CSI Eagles"
-                  bgColor="00889C"
+                  bgColor="bg-[#00889C]"
                   description="CSI Eagles is dedicated to preparing students for higher education and beyond with a robust O and A level program that builds strong academic foundations and key life skills."
                   image="vector_2"
                   link="/eagles"
@@ -116,7 +116,7 @@ export default function Home() {
                 <BirdCard
                   onClickCross={() => setActiveHoverIndex(null)}
                   title="CSI Larks"
-                  bgColor="009C93"
+                  bgColor="bg-[#009C93]"
                   description="CSI Larks is our middle school program, blending international best practices with contextual learning that respects students’ backgrounds and promotes personal and academic growth."
                   image="frame_4x"
                   link="/larks"
@@ -150,7 +150,7 @@ export default function Home() {
                 <BirdCard
                   onClickCross={() => setActiveHoverIndex(null)}
                   title="CSI Sparrows"
-                  bgColor="0086B7"
+                  bgColor="bg-[#0086B7]"
                   image="vector_3"
                   link="/sparrows"
                   description="CSI Sparrows is our primary program tailored by Cambridge specialists for Pakistani students, building strong academic foundations and fostering a love for learning."
@@ -184,7 +184,7 @@ export default function Home() {
                 <BirdCard
                   onClickCross={() => setActiveHoverIndex(null)}
                   title=" CSI Robins"
-                  bgColor="00889C"
+                  bgColor="bg-[#00889C]"
                   description="CSI Robins is our early years program, crafted by Trehaus Singapore. It ensures a gentle, holistic development for your child, guided by best practices."
                   image="vector_4"
                   link="/robins"

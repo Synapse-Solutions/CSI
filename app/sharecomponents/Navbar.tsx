@@ -93,7 +93,7 @@ export default function Navbar() {
             </Link>
             <Link href={"/coming-soon"}>
               <h1 className="hover:text-[#028676] cursor-pointer">
-                See The campus
+                Summer School
               </h1>
             </Link>
             <Link href={"/coming-soon"}>
