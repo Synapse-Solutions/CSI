@@ -20,19 +20,19 @@ export default function HeroSection() {
     <div className="image-wrap w-screen flex items-center justify-center h-[calc(50vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
       {currentImageIndex === 1 ? (
         <a
-          className="w-screen h-[calc(50vh)] xl:h-[calc(100vh)]"
+          className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
           href="https://summerscsi.com/"
           target="_blank"
         >
           <img
             src={images[currentImageIndex]}
-            className="w-screen h-[calc(50vh)] xl:h-[calc(100vh)]"
+            className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
           />
         </a>
       ) : (
         <img
           src={images[currentImageIndex]}
-          className="w-screen h-[calc(50vh)] xl:h-[calc(100vh)]"
+          className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
         />
       )}
       {currentImageIndex !== 1 && (
