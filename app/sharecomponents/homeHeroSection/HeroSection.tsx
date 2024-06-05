@@ -60,7 +60,7 @@ export default function HeroSection() {
               className="h-[30px] xl:h-[80px] w-auto object-contain"
             />
             <a href="https://summerscsi.com/" target="_blank">
-              <button className="bg-[#028676] rounded-full px-10 py-3 text-white flex items-center justify-center mt-10">
+              <button className="bg-[#028676] hover:bg-[#4d8680] rounded-full px-10 py-3 text-white flex items-center justify-center mt-10">
                 Join Our Summer School!
               </button>
             </a>
