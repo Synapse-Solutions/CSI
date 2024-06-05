@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import Image from "next/image";
 
-const images = ["/b001.png", "/home_hero_1.webp", "/home_hero_2.webp"];
+const images = ["/b001.png", "/home_hero_1.webp"];
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -18,37 +18,52 @@ export default function HeroSection() {
   }, []);
   return (
     <div className="image-wrap w-screen flex items-center justify-center h-[calc(50vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
-      <img
-        src={images[currentImageIndex]}
-        className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
-      />
-      <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center">
-        <div className="flex flex-col items-center">
-          <Image
-            src={"/icons.png"}
-            height={1000}
-            width={1000}
-            alt="urdu"
-            className="h-[50px] xl:h-[100px] w-auto object-contain"
+      {currentImageIndex === 1 ? (
+        <a
+          className="w-screen h-[calc(50vh)] xl:h-[calc(100vh)]"
+          href="https://summerscsi.com/"
+          target="_blank"
+        >
+          <img
+            src={images[currentImageIndex]}
+            className="w-screen h-[calc(50vh)] xl:h-[calc(100vh)]"
           />
-          <h1 className="text-[#028676] text-[25px] xl:text-[45px]">
-            Knowledge, Action, Resolve
-          </h1>{" "}
-          <br />
-          <Image
-            src={"/urdu.webp"}
-            height={1000}
-            width={1000}
-            alt="urdu"
-            className="h-[30px] xl:h-[80px] w-auto object-contain"
-          />
-          <a href="https://summerscsi.com/" target="_blank">
-            <button className="bg-[#028676] rounded-full px-10 py-3 text-white flex items-center justify-center mt-10">
-              Join Our Summer Camp!
-            </button>
-          </a>
+        </a>
+      ) : (
+        <img
+          src={images[currentImageIndex]}
+          className="w-screen h-[calc(50vh)] xl:h-[calc(100vh)]"
+        />
+      )}
+      {currentImageIndex !== 1 && (
+        <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center">
+          <div className="flex flex-col items-center">
+            <Image
+              src={"/icons.png"}
+              height={1000}
+              width={1000}
+              alt="urdu"
+              className="h-[50px] xl:h-[100px] w-auto object-contain"
+            />
+            <h1 className="text-[#028676] text-[25px] xl:text-[45px]">
+              Knowledge, Action, Resolve
+            </h1>{" "}
+            <br />
+            <Image
+              src={"/urdu.webp"}
+              height={1000}
+              width={1000}
+              alt="urdu"
+              className="h-[30px] xl:h-[80px] w-auto object-contain"
+            />
+            <a href="https://summerscsi.com/" target="_blank">
+              <button className="bg-[#028676] rounded-full px-10 py-3 text-white flex items-center justify-center mt-10">
+                Join Our Summer Camp!
+              </button>
+            </a>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
