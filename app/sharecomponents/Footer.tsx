@@ -26,7 +26,7 @@ export default function Footer() {
         />
         <h1 className="font-bold text-[22px] mt-5">Quick Links</h1>
         <div className="flex gap-3 xl:gap-10 mt-5 text-[15px]">
-          <Link href={"/learning-program"}>
+          <Link href={"/coming-soon"}>
             <p className="hover:text-[#028676]">Programs</p>
           </Link>
           <Link href={"/coming-soon"}>

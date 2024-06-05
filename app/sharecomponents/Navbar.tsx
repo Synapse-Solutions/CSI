@@ -31,7 +31,9 @@ export default function Navbar() {
   const [isClosing, setIsClosing] = useState(false);
 
   let color =
-    pathname === "/" && !isHeaderShow
+    pathname === "/coming-soon" && !isHeaderShow
+      ? "white"
+      : pathname === "/" && !isHeaderShow
       ? "white"
       : pathname !== "/"
       ? "#355496"
@@ -86,7 +88,7 @@ export default function Navbar() {
       >
         <div className="flex w-[80%] items-center justify-between ">
           <div className="w-[40%] 2xl:w-[30%] flex justify-between">
-            <Link href={"/learning-program"}>
+            <Link href={"/coming-soon"}>
               <h1 className="hover:text-[#028676] cursor-pointer">Programs</h1>
             </Link>
             <Link href={"/coming-soon"}>
@@ -104,7 +106,9 @@ export default function Navbar() {
             <Link href={"/"}>
               <Image
                 src={
-                  pathname !== "/" || isHeaderShow
+                  pathname === "/coming-soon" && !isHeaderShow
+                    ? "/logo.webp"
+                    : pathname !== "/" || isHeaderShow
                     ? "/logo_blue.webp"
                     : "/logo.webp"
                 }
@@ -133,7 +137,9 @@ export default function Navbar() {
             <div className="flex gap-10">
               <Image
                 src={
-                  pathname !== "/" || isHeaderShow
+                  pathname === "/coming-soon" && !isHeaderShow
+                    ? "/magnifyingglass.webp"
+                    : pathname !== "/" || isHeaderShow
                     ? "/search_green.webp"
                     : "/magnifyingglass.webp"
                 }
@@ -145,7 +151,9 @@ export default function Navbar() {
 
               <Image
                 src={
-                  pathname !== "/" || isHeaderShow
+                  pathname === "/coming-soon" && !isHeaderShow
+                    ? "/sharenetwork.webp"
+                    : pathname !== "/" || isHeaderShow
                     ? "/share_green.webp"
                     : "/sharenetwork.webp"
                 }
