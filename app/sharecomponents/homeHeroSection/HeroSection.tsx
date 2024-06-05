@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import Image from "next/image";
 
-const images = ["/home_hero.png", "/home_hero_1.webp", "/home_hero_2.webp"];
+const images = ["/b001.png", "/home_hero_1.webp", "/home_hero_2.webp"];
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -24,6 +24,13 @@ export default function HeroSection() {
       />
       <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center">
         <div className="flex flex-col items-center">
+          <Image
+            src={"/icons.png"}
+            height={1000}
+            width={1000}
+            alt="urdu"
+            className="h-[50px] xl:h-[100px] w-auto object-contain"
+          />
           <h1 className="text-[#028676] text-[25px] xl:text-[45px]">
             Knowledge, Action, Resolve
           </h1>{" "}
