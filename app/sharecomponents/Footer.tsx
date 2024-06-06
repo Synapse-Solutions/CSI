@@ -10,7 +10,11 @@ export default function Footer() {
     <div className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative bg-[#355496]">
       <div className="w-screen flex z-10 absolute bottom-[99%] xl:bottom-[95%] left-0 ">
         <img
-          src="/animation003-new.gif"
+          src={
+            pathname === "/coming-soon"
+              ? "/coming_soon.gif"
+              : "/animation003-new.gif"
+          }
           alt="tree"
           style={{ width: "100%", height: "auto", objectFit: "contain" }}
         />
