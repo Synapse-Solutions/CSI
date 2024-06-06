@@ -102,7 +102,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="absolute top-[25%] xl:top-[28%] 2xl:top-[33%] left-[43%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[25%] xl:top-[28%] 2xl:top-[33%] left-[43%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(2)}
@@ -136,7 +136,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="absolute top-[45%] xl:top-[55%] 2xl:top-[60%] h-[100px] w-[150px]  left-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[45%] xl:top-[55%] 2xl:top-[60%] h-[100px] w-[150px]  left-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
             <div
               className="h-[100px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(3)}
@@ -170,7 +170,7 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="absolute top-[30%] xl:top-[42%] 2xl:top-[47%] left-[65%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[30%] xl:top-[42%] 2xl:top-[47%] left-[65%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(4)}

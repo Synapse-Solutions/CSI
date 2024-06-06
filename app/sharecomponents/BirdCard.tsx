@@ -20,7 +20,7 @@ export default function BirdCard(props: Props) {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="md:block hidden cursor-pointer h-[180px] xl:h-[300px] w-[calc(88vw)] xl:w-[450px] object-contain p-5 py-10 text-white relative"
+        className="md:block hidden cursor-pointer h-[180px] xl:h-[300px] w-[calc(88vw)] xl:w-[450px] object-contain p-5 py-10 text-white relative z-50"
       >
         <div className="absolute top-10 right-3">
           <Image
