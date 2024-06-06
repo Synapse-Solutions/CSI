@@ -86,7 +86,7 @@ export default function SwiperCompoenent() {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className=" ml-[25px] xl:ml-0 bg-transparent w-[100%] relative"
+      className="ml-[25px] xl:ml-0 bg-transparent w-[100%] relative"
     >
       <div
         style={{
@@ -137,13 +137,13 @@ export default function SwiperCompoenent() {
         {array.map((item, index) => (
           <SwiperSlide
             key={index}
-            className={`w-[350px] 2xl:w-[450px] bg-transparent `}
+            className={`w-[350px] 2xl:w-[450px]  bg-transparent `}
             data-aos={fadeAnimation}
           >
             <>
               {selectedIndex === index ? (
                 <div
-                  className={`bg-[#028676] h-[100%] mt-[40px] 2xl:mt-[80px]  w-[90%] rounded-md p-3 duration-500 `}
+                  className={`bg-[#028676] h-[100%]  ml-[10px] mt-[40px] 2xl:mt-[80px]  w-[90%] rounded-md p-3 duration-500 `}
                 >
                   <div className="h-[50px] w-full flex justify-end px-5">
                     <p
@@ -166,7 +166,7 @@ export default function SwiperCompoenent() {
                   style={{
                     boxShadow: "0 0 5px 1px #CCC",
                   }}
-                  className=" bg-white rounded mr-[50px] max-h-[570px]"
+                  className=" bg-white rounded mr-[40px] ml-[10px] max-h-[570px]"
                 >
                   <div className="w-full h-[160px] 2xl:h-[260px] overflow-hidden mt-10 2xl:mt-20 flex items-center">
                     <Image
