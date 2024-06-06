@@ -206,7 +206,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pt-[180px]">
+      <div className="pt-[10px]">
         <Footer />
       </div>
     </div>

@@ -145,7 +145,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-between items-center gap-5 px-[10%] mt-20">
+      {/* <div className="flex flex-col justify-between items-center gap-5 px-[10%] mt-20">
         <button className="border border-gray-400 rounded-full px-10 py-2 text-[#028676] text-[18px] font-bold">
           Join CSI Eagles Today
         </button>
@@ -153,8 +153,8 @@ export default function page() {
           Ready to take the next step? Apply now to become part of a community
           that values academic excellence and global awareness.
         </p>
-      </div>
-      <div className="mt-[20%] hidden md:flex  items-end">
+      </div> */}
+      {/* <div className="mt-[20%] hidden md:flex  items-end">
         <Image
           src={"/tree_1.webp"}
           height={500}
@@ -176,8 +176,8 @@ export default function page() {
           alt="tree"
           className="w-[50px] h-auto object-contain ml-[70%] mb-[-20px]"
         />
-      </div>
-      <div className="">
+      </div> */}
+      <div className="mt-[180px]">
         <Footer />
       </div>
     </div>

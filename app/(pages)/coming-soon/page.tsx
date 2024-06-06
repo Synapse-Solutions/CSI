@@ -6,12 +6,12 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="text-black w-screen overflow-hidden">
+    <div className="text-black w-screen overflow-hidden relative">
       <Navbar />
-      <div className="relative z-20">
+      <div className=" z-20">
         <HeroSection_CS />
       </div>
-      <div className="mt-[160px] z-10">
+      <div className=" z-30">
         <Footer />
       </div>
     </div>

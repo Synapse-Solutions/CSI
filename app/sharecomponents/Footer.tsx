@@ -8,9 +8,9 @@ export default function Footer() {
   const pathname = usePathname();
   return (
     <div className="w-screen p-[5%] flex flex-col xl:flex-row text-white justify-between text-[13px] xl:text-[17px] relative bg-[#355496]">
-      <div className="w-screen flex z-10 absolute bottom-[90%] left-0 ">
+      <div className="w-screen flex z-10 absolute bottom-[99%] xl:bottom-[95%] left-0 ">
         <img
-          src="/Animation003.gif"
+          src="/animation003-new.gif"
           alt="tree"
           style={{ width: "100%", height: "auto", objectFit: "contain" }}
         />
@@ -41,27 +41,37 @@ export default function Footer() {
         </div>
         <h1 className="font-bold text-[22px] mt-5">Follow Us</h1>
         <div className="flex gap-5 mt-5">
-          <Image
+          {/* <Image
             src={"/linkedinlogo.webp"}
             height={100}
             width={100}
             className="h-[30px] w-auto object-contain"
             alt="logo"
-          />
-          <Image
-            src={"/facebooklogo.webp"}
-            height={100}
-            width={100}
-            className="h-[30px] w-auto object-contain"
-            alt="logo"
-          />
-          <Image
-            src={"/instagramlogo.webp"}
-            height={100}
-            width={100}
-            className="h-[30px] w-auto object-contain"
-            alt="logo"
-          />
+          /> */}
+          <a
+            href="https://www.facebook.com/centralschoolinternational"
+            target="_blank"
+          >
+            <Image
+              src={"/facebooklogo.webp"}
+              height={100}
+              width={100}
+              className="h-[30px] w-auto object-contain"
+              alt="logo"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/central.school.international/?fbclid=IwAR2-tAPKEW4ykF3QuvvUBADiuJxEzVvK3CKJkQU-PceD0p3630Z2wTACHxA"
+            target="_blank"
+          >
+            <Image
+              src={"/instagramlogo.webp"}
+              height={100}
+              width={100}
+              className="h-[30px] w-auto object-contain"
+              alt="logo"
+            />
+          </a>
         </div>
         <p className="mt-5 text-[14px]">
           © Central School International 2024 | Terms & Privacy 
