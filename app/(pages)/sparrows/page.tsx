@@ -147,7 +147,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-between items-center gap-5 px-[10%] mt-20">
+      {/* <div className="flex flex-col justify-between items-center gap-5 px-[10%] mt-20">
         <button className="border border-gray-400 rounded-full px-10 py-2 text-[#028676] text-[18px] font-bold">
           Enroll at CSI Sparrows
         </button>
@@ -156,7 +156,7 @@ export default function page() {
           their educational journey. Discover a program where academic and
           personal growth go hand in hand.
         </p>
-      </div>
+      </div> */}
       {/* <div className="mt-[20%] hidden md:flex  items-end">
         <Image
           src={"/tree_1.webp"}
