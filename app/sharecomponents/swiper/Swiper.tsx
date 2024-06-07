@@ -90,7 +90,7 @@ export default function SwiperCompoenent() {
     >
       <div
         style={{
-          opacity: isHovered ? 1 : 0,
+          opacity: isMobile ? 1 : isHovered ? 1 : 0,
           transition: "opacity 1s ease",
         }}
         className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-[15px] z-10 cursor-pointer"
@@ -105,10 +105,10 @@ export default function SwiperCompoenent() {
       </div>
       <div
         style={{
-          opacity: isHovered ? 1 : 0,
+          opacity: isMobile ? 1 : isHovered ? 1 : 0,
           transition: "opacity 1s ease",
         }}
-        className="bg-[#EEEEEE] hover:bg-[#028676] h-[50px] w-[50px] rounded-full flex items-center justify-center right_arrow absolute top-[45%] right-20 z-10 cursor-pointer"
+        className="bg-[#EEEEEE] hover:bg-[#028676] h-[50px] w-[50px] rounded-full flex items-center justify-center right_arrow absolute top-[45%] right-[70px] xl:right-20 z-10 cursor-pointer"
       >
         <Image
           src={"/left_arr.webp"}
@@ -143,7 +143,7 @@ export default function SwiperCompoenent() {
             <>
               {selectedIndex === index ? (
                 <div
-                  className={`bg-[#028676] h-[100%]  ml-[10px] mt-[40px] 2xl:mt-[80px]  w-[90%] rounded-md p-3 duration-500 `}
+                  className={`bg-[#028676] mb-5 xl:mb-0 h-[100%]  ml-[10px] mt-[40px] 2xl:mt-[80px] w-[85%] xl:w-[90%] rounded-md p-3 duration-500 `}
                 >
                   <div className="h-[50px] w-full flex justify-end px-5">
                     <p
@@ -166,7 +166,7 @@ export default function SwiperCompoenent() {
                   style={{
                     boxShadow: "0 0 5px 1px #CCC",
                   }}
-                  className=" bg-white rounded mr-[40px] ml-[10px] max-h-[570px]"
+                  className=" bg-white rounded mb-5 xl:mb-0 mr-[60px] xl:mr-[40px] ml-[10px] max-h-[570px]"
                 >
                   <div className="w-full h-[160px] 2xl:h-[260px] overflow-hidden mt-10 2xl:mt-20 flex items-center">
                     <Image
