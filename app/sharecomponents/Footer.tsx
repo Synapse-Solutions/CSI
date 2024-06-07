@@ -13,7 +13,7 @@ export default function Footer() {
           src={
             pathname === "/coming-soon"
               ? "/animation003-new.gif"
-              : "/animation003-new.gif"
+              : "/animation003-new-white-bg.gif"
           }
           alt="tree"
           style={{ width: "100%", height: "auto", objectFit: "contain" }}

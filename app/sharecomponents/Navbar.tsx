@@ -77,7 +77,7 @@ export default function Navbar() {
           transition: `background-color 1s ease${
             isHeaderShow ? ", border 1s ease" : ""
           }`,
-          borderBottom: isHeaderShow ? "1px solid gray" : "",
+          borderBottom: isHeaderShow ? "1px solid lightgrey" : "",
 
           opacity: 1,
           color: color,
