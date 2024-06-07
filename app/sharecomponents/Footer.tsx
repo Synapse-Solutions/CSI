@@ -12,7 +12,7 @@ export default function Footer() {
         <img
           src={
             pathname === "/coming-soon"
-              ? "/coming_soon.gif"
+              ? "/animation003-new.gif"
               : "/animation003-new.gif"
           }
           alt="tree"
