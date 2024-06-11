@@ -32,41 +32,45 @@ export default function Home() {
     <div className="text-black w-screen overflow-hidden">
       <Navbar />
       <div className="relative z-10">
-        <HeroSection />
       </div>
-      {/* <Image
-        src={"/color_bar.webp"}
-        height={100}
-        width={2000}
-        className="h-[50px] w-screen"
-        alt="bar"
-      /> */}
-      <div className="h-[50px] w-full bg-[#355496]"></div>
-      <div className="flex flex-col xl:flex-row bg-white overflow-visible relative">
-        <div className="w-full xl:w-[30%] px-[5%] pt-[10%] text-black">
+      <header>
+        <HeroSection />
+        {/* <Image
+          src={"/color_bar.webp"}
+          height={100}
+          width={2000}
+          className="h-[50px] w-screen"
+          alt="bar"
+          /> */}
+        < div className="h-[50px] w-full bg-[#355496]"></div>
+      </header>
+      <main className="flex flex-col xl:flex-row bg-white overflow-visible relative">
+        <aside className="w-full xl:w-[30%] px-[5%] pt-[10%] text-black">
+        <section>
           <h1 className="font-bold text-[40px] ">The CSI Way</h1>
           <p>
             CSi’s Approach takes the best from international best practics,
             local expertise & the latest in research to deliver an education
             best suited for 21st century.
           </p>
-        </div>
-        <div
+        </section>
+        </aside>
+        <section
           ref={scrollRef}
           className="w-[100%] xl:w-[70%] flex gap-10 mt-20 xl:z-10 "
         >
           <Swiper />
-        </div>
+        </section>
         <div className="bg-[#EEEEEE] hidden xl:block w-screen h-[50%] absolute -bottom-[10%] left-0 z-0"></div>
-      </div>
-      <div data-aos="fade-right" className="w-full my-[150px] xl:mt-[15%]">
+      </main>
+      <section data-aos="fade-right" className="w-full my-[150px] xl:mt-[15%]">
         <div className="h-auto w-[90vw] xl:w-[calc(70vw)] relative">
           <Image
             src={"/tree.webp"}
             height={1000}
             width={2000}
             className="h-auto w-full"
-            alt="tree"
+            alt="tree-of-programs"
           />
           <div className="absolute top-[14%] xl:top-[18%] 2xl:top-[20%] left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
             <div
@@ -205,10 +209,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="pt-[10px]">
+      </section>
+      <footer className="pt-[10px]">
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 }
