@@ -20,6 +20,7 @@ export default function HeroSection_CS() {
     <div className="image-wrap w-screen flex items-center justify-center h-[calc(50vh)] xl:h-[calc(100vh)] bg-black text-white bg-opacity-75">
       <img
         src={"/b002.webp"}
+        alt="hero image"
         className="animate_img h-[calc(50vh)] xl:h-[calc(100vh)]"
       />
       <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center">

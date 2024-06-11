@@ -35,6 +35,7 @@ export default function HeroSection() {
       ) : (
         <img
           src={images[currentImageIndex]}
+          alt="hero image"
           className="animate_img h-[calc(60vh)] xl:h-[calc(100vh)]"
         />
       )}
