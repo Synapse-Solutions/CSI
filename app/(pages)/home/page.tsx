@@ -1,5 +1,5 @@
 "use client";
-import BirdCard from "@/app/sharecomponents/BirdCard";
+import HomePageCard from "@/app/sharecomponents/HomePageCard";
 import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import HeroSection from "@/app/sharecomponents/homeHeroSection/HeroSection";
@@ -23,6 +23,7 @@ export default function Home() {
     });
   }, []);
   function handleMouseLeaveLast(event: any) {
+    setActiveHoverIndex(null);
     // const divElement = event.currentTarget.querySelector("div");
     // if (divElement) {
     //   divElement.classList.add("hidden");
@@ -31,29 +32,32 @@ export default function Home() {
   return (
     <div className="text-black w-screen overflow-hidden">
       <Navbar />
-      <div className="relative z-10">
-      </div>
-      <header>
+      <div className="relative z-10"></div>
+      <header className="relative">
         <HeroSection />
-        {/* <Image
-          src={"/color_bar.webp"}
+        <Image
+          src={"/color-bar.png"}
           height={100}
           width={2000}
           className="h-[50px] w-screen"
           alt="bar"
-          /> */}
-        < div className="h-[50px] w-full bg-[#355496]"></div>
+        />
+        <a href="https://summerscsi.com/" target="_blank">
+          <button className="bg-[#028676] rounded-full px-10 py-5 text-white absolute bottom-5 right-10">
+            Join Our Summer Camp!
+          </button>
+        </a>
       </header>
       <main className="flex flex-col xl:flex-row bg-white overflow-visible relative">
         <aside className="w-full xl:w-[30%] px-[5%] pt-[10%] text-black">
-        <section>
-          <h1 className="font-bold text-[40px] ">The CSI Way</h1>
-          <p>
-            CSi’s Approach takes the best from international best practics,
-            local expertise & the latest in research to deliver an education
-            best suited for 21st century.
-          </p>
-        </section>
+          <section>
+            <h1 className="font-bold text-[40px] ">The CSI Way</h1>
+            <p>
+              CSi’s Approach takes the best from international best practics,
+              local expertise & the latest in research to deliver an education
+              best suited for 21st century.
+            </p>
+          </section>
         </aside>
         <section
           ref={scrollRef}
@@ -63,16 +67,22 @@ export default function Home() {
         </section>
         <div className="bg-[#EEEEEE] hidden xl:block w-screen h-[50%] absolute -bottom-[10%] left-0 z-0"></div>
       </main>
-      <section data-aos="fade-right" className="w-full my-[150px] xl:mt-[15%]">
-        <div className="h-auto w-[90vw] xl:w-[calc(70vw)] relative">
+      <section className="w-full my-[150px] xl:mt-[15%]">
+        <div className="h-auto w-[100vw] xl:w-[calc(100vw)] relative">
           <Image
-            src={"/tree.webp"}
+            src={"/section001.png"}
             height={1000}
             width={2000}
             className="h-auto w-full"
             alt="tree-of-programs"
           />
-          <div className="absolute top-[14%] xl:top-[18%] 2xl:top-[20%] left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[35%] left-[43%] text-[45px] font-bold text-center">
+            <h4>
+              The CSI <br />
+              Advantage
+            </h4>
+          </div>
+          <div className="absolute top-[38%] left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(1)}
@@ -83,129 +93,71 @@ export default function Home() {
                   activeHoverIndex === 1 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard
+                <HomePageCard
                   onClickCross={() => setActiveHoverIndex(null)}
-                  title="CSI Eagles"
+                  title="Habits of Thought"
                   bgColor="bg-[#00889C]"
-                  description="CSI Eagles is dedicated to preparing students for higher education and beyond with a robust O and A level program that builds strong academic foundations and key life skills."
-                  image="vector_2"
+                  description="A critical aspect of a holistic education is inculcating ways of thinking which allow an individual to effectively capitalize on opportunities and meet challenges. At CSI our entire approach is geared towards cultivating habits of thought which are dynamic, based in critical thinking and adaptive."
+                  image="habits_bg"
                   link="/eagles"
                 />
               </div>
-              <h1 className="absolute -top-[20px] xl:top-0 -left-5 xl:-left-[60px]  text-black font-bold text-[12px] xl:text-[20px]">
-                CSI Eagles
+              <h1 className="text-[#355496]   font-bold text-[12px] xl:text-[20px]">
+                Habits of Thought
               </h1>
-              <Link href={"/eagles"}>
-                <Image
-                  src={"/02.webp"}
-                  height={150}
-                  width={150}
-                  className="h-[50px] xl:h-[150px] w-auto object-contain cursor-pointer"
-                  alt="02"
-                />
-              </Link>
             </div>
           </div>
-          <div className="absolute top-[25%] xl:top-[28%] 2xl:top-[33%] left-[43%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
-            <div
-              className="h-[150px] w-[150px] relative"
-              onMouseEnter={() => handleMouseEnterLast(2)}
-              onMouseLeave={handleMouseLeaveLast}
-            >
-              <div
-                className={`absolute -top-[180px]  xl:-top-[280px] -left-[120px] xl:left-[50px] w-[400px] ${
-                  activeHoverIndex === 2 ? "block" : "hidden"
-                }`}
-              >
-                <BirdCard
-                  onClickCross={() => setActiveHoverIndex(null)}
-                  title="CSI Larks"
-                  bgColor="bg-[#009C93]"
-                  description="CSI Larks is our middle school program, blending international best practices with contextual learning that respects students’ backgrounds and promotes personal and academic growth."
-                  image="frame_4x"
-                  link="/larks"
-                />
-              </div>
-              <h1 className="absolute top-0 -left-[30px]  text-black font-bold text-[12px] xl:text-[20px]">
-                CSI Larks
-              </h1>
-              <Link href={"/larks"}>
-                <Image
-                  src={"/01.webp"}
-                  height={120}
-                  width={120}
-                  className="h-[50px] xl:h-[120px] w-auto object-contain cursor-pointer"
-                  alt="02"
-                />
-              </Link>
-            </div>
-          </div>
-          <div className="absolute top-[45%] xl:top-[55%] 2xl:top-[60%] h-[100px] w-[150px]  left-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
+
+          <div className="absolute top-[80%] h-[100px] w-[150px]  right-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
             <div
               className="h-[100px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(3)}
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute z-20 -top-[150px] xl:-top-[280px] -left-[100px] xl:left-[50px] w-[400px] ${
+                className={`absolute z-20 -top-[150px] xl:-top-[280px] xl:-right-[80px] w-[400px] ${
                   activeHoverIndex === 3 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard
+                <HomePageCard
                   onClickCross={() => setActiveHoverIndex(null)}
-                  title="CSI Sparrows"
+                  title="Critical Competencies"
                   bgColor="bg-[#0086B7]"
-                  image="vector_3"
+                  image="cretical_bg"
                   link="/sparrows"
-                  description="CSI Sparrows is our primary program tailored by Cambridge specialists for Pakistani students, building strong academic foundations and fostering a love for learning."
+                  description="At CSI, we emphasize essential skills that prepare students for success in a complex world. Our students develop strong problem-solving abilities, learning to analyze situations and find effective solutions."
                 />
               </div>
-              <Link href={"/sparrows"}>
-                <Image
-                  src={"/04.webp"}
-                  height={100}
-                  width={100}
-                  className="h-[50px] xl:h-[100px] w-auto object-contain cursor-pointer"
-                  alt="02"
-                />
-              </Link>
-              <h1 className="  text-black font-bold text-[12px] xl:text-[17px]">
-                CSI Sparrows
+
+              <h1 className="text-[#1F4694] font-bold text-[12px] xl:text-[17px]">
+                Critical <br />
+                Competencies
               </h1>
             </div>
           </div>
-          <div className="absolute top-[30%] xl:top-[42%] 2xl:top-[47%] left-[65%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
+          <div className="absolute top-[38%]  right-[10%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(4)}
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute -top-[150px] xl:-top-[280px] -left-[190px] xl:left-[50px] w-[400px] ${
+                className={`absolute -top-[150px] xl:-top-[280px]  xl:right-[100px] w-[400px] ${
                   activeHoverIndex === 4 ? "block" : "hidden"
                 }`}
               >
-                <BirdCard
+                <HomePageCard
                   onClickCross={() => setActiveHoverIndex(null)}
-                  title=" CSI Robins"
+                  title="Outlook"
                   bgColor="bg-[#00889C]"
-                  description="CSI Robins is our early years program, crafted by Trehaus Singapore. It ensures a gentle, holistic development for your child, guided by best practices."
-                  image="vector_4"
+                  description="At CSI, we cultivate a positive, forward-thinking mindset. Our students learn to view challenges as opportunities, set ambitious goals, and stay motivated. This proactive outlook, combined with empathy and social responsibility, prepares them for personal success!"
+                  image="outlook_bg"
                   link="/robins"
                 />
               </div>
-              <h1 className="  text-black font-bold text-[12px] xl:text-[20px]">
-                CSI Robins
+              <h1 className="  text-[#1F4694] font-bold text-[12px] xl:text-[20px]">
+                Outlook
               </h1>
-              <Link href={"/robins"}>
-                <Image
-                  src={"/03.webp"}
-                  height={80}
-                  width={80}
-                  className="h-[50px] xl:h-[80px] w-auto object-contain cursor-pointer"
-                  alt="02"
-                />
-              </Link>
             </div>
           </div>
         </div>

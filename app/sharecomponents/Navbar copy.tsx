@@ -25,7 +25,7 @@ const array = [
 export default function Navbar() {
   const pathname = usePathname();
 
-  const [isHeaderShow, setIsHeaderShow] = useState(true);
+  const [isHeaderShow, setIsHeaderShow] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isHambergerShow, setIsHambergerShow] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -56,6 +56,10 @@ export default function Navbar() {
     if (window.innerWidth < 768) {
       setIsMobile(true);
     }
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleCloseMenu = () => {
