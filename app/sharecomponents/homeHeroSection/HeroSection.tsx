@@ -17,8 +17,8 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="image-wrap w-screen flex items-center justify-center h-[calc(60vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
-      <div className="animate_img h-[calc(60vh)] xl:h-[calc(100vh)]">
+    <div className="h-[calc(40vh)] image-wrap w-screen flex items-center justify-center md:h-[calc(60vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
+      <div className="animate_img h-[calc(60vh)] xl:h-[calc(100vh)] mt-80 md:mt-0">
         <Image
           height={1500}
           width={1500}
@@ -33,7 +33,7 @@ export default function HeroSection() {
             Knowledge, Action, Resolve
           </h1>{" "}
           <br />
-          <p className="text-white mt-5 text-[18px] xl:text-[22px] w-[50%]">
+          <p className="hidden md:block text-white mt-5 text-[18px] xl:text-[22px] w-[50%]">
             Empowering students with the wisdom to learn, the courage to act,
             and the determination to succeed.
           </p>

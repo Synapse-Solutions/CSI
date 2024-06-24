@@ -27,34 +27,38 @@ export default function Page() {
     <div className="text-black w-screen overflow-hidden">
       <Navbar />
       <div className="relative z-10"></div>
-      <section className="flex justify-center items-center h-screen p-20">
-        <div className="w-1/2 flex justify-end ">
+      <section className="flex justify-center items-center h-2/5 md:h-screen pt-10 md:mt-0 md:p-20">
+        <div className="w-1/2 flex justify-center md:justify-end md:mt-0 ">
           <Image
             src={"/our-heart.png"}
             height={1000}
             width={1000}
-            className="object-contain w-[80%] h-[calc(60vh)]"
+            className="object-contain w-[80%] h-[calc(60vh)] pt-10 md:pt-0"
             alt="leaf"
           />
         </div>
-        <div className="w-1/2">
-          <h4 className="text-[40px] font-semibold">Our Heart</h4>
-          <p>
+        <div className="w-3/5 mr-4 md:mr-0 md:w-1/2">
+          <h4 className="text-[30px] md:text-[40px] font-semibold">
+            Our Heart
+          </h4>
+          <p className="text-[12px] md:text-[16px] mb-4 mt-4 md:mb-0">
             Central School International (CSI) is a Pan-Pakistan School Network
             which provides an education rooted in research, international best
             practices, and values.
           </p>
-          <p>
+          <p className="text-[12px] md:text-[16px]">
             Our academic and extended learning programs ensure that our students
             develop the knowledge base, skills, and character traits needed to
             succeed in todays global age.
           </p>
         </div>
       </section>
-      <section className="bg-[#1f4694] px-[5%] py-[5%] text-white pb-[15%]">
-        <h4>Our Guiding Principles</h4>
-        <div className="flex w-full justify-between">
-          <div className="w-[33%] ">
+      <section className="bg-[#1f4694] px-[5%] py-[5%] text-white pb-[15%] ">
+        <h4 className="text-center font-bold md:font-normal md:text-left ">
+          Our Guiding Principles
+        </h4>
+        <div className="flex flex-col md:flex-row w-full md:justify-between">
+          <div className="md:w-[33%] ">
             <Image
               src={"/elam.png"}
               height={500}
@@ -62,9 +66,9 @@ export default function Page() {
               alt="elam"
               className="w-full h-auto object-contain"
             />
-            <div className="px-[45px]">
-              <div className="flex items-center gap-2">
-                <p className="text-[28px]">Knowledge</p>
+            <div className=" px-[45px]">
+              <div className=" justify-center md:justify-normal flex items-center gap-2">
+                <p className=" text-[28px]">Knowledge</p>
                 <Image
                   src={"/elam_text.png"}
                   height={40}
@@ -72,12 +76,12 @@ export default function Page() {
                   alt="elam"
                 />
               </div>
-              <p className="mt-3">
+              <p className="text-center md:text-left mt-3">
                 Exploring the infinite potential of the human mind and spirit
               </p>
             </div>
           </div>
-          <div className="w-[33%] ">
+          <div className="md:w-[33%]">
             <Image
               src={"/amal.png"}
               height={500}
@@ -86,7 +90,7 @@ export default function Page() {
               className="w-full h-auto object-contain"
             />
             <div className="px-[45px]">
-              <div className="flex items-center gap-2 ">
+              <div className="justify-center md:justify-normal flex items-center gap-2">
                 <p className="text-[28px]">Action</p>
                 <Image
                   src={"/amal_text.png"}
@@ -95,12 +99,12 @@ export default function Page() {
                   alt="elam"
                 />
               </div>
-              <p className="mt-3">
+              <p className="text-center md:text-left mt-3">
                 Taking meaningful actions in the pursuit of one’s goals
               </p>
             </div>
           </div>
-          <div className="w-[33%] ">
+          <div className="md:w-[33%]">
             <Image
               src={"/azam.png"}
               height={500}
@@ -109,7 +113,7 @@ export default function Page() {
               className="w-full h-auto object-contain"
             />
             <div className="px-[45px]">
-              <div className="flex items-center gap-2  ">
+              <div className="justify-center md:justify-normal flex items-center gap-2">
                 <p className="text-[28px]">Resolve</p>
                 <Image
                   src={"/azam_text.png"}
@@ -118,7 +122,7 @@ export default function Page() {
                   alt="elam"
                 />
               </div>
-              <p className="mt-3">
+              <p className="text-center md:text-left mt-3">
                 Fostering nobility and strength of character, providing a sense
                 of grounding
               </p>
@@ -126,10 +130,10 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <h3 className="text-[35px] font-bold mt-20 ">
+          <h3 className="text-center md:text-normal text-[18px] md:text-[35px] font-bold mt-20 ">
             CSI’s Constellation of Character
           </h3>
-          <p>
+          <p className="mx-5 ml-10 md:ml-0 md:mx-0">
             CSI seeks to include the following constellation of values in all of
             our students.
           </p>
