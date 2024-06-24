@@ -39,20 +39,26 @@ export default function Home() {
           src={"/color-bar.png"}
           height={100}
           width={2000}
-          className="h-[50px] w-screen"
+          className="hidden md:block h-[50px] w-screen"
           alt="bar"
         />
-        <a href="https://summerscsi.com/" target="_blank">
+        <a
+          href="https://summerscsi.com/"
+          target="_blank"
+          className="hidden md:block"
+        >
           <button className="bg-[#028676] rounded-full px-10 py-5 text-white absolute bottom-5 right-10">
             Join Our Summer Camp!
           </button>
         </a>
       </header>
       <main className="flex flex-col xl:flex-row bg-white overflow-visible relative">
-        <aside className="w-full xl:w-[30%] px-[5%] pt-[10%] text-black">
+        <aside className="text-center px-[15%] md:text-start w-full xl:w-[30%] md:px-[5%] pt-[10%] text-black">
           <section>
-            <h1 className="font-bold text-[40px] ">The CSI Way</h1>
-            <p>
+            <h1 className="font-bold text-[20px] md:text-[40px] ">
+              The CSI Way
+            </h1>
+            <p className="text-[14px] md:text-[18px]">
               CSi’s Approach takes the best from international best practics,
               local expertise & the latest in research to deliver an education
               best suited for 21st century.
@@ -61,13 +67,13 @@ export default function Home() {
         </aside>
         <section
           ref={scrollRef}
-          className="w-[100%] xl:w-[70%] flex gap-10 mt-20 xl:z-10 "
+          className="w-[100%] xl:w-[70%] flex gap-10 md:mt-20 xl:z-10 "
         >
           <Swiper />
         </section>
         <div className="bg-[#EEEEEE] hidden xl:block w-screen h-[50%] absolute -bottom-[10%] left-0 z-0"></div>
       </main>
-      <section className="w-full my-[150px] xl:mt-[15%]">
+      <section className="w-full my-[80px] md:my-[150px] xl:mt-[15%]">
         <div className="h-auto w-[100vw] xl:w-[calc(100vw)] relative">
           <Image
             src={"/section001.png"}
@@ -76,13 +82,13 @@ export default function Home() {
             className="h-auto w-full"
             alt="tree-of-programs"
           />
-          <div className="absolute top-[35%] left-[43%] text-[45px] font-bold text-center">
+          <div className="absolute top-[35%] left-[40%]  lg:left-[43%] text-[15px] md:text-[32px] lg:text-[45px] font-bold text-center">
             <h4>
               The CSI <br />
               Advantage
             </h4>
           </div>
-          <div className="absolute top-[38%] left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[38%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(1)}
@@ -108,7 +114,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute top-[80%] h-[100px] w-[150px]  right-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
+          <div className="absolute top-[80%] h-[100px] w-[150px] right-[8%] md:right-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
             <div
               className="h-[100px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(3)}
@@ -135,7 +141,7 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="absolute top-[38%]  right-[10%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
+          <div className="absolute top-[38%] left-[75%] md:left[0%] md:right-[10%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(4)}
