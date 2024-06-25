@@ -116,10 +116,6 @@ export default function page() {
   }
   function handleMouseLeaveLast(event: any) {
     setActiveHoverIndex(null);
-    // const divElement = event.currentTarget.querySelector("div");
-    // if (divElement) {
-    //   divElement.classList.add("hidden");
-    // }
   }
   return (
     <div className="pt-[120px] text-black w-screen overflow-hidden">
@@ -155,15 +151,15 @@ export default function page() {
                     onClickCross={() => setActiveHoverIndex(null)}
                     title="CSI Eagles"
                     bgColor="bg-[#00889C]"
-                    description="CSI Eagles is dedicated to preparing students for higher education and beyond with a robust O and A level program that builds strong academic foundations and key life skills."
+                    description="CSI Eagles is our most advanced program. Building on our earlier programs, this program focuses in building the cognitive skills and academic competencies of our students to make sure they excel in the final stage of their schooling journey."
                     image="vector_2"
-                    link="/eagles"
+                    link=""
                   />
                 </div>
                 <h1 className="absolute -top-[20px] xl:top-0 -left-5 xl:-left-[60px]  text-black font-bold text-[12px] xl:text-[20px]">
                   CSI Eagles
                 </h1>
-                <Link href={"/eagles"}>
+                <Link href={""}>
                   <Image
                     src={"/02.webp"}
                     height={150}
@@ -189,15 +185,15 @@ export default function page() {
                     onClickCross={() => setActiveHoverIndex(null)}
                     title="CSI Larks"
                     bgColor="bg-[#009C93]"
-                    description="CSI Larks is our middle school program, blending international best practices with contextual learning that respects students’ backgrounds and promotes personal and academic growth."
+                    description="CSI Larks, our Middle School Program, is both globally aligned and locally grounded. This program ensures that our students benefit from international best practices as well as context driven insights."
                     image="frame_4x"
-                    link="/larks"
+                    link=""
                   />
                 </div>
                 <h1 className="absolute top-0 -left-[30px]  text-black font-bold text-[12px] xl:text-[20px]">
                   CSI Larks
                 </h1>
-                <Link href={"/larks"}>
+                <Link href={""}>
                   <Image
                     src={"/01.webp"}
                     height={120}
@@ -224,11 +220,11 @@ export default function page() {
                     title="CSI Sparrows"
                     bgColor="bg-[#0086B7]"
                     image="vector_3"
-                    link="/sparrows"
-                    description="CSI Sparrows is our primary program tailored by Cambridge specialists for Pakistani students, building strong academic foundations and fostering a love for learning."
+                    link=""
+                    description="CSI Sparrows is a bespoke Primary Level Program combining the expertise of Cambridge and CSI's Team."
                   />
                 </div>
-                <Link href={"/sparrows"}>
+                <Link href={""}>
                   <Image
                     src={"/04.webp"}
                     height={100}
@@ -257,7 +253,7 @@ export default function page() {
                     onClickCross={() => setActiveHoverIndex(null)}
                     title=" CSI Robins"
                     bgColor="bg-[#00889C]"
-                    description="CSI Robins is our early years program, crafted by Trehaus Singapore. It ensures a gentle, holistic development for your child, guided by best practices."
+                    description="CSI Robins is our Early Years Program. Its focus on play based learning, research driven lessons, and alignment with international standards ensures that our Robbins recieve the best early years education."
                     image="vector_4"
                     link="/robins"
                   />

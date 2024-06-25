@@ -136,6 +136,105 @@ export default function page() {
             />
           </div>
         </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_6.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="w-[40%] p-10">
+            <p className="text-left">
+              Designed for the <br /> Needs of All Ages
+            </p>
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[40%] p-10">
+            <p className="text-right">
+              Created to Carry Out A <br /> Custom Sports Program
+            </p>
+          </div>
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_7.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_8.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="w-[40%] p-10">
+            <p className="text-left">
+              Built to Ensure Low <br /> Student-Teacher Ratios
+            </p>
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[40%] p-10">
+            <p className="text-right">
+              Featuring a Variety of <br /> Skill Specific <br />
+              Learning Areas
+            </p>
+          </div>
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_9.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_10.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="w-[40%] p-10">
+            <p className="text-left">
+              Made to Ensure <br />
+              Student Comfort
+            </p>
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[40%] p-10">
+            <p className="text-left">
+              Designed to <br />
+              Foster Collaboration
+            </p>
+          </div>
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_11.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
       </section>
 
       <footer className="mt-[250px]">
