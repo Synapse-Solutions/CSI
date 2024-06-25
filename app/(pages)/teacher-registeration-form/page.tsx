@@ -3,9 +3,50 @@ import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 export default function page() {
-  const [selectedForm, setSelectedForm] = useState(3);
+
+
+
+  const { register, handleSubmit, reset } = useForm();
+
+
+  const sendEmail = async (data: any) => {
+
+    try {
+      const response = await fetch("/api/teacher-registation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+   
+      if (response.ok) {
+      
+        toast('Thank you for contacting us !',
+        {
+          icon: '🤗',
+          style: {
+            borderRadius: '10px',
+            background: '#122749',
+            color: '#fff',
+          },
+        }
+      );
+        reset();
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
+  const [selectedForm, setSelectedForm] = useState(1);
   const [educationDetails, setEducationDetails] = useState([
     {
       qualification: "",
@@ -176,11 +217,13 @@ export default function page() {
                     type="text"
                     placeholder="First Name"
                     className="bg-[#d2daea] rounded-md w-1/2 p-3"
+                    {...register("teacher_first_name")}
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
                     className="bg-[#d2daea] rounded-md w-1/2 p-3"
+                    {...register("teacher_last_name")}
                   />
                 </div>
               </div>
@@ -191,11 +234,13 @@ export default function page() {
                     type="text"
                     placeholder="First Name"
                     className="bg-[#d2daea] rounded-md w-1/2 p-3"
+                    {...register("father_first_name")}
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
                     className="bg-[#d2daea] rounded-md w-1/2 p-3"
+                    {...register("father_last_name")}
                   />
                 </div>
               </div>
@@ -205,6 +250,7 @@ export default function page() {
                   <input
                     type="date"
                     className="bg-[#d2daea] rounded-md w-full p-3"
+                    {...register("date_of_birth")}
                   />
                 </div>
               </div>
@@ -215,6 +261,7 @@ export default function page() {
                     type="text"
                     placeholder="Language known"
                     className="bg-[#d2daea] rounded-md w-full p-3"
+                    {...register("languages_known")}
                   />
                 </div>
               </div>
@@ -225,6 +272,7 @@ export default function page() {
                     type="text"
                     placeholder="First Language"
                     className="bg-[#d2daea] rounded-md w-full p-3"
+                    {...register("first_language")}
                   />
                 </div>
               </div>
@@ -235,62 +283,62 @@ export default function page() {
                 <div className="flex items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Reading</p>
                   <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Proficient</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Intermediate</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Beginner</p>
-                  </div>
+      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("reading_proficiency")} />
+      <p>Proficient</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("reading_proficiency")} />
+      <p>Intermediate</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("reading_proficiency")} />
+      <p>Beginner</p>
+    </div>
                 </div>
                 <div className="flex items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Writing</p>
                   <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Proficient</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Intermediate</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Beginner</p>
-                  </div>
+      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("writing_proficiency")} />
+      <p>Proficient</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("writing_proficiency")} />
+      <p>Intermediate</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("writing_proficiency")} />
+      <p>Beginner</p>
+    </div>
                 </div>
                 <div className="flex items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Speaking</p>
                   <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Proficient</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Intermediate</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Beginner</p>
-                  </div>
+      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
+      <p>Proficient</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
+      <p>Intermediate</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
+      <p>Beginner</p>
+    </div>
                 </div>
                 <div className="flex items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Listening</p>
                   <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Proficient</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Intermediate</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Beginner</p>
-                  </div>
+      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("listening_proficiency")} />
+      <p>Proficient</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("listening_proficiency")} />
+      <p>Intermediate</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("listening_proficiency")} />
+      <p>Beginner</p>
+    </div>
                 </div>
               </div>
             </>
