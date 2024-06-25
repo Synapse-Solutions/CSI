@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import { uploadToS3 } from "@/app/service/upload-resume";
 
 export default function page() {
+<<<<<<< HEAD
 
 
 
@@ -58,6 +59,8 @@ export default function page() {
     }
   };
 
+=======
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
   const [selectedForm, setSelectedForm] = useState(1);
   const [educationDetails, setEducationDetails] = useState([
     {
@@ -108,7 +111,7 @@ export default function page() {
   };
 
   return (
-    <div>
+    <div className="w-screen overflow-hidden">
       <Navbar />
       <section>
         <div
@@ -118,16 +121,18 @@ export default function page() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-          className="h-[700px] w-screen relative"
+          className="h-[400px] xl:h-[700px] w-screen relative"
         >
-          <div className="text-white absolute bottom-[30%] right-[15%]">
-            <h1 className="text-[35px] font-bold">Our Teacher’s Training</h1>
-            <p className="text-[35px]">Empowerment Process</p>
+          <div className="text-white hidden xl:block absolute bottom-[30%] right-[15%]">
+            <h1 className="text-[20px] xl:text-[35px] font-bold">
+              Our Teacher’s Training
+            </h1>
+            <p className="text-[20px] xl:text-[35px]">Empowerment Process</p>
           </div>
         </div>
       </section>
-      <section className="px-[10%]">
-        <div className="relative text-black text-[22px] font-bold">
+      <section className="px-[10%] hidden xl:block">
+        <div className="relative text-black text-[16px] xl:text-[22px] font-bold">
           <Image
             src={"/arrows_pic.png"}
             height={1000}
@@ -191,8 +196,13 @@ export default function page() {
         <h1 className="text-[35px] font-bold text-center ">
           Teacher’s Registration Form
         </h1>
+<<<<<<< HEAD
         <form onSubmit={handleSubmit(sendEmail)} className="border border-[#1F4694] rounded-md p-10">
           <div className="flex items-center justify-between">
+=======
+        <div className="border border-[#1F4694] rounded-md p-5 xl:p-10">
+          <div className="flex flex-col xl:flex-row gap-3 xl:gap-0 xl:items-center justify-between">
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setSelectedForm(1)}
@@ -201,7 +211,7 @@ export default function page() {
                 1
               </button>
               <p>General Details</p>
-              <div className="h-[1px] w-[100px] bg-[#1F4694]"></div>
+              <div className="h-[1px] w-[100px] bg-[#1F4694] hidden xl:block"></div>
             </div>
             <div className="flex items-center gap-3">
               <button
@@ -211,7 +221,7 @@ export default function page() {
                 2
               </button>
               <p>Education Details</p>
-              <div className="h-[1px] w-[100px] bg-[#1F4694]"></div>
+              <div className="h-[1px] w-[100px] bg-[#1F4694] hidden xl:block"></div>
             </div>
             <div className="flex items-center gap-3">
               <button
@@ -227,35 +237,51 @@ export default function page() {
             <>
               <div className="mt-5">
                 <p>Full Name</p>
-                <div className="flex items-center gap-5">
+                <div className="flex flex-col xl:flex-row items-center gap-5">
                   <input
                     type="text"
                     placeholder="First Name"
+<<<<<<< HEAD
                     className="bg-[#d2daea] rounded-md w-1/2 p-3"
                     {...register("teacher_first_name")}
+=======
+                    className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
+<<<<<<< HEAD
                     className="bg-[#d2daea] rounded-md w-1/2 p-3"
                     {...register("teacher_last_name")}
+=======
+                    className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
                   />
                 </div>
               </div>
               <div className="mt-5">
                 <p>Father’s Name</p>
-                <div className="flex items-center gap-5">
+                <div className="flex flex-col xl:flex-row items-center gap-5">
                   <input
                     type="text"
                     placeholder="First Name"
+<<<<<<< HEAD
                     className="bg-[#d2daea] rounded-md w-1/2 p-3"
                     {...register("father_first_name")}
+=======
+                    className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
+<<<<<<< HEAD
                     className="bg-[#d2daea] rounded-md w-1/2 p-3"
                     {...register("father_last_name")}
+=======
+                    className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
                   />
                 </div>
               </div>
@@ -295,6 +321,7 @@ export default function page() {
                 <p className="text-[18px] font-[600]">
                   English Language Proficiency*
                 </p>
+<<<<<<< HEAD
                 <div className="flex items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Reading</p>
                   <div className="flex items-center gap-2">
@@ -309,9 +336,28 @@ export default function page() {
       <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("reading_proficiency")} />
       <p>Beginner</p>
     </div>
+=======
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
+                  <p className="font-[600] w-[100px] mr-10">Reading</p>{" "}
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Proficient</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Intermediate</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Beginner</p>
+                    </div>
+                  </div>
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
                 </div>
-                <div className="flex items-center gap-3 mt-5">
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Writing</p>
+<<<<<<< HEAD
                   <div className="flex items-center gap-2">
       <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("writing_proficiency")} />
       <p>Proficient</p>
@@ -324,9 +370,26 @@ export default function page() {
       <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("writing_proficiency")} />
       <p>Beginner</p>
     </div>
+=======
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Proficient</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Intermediate</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Beginner</p>
+                    </div>
+                  </div>
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
                 </div>
-                <div className="flex items-center gap-3 mt-5">
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Speaking</p>
+<<<<<<< HEAD
                   <div className="flex items-center gap-2">
       <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
       <p>Proficient</p>
@@ -339,9 +402,26 @@ export default function page() {
       <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
       <p>Beginner</p>
     </div>
+=======
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Proficient</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Intermediate</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Beginner</p>
+                    </div>
+                  </div>
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
                 </div>
-                <div className="flex items-center gap-3 mt-5">
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Listening</p>
+<<<<<<< HEAD
                   <div className="flex items-center gap-2">
       <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("listening_proficiency")} />
       <p>Proficient</p>
@@ -354,6 +434,22 @@ export default function page() {
       <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("listening_proficiency")} />
       <p>Beginner</p>
     </div>
+=======
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Proficient</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Intermediate</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Beginner</p>
+                    </div>
+                  </div>
+>>>>>>> 7ad212ff1a696a2b72c5a1c42a8b35b3444eb189
                 </div>
               </div>
             </>

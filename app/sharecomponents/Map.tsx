@@ -33,12 +33,14 @@ const Map = () => {
 
   const dynamicContainerStyle = {
     width: "100%",
-    height: isMobile ? "calc(140vh)" : "calc(110vh)",
+    height: isMobile ? "calc(140vh)" : "calc(50vh)",
   };
 
   return (
     <div className="w-full">
-      <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}>
+      <LoadScript
+        googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}
+      >
         <GoogleMap
           mapContainerStyle={dynamicContainerStyle}
           center={center}

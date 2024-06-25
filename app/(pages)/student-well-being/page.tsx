@@ -10,8 +10,8 @@ export default function page() {
       <Navbar />
       <div className="h-[130px]"></div>
       <section className="w-full px-10">
-        <h1 className="text-[68px] font-[400] text-center">
-          The Student <span className="font-[700] "> well-Being</span>
+        <h1 className="text-[30px] xl:text-[68px] font-[400] text-center">
+          Student <span className="font-[700] "> well-Being</span>
         </h1>
         <Image
           src={"/student_wellb_1.png"}
@@ -21,7 +21,7 @@ export default function page() {
           className="w-full h-auto object-contain"
         />
       </section>
-      <section className="text-[20px] text-center">
+      <section className="text-[8px] xl:text-[20px] text-center">
         <div className="relative w-full h-auto">
           <Image
             src={"/student_wellb_2.png"}
@@ -30,7 +30,7 @@ export default function page() {
             alt="student well being"
             className="w-full h-auto object-contain "
           />
-          <div className="w-[40%] absolute top-0 h-full flex items-center right-20 ">
+          <div className="w-[40%] absolute top-0 h-full flex items-center right-5 xl:right-20 ">
             <p>
               We offer state of the art transport facilities for our students.
               Our technology driven service allows parents to use a
@@ -48,7 +48,7 @@ export default function page() {
             alt="student well being"
             className="w-full h-auto object-contain "
           />
-          <div className="w-[30%] absolute top-0 h-full flex items-center left-20 ">
+          <div className="w-[30%] absolute top-0 h-full flex items-center left-5 xl:left-20 ">
             <p>
               We offer Day-Boarding to ensure that CSI students feel at home
               when taking part in the varied and unique courses offered as part
@@ -64,7 +64,7 @@ export default function page() {
             alt="student well being"
             className="w-full h-auto object-contain "
           />
-          <div className="w-[35%] absolute top-0 h-full flex items-center right-20 ">
+          <div className="w-[35%] absolute top-0 h-full flex items-center right-5 xl:right-20 ">
             <p>
               At CSI, every student's everyday matters. We use state of the art
               digital architecture to monitor and document the social and
@@ -84,7 +84,7 @@ export default function page() {
             alt="student well being"
             className="w-full h-auto object-contain "
           />
-          <div className="w-[35%] absolute top-0 h-full flex items-center left-20 ">
+          <div className="w-[35%] absolute top-0 h-full flex items-center left-5 xl:left-20 ">
             <p>
               We believe that it takes a village to raise a child. As such, at
               CSI we have made sure that parents have a regular meeting with the
@@ -103,7 +103,7 @@ export default function page() {
             alt="student well being"
             className="w-full h-auto object-contain "
           />
-          <div className="w-[35%] absolute top-0 h-full flex items-center right-20 ">
+          <div className="w-[35%] absolute top-0 h-full flex items-center right-5 xl:right-20 ">
             <p>
               Nutrition is a critically important and often under discussed part
               of a child's education. CSI has a purpose-built in-house kitchen

@@ -130,10 +130,10 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <h3 className="text-center md:text-normal text-[18px] md:text-[35px] font-bold mt-20 ">
+          <h3 className="text-center md:text-start text-[18px] md:text-[35px] font-bold mt-20 ">
             CSI’s Constellation of Character
           </h3>
-          <p className="mx-5 ml-10 md:ml-0 md:mx-0">
+          <p className="mx-5 text-center md:text-start ml-10 md:ml-0 md:mx-0">
             CSI seeks to include the following constellation of values in all of
             our students.
           </p>
@@ -152,7 +152,7 @@ export default function Page() {
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] xl:right-[120px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] right-[-150px] z-20 xl:right-[120px] w-[400px] ${
                     activeHoverIndex === 1 ? "block" : "hidden"
                   }`}
                 >
@@ -177,7 +177,7 @@ export default function Page() {
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] xl:right-[120px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] right-[-0px] xl:right-[120px] w-[400px] ${
                     activeHoverIndex === 2 ? "block" : "hidden"
                   }`}
                 >
@@ -202,7 +202,7 @@ export default function Page() {
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[70px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] right-[-120px] z-20 xl:-right-[70px] w-[400px] ${
                     activeHoverIndex === 3 ? "block" : "hidden"
                   }`}
                 >
@@ -227,7 +227,7 @@ export default function Page() {
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] left-[20px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] left-[-30px] xl:left-[20px] w-[400px] ${
                     activeHoverIndex === 4 ? "block" : "hidden"
                   }`}
                 >
@@ -252,7 +252,7 @@ export default function Page() {
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[70px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[100px] xl:-right-[70px] w-[400px] ${
                     activeHoverIndex === 5 ? "block" : "hidden"
                   }`}
                 >
@@ -277,7 +277,7 @@ export default function Page() {
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[70px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[120px] xl:-right-[70px] w-[400px] ${
                     activeHoverIndex === 6 ? "block" : "hidden"
                   }`}
                 >

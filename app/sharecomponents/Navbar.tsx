@@ -10,16 +10,46 @@ const array = [
     link: "/",
   },
   {
-    name: "About",
-    link: "/about",
+    name: "See The Campus",
+    link: "/see-the-campus",
   },
   {
-    name: "Admission",
-    link: "/admission",
+    name: "Admissions",
+    link: "/interest-form",
   },
   {
-    name: "Programs",
-    link: "/learning-program",
+    name: "Know More",
+    link: "",
+  },
+  {
+    name: "Our Heart",
+    link: "/our-heart",
+  },
+  {
+    name: "Contact Us",
+    link: "/contact-us",
+  },
+];
+let knowMoreArray = [
+  {
+    name: "Clarity by CSI",
+    link: "/clearity-by-csi",
+  },
+  {
+    name: "For Teachers",
+    link: "/teacher-registeration-form",
+  },
+  {
+    name: "From The Principal",
+    link: "/from-the-principle",
+  },
+  {
+    name: "Academic Council",
+    link: "/academic-councel",
+  },
+  {
+    name: "Student Well-Being",
+    link: "/student-well-being",
   },
 ];
 export default function Navbar() {
@@ -30,6 +60,7 @@ export default function Navbar() {
   const [isHambergerShow, setIsHambergerShow] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
+  console.log("🚀 ~ Navbar ~ showDropDown:ads", showDropDown);
 
   let color =
     pathname === "/coming-soon" && !isHeaderShow
@@ -93,7 +124,7 @@ export default function Navbar() {
                 See The campus
               </h1>
             </Link>
-            <Link href={"/coming-soon"}>
+            <Link href={"/interest-form"}>
               <h1 className="hover:text-[#028676] cursor-pointer">
                 Admissions
               </h1>
@@ -117,10 +148,10 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="w-[40%] 2xl:w-[30%]  flex justify-between">
-            <div className="flex-1 relative">
+            <div className="flex-1 relative z-20">
               <button
                 onClick={() => setShowDropDown(!showDropDown)}
-                className="flex items-center gap-2 "
+                className="flex items-center gap-2 z-20"
               >
                 <h1 className="hover:text-[#028676] cursor-pointer">
                   Know more
@@ -132,28 +163,36 @@ export default function Navbar() {
                   alt="caredown"
                 />
               </button>
-              {showDropDown && (
-                <div className="flex flex-col p-5 text-[#1F4694] text-[20px] font-[400] gap-5 absolute top-full bg-white rounded-b-xl -left-[70px] w-[260px]">
-                  <Link href={"/clearity-by-csi"}>
-                    <p>Clarity by CSI</p>
-                  </Link>
-                  <Link href={"/teacher-registeration-form"}>
-                    <p>For Teachers</p>
-                  </Link>
-                  <Link href={"/from-the-principle"}>
-                    <p>From the principle</p>
-                  </Link>
-                  <Link href={"/advisory-board"}>
-                    <p>Our Advisory Board</p>
-                  </Link>
-                  <Link href={"/academic-councel"}>
-                    <p>Academic council</p>
-                  </Link>
-                  <Link href={"/student-well-being"}>
-                    <p>Student well-being</p>
-                  </Link>
-                </div>
-              )}
+
+              <div
+                style={{
+                  opacity: showDropDown ? 1 : 0,
+                  transform: showDropDown
+                    ? "translateY(0)"
+                    : "translateY(-110%)",
+                  transition: "opacity 0.7s ease, transform 0.7s ease",
+                }}
+                className="flex flex-col p-5 text-[#1F4694]  text-[20px] z-0 font-[400] gap-5 absolute top-full bg-white rounded-b-xl -left-[70px] w-[260px]"
+              >
+                <Link href={"/clearity-by-csi"}>
+                  <p className="hover:text-[#028676]">Clarity by CSI</p>
+                </Link>
+                <Link href={"/teacher-registeration-form"}>
+                  <p className="hover:text-[#028676]">For Teachers</p>
+                </Link>
+                <Link href={"/from-the-principle"}>
+                  <p className="hover:text-[#028676]">From the Principal</p>
+                </Link>
+                <Link href={"/advisory-board"}>
+                  <p className="hover:text-[#028676]">Our Advisory Board</p>
+                </Link>
+                <Link href={"/academic-councel"}>
+                  <p className="hover:text-[#028676]">Academic council</p>
+                </Link>
+                <Link href={"/student-well-being"}>
+                  <p className="hover:text-[#028676]">Student well-being</p>
+                </Link>
+              </div>
             </div>
             <div className="flex-1">
               <Link href={"/our-heart"}>
@@ -259,41 +298,53 @@ export default function Navbar() {
           data-aos="fade-right"
           className={`${
             isClosing ? "fade-left" : ""
-          } lg:hidden flex flex-col items-center fixed top-0 left-0 h-screen w-screen z-50 bg-[#028676]`}
+          } lg:hidden flex flex-col items-center fixed top-0 left-0 h-screen w-screen z-50 bg-[#1f4694]`}
         >
-          <div className="w-full flex items-end justify-end p-5">
+          <div className="w-full flex items-center justify-between p-5 bg-[#355496]">
             <Image
-              src={"/X.png"}
+              src={"/logo.webp"}
+              alt="logo"
+              width={100}
+              height={80}
+              className="cursor-pointer hover:animate-pulse h-[60px] w-auto  object-contain"
+            />
+            <Image
+              src={"/cross_icon.png"}
               alt="logo"
               width={50}
               height={30}
               onClick={handleCloseMenu}
-              className="cursor-pointer hover:animate-pulse h-[50px] object-contain"
+              className="cursor-pointer hover:animate-pulse h-[30px] object-contain"
             />
           </div>
-          <Image
-            src={"/logo.webp"}
-            alt="logo"
-            width={100}
-            height={80}
-            className="cursor-pointer hover:animate-pulse h-[60px] w-auto mt-10 object-contain"
-          />
-          <div className="flex flex-col space-y-5 text-white mt-10">
+
+          <div className="flex flex-col space-y-3 text-white mt-10 w-full">
             {array?.map((item, index) => (
               <Link
-                href={item.name !== "Services" ? item.link : ""}
+                href={item.link}
                 key={index}
-                className="relative"
+                className="relative border-b-[1px] border-white pb-2"
               >
                 <p
                   style={{
                     color: pathname === item.link ? "#93F1FE" : "white",
                   }}
-                  className="cursor-pointer transform hover:text-[#93F1FE]"
+                  className="cursor-pointer transform hover:text-[#93F1FE] text-[22px] font-[700] px-5"
                 >
                   {item.name}
                 </p>
-                <div></div>
+
+                {item.link === "" && (
+                  <div className="flex flex-col gap-2">
+                    {knowMoreArray.map((tab, _index) => (
+                      <Link href={tab.link} key={_index}>
+                        <p className="text-[16px] font-[400] px-5">
+                          {tab.name}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </Link>
             ))}
           </div>
