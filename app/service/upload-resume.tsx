@@ -2,16 +2,17 @@ import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 
 const s3 = new S3Client({
   credentials: {
-    accessKeyId: process.env.S3_ACCESS_KEY_ID || '',
-    secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || '',
+    accessKeyId: process.env.NEXT_PUBLIC_S3_ACCESS_KEY_ID || '',
+    secretAccessKey: process.env.NEXT_PUBLIC_S3_SECRET_ACCESS_KEY || '',
   },
   region: 'us-east-1', // Replace with your AWS region
 });
 
 export const uploadToS3 = async (file: any, file_name: any) => {
   console.log("s3", file);
+ 
   const params = {
-    Bucket: process.env.S3_BUCKET,
+    Bucket: process.env.NEXT_PUBLIC_S3_BUCKET,
     Key: `public/resumes/${file_name}`, // Set your desired path
     Body: file,
   };

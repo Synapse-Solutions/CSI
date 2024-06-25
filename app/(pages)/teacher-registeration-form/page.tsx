@@ -2,9 +2,62 @@
 import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useForm, useFieldArray } from "react-hook-form";
+import toast from "react-hot-toast";
+
+import { uploadToS3 } from "@/app/service/upload-resume";
 
 export default function page() {
+
+
+
+  const { register, handleSubmit, reset, setValue} = useForm();
+
+
+  const sendEmail = async (data: any) => {
+
+    // const formData = new FormData();
+
+    // formData.append("data", JSON.stringify(data));
+    // formData.append("resume", data.resume[0]); 
+
+    const resume_url = await uploadToS3(data.resume[0], data.resume[0].name);
+
+    data.resume_url = resume_url;
+    data.resume_file_name = data.resume[0].name;
+
+    try {
+      const response = await fetch("/api/teacher-registration", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body:  JSON.stringify(data)
+      });
+
+   
+      if (response.ok) {
+      
+        toast('Thank you for contacting us !',
+        {
+          icon: '🤗',
+          style: {
+            borderRadius: '10px',
+            background: '#122749',
+            color: '#fff',
+          },
+        }
+      );
+       
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
   const [selectedForm, setSelectedForm] = useState(1);
   const [educationDetails, setEducationDetails] = useState([
     {
@@ -32,7 +85,8 @@ export default function page() {
     updatedArray.pop();
     setExperienceArray(updatedArray);
   };
-  const handleAdd = () => {
+  const handleAdd = (e: any) => {
+    e.preventDefault();
     let updatedArray = [...educationDetails];
     updatedArray.push({
       qualification: "",
@@ -42,7 +96,8 @@ export default function page() {
     });
     setEducationDetails(updatedArray);
   };
-  const handleAddExperience = () => {
+  const handleAddExperience = (e: any) => {
+    e.preventDefault();
     let updatedArray = [...experienceArray];
     updatedArray.push({
       organization: "",
@@ -51,6 +106,7 @@ export default function page() {
     });
     setExperienceArray(updatedArray);
   };
+
   return (
     <div className="w-screen overflow-hidden">
       <Navbar />
@@ -137,7 +193,7 @@ export default function page() {
         <h1 className="text-[35px] font-bold text-center ">
           Teacher’s Registration Form
         </h1>
-        <div className="border border-[#1F4694] rounded-md p-5 xl:p-10">
+        <form onSubmit={handleSubmit(sendEmail)} className="border border-[#1F4694] rounded-md p-5 xl:p-10">
           <div className="flex flex-col xl:flex-row gap-3 xl:gap-0 xl:items-center justify-between">
             <div className="flex items-center gap-3">
               <button
@@ -178,11 +234,13 @@ export default function page() {
                     type="text"
                     placeholder="First Name"
                     className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
+                    {...register("teacher_first_name")}
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
                     className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
+                    {...register("teacher_last_name")}
                   />
                 </div>
               </div>
@@ -193,11 +251,14 @@ export default function page() {
                     type="text"
                     placeholder="First Name"
                     className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
+                    {...register("father_first_name")}
+
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
                     className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
+                    {...register("father_last_name")}
                   />
                 </div>
               </div>
@@ -207,6 +268,7 @@ export default function page() {
                   <input
                     type="date"
                     className="bg-[#d2daea] rounded-md w-full p-3"
+                    {...register("date_of_birth")}
                   />
                 </div>
               </div>
@@ -217,6 +279,7 @@ export default function page() {
                     type="text"
                     placeholder="Language known"
                     className="bg-[#d2daea] rounded-md w-full p-3"
+                    {...register("languages_known")}
                   />
                 </div>
               </div>
@@ -227,6 +290,7 @@ export default function page() {
                     type="text"
                     placeholder="First Language"
                     className="bg-[#d2daea] rounded-md w-full p-3"
+                    {...register("first_language")}
                   />
                 </div>
               </div>
@@ -234,73 +298,65 @@ export default function page() {
                 <p className="text-[18px] font-[600]">
                   English Language Proficiency*
                 </p>
-                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
-                  <p className="font-[600] w-[100px] mr-10">Reading</p>{" "}
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Proficient</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Intermediate</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Beginner</p>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-3 mt-5">
+                  <p className="font-[600] w-[100px] mr-10">Reading</p>
+                  <div className="flex items-center gap-2">
+      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("reading_proficiency")} />
+      <p>Proficient</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("reading_proficiency")} />
+      <p>Intermediate</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("reading_proficiency")} />
+      <p>Beginner</p>
+    </div>
                 </div>
                 <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Writing</p>
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Proficient</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Intermediate</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Beginner</p>
-                    </div>
-                  </div>
+                  <div className="flex items-center gap-2">
+      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("writing_proficiency")} />
+      <p>Proficient</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("writing_proficiency")} />
+      <p>Intermediate</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("writing_proficiency")} />
+      <p>Beginner</p>
+    </div>
                 </div>
                 <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Speaking</p>
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Proficient</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Intermediate</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Beginner</p>
-                    </div>
-                  </div>
+                  <div className="flex items-center gap-2">
+      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
+      <p>Proficient</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
+      <p>Intermediate</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
+      <p>Beginner</p>
+    </div>
                 </div>
                 <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Listening</p>
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Proficient</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Intermediate</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="checkbox" className="bg-[#d2daea]" />
-                      <p>Beginner</p>
-                    </div>
-                  </div>
+                  <div className="flex items-center gap-2">
+      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("listening_proficiency")} />
+      <p>Proficient</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("listening_proficiency")} />
+      <p>Intermediate</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("listening_proficiency")} />
+      <p>Beginner</p>
+    </div>
                 </div>
               </div>
             </>
@@ -319,6 +375,7 @@ export default function page() {
                       type="text"
                       placeholder="Enter Qualification"
                       className="bg-[#d2daea] rounded-md p-3"
+                      {...register(`education.${index}.qualification`)}
                     />
                   </div>
                   <div>
@@ -327,6 +384,7 @@ export default function page() {
                       type="text"
                       placeholder="Enter Institute"
                       className="bg-[#d2daea] rounded-md p-3"
+                      {...register(`education.${index}.institute`)}
                     />
                   </div>
                   <div>
@@ -335,6 +393,7 @@ export default function page() {
                       type="text"
                       placeholder="Enter Board"
                       className="bg-[#d2daea] rounded-md p-3"
+                      {...register(`education.${index}.board`)}
                     />
                   </div>
                   <div>
@@ -343,6 +402,7 @@ export default function page() {
                       type="text"
                       placeholder="Enter Marks"
                       className="bg-[#d2daea] rounded-md p-3"
+                      {...register(`education.${index}.marks`)}
                     />
                   </div>
                   {index === educationDetails.length - 1 ? (
@@ -390,6 +450,7 @@ export default function page() {
                       type="text"
                       placeholder="Enter Organization Name"
                       className="bg-[#d2daea] rounded-md p-3"
+                      {...register(`experience.${index}.organization`)}
                     />
                   </div>
                   <div>
@@ -398,6 +459,7 @@ export default function page() {
                       type="text"
                       placeholder="Enter Your Position/Designation"
                       className="bg-[#d2daea] rounded-md p-3"
+                      {...register(`experience.${index}.position`)}
                     />
                   </div>
                   <div>
@@ -406,6 +468,7 @@ export default function page() {
                       type="text"
                       placeholder="Enter the tenure time spent"
                       className="bg-[#d2daea] rounded-md p-3"
+                      {...register(`experience.${index}.tenure`)}
                     />
                   </div>
 
@@ -444,11 +507,12 @@ export default function page() {
                   type="text"
                   placeholder="Enter your Interests and Talents"
                   className="bg-[#d2daea] rounded-md p-3 w-full"
+                  {...register("interests")}
                 />
               </div>
               <div className="mt-5">
                 <p>Upload Updated Resume </p>
-                <input type="file" className="hidden" />
+                <input type="file"  {...register("resume")} />
                 <div className="w-full bg-[#d2daea] rounded-md flex items-center justify-center h-[100px]">
                   Choose files or drag here
                 </div>
@@ -474,11 +538,18 @@ export default function page() {
             </div>
           )}
           <div className="w-full flex justify-center">
-            <button className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white">
+
+            {selectedForm === 3 ? ( <button type="submit" className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white">
+              Submit
+            </button>) : 
+            
+            <button  onClick={(e) => {e.preventDefault(); setSelectedForm(prev => prev + 1)}} className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white">
               Next
             </button>
+            }
+           
           </div>
-        </div>
+        </form>
       </section>
       <footer className="mt-[370px]">
         <Footer />
