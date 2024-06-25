@@ -85,7 +85,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
           <p><strong>Interests/Talents:</strong> ${interests}</p>
           <p><strong>Education Details:</strong></p>
           <ul>
-            ${education.map(edu => `
+            ${education.map((edu: any) => `
               <li>
                 <strong>Qualification:</strong> ${edu.qualification}<br/>
                 <strong>Institute:</strong> ${edu.institute}<br/>
@@ -95,7 +95,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
           </ul>
           <p><strong>Experience Details:</strong></p>
           <ul>
-            ${experience.map(exp => `
+            ${experience.map((exp: any) => `
               <li>
                 <strong>Organization:</strong> ${exp.organization}<br/>
                 <strong>Position:</strong> ${exp.position}<br/>
