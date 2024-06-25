@@ -31,7 +31,7 @@ export default function Page() {
     <div className="text-black w-screen overflow-hidden">
       <Navbar />
       <div className="relative z-10"></div>
-      <section className="py-[10%] px-[5%] ">
+      <section className="  pt-[40%] py-[5%] md:py-[10%] px-[5%] ">
         <div className="flex  items-center">
           <div className="w-1/2 flex justify-center">
             <Image
@@ -43,25 +43,29 @@ export default function Page() {
             />
           </div>
           <div className="w-1/2">
-            <h1 className="text-[30px] font-bold">Clarity By CSI</h1>
+            <h1 className="ml-5 md:ml-0 text-[20px] md:text-[30px] font-bold">
+              Clarity By CSI
+            </h1>
           </div>
         </div>
-        <div className="flex justify-between mt-20 border-b border-black pb-5">
+        <div className="flex justify-between mt-5 md:mt-20 border-b border-black md:pb-5">
           <p>
             {" "}
-            <span className="text-[#1F4694]">
+            <span className="text-[#1F4694] text-[12px] md:text-[25px]">
               Blog Timeline / Blog / Home{" "}
             </span>{" "}
           </p>
-          <p className="text-[#1F4694] text-[25px]">Blog Timeline</p>
+          <p className="text-[#1F4694] text-[12px] md:text-[25px]">
+            Blog Timeline
+          </p>
         </div>
       </section>
-      <section className="px-[5%] flex flex-wrap justify-between gap-14 mb-[250px]">
+      <section className="px-[5%] flex flex-wrap justify-between gap-14 mb-[50px] md:mb-[250px]">
         {posts.map((item: any, index: number) => {
           return (
             <div
               key={index}
-              className="border border-black p-5 w-[47%] flex flex-col items-end"
+              className="border border-black p-5 w-full md:w-[47%] flex flex-col md:items-end"
             >
               <Image
                 src={
@@ -73,14 +77,14 @@ export default function Page() {
                 className="w-full h-[250px]"
                 alt="frame"
               />
-              <div className="max-w-[80%] flex flex-col items-end">
-                <h2 className="text-end text-[#1F4694]  text-[25px] mt-5">
+              <div className="w-full md:max-w-[80%] flex flex-col md:items-end">
+                <h2 className=" md:text-end text-[#1F4694] text-[15px] md:text-[25px] mt-5">
                   {item.postMeta.title}
                 </h2>
-                <p className="text-end text-[#646464]">
+                <p className=" text-[13px] md:text-end md:text-[16px] text-[#646464]">
                   {item.postMeta.description}
                 </p>
-                <button className="bg-[#1F4694] rounded-md px-6 py-2 text-white mt-5">
+                <button className="self-end bg-[#1F4694] rounded-md text-[12px] md:text-[16px] px-3 py-1 md:px-6 md:py-2 text-white mt-5">
                   Read More
                 </button>
               </div>

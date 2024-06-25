@@ -52,9 +52,9 @@ export default function page() {
     setExperienceArray(updatedArray);
   };
   return (
-    <div>
+    <div className="overflow-hidden w-screen">
       <Navbar />
-      <section>
+      <section className=" mt-20 md:mt-0">
         <div
           style={{
             backgroundImage: "url(/interest_hero_bg.png)",
@@ -62,27 +62,29 @@ export default function page() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-          className="h-[700px] w-screen relative"
+          className=" h-[200px] md:h-[700px] w-screen relative  "
         ></div>
       </section>
 
-      <section className="px-[10%] flex justify-center z-10 w-screen text-[#000000]">
-        <div className="border border-[#1F4694] rounded-md p-10  bg-[#F5F9FC] w-[80%]   ">
-          <h1 className="text-[52px]">
+      <section className="md:px-[10%] flex justify-center z-10 w-[80%] md:w-screen overflow-hidden text-[#000000]">
+        <div className="md:border md:border-[#1F4694] md:rounded-md  md:p-10  md:bg-[#F5F9FC] w-full md:w-[80%]   ">
+          <h1 className="hidden md:block  md:text-[52px]">
             Introductory <span>Line</span>
           </h1>
-          <p>
+          <p className=" text-center px-10 md:px-0 md:text-left text-[12px] md:text-[16px]">
             Welcome to Central School International, where your child's learning
             journey starts with 3 simple steps. Experience a hassle-free
             admissions process on our website by completing the online admission
             form and our representative will reach out to you promptly.
           </p>
           <div className="flex flex-col items-center">
-            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-[70%]">
-              <h1 className="text-[52px] absolute -top-[50px] left-10 text-black">
-                Step 1
-              </h1>
-              <p>
+            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-10 md:mt-20 w-[70%]">
+              <div className="w-full flex justify-center">
+                <h1 className="md:text-[52px] absolute -top-[15px]   md:-top-[50px] md:left-10 text-black">
+                  Step 1
+                </h1>
+              </div>
+              <p className="text-center md:text-none text-[12px] md:text-[16px]">
                 Registrations are accepted via the website or in person. After
                 the registration fee deposit, you will receive an admission
                 assessment and interview date. The assessment benchmarks are
@@ -94,14 +96,16 @@ export default function page() {
                 height={200}
                 width={200}
                 alt="arrow"
-                className="h-[150px] w-auto absolute -right-[70px] -bottom-[50px]"
+                className="h-[100px] md:h-[150px]  w-auto absolute -right-[25px] z-10 md:-right-[70px] md:-bottom-[50px]"
               />
             </div>
-            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-[70%]">
-              <h1 className="text-[52px] absolute -top-[50px] right-10 text-black">
-                Step 2
-              </h1>
-              <p>
+            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-10 md:mt-20 w-[70%]">
+              <div className="w-full flex justify-center">
+                <h1 className="md:text-[52px] absolute -top-[15px] md:-top-[50px] md:left-10 text-black">
+                  Step 2
+                </h1>
+              </div>
+              <p className="text-center md:text-none text-[12px] md:text-[16px]">
                 Registrations are accepted via the website or in person. After
                 the registration fee deposit, you will receive an admission
                 assessment and interview date. The assessment benchmarks are
@@ -113,14 +117,16 @@ export default function page() {
                 height={200}
                 width={200}
                 alt="arrow"
-                className="h-[150px] w-auto absolute -left-[70px] -bottom-[50px]"
+                className="h-[100px] md:h-[150px] z-10  w-auto absolute -left-[25px] md:-left-[70px] -bottom-[50px]"
               />
             </div>
-            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-[70%]">
-              <h1 className="text-[52px] absolute -top-[50px] left-10 text-black">
-                Step 3
-              </h1>
-              <p>
+            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-10 md:mt-20 w-[70%]">
+              <div className="w-full flex justify-center">
+                <h1 className="md:text-[52px] absolute -top-[15px]  md:-top-[50px] md:left-10 text-black">
+                  Step 3
+                </h1>
+              </div>
+              <p className="text-center md:text-none text-[12px] md:text-[16px]">
                 Registrations are accepted via the website or in person. After
                 the registration fee deposit, you will receive an admission
                 assessment and interview date. The assessment benchmarks are
@@ -132,15 +138,15 @@ export default function page() {
                 height={200}
                 width={200}
                 alt="arrow"
-                className="h-[150px] w-auto absolute -left-[70px] -bottom-[50px]"
+                className="h-[100px] md:h-[150px] z-10 w-auto absolute  -left-[25px] md:-left-[70px] -bottom-[50px]"
               />
             </div>
           </div>
-          <div className="mt-20">
-            <p className="text-[#000000] text-[33px]">
+          <div className="px-10 md:px-0 mt-20">
+            <p className="text-[#000000] text-[20px] md:text-[33px] text-center md:text-left   md:text-none">
               Conditions of registration
             </p>
-            <p>
+            <p className="text-[12px] md:text-[16px] text-center md:text-left md:text-none">
               Registration does not guarantee admission. <br />
               All information and relevant documents provided must be true and
               accurate for us to process the admission. incomplete registration
@@ -149,41 +155,43 @@ export default function page() {
               giving any further information.
             </p>
 
-            <p className="text-[#000000] text-[33px] mt-10">Key Suggestions</p>
-            <p>
+            <p className=" hidden md:block text-[#000000] text-[20px] md:text-[33px] text-center md:text-left md:text-none mt-10">
+              Key Suggestions
+            </p>
+            <p className="hidden md:block text-[12px] md:text-[16px] text-center md:text-left md:text-none">
               The admission form should be embedded within the website page,
               linked with the email <br />
               "pro@csi.edu.pk" for record maintenance
             </p>
           </div>
-          <div className="flex gap-10 text-black items-center mt-10">
-            <h1 className="text-[52px] font-[700]">
+          <div className="flex flex-col md:flex-row gap-10 text-black items-center mt-10">
+            <h1 className="text-[25px] md:text-[52px] font-[700] text-center">
               Our Fee <br /> <span className="font-[400]">Structure</span>
             </h1>
-            <div className="bg-white border-[1px] border-[#1F4694] rounded-md p-4">
-              <p className="text-[22px] font-[700px]">
+            <div className="bg-white border-[1px] border-[#1F4694] rounded-md p-4 mx-5">
+              <p className="md:text-[22px] font-[700px]">
                 Pre Nursery To KG:{" "}
                 <span className="font-[400]">PKR 32000 per month</span>
               </p>
-              <p className="text-[22px] font-[700px]">
+              <p className="md:text-[22px] font-[700px]">
                 Grade 1 - 5:{" "}
                 <span className="font-[400]">PKR 35000 per month</span>
               </p>
             </div>
           </div>
-          <h1 className="text-[52px] font-[700] uppercase mt-10">
+          <h1 className="text-[25px] text-center md:text-left md:text-none md:text-[52px] font-[700] uppercase mt-10 mb-5">
             Interest <br /> <span className="font-[400]">form</span>
           </h1>
-          <div>
-            <p> Child’s Name</p>
+          <div className="px-10 md:px-0">
+            <p className="text-center md:text-left"> Child’s Name</p>
             <input
               type="text"
               className="bg-white rounded-md border-[1px] border-[#1F4694] w-full py-3"
             />
           </div>
-          <div className="flex items-center justify-between mt-5 w-full">
-            <div>
-              <p>Gender</p> {" "}
+          <div className="flex flex-col md:flex-row items-center justify-center  md:justify-between mt-5 w-full">
+            <div className="justify-center">
+              <p className="text-center md:text-left">Gender</p> {" "}
               <div className="flex items-center gap-5">
                 <div className="flex items-center gap-2">
                   <input
@@ -205,41 +213,43 @@ export default function page() {
                 </div>
               </div>
             </div>
-            <div className="w-[35%]">
-              <p>Age</p>
+            <div className="mt-4 md:mt-0 w-[70%] md:w-[35%]">
+              <p className="text-center md:text-left">Age</p>
               <input
                 type="text"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] py-3 w-full"
               />
             </div>
-            <div className="w-[35%]">
-              <p>Admission Required in Class </p>
+            <div className="mt-4 md:mt-0  w-[70%] md:w-[35%]">
+              <p className="text-center md:text-left">
+                Admission Required in Class
+              </p>
               <input
                 type="text"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] py-3 w-full"
               />
             </div>
           </div>
-          <div className="flex items-center w-full mt-5 justify-between">
-            <div className="w-[60%]">
-              <p>Previous School</p>
+          <div className="flex flex-col md:flex-row items-center w-full mt-5 justify-center  md:justify-between">
+            <div className="w-[70%] md:w-[60%]">
+              <p className="text-center  md:text-left">Previous School</p>
               <input
                 type="text"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] w-full py-3"
               />{" "}
             </div>
-            <div className="w-[30%]">
-              <p>Previous School</p>
+            <div className="mt-4 md:mt-0 w-[70%] md:w-[30%]">
+              <p className="text-center md:text-left">Previous School</p>
               <input
                 type="date"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] w-full py-3 px-3"
               />{" "}
             </div>
           </div>
-          <div className="mt-10">
-            <p>Siblings Information</p>
-            <div className="border border-[#1F4694] rounded-md p-3 mt-5">
-              <div className="flex items-end justify-between">
+          <div className=" mt-10">
+            <p className="text-center md:text-left">Siblings Information</p>
+            <div className="flex flex-col md:flex-none  border border-[#1F4694] rounded-md p-3 mt-5">
+              <div className="flex flex-col md:flex-row items-center md:items-end justify-between">
                 <p> 1. Name </p>
                 <input
                   type="text"
@@ -406,7 +416,7 @@ export default function page() {
         height={1500}
         width={1500}
         alt="bg"
-        className="w-[100%] h-auto -top-[-10%] z-0"
+        className="hidden md:block w-[100%] h-auto -top-[-10%] z-0"
       />
       <footer className="mt-[250px]">
         <Footer />
