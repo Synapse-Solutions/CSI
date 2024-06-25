@@ -8,13 +8,13 @@
 .animate_img {
   width: 100%;
   position: absolute;
-  animation: move 70s ease infinite; /* Animation properties */
-  -ms-animation: move 70s ease infinite; /* Microsoft Edge */
-  -webkit-animation: move 70s ease infinite; /* Safari and Chrome */
-  -moz-animation: move 70s ease infinite; /* Firefox */
+  /* animation: move 70s ease infinite;  Animation properties */
+  /* -ms-animation: move 70s ease infinite;  Microsoft Edge */
+  /* -webkit-animation: move 70s ease infinite;  Safari and Chrome */
+  /* -moz-animation: move 70s ease infinite;  Firefox */
 }
 
-@-webkit-keyframes move {
+/* @-webkit-keyframes move {
   0% {
     -webkit-transform-origin: bottom left;
     -moz-transform-origin: bottom left;
@@ -23,29 +23,29 @@
     transform-origin: bottom left;
     transform: scale(1);
     -ms-transform: scale(1);
-    /* IE 9 */
+    IE 9 
 
     -webkit-transform: scale(1);
-    /* Safari and Chrome */
+    Safari and Chrome 
 
     -o-transform: scale(1);
-    /* Opera */
+    Opera 
 
     -moz-transform: scale(1);
-    /* Firefox */
+    Firefox 
   }
   100% {
     transform: scale(1.2);
     -ms-transform: scale(1.2);
-    /* IE 9 */
+    IE 9 
 
     -webkit-transform: scale(1.2);
-    /* Safari and Chrome */
+    Safari and Chrome 
 
     -o-transform: scale(1.2);
-    /* Opera */
+    Opera 
 
     -moz-transform: scale(1.2);
-    /* Firefox */
+    Firefox 
   }
-}
+} */

@@ -272,18 +272,18 @@ export default function page() {
           </div>
         </section>
       </section>
-      <div className="xl:hidden flex flex-col w-full items-center mt-20 ">
+      {/* <div className="xl:hidden flex flex-col w-full items-center mt-20 ">
         <div className="w-[80%] xl:w-[50%]">
           <h1 className="text-[25px] text-center 2xl:text-[35px] font-bold">
             The CSI Extended Learning Program
           </h1>
           <p className="text-center mt-5 text-[18px] xl:text-[18px]">
-            At CSI, learning takes place both inside & Outside the classroom.
-            Our extended learning program makes Sure that our students learn
+            At CSI, learning takes place both inside & outside the classroom.
+            Our extended learning program makes sure that our students learn
             through play, projects, co-curriculars and athletics.
           </p>
         </div>
-      </div>
+      </div> */}
       <div className=" justify-between relative overflow-hidden w-screen">
         <div className="w-full">
           <div className="hidden absolute -top-[80px] 2xl:top-0 left-0 xl:flex flex-col w-full items-center ">
@@ -292,7 +292,7 @@ export default function page() {
                 The CSI Extended Learning Program
               </h1>
               <p className="text-center mt-5 text-[18px] 2xl:text-[18px]">
-                At CSI, learning takes place both inside & Outside the
+                At CSI, learning takes place both inside & outside the
                 classroom. Our extended learning program makes Sure that our
                 students learn through play, projects, co-curriculars and
                 athletics.
@@ -301,13 +301,14 @@ export default function page() {
           </div>
           <div className="hidden xl:block absolute left-0 top-[50%] w-1/2 px-[10%]">
             <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
-              The CSI Take Flight Program
+              Project Based Learning
             </h1>
             <p className="mt-10 text-[18px] 2xl:text-[18px]">
-              The take flight program offers CSI Robins the opportunity to
-              engage in multiple projects based roles all designed to improve
-              their cognition, social and emotional intelligence and confidence.
-              these roles include:
+              Our Project based learning program offers CSI Robins the
+              opportunity to engage in multiple projects based roles all designed
+              roles all designed to improve their cognition,social, emotional
+              emotional intelligence and confidence.
+              These roles include:
             </p>
           </div>
           {/* <img
@@ -327,13 +328,14 @@ export default function page() {
         </div>
         <div className="px-[10%] xl:hidden">
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
-            The CSI Take Flight Program
+            Project Based Learning
           </h1>
           <p className="mt-10 text-[18px] 2xl:text-[18px]">
-            The take flight program offers CSI Robins the opportunity to engage
-            in multiple projects based roles all designed to improve their
-            cognition, social and emotional intelligence and confidence. these
-            roles include:
+            Our Project based learning program offers CSI Robins the
+            opportunity to engage in multiple projects based roles all designed
+            roles all designed to improve their cognition,social, emotional
+            emotional intelligence and confidence.
+            These roles include:
           </p>
         </div>
       </div>
@@ -424,13 +426,13 @@ export default function page() {
       <div className="flex w-full mt-[10%]">
         <div className="xl:w-[60%] px-[10%]">
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
-            The CSI Take Flight Program
+            The CSI Athletics Program
           </h1>
           <p className="mt-10 text-[18px] 2xl:text-[18px]">
-            The take flight program offers CSI Robins the opportunity to engage
-            in multiple projects based roles all designed to improve their
-            cognition, social and emotional intelligence and confidence. these
-            roles include:
+            Extensive Research has established that sports and athletics
+            are critically important in improving learning and academic
+            performance. At CSI we provide sporting facilities and an
+            athletics program built to help your child excel. We offer:
           </p>
         </div>
       </div>

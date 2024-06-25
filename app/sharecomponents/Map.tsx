@@ -9,7 +9,7 @@ const center = {
 
 const handleMarkerClick = () => {
   const mapUrl =
-    "https://www.google.com/maps/place/278+St+5,+Sector+C+Sector+B+DHA+Phase+6,+Lahore,+Punjab/@31.4672776,74.448089,17z/data=!4m6!3m5!1s0x391908dbab43f39d:0x4c2e17e3dfcbb041!8m2!3d31.4673344!4d74.4498704!16s%2Fg%2F11ggt5b4s_?entry=ttu";
+    "https://www.google.com/maps/place/31%C2%B026'39.0%22N+74%C2%B012'03.7%22E/@31.4441667,74.1984529,17z/data=!3m1!4b1!4m4!3m3!8m2!3d31.4441667!4d74.2010278?coh=219815&entry=tts&g_ep=EgoyMDI0MDYyMy4wKgBIAVAD";
   window.open(mapUrl, "_blank");
 };
 

@@ -110,23 +110,23 @@ export default function Navbar() {
           opacity: 1,
           color: color,
         }}
-        className={`hidden lg:flex text-[16px] 2xl:text-[18px] justify-center fixed top-0 left-0 w-full h-[120px] items-center  uppercase z-50 
+        className={`hidden lg:flex text-[16px] 2xl:text-[18px] justify-center fixed top-0 left-0 w-full h-[120px] items-center z-50 
          
         `}
       >
         <div className="flex w-[80%] font-[700] text-[16px] items-end justify-between ">
           <div className="w-[40%] 2xl:w-[30%] flex justify-between">
             <Link href={"/learning-program"}>
-              <h1 className="hover:text-[#028676] cursor-pointer">Programs</h1>
+              <h1 className="hover:text-[#028676] cursor-pointer">PROGRAMS</h1>
             </Link>
             <Link href={"/see-the-campus"}>
               <h1 className="hover:text-[#028676] cursor-pointer">
-                See The campus
+                SEE THE CAMPUS
               </h1>
             </Link>
             <Link href={"/interest-form"}>
               <h1 className="hover:text-[#028676] cursor-pointer">
-                Admissions
+                ADMISSIONS
               </h1>
             </Link>
           </div>
@@ -158,12 +158,12 @@ export default function Navbar() {
                 className="flex items-center gap-2 z-20"
               >
                 <h1 className="hover:text-[#028676] cursor-pointer">
-                  Know more
+                  KNOW MORE
                 </h1>
                 <Image
                   src={"/CaretDown.png"}
-                  height={20}
-                  width={20}
+                  height={10}
+                  width={10}
                   alt="caredown"
                 />
               </button>
@@ -205,14 +205,14 @@ export default function Navbar() {
             <div className="flex-1">
               <Link href={"/our-heart"}>
                 <h1 className="hover:text-[#028676] cursor-pointer">
-                  Our heart
+                  OUR HEART
                 </h1>
               </Link>
             </div>
             <div className="flex-1">
               <Link href={"/contact-us"}>
                 <h1 className="hover:text-[#028676] cursor-pointer">
-                  contact us
+                  CONTACT US
                 </h1>
               </Link>
             </div>
