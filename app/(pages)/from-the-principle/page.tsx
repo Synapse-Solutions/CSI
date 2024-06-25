@@ -28,18 +28,18 @@ export default function page() {
 
           <div className="absolute top-0  w-full">
             <h1 className="text-[52px] font-[700] ml-10">
-              From the desk <br /> of the principle
+              From the desk <br /> of the principal
             </h1>
             <div
               style={{
                 backgroundImage: "url(/from_principles_bg.png)",
-                backgroundSize: "contain",
+                backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }}
               className="w-[45%] h-auto pt-20 text-white text-[22px] flex flex-col items-center"
             >
-              <div className="w-[80%] mt-20 flex flex-col gap-5">
+              <div className="w-[80%] mt-10 2xl:mt-20 flex flex-col gap-5 text-[14px] 2xl:text-[24px]">
                 <p>
                   It is my honour and privilege as the Principal of the first
                   campus of Central School International to welcome you to our

@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 export default function page() {
-  const [selectedForm, setSelectedForm] = useState(3);
+  const [selectedForm, setSelectedForm] = useState(1);
   const [educationDetails, setEducationDetails] = useState([
     {
       qualification: "",
@@ -52,7 +52,7 @@ export default function page() {
     setExperienceArray(updatedArray);
   };
   return (
-    <div>
+    <div className="w-screen overflow-hidden">
       <Navbar />
       <section>
         <div
@@ -62,16 +62,18 @@ export default function page() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-          className="h-[700px] w-screen relative"
+          className="h-[400px] xl:h-[700px] w-screen relative"
         >
-          <div className="text-white absolute bottom-[30%] right-[15%]">
-            <h1 className="text-[35px] font-bold">Our Teacher’s Training</h1>
-            <p className="text-[35px]">Empowerment Process</p>
+          <div className="text-white hidden xl:block absolute bottom-[30%] right-[15%]">
+            <h1 className="text-[20px] xl:text-[35px] font-bold">
+              Our Teacher’s Training
+            </h1>
+            <p className="text-[20px] xl:text-[35px]">Empowerment Process</p>
           </div>
         </div>
       </section>
-      <section className="px-[10%]">
-        <div className="relative text-black text-[22px] font-bold">
+      <section className="px-[10%] hidden xl:block">
+        <div className="relative text-black text-[16px] xl:text-[22px] font-bold">
           <Image
             src={"/arrows_pic.png"}
             height={1000}

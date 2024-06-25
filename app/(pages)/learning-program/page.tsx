@@ -368,10 +368,10 @@ export default function page() {
               The CSI Co-Curricular Program
             </h1>
             <p className="mt-10 text-[18px] 2xl:text-[18px]">
-              Our Extensive co curricular program builds upon our take flight
-              program and allows students to make further gains through project
-              and play based learning. our program also centers around the
-              importance of well being and mindfulness. activities offered are:
+              Our extensive co-curricular program builds upon our take flight
+              academic program and allows students to make further gains through
+              project and play based learning. The following are the activities
+              offered:
             </p>
           </div>
           <img
@@ -392,10 +392,10 @@ export default function page() {
             The CSI Co-Curricular Program
           </h1>
           <p className="mt-10 text-[18px] 2xl:text-[18px]">
-            Our Extensive co curricular program builds upon our take flight
-            program and allows students to make further gains through project
-            and play based learning. our program also centers around the
-            importance of well being and mindfulness. activities offered are:
+            Our extensive co-curricular program builds upon our take flight
+            academic program and allows students to make further gains through
+            project and play based learning. The following are the activities
+            offered:
           </p>
         </div>
       </div>

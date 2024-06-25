@@ -8,20 +8,20 @@ export default function page() {
   return (
     <div className="w-screen overflow-hidden">
       <Navbar />
-      <section className="mb-[400px]">
-        <div className="h-screen w-screen relative">
+      <section className="xl:mb-[400px]">
+        <div className="h-[400px] xl:h-screen w-screen relative">
           <Image
             src={"/see_all_campush_hero.png"}
             height={1500}
             width={1500}
             alt="her"
-            className="absolute top-0 left-0 w-screen h-auto"
+            className="absolute top-0 left-0 w-screen h-[400px] xl:h-auto"
           />
 
-          <h1 className="text-[58px] font-[700px] absolute top-[20%] left-0 w-full text-center z-20 text-white">
+          <h1 className="text-[25px] xl:text-[58px] font-[700px] absolute top-[55%] xl:top-[20%] left-0 w-full text-center z-20 text-white">
             See the campus
           </h1>
-          <button className="bg-white rounded-full px-10 py-2 text-black uppercase text-[28] font-[400] absolute left-20 z-20 top-[90%]">
+          <button className="bg-white rounded-full px-10 py-2 text-black uppercase text-[20px] xl:text-[28] font-[400] absolute left-20 z-20 top-[70%] xl:top-[90%]">
             Book A tour
           </button>
         </div>
@@ -49,13 +49,13 @@ export default function page() {
               className="w-full h-auto object-contain"
             />
           </div>
-          <p>
+          <p className="hidden xl:block">
             Custom Made <br /> Learning Spaces
           </p>
         </div>
         <div className="flex px-[5%] gap-10">
           <div className="w-[40%] p-10">
-            <p className="text-right">
+            <p className="text-right hidden xl:block">
               Designed with <br />
               Expertise and Experience
             </p>
@@ -81,7 +81,7 @@ export default function page() {
             />
           </div>
           <div className="w-[40%] p-10">
-            <p className="text-left">
+            <p className="text-left hidden xl:block">
               Specifically Designed to <br /> Facilitate Project Based <br />{" "}
               Learning
             </p>
@@ -89,7 +89,7 @@ export default function page() {
         </div>
         <div className="flex px-[5%] gap-10">
           <div className="w-[40%] p-10">
-            <p className="text-right">
+            <p className="text-right hidden xl:block">
               Made to Facilitate Play <br /> Based Learning
             </p>
           </div>
@@ -114,14 +114,14 @@ export default function page() {
             />
           </div>
           <div className="w-[40%] p-10">
-            <p className="text-left">
+            <p className="text-left hidden xl:block">
               Expansive Outdoor <br /> Sports Facilities
             </p>
           </div>
         </div>
         <div className="flex px-[5%] gap-10">
           <div className="w-[40%] p-10">
-            <p className="text-right">
+            <p className="text-right hidden xl:block">
               Built to Make <br />
               Learning Interactive
             </p>
@@ -147,14 +147,14 @@ export default function page() {
             />
           </div>
           <div className="w-[40%] p-10">
-            <p className="text-left">
+            <p className="text-left hidden xl:block">
               Designed for the <br /> Needs of All Ages
             </p>
           </div>
         </div>
         <div className="flex px-[5%] gap-10">
           <div className="w-[40%] p-10">
-            <p className="text-right">
+            <p className="text-right hidden xl:block">
               Created to Carry Out A <br /> Custom Sports Program
             </p>
           </div>
@@ -179,14 +179,14 @@ export default function page() {
             />
           </div>
           <div className="w-[40%] p-10">
-            <p className="text-left">
+            <p className="text-left hidden xl:block">
               Built to Ensure Low <br /> Student-Teacher Ratios
             </p>
           </div>
         </div>
         <div className="flex px-[5%] gap-10">
           <div className="w-[40%] p-10">
-            <p className="text-right">
+            <p className="text-right hidden xl:block">
               Featuring a Variety of <br /> Skill Specific <br />
               Learning Areas
             </p>
@@ -212,7 +212,7 @@ export default function page() {
             />
           </div>
           <div className="w-[40%] p-10">
-            <p className="text-left">
+            <p className="text-left hidden xl:block">
               Made to Ensure <br />
               Student Comfort
             </p>
@@ -220,7 +220,7 @@ export default function page() {
         </div>
         <div className="flex px-[5%] gap-10">
           <div className="w-[40%] p-10">
-            <p className="text-left">
+            <p className="text-left hidden xl:block">
               Designed to <br />
               Foster Collaboration
             </p>

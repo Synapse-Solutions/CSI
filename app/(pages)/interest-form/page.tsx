@@ -175,7 +175,7 @@ export default function page() {
             <p> Child’s Name</p>
             <input
               type="text"
-              className="bg-white rounded-md border-[1px] border-[#1F4694] w-full py-3"
+              className="bg-white rounded-md border-[1px] border-[#1F4694] w-full p-3"
             />
           </div>
           <div className="flex items-center justify-between mt-5 w-full">
@@ -206,14 +206,14 @@ export default function page() {
               <p>Age</p>
               <input
                 type="text"
-                className="bg-white rounded-md border-[1px] border-[#1F4694] py-3 w-full"
+                className="bg-white rounded-md border-[1px] border-[#1F4694] p-3 w-full"
               />
             </div>
             <div className="w-[35%]">
               <p>Admission Required in Class </p>
               <input
                 type="text"
-                className="bg-white rounded-md border-[1px] border-[#1F4694] py-3 w-full"
+                className="bg-white rounded-md border-[1px] border-[#1F4694] p-3 w-full"
               />
             </div>
           </div>
@@ -222,14 +222,14 @@ export default function page() {
               <p>Previous School</p>
               <input
                 type="text"
-                className="bg-white rounded-md border-[1px] border-[#1F4694] w-full py-3"
+                className="bg-white rounded-md border-[1px] border-[#1F4694] w-full p-3"
               />{" "}
             </div>
             <div className="w-[30%]">
               <p>Previous School</p>
               <input
                 type="date"
-                className="bg-white rounded-md border-[1px] border-[#1F4694] w-full py-3 px-3"
+                className="bg-white rounded-md border-[1px] border-[#1F4694] w-full p-3 px-3"
               />{" "}
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function page() {
                 <p> 1. Name </p>
                 <input
                   type="text"
-                  className="bg-transparent border-b border-[#1F4694] w-[26%]"
+                  className="bg-transparent border-b border-[#1F4694] w-[26%] p-3"
                 />
 
                 <p>Age</p>
@@ -281,14 +281,14 @@ export default function page() {
                   <p className="">Father’s Name</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[60%] "
+                    className="border-b border-[#1F4694] w-[60%] px-3 outline-none bg-transparent"
                   />
                 </div>
                 <div className="flex w-1/2 items-end">
                   <p>Mother’s Name</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[60%]"
+                    className="border-b border-[#1F4694] w-[60%] px-3 outline-none bg-transparent"
                   />
                 </div>
               </div>
@@ -297,14 +297,14 @@ export default function page() {
                   <p className="">Contact #</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[70%] "
+                    className="border-b border-[#1F4694] w-[70%] px-3 outline-none bg-transparent"
                   />
                 </div>
                 <div className="flex w-1/2 items-end">
                   <p>Contact #</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[70%]"
+                    className="border-b border-[#1F4694] w-[70%] px-3 outline-none bg-transparent"
                   />
                 </div>
               </div>
@@ -313,14 +313,14 @@ export default function page() {
                   <p className="">Email</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[80%] "
+                    className="border-b border-[#1F4694] w-[80%] px-3 outline-none bg-transparent"
                   />
                 </div>
                 <div className="flex w-1/2 items-end">
                   <p>Email</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[80%]"
+                    className="border-b border-[#1F4694] w-[80%] px-3 outline-none bg-transparent"
                   />
                 </div>
               </div>

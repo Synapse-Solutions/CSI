@@ -15,7 +15,7 @@ const array = [
   },
   {
     name: "Admissions",
-    link: "/admission",
+    link: "/interest-form",
   },
   {
     name: "Know More",
@@ -40,7 +40,7 @@ let knowMoreArray = [
     link: "/teacher-registeration-form",
   },
   {
-    name: "From The Principle",
+    name: "From The Principal",
     link: "/from-the-principle",
   },
   {
@@ -124,7 +124,7 @@ export default function Navbar() {
                 See The campus
               </h1>
             </Link>
-            <Link href={"/coming-soon"}>
+            <Link href={"/interest-form"}>
               <h1 className="hover:text-[#028676] cursor-pointer">
                 Admissions
               </h1>
@@ -181,7 +181,7 @@ export default function Navbar() {
                   <p className="hover:text-[#028676]">For Teachers</p>
                 </Link>
                 <Link href={"/from-the-principle"}>
-                  <p className="hover:text-[#028676]">From the principle</p>
+                  <p className="hover:text-[#028676]">From the Principal</p>
                 </Link>
                 <Link href={"/advisory-board"}>
                   <p className="hover:text-[#028676]">Our Advisory Board</p>
