@@ -29,6 +29,8 @@ export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [isHambergerShow, setIsHambergerShow] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [showDropDown, setShowDropDown] = useState(false);
+  console.log("🚀 ~ Navbar ~ showDropDown:ads", showDropDown);
 
   let color =
     pathname === "/coming-soon" && !isHeaderShow
@@ -82,12 +84,12 @@ export default function Navbar() {
          
         `}
       >
-        <div className="flex w-[80%] items-end justify-between ">
+        <div className="flex w-[80%] font-[700] text-[16px] items-end justify-between ">
           <div className="w-[40%] 2xl:w-[30%] flex justify-between">
-            <Link href={"/coming-soon"}>
+            <Link href={"/learning-program"}>
               <h1 className="hover:text-[#028676] cursor-pointer">Programs</h1>
             </Link>
-            <Link href={"/coming-soon"}>
+            <Link href={"/see-the-campus"}>
               <h1 className="hover:text-[#028676] cursor-pointer">
                 See The campus
               </h1>
@@ -116,12 +118,51 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="w-[40%] 2xl:w-[30%]  flex justify-between">
-            <div className="flex-1">
-              <Link href={"/coming-soon"}>
+            <div className="flex-1 relative z-20">
+              <button
+                onClick={() => setShowDropDown(!showDropDown)}
+                className="flex items-center gap-2 z-20"
+              >
                 <h1 className="hover:text-[#028676] cursor-pointer">
                   Know more
                 </h1>
-              </Link>
+                <Image
+                  src={"/CaretDown.png"}
+                  height={20}
+                  width={20}
+                  alt="caredown"
+                />
+              </button>
+
+              <div
+                style={{
+                  opacity: showDropDown ? 1 : 0,
+                  transform: showDropDown
+                    ? "translateY(0)"
+                    : "translateY(-110%)",
+                  transition: "opacity 0.7s ease, transform 0.7s ease",
+                }}
+                className="flex flex-col p-5 text-[#1F4694]  text-[20px] z-0 font-[400] gap-5 absolute top-full bg-white rounded-b-xl -left-[70px] w-[260px]"
+              >
+                <Link href={"/clearity-by-csi"}>
+                  <p className="hover:text-[#028676]">Clarity by CSI</p>
+                </Link>
+                <Link href={"/teacher-registeration-form"}>
+                  <p className="hover:text-[#028676]">For Teachers</p>
+                </Link>
+                <Link href={"/from-the-principle"}>
+                  <p className="hover:text-[#028676]">From the principle</p>
+                </Link>
+                <Link href={"/advisory-board"}>
+                  <p className="hover:text-[#028676]">Our Advisory Board</p>
+                </Link>
+                <Link href={"/academic-councel"}>
+                  <p className="hover:text-[#028676]">Academic council</p>
+                </Link>
+                <Link href={"/student-well-being"}>
+                  <p className="hover:text-[#028676]">Student well-being</p>
+                </Link>
+              </div>
             </div>
             <div className="flex-1">
               <Link href={"/our-heart"}>
@@ -148,25 +189,39 @@ export default function Navbar() {
             className="absolute top-0 right-0 w-[180px] h-[30px] flex justify-center items-center"
           >
             <div className="flex items-center gap-3">
-              <Image src={"/XLogo.png"} width={20} height={20} alt="xlogo" />
-              <Image
-                src={"/YoutubeLogo.png"}
-                width={20}
-                height={20}
-                alt="xlogo"
-              />
-              <Image
-                src={"/FacebookLogo.png"}
-                width={20}
-                height={20}
-                alt="xlogo"
-              />
-              <Image
-                src={"/InstagramLogo.png"}
-                width={20}
-                height={20}
-                alt="xlogo"
-              />
+              <a
+                href="https://pk.linkedin.com/company/central-school-international?trk=public_post_main-feed-card-text"
+                target="_black"
+              >
+                <Image
+                  src={"/LinkedinLogo.png"}
+                  width={20}
+                  height={20}
+                  alt="xlogo"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/central.school.international/?fbclid=IwAR2-tAPKEW4ykF3QuvvUBADiuJxEzVvK3CKJkQU-PceD0p3630Z2wTACHxA"
+                target="_blank"
+              >
+                <Image
+                  src={"/InstagramLogo.png"}
+                  width={20}
+                  height={20}
+                  alt="xlogo"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/centralschoolinternational"
+                target="_blank"
+              >
+                <Image
+                  src={"/FacebookLogo.png"}
+                  width={20}
+                  height={20}
+                  alt="xlogo"
+                />
+              </a>
             </div>
           </div>
         </div>

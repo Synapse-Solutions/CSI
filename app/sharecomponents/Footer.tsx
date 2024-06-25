@@ -11,7 +11,9 @@ export default function Footer() {
       <div className="w-screen flex z-10 absolute bottom-[99%] xl:bottom-[95%] left-0 ">
         <img
           src={
-            pathname === "/coming-soon"
+            pathname === "/our-heart"
+              ? "/animation003-blue.gif"
+              : pathname === "/coming-soon"
               ? "/animation003-new.gif"
               : "/animation003-new-white-bg.gif"
           }

@@ -86,7 +86,7 @@ export default function SwiperCompoenent() {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="px-16 md:px-0 ml-[25px] xl:ml-0 bg-transparent w-[100%] relative"
+      className="ml-[25px] xl:ml-0 bg-transparent w-[100%] relative"
     >
       <div
         style={{
@@ -181,12 +181,12 @@ export default function SwiperCompoenent() {
                       className="w-[80%] h-[140px] 2xl:h-[240px] object-contain  hover:scale-125 duration-1000 ease-in-out "
                     />
                   </div>
-                  <div className="px-10 mt-5 w-full flex flex-col items-center lg:items-start ">
+                  <div className="px-10 mt-5 w-full flex flex-col items-start ">
                     <div className="h-[150px] 2xl:h-[200px]">
                       {item.title.split("\n").map((line, i) => (
                         <h1
                           key={i}
-                          className="font-bold text-black text-[15px] lg:text-[20px] 2xl:text-[30px] text-start "
+                          className="font-bold text-black text-[20px] 2xl:text-[30px] text-start "
                         >
                           {line}
                         </h1>
@@ -197,7 +197,7 @@ export default function SwiperCompoenent() {
                         setSelectedIndex(index);
                         setFadeAnimation;
                       }}
-                      className="bg-[#028676] hover:bg-[#25524c] text-[12px] md:text-[14px] 2xl:text-[20px] rounded-full text-white py-2 px-8 md:px-10 md:py-3 mb-5 2xl:mb-10"
+                      className="bg-[#028676] hover:bg-[#25524c] text-[14px] 2xl:text-[20px] rounded-full text-white px-10 py-3 mb-5 2xl:mb-10"
                     >
                       See More
                     </button>
