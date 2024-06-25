@@ -137,8 +137,8 @@ export default function page() {
         <h1 className="text-[35px] font-bold text-center ">
           Teacher’s Registration Form
         </h1>
-        <div className="border border-[#1F4694] rounded-md p-10">
-          <div className="flex items-center justify-between">
+        <div className="border border-[#1F4694] rounded-md p-5 xl:p-10">
+          <div className="flex flex-col xl:flex-row gap-3 xl:gap-0 xl:items-center justify-between">
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setSelectedForm(1)}
@@ -147,7 +147,7 @@ export default function page() {
                 1
               </button>
               <p>General Details</p>
-              <div className="h-[1px] w-[100px] bg-[#1F4694]"></div>
+              <div className="h-[1px] w-[100px] bg-[#1F4694] hidden xl:block"></div>
             </div>
             <div className="flex items-center gap-3">
               <button
@@ -157,7 +157,7 @@ export default function page() {
                 2
               </button>
               <p>Education Details</p>
-              <div className="h-[1px] w-[100px] bg-[#1F4694]"></div>
+              <div className="h-[1px] w-[100px] bg-[#1F4694] hidden xl:block"></div>
             </div>
             <div className="flex items-center gap-3">
               <button
@@ -173,31 +173,31 @@ export default function page() {
             <>
               <div className="mt-5">
                 <p>Full Name</p>
-                <div className="flex items-center gap-5">
+                <div className="flex flex-col xl:flex-row items-center gap-5">
                   <input
                     type="text"
                     placeholder="First Name"
-                    className="bg-[#d2daea] rounded-md w-1/2 p-3"
+                    className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="bg-[#d2daea] rounded-md w-1/2 p-3"
+                    className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
                   />
                 </div>
               </div>
               <div className="mt-5">
                 <p>Father’s Name</p>
-                <div className="flex items-center gap-5">
+                <div className="flex flex-col xl:flex-row items-center gap-5">
                   <input
                     type="text"
                     placeholder="First Name"
-                    className="bg-[#d2daea] rounded-md w-1/2 p-3"
+                    className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="bg-[#d2daea] rounded-md w-1/2 p-3"
+                    className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
                   />
                 </div>
               </div>
@@ -234,64 +234,72 @@ export default function page() {
                 <p className="text-[18px] font-[600]">
                   English Language Proficiency*
                 </p>
-                <div className="flex items-center gap-3 mt-5">
-                  <p className="font-[600] w-[100px] mr-10">Reading</p>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Proficient</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Intermediate</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Beginner</p>
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
+                  <p className="font-[600] w-[100px] mr-10">Reading</p>{" "}
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Proficient</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Intermediate</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Beginner</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 mt-5">
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Writing</p>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Proficient</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Intermediate</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Beginner</p>
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Proficient</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Intermediate</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Beginner</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 mt-5">
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Speaking</p>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Proficient</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Intermediate</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Beginner</p>
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Proficient</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Intermediate</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Beginner</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 mt-5">
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Listening</p>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Proficient</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Intermediate</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input type="checkbox" className="bg-[#d2daea]" />
-                    <p>Beginner</p>
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Proficient</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Intermediate</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" className="bg-[#d2daea]" />
+                      <p>Beginner</p>
+                    </div>
                   </div>
                 </div>
               </div>
