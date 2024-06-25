@@ -68,9 +68,6 @@ export default function page() {
 
       <section className="px-[10%] flex justify-center z-10 w-screen text-[#000000]">
         <div className="border border-[#1F4694] rounded-md p-10  bg-[#F5F9FC] w-[80%]   ">
-          <h1 className="text-[52px]">
-            Introductory <span>Line</span>
-          </h1>
           <p>
             Welcome to Central School International, where your child's learning
             journey starts with 3 simple steps. Experience a hassle-free
@@ -149,12 +146,12 @@ export default function page() {
               giving any further information.
             </p>
 
-            <p className="text-[#000000] text-[33px] mt-10">Key Suggestions</p>
+            {/* <p className="text-[#000000] text-[33px] mt-10">Key Suggestions</p>
             <p>
               The admission form should be embedded within the website page,
               linked with the email <br />
               "pro@csi.edu.pk" for record maintenance
-            </p>
+            </p> */}
           </div>
           <div className="flex gap-10 text-black items-center mt-10">
             <h1 className="text-[52px] font-[700]">
