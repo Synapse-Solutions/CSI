@@ -35,9 +35,10 @@ const Map = () => {
     width: "100%",
     height: isMobile ? "calc(140vh)" : "calc(110vh)",
   };
+
   return (
     <div className="w-full">
-      <LoadScript googleMapsApiKey={"AIzaSyA0Sb2g-IWQwyXbiPcbLA1TeYy-7akTtrc"}>
+      <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}>
         <GoogleMap
           mapContainerStyle={dynamicContainerStyle}
           center={center}
