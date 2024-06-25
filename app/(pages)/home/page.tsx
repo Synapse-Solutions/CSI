@@ -24,10 +24,6 @@ export default function Home() {
   }, []);
   function handleMouseLeaveLast(event: any) {
     setActiveHoverIndex(null);
-    // const divElement = event.currentTarget.querySelector("div");
-    // if (divElement) {
-    //   divElement.classList.add("hidden");
-    // }
   }
   return (
     <div className="text-black w-screen overflow-hidden">
@@ -95,7 +91,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute -top-[180px]  xl:-top-[280px] -left-[30px] xl:left-[50px] w-[400px] ${
+                className={`absolute -top-[180px]  xl:-top-[280px] left-2 xl:left-[50px] w-[400px] ${
                   activeHoverIndex === 1 ? "block" : "hidden"
                 }`}
               >
@@ -108,8 +104,8 @@ export default function Home() {
                   link="/eagles"
                 />
               </div>
-              <h1 className="text-[#355496]   font-bold text-[20x] xl:text-[36px] w-[180px]">
-                Habits of Thought
+              <h1 className="text-[#355496]   font-bold text-[18x] xl:text-[36px] w-[180px]">
+                Habits of <br /> Thought
               </h1>
             </div>
           </div>
@@ -121,7 +117,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute z-20 -top-[150px] xl:-top-[280px] xl:-right-[80px] w-[400px] ${
+                className={`absolute z-20 -top-[150px] xl:-top-[280px] right-[-80px] xl:-right-[80px] w-[400px] ${
                   activeHoverIndex === 3 ? "block" : "hidden"
                 }`}
               >
@@ -148,7 +144,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeaveLast}
             >
               <div
-                className={`absolute -top-[150px] xl:-top-[280px]  xl:right-[100px] w-[400px] ${
+                className={`absolute -top-[150px] xl:-top-[280px] right-0 xl:right-[100px] w-[400px] ${
                   activeHoverIndex === 4 ? "block" : "hidden"
                 }`}
               >

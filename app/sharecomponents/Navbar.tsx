@@ -10,16 +10,46 @@ const array = [
     link: "/",
   },
   {
-    name: "About",
-    link: "/about",
+    name: "See The Campus",
+    link: "/see-the-campus",
   },
   {
-    name: "Admission",
+    name: "Admissions",
     link: "/admission",
   },
   {
-    name: "Programs",
-    link: "/learning-program",
+    name: "Know More",
+    link: "",
+  },
+  {
+    name: "Our Heart",
+    link: "/our-heart",
+  },
+  {
+    name: "Contact Us",
+    link: "/contact-us",
+  },
+];
+let knowMoreArray = [
+  {
+    name: "Clarity by CSI",
+    link: "/clearity-by-csi",
+  },
+  {
+    name: "For Teachers",
+    link: "/teacher-registeration-form",
+  },
+  {
+    name: "From The Principle",
+    link: "/from-the-principle",
+  },
+  {
+    name: "Academic Council",
+    link: "/academic-councel",
+  },
+  {
+    name: "Student Well-Being",
+    link: "/student-well-being",
   },
 ];
 export default function Navbar() {
@@ -268,41 +298,53 @@ export default function Navbar() {
           data-aos="fade-right"
           className={`${
             isClosing ? "fade-left" : ""
-          } lg:hidden flex flex-col items-center fixed top-0 left-0 h-screen w-screen z-50 bg-[#028676]`}
+          } lg:hidden flex flex-col items-center fixed top-0 left-0 h-screen w-screen z-50 bg-[#1f4694]`}
         >
-          <div className="w-full flex items-end justify-end p-5">
+          <div className="w-full flex items-center justify-between p-5 bg-[#355496]">
             <Image
-              src={"/X.png"}
+              src={"/logo.webp"}
+              alt="logo"
+              width={100}
+              height={80}
+              className="cursor-pointer hover:animate-pulse h-[60px] w-auto  object-contain"
+            />
+            <Image
+              src={"/cross_icon.png"}
               alt="logo"
               width={50}
               height={30}
               onClick={handleCloseMenu}
-              className="cursor-pointer hover:animate-pulse h-[50px] object-contain"
+              className="cursor-pointer hover:animate-pulse h-[30px] object-contain"
             />
           </div>
-          <Image
-            src={"/logo.webp"}
-            alt="logo"
-            width={100}
-            height={80}
-            className="cursor-pointer hover:animate-pulse h-[60px] w-auto mt-10 object-contain"
-          />
-          <div className="flex flex-col space-y-5 text-white mt-10">
+
+          <div className="flex flex-col space-y-3 text-white mt-10 w-full">
             {array?.map((item, index) => (
               <Link
-                href={item.name !== "Services" ? item.link : ""}
+                href={item.link}
                 key={index}
-                className="relative"
+                className="relative border-b-[1px] border-white pb-2"
               >
                 <p
                   style={{
                     color: pathname === item.link ? "#93F1FE" : "white",
                   }}
-                  className="cursor-pointer transform hover:text-[#93F1FE]"
+                  className="cursor-pointer transform hover:text-[#93F1FE] text-[22px] font-[700] px-5"
                 >
                   {item.name}
                 </p>
-                <div></div>
+
+                {item.link === "" && (
+                  <div className="flex flex-col gap-2">
+                    {knowMoreArray.map((tab, _index) => (
+                      <Link href={tab.link} key={_index}>
+                        <p className="text-[16px] font-[400] px-5">
+                          {tab.name}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </Link>
             ))}
           </div>

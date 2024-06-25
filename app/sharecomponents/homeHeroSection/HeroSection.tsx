@@ -12,16 +12,25 @@ const images = [
 ];
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [intervalDuration, setIntervalDuration] = useState(8000);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 8000);
+    }, intervalDuration);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [intervalDuration]);
+
+  useEffect(() => {
+    if (currentImageIndex === 2) {
+      setIntervalDuration(12000);
+    } else {
+      setIntervalDuration(8000);
+    }
+  }, [currentImageIndex]);
   return (
     <div className="h-[calc(40vh)] image-wrap w-screen flex items-center justify-center md:h-[calc(60vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
       <div className="animate_img h-[calc(60vh)] xl:h-[calc(100vh)] mt-80 md:mt-0">

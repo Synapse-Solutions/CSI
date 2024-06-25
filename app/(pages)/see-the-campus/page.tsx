@@ -6,7 +6,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div>
+    <div className="w-screen overflow-hidden">
       <Navbar />
       <section className="mb-[400px]">
         <div className="h-screen w-screen relative">

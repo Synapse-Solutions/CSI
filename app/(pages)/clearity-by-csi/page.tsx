@@ -31,8 +31,8 @@ export default function Page() {
   return (
     <div className="text-black w-screen overflow-hidden">
       <Navbar />
-      <div className="relative z-10"></div>
-      <section className="py-[10%] px-[5%] ">
+      <div className="relative z-10 h-[130px]"></div>
+      <section className="pb-[10%] px-[5%] ">
         <div className="flex  items-center">
           <div className="w-1/2 flex justify-center">
             <Image
@@ -44,17 +44,21 @@ export default function Page() {
             />
           </div>
           <div className="w-1/2">
-            <h1 className="text-[30px] font-bold">Clarity By CSI</h1>
+            <h1 className="text-[20px] xl:text-[30px] font-bold">
+              Clarity By CSI
+            </h1>
           </div>
         </div>
-        <div className="flex justify-between mt-20 border-b border-black pb-5">
+        <div className="flex justify-between mt-20 border-b border-black pb-5 ">
           <p>
             {" "}
-            <span className="text-[#1F4694]">
+            <span className="text-[#1F4694] text-[14px] xl:text-[18px]">
               Blog Timeline / Blog / Home{" "}
             </span>{" "}
           </p>
-          <p className="text-[#1F4694] text-[25px]">Blog Timeline</p>
+          <p className="text-[#1F4694] text-[18px] xl:text-[25px]">
+            Blog Timeline
+          </p>
         </div>
       </section>
       {!selectedBlog ? (
@@ -63,7 +67,7 @@ export default function Page() {
             return (
               <div
                 key={index}
-                className="border border-black p-5 w-[47%] flex flex-col items-end"
+                className="border border-black p-5 w-full xl:w-[47%] flex flex-col items-end"
               >
                 <Image
                   src={

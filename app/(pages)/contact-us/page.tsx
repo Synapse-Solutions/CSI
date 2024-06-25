@@ -38,61 +38,15 @@ export default function page() {
     }
   };
 
-  // const [selectedForm, setSelectedForm] = useState(3);
-  // const [educationDetails, setEducationDetails] = useState([
-  //   {
-  //     qualification: "",
-  //     institute: "",
-  //     board: "",
-  //     marks: "",
-  //   },
-  // ]);
-  // const [experienceArray, setExperienceArray] = useState([
-  //   {
-  //     organization: "",
-  //     position: "",
-  //     tenure: "",
-  //   },
-  // ]);
-
-  // const handleRemove = () => {
-  //   let updatedArray = [...educationDetails];
-  //   updatedArray.pop();
-  //   setEducationDetails(updatedArray);
-  // };
-  // const handleRemoveExperience = () => {
-  //   let updatedArray = [...experienceArray];
-  //   updatedArray.pop();
-  //   setExperienceArray(updatedArray);
-  // };
-  // const handleAdd = () => {
-  //   let updatedArray = [...educationDetails];
-  //   updatedArray.push({
-  //     qualification: "",
-  //     institute: "",
-  //     board: "",
-  //     marks: "",
-  //   });
-  //   setEducationDetails(updatedArray);
-  // };
-  // const handleAddExperience = () => {
-  //   let updatedArray = [...experienceArray];
-  //   updatedArray.push({
-  //     organization: "",
-  //     position: "",
-  //     tenure: "",
-  //   });
-  //   setExperienceArray(updatedArray);
-  // };
   return (
     <div>
       <Navbar />
       <div className="h-[120px]"></div>
       <section className="px-[10%] mt-[5%] text-[#1F4694]">
-        <div className="flex justify-between gap-10">
+        <div className="flex flex-col-reverse xl:flex-row justify-between gap-10">
           <form
             onSubmit={handleSubmit(sendEmail)}
-            className="border border-[#1F4694] rounded-md p-10 w-1/2"
+            className="border border-[#1F4694] rounded-md p-10 w-full xl:w-1/2"
           >
             <>
               <div className="">
@@ -145,11 +99,11 @@ export default function page() {
               Submit
             </button>
           </form>
-          <div className="w-1/2">
+          <div className="w-full xl:w-1/2">
             <h1 className="font-[700] text-[30px] 2xl:text-[45px]">
               Contact Us!
             </h1>
-            <p className="mt-5">
+            <p className="mt-5 hidden xl:block">
               We'd love to hear from you! Whether you have questions, need
               information, or want to schedule a visit, our team is here to
               assist you. Reach out to us via phone, email, or the contact form
