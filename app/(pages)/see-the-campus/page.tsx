@@ -2,55 +2,9 @@
 import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 export default function page() {
-  const [selectedForm, setSelectedForm] = useState(3);
-  const [educationDetails, setEducationDetails] = useState([
-    {
-      qualification: "",
-      institute: "",
-      board: "",
-      marks: "",
-    },
-  ]);
-  const [experienceArray, setExperienceArray] = useState([
-    {
-      organization: "",
-      position: "",
-      tenure: "",
-    },
-  ]);
-
-  const handleRemove = () => {
-    let updatedArray = [...educationDetails];
-    updatedArray.pop();
-    setEducationDetails(updatedArray);
-  };
-  const handleRemoveExperience = () => {
-    let updatedArray = [...experienceArray];
-    updatedArray.pop();
-    setExperienceArray(updatedArray);
-  };
-  const handleAdd = () => {
-    let updatedArray = [...educationDetails];
-    updatedArray.push({
-      qualification: "",
-      institute: "",
-      board: "",
-      marks: "",
-    });
-    setEducationDetails(updatedArray);
-  };
-  const handleAddExperience = () => {
-    let updatedArray = [...experienceArray];
-    updatedArray.push({
-      organization: "",
-      position: "",
-      tenure: "",
-    });
-    setExperienceArray(updatedArray);
-  };
   return (
     <div>
       <Navbar />
@@ -82,6 +36,105 @@ export default function page() {
             alt="vdo"
             className="object-contain mt-10"
           />
+        </div>
+      </section>
+      <section className="text-[30px] text-black mt-10">
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[60%]">
+            <Image
+              src={"/KI8A7197.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <p>
+            Custom Made <br /> Learning Spaces
+          </p>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[40%] p-10">
+            <p className="text-right">
+              Designed with <br />
+              Expertise and Experience
+            </p>
+          </div>
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_1.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_2.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="w-[40%] p-10">
+            <p className="text-left">
+              Specifically Designed to <br /> Facilitate Project Based <br />{" "}
+              Learning
+            </p>
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[40%] p-10">
+            <p className="text-right">
+              Made to Facilitate Play <br /> Based Learning
+            </p>
+          </div>
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_3.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_4.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="w-[40%] p-10">
+            <p className="text-left">
+              Expansive Outdoor <br /> Sports Facilities
+            </p>
+          </div>
+        </div>
+        <div className="flex px-[5%] gap-10">
+          <div className="w-[40%] p-10">
+            <p className="text-right">
+              Built to Make <br />
+              Learning Interactive
+            </p>
+          </div>
+          <div className="w-[60%]">
+            <Image
+              src={"/seecampus_5.png"}
+              height={500}
+              width={500}
+              alt="kids"
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
       </section>
 
