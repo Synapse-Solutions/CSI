@@ -85,7 +85,7 @@ export default function Navbar() {
       >
         <div className="flex w-[80%] font-[700] text-[16px] items-end justify-between ">
           <div className="w-[40%] 2xl:w-[30%] flex justify-between">
-            <Link href={"/coming-soon"}>
+            <Link href={"/learning-program"}>
               <h1 className="hover:text-[#028676] cursor-pointer">Programs</h1>
             </Link>
             <Link href={"/see-the-campus"}>
@@ -140,16 +140,16 @@ export default function Navbar() {
                   <Link href={"/teacher-registeration-form"}>
                     <p>For Teachers</p>
                   </Link>
-                  <Link href={"/clearity-by-csi"}>
+                  <Link href={"/from-the-principle"}>
                     <p>From the principle</p>
                   </Link>
-                  <Link href={"/clearity-by-csi"}>
+                  <Link href={"/advisory-board"}>
                     <p>Our Advisory Board</p>
                   </Link>
-                  <Link href={"/clearity-by-csi"}>
+                  <Link href={"/academic-councel"}>
                     <p>Academic council</p>
                   </Link>
-                  <Link href={"/clearity-by-csi"}>
+                  <Link href={"/student-well-being"}>
                     <p>Student well-being</p>
                   </Link>
                 </div>

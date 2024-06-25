@@ -518,7 +518,7 @@ export default function page() {
           </div>
         </div>
       </section>
-      <footer className="mt-[250px]">
+      <footer className="mt-[370px]">
         <Footer />
       </footer>
     </div>
