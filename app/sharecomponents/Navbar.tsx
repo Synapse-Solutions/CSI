@@ -191,12 +191,12 @@ export default function Navbar() {
                   </Link>
                   <Link href={"/academic-councel"}>
                     <p className="hover:text-[#028676] hover:scale-110  ease-in-out duration-300">
-                      Academic council
+                      Academic Council
                     </p>
                   </Link>
                   <Link href={"/student-well-being"}>
                     <p className="hover:text-[#028676] hover:scale-110  ease-in-out duration-300">
-                      Student well-being
+                      Student Well-being
                     </p>
                   </Link>
                 </div>

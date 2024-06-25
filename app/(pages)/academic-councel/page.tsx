@@ -20,10 +20,10 @@ export default function page() {
       </section>
       <section>
         <div className="bg-[#F1F1F1] w-full p-8 xl:p-20 ">
-          <h1 className="text-[30px] xl:text-[52px] font-[700] text-center uppercase">
-            Academic Insights councel
+          <h1 className="text-[30px] xl:text-[52px] font-[700] text-center uppercase text-black">
+            Academic Insights Council
           </h1>
-          <p className="mt-10 text-[16px] xl:text-[22px] text-center">
+          <p className="mt-10 text-[16px] xl:text-[22px] text-center text-black">
             Our Academic Insights Council is composed solely of leading
             educationists who advise CSI in creating, adapting and implementing
             its academic programs. Our Council members all hold a doctorate and
@@ -45,7 +45,7 @@ export default function page() {
               className="h-auto w-[90%] object-contain "
             />
           </div>
-          <p className="w-full xl:w-[80%]">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Sohail received his Ph.D in Sociology from Paris Nanterre
             University, France and joined the civil service in 1984. He has
             since been actively involved in research and teaching. He has taught
@@ -62,7 +62,7 @@ export default function page() {
           </p>
         </div>
         <div className="flex flex-col-reverse xl:flex-row gap-10 mt-20">
-          <p className="w-full xl:w-[80%]">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Shams, received his Ph.D/EdD from the world renowened Institute
             of Education, University College London (IOE-UCL), UK and his M.Sc.
             in Economic History from London School of Economics & Political
@@ -98,7 +98,7 @@ export default function page() {
               className="h-auto w-full xl:w-[90%] object-contain "
             />
           </div>
-          <p className="w-full xl:w-[80%]">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Shahzad, received her Ph.D from Deakin University, Australia and
             is a known expert on the techniques of designing student
             assessments, and the preparation of cuttig edge teaching and

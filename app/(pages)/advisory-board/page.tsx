@@ -20,10 +20,10 @@ export default function page() {
       </section>
       <section>
         <div className="bg-[#F1F1F1] w-full p-20 ">
-          <h1 className="text-[40px] xl:text-[52px] font-[700] text-center">
+          <h1 className="text-[40px] xl:text-[52px] font-[700] text-center text-black">
             Advisory Board
           </h1>
-          <p className="mt-10 text-[16px] xl:text-[22px]">
+          <p className="mt-10 text-[16px] xl:text-[22px] text-black">
             Our Advisory Board brings significant expertise, experience and
             strategic insight to CSI. Comprised of practitioners, policy experts
             and leading academics, the CSI Advisory Board ensures that CSl is
@@ -46,7 +46,7 @@ export default function page() {
               className="h-auto w-[90%] object-contain "
             />
           </div>
-          <p className="w-full xl:w-[80%]">
+          <p className="w-full xl:w-[80%] text-black">
             Akbar Hussain Durrani, Tamgha-e-Imtiaz, is currently serving as the
             Chairman of the Federal Public Service Commission. Over the span of
             his illustrious career, Mr. Durrani has served as the Chief
@@ -64,7 +64,7 @@ export default function page() {
           </p>
         </div>
         <div className="flex flex-col-reverse xl:flex-row gap-10 mt-20">
-          <p className="w-full xl:w-[80%]">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Faisal Bari has served as the Dean of the School of Education at
             the Lahore University of Management Science (LUMS), Pakistan and as
             a Board Member of the Punjab Examination Commission. Dr. Bari
@@ -97,7 +97,7 @@ export default function page() {
               className="h-auto w-[90%] object-contain "
             />
           </div>
-          <p className="w-full xl:w-[80%]">
+          <p className="w-full xl:w-[80%] text-black">
             Qualified in Curriculum and Teaching, with a special focus on Early
             Childhood from the world leading Teachers College, Columbia
             University, USA, Ms. Umbreen Arif has more than two decades of

@@ -3,12 +3,13 @@ import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 export default function page() {
   return (
     <div className="w-screen overflow-hidden">
       <Navbar />
-      <section className="xl:mb-[400px]">
+      <section className="xl:mb-[100px]">
         <div className="h-[400px] xl:h-screen w-screen relative">
           <Image
             src={"/see_all_campush_hero.png"}
@@ -21,14 +22,16 @@ export default function page() {
           <h1 className="text-[25px] xl:text-[58px] font-[700px] absolute top-[55%] xl:top-[20%] left-0 w-full text-center z-20 text-white">
             See the campus
           </h1>
-          <button className="bg-white rounded-full px-10 py-2 text-black uppercase text-[20px] xl:text-[28] font-[400] absolute left-20 z-20 top-[70%] xl:top-[90%]">
-            Book A tour
-          </button>
+          <Link href="https://csi.edu.pk/contact-us">
+            <button className="bg-white rounded-full px-10 py-2 text-black uppercase text-[20px] xl:text-[28px] font-[400] absolute left-20 z-20 top-[70%] xl:top-[90%]">
+              Book A tour
+            </button>
+        </Link>
         </div>
       </section>
       <section>
         <div className="flex flex-col items-center w-full">
-          <p>Purpose Built Flagship Campus</p>
+          <p style={{ color: 'black', fontSize: '24px' }}>Purpose Built Flagship Campus</p>
           <Image
             src={"/VDO.png"}
             height={500}

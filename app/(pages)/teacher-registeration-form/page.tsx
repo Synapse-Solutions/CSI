@@ -159,8 +159,8 @@ export default function page() {
               Capacity <br />
               Building <br />
               Trips to engage <br />
-              with policy <br />
-              experts
+              with Policy <br />
+              Experts
             </h1>
           </div>
           <div className="absolute top-[55%] left-[30%]">
