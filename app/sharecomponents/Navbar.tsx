@@ -148,9 +148,13 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="w-[40%] 2xl:w-[30%]  flex justify-between">
-            <div className="flex-1 relative z-20">
+            <div
+              onMouseLeave={() => setShowDropDown(false)}
+              className="flex-1 relative z-20"
+            >
               <button
                 onClick={() => setShowDropDown(!showDropDown)}
+                onMouseEnter={() => setShowDropDown(true)}
                 className="flex items-center gap-2 z-20"
               >
                 <h1 className="hover:text-[#028676] cursor-pointer">
@@ -163,36 +167,40 @@ export default function Navbar() {
                   alt="caredown"
                 />
               </button>
-
-              <div
-                style={{
-                  opacity: showDropDown ? 1 : 0,
-                  transform: showDropDown
-                    ? "translateY(0)"
-                    : "translateY(-110%)",
-                  transition: "opacity 0.7s ease, transform 0.7s ease",
-                }}
-                className="flex flex-col p-5 text-[#1F4694]  text-[20px] z-0 font-[400] gap-5 absolute top-full bg-white rounded-b-xl -left-[70px] w-[260px]"
-              >
-                <Link href={"/clearity-by-csi"}>
-                  <p className="hover:text-[#028676]">Clarity by CSI</p>
-                </Link>
-                <Link href={"/teacher-registeration-form"}>
-                  <p className="hover:text-[#028676]">For Teachers</p>
-                </Link>
-                <Link href={"/from-the-principle"}>
-                  <p className="hover:text-[#028676]">From the Principal</p>
-                </Link>
-                <Link href={"/advisory-board"}>
-                  <p className="hover:text-[#028676]">Our Advisory Board</p>
-                </Link>
-                <Link href={"/academic-councel"}>
-                  <p className="hover:text-[#028676]">Academic council</p>
-                </Link>
-                <Link href={"/student-well-being"}>
-                  <p className="hover:text-[#028676]">Student well-being</p>
-                </Link>
-              </div>
+              {showDropDown && (
+                <div className="flex flex-col p-5 text-[#1F4694]  text-[20px] z-0 font-[400] gap-5 absolute top-full bg-white rounded-b-xl -left-[70px] w-[260px]">
+                  <Link href={"/clearity-by-csi"}>
+                    <p className="hover:text-[#028676] hover:scale-110  ease-in-out duration-300">
+                      Clarity by CSI
+                    </p>
+                  </Link>
+                  <Link href={"/teacher-registeration-form"}>
+                    <p className="hover:text-[#028676] hover:scale-110  ease-in-out duration-300">
+                      For Teachers
+                    </p>
+                  </Link>
+                  <Link href={"/from-the-principle"}>
+                    <p className="hover:text-[#028676] hover:scale-110  ease-in-out duration-300">
+                      From the Principal
+                    </p>
+                  </Link>
+                  <Link href={"/advisory-board"}>
+                    <p className="hover:text-[#028676] hover:scale-110  ease-in-out duration-300">
+                      Our Advisory Board
+                    </p>
+                  </Link>
+                  <Link href={"/academic-councel"}>
+                    <p className="hover:text-[#028676] hover:scale-110  ease-in-out duration-300">
+                      Academic council
+                    </p>
+                  </Link>
+                  <Link href={"/student-well-being"}>
+                    <p className="hover:text-[#028676] hover:scale-110  ease-in-out duration-300">
+                      Student well-being
+                    </p>
+                  </Link>
+                </div>
+              )}
             </div>
             <div className="flex-1">
               <Link href={"/our-heart"}>
@@ -202,9 +210,9 @@ export default function Navbar() {
               </Link>
             </div>
             <div className="flex-1">
-              <Link href={"/coming-soon"}>
+              <Link href={"/contact-us"}>
                 <h1 className="hover:text-[#028676] cursor-pointer">
-                  inquire today
+                  contact us
                 </h1>
               </Link>
             </div>

@@ -6,7 +6,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div>
+    <div className="w-screen overflow-hidden">
       <Navbar />
       <div className="h-[130px]"></div>
       <section>
@@ -15,19 +15,19 @@ export default function page() {
             src={"/fakhra_shahid.png"}
             height={2500}
             width={1500}
-            className="w-[65%] h-auto object-contain"
+            className="w-full xl:w-[65%] h-auto object-contain"
             alt="fakhra shahid"
           />
           <Image
             src={"/sign.png"}
             height={1000}
             width={1000}
-            className="w-[55%] h-auto object-contain mt-20"
+            className="w-full xl:w-[50%] h-auto object-contain mt-20 px-20 xl:px-0"
             alt="fakhra shahid signature"
           />
 
-          <div className="absolute top-0  w-full">
-            <h1 className="text-[52px] font-[700] ml-10">
+          <div className="xl:absolute xl:top-0  w-full mt-10 xl:mt-0 px-20 xl:px-0">
+            <h1 className="text-[52px] text-center xl:text-start font-[700] xl:ml-10">
               From the desk <br /> of the principal
             </h1>
             <div
@@ -37,9 +37,9 @@ export default function page() {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }}
-              className="w-[45%] h-auto pt-20 text-white text-[22px] flex flex-col items-center"
+              className="w-full xl:w-[45%] xl:ml-10 h-auto pt-20 text-white text-[22px] flex flex-col items-center relative"
             >
-              <div className="w-[80%] mt-10 2xl:mt-20 flex flex-col gap-5 text-[14px] 2xl:text-[24px]">
+              <div className="px-10 mt-10 2xl:mt-20 flex flex-col gap-5 text-[14px] 2xl:text-[24px]">
                 <p>
                   It is my honour and privilege as the Principal of the first
                   campus of Central School International to welcome you to our
@@ -81,12 +81,13 @@ export default function page() {
                   global citizens of the future.
                 </p>
               </div>
-              <div className="w-[96%]">
+              <div className="h-[400px]"></div>
+              <div className="absolute right-0 bottom-0 w-full">
                 <Image
-                  src={"/from_principles_tree.png"}
+                  src={"/fly2.gif"}
                   height={1000}
                   width={1000}
-                  className="h-[200px] w-auto object-contain"
+                  className=" w-full h-auto object-contain"
                   alt="tree"
                 />
               </div>

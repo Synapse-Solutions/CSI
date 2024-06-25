@@ -33,13 +33,28 @@ export default function HeroSection() {
   }, [currentImageIndex]);
   return (
     <div className="h-[calc(40vh)] image-wrap w-screen flex items-center justify-center md:h-[calc(60vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
-      <div className="animate_img h-[calc(60vh)] xl:h-[calc(100vh)] mt-80 md:mt-0">
+      <div
+        className={`${
+          currentImageIndex !== 3 && currentImageIndex !== 2 && "animate_img"
+        } h-[calc(60vh)] xl:h-[calc(100vh)] mt-80 md:mt-0`}
+      >
         {currentImageIndex === 2 ? (
           <video
             src="/banner_video.mp4"
             autoPlay
+            muted
+            controls
+            playsInline
             className="w-full h-auto object-contain"
           ></video>
+        ) : currentImageIndex === 3 ? (
+          <Image
+            height={1500}
+            width={1500}
+            alt="image"
+            src={images[currentImageIndex]}
+            className=" w-full h-auto object-contain"
+          />
         ) : (
           <Image
             height={1500}

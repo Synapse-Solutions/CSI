@@ -52,7 +52,7 @@ export default function page() {
     setExperienceArray(updatedArray);
   };
   return (
-    <div>
+    <div className="w-screen overflow-hidden">
       <Navbar />
       <section>
         <div
@@ -62,12 +62,12 @@ export default function page() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-          className="h-[700px] w-screen relative"
+          className="h-[350px] xl:h-[700px] w-screen relative"
         ></div>
       </section>
 
       <section className="px-[10%] flex justify-center z-10 w-screen text-[#000000]">
-        <div className="border border-[#1F4694] rounded-md p-10  bg-[#F5F9FC] w-[80%]   ">
+        <div className="border border-[#1F4694] rounded-md p-10  bg-[#F5F9FC] w-full xl:w-[80%]   ">
           <p>
             Welcome to Central School International, where your child's learning
             journey starts with 3 simple steps. Experience a hassle-free
@@ -75,7 +75,7 @@ export default function page() {
             form and our representative will reach out to you promptly.
           </p>
           <div className="flex flex-col items-center">
-            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-[70%]">
+            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-full xl:w-[70%]">
               <h1 className="text-[52px] absolute -top-[50px] left-10 text-black">
                 Step 1
               </h1>
@@ -94,7 +94,7 @@ export default function page() {
                 className="h-[150px] w-auto absolute -right-[70px] -bottom-[50px]"
               />
             </div>
-            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-[70%]">
+            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-full xl:w-[70%]">
               <h1 className="text-[52px] absolute -top-[50px] right-10 text-black">
                 Step 2
               </h1>
@@ -113,7 +113,7 @@ export default function page() {
                 className="h-[150px] w-auto absolute -left-[70px] -bottom-[50px]"
               />
             </div>
-            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-[70%]">
+            <div className="bg-[#DCF1F2] rounded-md relative p-5 mt-20 w-full xl:w-[70%]">
               <h1 className="text-[52px] absolute -top-[50px] left-10 text-black">
                 Step 3
               </h1>
@@ -145,15 +145,8 @@ export default function page() {
               The school reserves the right to accept/decline admission without
               giving any further information.
             </p>
-
-            {/* <p className="text-[#000000] text-[33px] mt-10">Key Suggestions</p>
-            <p>
-              The admission form should be embedded within the website page,
-              linked with the email <br />
-              "pro@csi.edu.pk" for record maintenance
-            </p> */}
           </div>
-          <div className="flex gap-10 text-black items-center mt-10">
+          <div className="flex flex-col xl:flex-row gap-10 text-black items-center mt-10">
             <h1 className="text-[52px] font-[700]">
               Our Fee <br /> <span className="font-[400]">Structure</span>
             </h1>
@@ -178,7 +171,7 @@ export default function page() {
               className="bg-white rounded-md border-[1px] border-[#1F4694] w-full p-3"
             />
           </div>
-          <div className="flex items-center justify-between mt-5 w-full">
+          <div className="flex flex-col xl:flex-row xl:items-center justify-between mt-5 w-full gap-3 xl:gap-0">
             <div>
               <p>Gender</p> {" "}
               <div className="flex items-center gap-5">
@@ -202,14 +195,14 @@ export default function page() {
                 </div>
               </div>
             </div>
-            <div className="w-[35%]">
+            <div className="w-full xl:w-[35%]">
               <p>Age</p>
               <input
                 type="text"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] p-3 w-full"
               />
             </div>
-            <div className="w-[35%]">
+            <div className="w-full xl:w-[35%]">
               <p>Admission Required in Class </p>
               <input
                 type="text"
@@ -217,15 +210,15 @@ export default function page() {
               />
             </div>
           </div>
-          <div className="flex items-center w-full mt-5 justify-between">
-            <div className="w-[60%]">
+          <div className="flex flex-col xl:flex-row xl:items-center w-full mt-5 justify-between gap-3 xl:gap-0">
+            <div className="w-full xl:w-[60%]">
               <p>Previous School</p>
               <input
                 type="text"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] w-full p-3"
               />{" "}
             </div>
-            <div className="w-[30%]">
+            <div className="w-full xl:w-[30%]">
               <p>Previous School</p>
               <input
                 type="date"
@@ -236,11 +229,11 @@ export default function page() {
           <div className="mt-10">
             <p>Siblings Information</p>
             <div className="border border-[#1F4694] rounded-md p-3 mt-5">
-              <div className="flex items-end justify-between">
+              <div className="flex flex-col xl:flex-row xl:items-end gap-3 xl:gap-0 justify-between">
                 <p> 1. Name </p>
                 <input
                   type="text"
-                  className="bg-transparent border-b border-[#1F4694] w-[26%] p-3"
+                  className="bg-transparent border-b border-[#1F4694] w-full xl:w-[26%] p-3"
                 />
 
                 <p>Age</p>
@@ -255,7 +248,7 @@ export default function page() {
                   className="bg-white border border-[#1F4694] rounded-md p-3"
                 />
               </div>
-              <div className="flex mt-10 items-center justify-end gap-5">
+              <div className="flex flex-col xl:flex-row mt-10 items-center justify-end gap-5">
                 <Image
                   src={"/remove_btn.png"}
                   height={100}
@@ -276,58 +269,58 @@ export default function page() {
           <div className="mt-10">
             <p>Personal Information</p>
             <div className="border border-[#1F4694] rounded-md p-5 mt-5">
-              <div className="flex w-full">
-                <div className="flex w-1/2 items-end">
+              <div className="flex flex-col xl:flex-row gap-3 xl:gap-0 w-full">
+                <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
                   <p className="">Father’s Name</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[60%] px-3 outline-none bg-transparent"
+                    className="border-b border-[#1F4694] w-full xl:w-[60%] px-3 outline-none bg-transparent"
                   />
                 </div>
-                <div className="flex w-1/2 items-end">
+                <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
                   <p>Mother’s Name</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[60%] px-3 outline-none bg-transparent"
+                    className="border-b border-[#1F4694] w-full xl:w-[60%] px-3 outline-none bg-transparent"
                   />
                 </div>
               </div>
-              <div className="flex w-full mt-5">
-                <div className="flex w-1/2 items-end">
+              <div className="flex flex-col xl:flex-row gap-3 xl:gap-0 w-full mt-5">
+                <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
                   <p className="">Contact #</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[70%] px-3 outline-none bg-transparent"
+                    className="border-b border-[#1F4694] w-full xl:w-[70%] px-3 outline-none bg-transparent"
                   />
                 </div>
-                <div className="flex w-1/2 items-end">
+                <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
                   <p>Contact #</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[70%] px-3 outline-none bg-transparent"
+                    className="border-b border-[#1F4694] w-full xl:w-[70%] px-3 outline-none bg-transparent"
                   />
                 </div>
               </div>
-              <div className="flex w-full mt-5">
-                <div className="flex w-1/2 items-end">
+              <div className="flex flex-col xl:flex-row gap-3 xl:gap-0 w-full mt-5">
+                <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
                   <p className="">Email</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[80%] px-3 outline-none bg-transparent"
+                    className="border-b border-[#1F4694] w-full xl:w-[80%] px-3 outline-none bg-transparent"
                   />
                 </div>
-                <div className="flex w-1/2 items-end">
+                <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
                   <p>Email</p>
                   <input
                     type="text"
-                    className="border-b border-[#1F4694] w-[80%] px-3 outline-none bg-transparent"
+                    className="border-b border-[#1F4694] w-full xl:w-[80%] px-3 outline-none bg-transparent"
                   />
                 </div>
               </div>
               <div className="mt-10">
                 <p>How did you come to know about our school (CSI)?</p>
-                <div className="flex gap-2 mt-5 items-center">
-                  <div className="flex items-center gap-3">
+                <div className="flex flex-col xl:flex-row gap-2 mt-5 xl:items-center">
+                  <div className="flex  items-center gap-3">
                      {" "}
                     <input
                       type="radio"

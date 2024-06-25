@@ -118,17 +118,14 @@ export default function page() {
     setActiveHoverIndex(null);
   }
   return (
-    <div className="pt-[120px] text-black w-screen overflow-hidden">
+    <div className="pt-[150px] text-black w-screen overflow-hidden">
       <Navbar />
       <section>
         <h1 className="text-[25px] text-center 2xl:text-[35px] font-bold">
-          The CSI Extended Learning Program
+          The Take Flight Academic Program at CSI
         </h1>
-        <section
-          data-aos="fade-right"
-          className="w-full my-[150px] xl:mt-[15%]"
-        >
-          <div className="h-auto w-[90vw] xl:w-[calc(70vw)] relative">
+        <section data-aos="fade-right" className="w-full mt-10">
+          <div className="h-auto w-[90vw] xl:w-[calc(70vw)] relative ">
             <Image
               src={"/tree.webp"}
               height={1000}
