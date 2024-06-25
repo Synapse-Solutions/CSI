@@ -88,7 +88,7 @@ export default function Home() {
               Advantage
             </h4>
           </div>
-          <div className="absolute top-[38%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[35%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(1)}
@@ -108,7 +108,7 @@ export default function Home() {
                   link="/eagles"
                 />
               </div>
-              <h1 className="text-[#355496]   font-bold text-[12px] xl:text-[20px]">
+              <h1 className="text-[#355496]   font-bold text-[20x] xl:text-[36px] w-[180px]">
                 Habits of Thought
               </h1>
             </div>
@@ -135,7 +135,7 @@ export default function Home() {
                 />
               </div>
 
-              <h1 className="text-[#1F4694] font-bold text-[12px] xl:text-[17px]">
+              <h1 className="text-[#1F4694] font-bold text-[20x] xl:text-[36px]">
                 Critical <br />
                 Competencies
               </h1>
@@ -161,7 +161,7 @@ export default function Home() {
                   link="/robins"
                 />
               </div>
-              <h1 className="  text-[#1F4694] font-bold text-[12px] xl:text-[20px]">
+              <h1 className="  text-[#1F4694] font-bold text-[20x] xl:text-[36px]">
                 Outlook
               </h1>
             </div>
