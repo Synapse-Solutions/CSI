@@ -217,11 +217,11 @@ export default function page() {
                     title="CSI Sparrows"
                     bgColor="bg-[#0086B7]"
                     image="vector_3"
-                    link=""
+                    link="/sparrows"
                     description="CSI Sparrows is a bespoke Primary Level Program combining the expertise of Cambridge and CSI's Team."
                   />
                 </div>
-                <Link href={""}>
+                <Link href={"/sparrows"}>
                   <Image
                     src={"/04.webp"}
                     height={100}
