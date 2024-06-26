@@ -86,12 +86,11 @@ export default function Page() {
                   <p className="text-end text-[#646464]">
                     {item.postMeta.description}
                   </p>
-                  <button
-                    onClick={() => setSelectedBlog(item)}
-                    className="bg-[#1F4694] rounded-md px-6 py-2 text-white mt-5"
-                  >
-                    Read More
-                  </button>
+                  <Link href={"/clearity-by-csi/" + item.id}>
+                    <button className="bg-[#1F4694] rounded-md px-6 py-2 text-white mt-5">
+                      Read More
+                    </button>
+                  </Link>
                 </div>
               </div>
             );
