@@ -22,14 +22,14 @@ export default function page() {
             src={"/fakhra_shahid.webp"}
             height={2500}
             width={1500}
-            className="w-full xl:w-[50%] h-auto object-contain"
+            className="w-full xl:w-[65%] h-auto object-contain"
             alt="fakhra shahid"
           />
           <Image
             src={"/sign.webp"}
             height={1000}
             width={1000}
-            className="w-full xl:w-[50%] h-auto object-contain mt-20 px-20 xl:px-20"
+            className="w-full xl:w-[50%] h-auto object-contain mt-20 px-20 xl:px-0"
             alt="fakhra shahid signature"
           />
 
