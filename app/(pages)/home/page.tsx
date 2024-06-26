@@ -55,7 +55,7 @@ export default function Home() {
               The CSI Way
             </h1>
             <p className="text-[14px] md:text-[18px]">
-              CSi’s Approach takes the best from international best practics,
+              CSI’s Approach takes the best from international best practics,
               local expertise & the latest in research to deliver an education
               best suited for 21st century.
             </p>
@@ -69,7 +69,7 @@ export default function Home() {
         </section>
         <div className="bg-[#EEEEEE] hidden xl:block w-screen h-[50%] absolute -bottom-[10%] left-0 z-0"></div>
       </main>
-      <section className="w-full my-[80px] md:my-[150px] xl:mt-[15%]">
+      <section className="w-full mt-0 md:mt-[150px] xl:mt-[15%]">
         <div className="h-auto w-[100vw] xl:w-[calc(100vw)] relative">
           <Image
             src={"/section001.png"}
@@ -152,7 +152,7 @@ export default function Home() {
                   onClickCross={() => setActiveHoverIndex(null)}
                   title="Outlook"
                   bgColor="bg-[#00889C]"
-                  description="At CSI, we cultivate a positive, forward-thinking mindset. Our students learn to view challenges as opportunities, set ambitious goals, and stay motivated. This proactive outlook, combined with empathy and social responsibility, prepares them for personal success!"
+                  description="At CSI, we cultivate a positive and forward-thinking mindset. Our students learn to view challenges as opportunities, set ambitious goals, and stay motivated. This proactive outlook, combined with empathy and social responsibility prepares them for personal success!"
                   image="outlook_bg"
                   link="/robins"
                 />

@@ -30,7 +30,7 @@ export default function page() {
             bring significant expertise within education to CSI. Collectively,
             Council members engage with international discourses and best
             practices to ensure that CS's academic programs reflect the very
-            best trends in schooling and education globally
+            best trends in schooling and education globally.
           </p>
         </div>
       </section>

@@ -28,7 +28,7 @@ export default function page() {
             strategic insight to CSI. Comprised of practitioners, policy experts
             and leading academics, the CSI Advisory Board ensures that CSl is
             well equipped to respond to the changing challenges and
-            circumstances of schooling and education in the 21st Century. The
+            circumstances of schooling and education in the 21st century. The
             diversified experience of our Board ensures that from academic depth
             to skills acquisition to real world applicability, education at CSI
             is always of the highest quality.

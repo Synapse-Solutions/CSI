@@ -3,54 +3,125 @@ import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 export default function page() {
-  const [selectedForm, setSelectedForm] = useState(1);
-  const [educationDetails, setEducationDetails] = useState([
+
+
+  const { register, handleSubmit, reset, setValue} = useForm();
+
+  const sendEmail = async (data: any) => {
+
+
+    console.log(data);
+
+
+    try {
+      const response = await fetch("/api/interest", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body:  JSON.stringify(data)
+      });
+
+   
+      if (response.ok) {
+      
+        toast('Thank you for your interest!',
+        {
+          icon: '🤗',
+          style: {
+            borderRadius: '10px',
+            background: '#122749',
+            color: '#fff',
+          },
+        }
+      );
+       
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
+  const [siblingDetails, setSiblingDetails] = useState([
     {
-      qualification: "",
-      institute: "",
-      board: "",
-      marks: "",
-    },
-  ]);
-  const [experienceArray, setExperienceArray] = useState([
-    {
-      organization: "",
-      position: "",
-      tenure: "",
+      name: "",
+      age: "",
+      date_of_birth: ""
     },
   ]);
 
-  const handleRemove = () => {
-    let updatedArray = [...educationDetails];
-    updatedArray.pop();
-    setEducationDetails(updatedArray);
-  };
-  const handleRemoveExperience = () => {
-    let updatedArray = [...experienceArray];
-    updatedArray.pop();
-    setExperienceArray(updatedArray);
-  };
-  const handleAdd = () => {
-    let updatedArray = [...educationDetails];
+  const handleAddSiblings = (e: any) => {
+    e.preventDefault();
+    let updatedArray = [...siblingDetails];
     updatedArray.push({
-      qualification: "",
-      institute: "",
-      board: "",
-      marks: "",
+      name: "",
+      age: "",
+      date_of_birth: ""
     });
-    setEducationDetails(updatedArray);
+    setSiblingDetails(updatedArray);
   };
-  const handleAddExperience = () => {
-    let updatedArray = [...experienceArray];
-    updatedArray.push({
-      organization: "",
-      position: "",
-      tenure: "",
-    });
-    setExperienceArray(updatedArray);
+
+
+  const handleRemoveSiblings = () => {
+    let updatedArray = [...siblingDetails];
+    updatedArray.pop();
+    setSiblingDetails(updatedArray);
   };
+
+
+
+  // const [selectedForm, setSelectedForm] = useState(1);
+  // const [educationDetails, setEducationDetails] = useState([
+  //   {
+  //     qualification: "",
+  //     institute: "",
+  //     board: "",
+  //     marks: "",
+  //   },
+  // ]);
+  // const [experienceArray, setExperienceArray] = useState([
+  //   {
+  //     organization: "",
+  //     position: "",
+  //     tenure: "",
+  //   },
+  // ]);
+
+  // const handleRemove = () => {
+  //   let updatedArray = [...educationDetails];
+  //   updatedArray.pop();
+  //   setEducationDetails(updatedArray);
+  // };
+  // const handleRemoveExperience = () => {
+  //   let updatedArray = [...experienceArray];
+  //   updatedArray.pop();
+  //   setExperienceArray(updatedArray);
+  // };
+  // const handleAdd = () => {
+  //   let updatedArray = [...educationDetails];
+  //   updatedArray.push({
+  //     qualification: "",
+  //     institute: "",
+  //     board: "",
+  //     marks: "",
+  //   });
+  //   setEducationDetails(updatedArray);
+  // };
+  // const handleAddExperience = () => {
+  //   let updatedArray = [...experienceArray];
+  //   updatedArray.push({
+  //     organization: "",
+  //     position: "",
+  //     tenure: "",
+  //   });
+  //   setExperienceArray(updatedArray);
+  // };
   return (
     <div className="w-screen overflow-hidden">
       <Navbar />
@@ -67,7 +138,7 @@ export default function page() {
       </section>
 
       <section className="px-[10%] flex justify-center z-10 w-screen text-[#000000]">
-        <div className="border border-[#1F4694] rounded-md p-10  bg-[#F5F9FC] w-full xl:w-[80%]   ">
+        <form onSubmit={handleSubmit(sendEmail)} className="border border-[#1F4694] rounded-md p-10  bg-[#F5F9FC] w-full xl:w-[80%]   ">
           <p>
             Welcome to Central School International, where your child's learning
             journey starts with 3 simple steps. Experience a hassle-free
@@ -99,11 +170,8 @@ export default function page() {
                 Step 2
               </h1>
               <p>
-                Registrations are accepted via the website or in person. After
-                the registration fee deposit, you will receive an admission
-                assessment and interview date. The assessment benchmarks are
-                also shared for the relevant class level at the time of
-                on-campus registration
+                An interview with the principal or the relevant section head is 
+                scheduled on the day the admission assessment is conducted.
               </p>
               <Image
                 src={"/left_arrow.png"}
@@ -118,11 +186,10 @@ export default function page() {
                 Step 3
               </h1>
               <p>
-                Registrations are accepted via the website or in person. After
-                the registration fee deposit, you will receive an admission
-                assessment and interview date. The assessment benchmarks are
-                also shared for the relevant class level at the time of
-                on-campus registration
+                After completing the above steps, the school office will contact 
+                you regarding the status of your child's application. Please allow 1-3 business 
+                days from the time your admission assessment and interview has been processed to 
+                receive an admission decision.
               </p>
               <Image
                 src={"/left_arrow.png"}
@@ -138,11 +205,11 @@ export default function page() {
               Conditions of registration
             </p>
             <p>
-              Registration does not guarantee admission. <br />
-              All information and relevant documents provided must be true and
+            • Registration does not guarantee admission. <br />
+            • All information and relevant documents provided must be true and
               accurate for us to process the admission. incomplete registration
               applications (forms) will not be accepted/processed. <br />
-              The school reserves the right to accept/decline admission without
+            • The school reserves the right to accept/decline admission without
               giving any further information.
             </p>
           </div>
@@ -153,11 +220,11 @@ export default function page() {
             <div className="bg-white border-[1px] border-[#1F4694] rounded-md p-4">
               <p className="text-[22px] font-[700px]">
                 Pre Nursery To KG:{" "}
-                <span className="font-[400]">PKR 32000 per month</span>
+                <span className="font-[400]">PKR 32,000 per month</span>
               </p>
               <p className="text-[22px] font-[700px]">
                 Grade 1 - 5:{" "}
-                <span className="font-[400]">PKR 35000 per month</span>
+                <span className="font-[400]">PKR 35,000 per month</span>
               </p>
             </div>
           </div>
@@ -169,6 +236,7 @@ export default function page() {
             <input
               type="text"
               className="bg-white rounded-md border-[1px] border-[#1F4694] w-full p-3"
+              {...register("child_name")}
             />
           </div>
           <div className="flex flex-col xl:flex-row xl:items-center justify-between mt-5 w-full gap-3 xl:gap-0">
@@ -179,8 +247,8 @@ export default function page() {
                   <input
                     type="radio"
                     id="html"
-                    name="fav_language"
                     value="male"
+                    {...register("gender")}
                   />
                   <p>Male</p>
                 </div>
@@ -188,8 +256,8 @@ export default function page() {
                   <input
                     type="radio"
                     id="html"
-                    name="fav_language"
                     value="female"
+                    {...register("gender")}
                   />
                   <p>Female</p>
                 </div>
@@ -200,6 +268,7 @@ export default function page() {
               <input
                 type="text"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] p-3 w-full"
+                {...register("age")}
               />
             </div>
             <div className="w-full xl:w-[35%]">
@@ -207,6 +276,7 @@ export default function page() {
               <input
                 type="text"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] p-3 w-full"
+                {...register("class_admission")}
               />
             </div>
           </div>
@@ -216,45 +286,54 @@ export default function page() {
               <input
                 type="text"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] w-full p-3"
+                {...register("previous_school")}
               />{" "}
             </div>
             <div className="w-full xl:w-[30%]">
-              <p>Previous School</p>
+              <p>Date of Birth</p>
               <input
                 type="date"
                 className="bg-white rounded-md border-[1px] border-[#1F4694] w-full p-3 px-3"
+                {...register("date_of_birth")}
               />{" "}
             </div>
           </div>
           <div className="mt-10">
             <p>Siblings Information</p>
             <div className="border border-[#1F4694] rounded-md p-3 mt-5">
-              <div className="flex flex-col xl:flex-row xl:items-end gap-3 xl:gap-0 justify-between">
+              {siblingDetails.map((item, index) => (
+              <div key={index} className="flex flex-col xl:flex-row xl:items-end gap-3 xl:gap-0 justify-between">
                 <p> 1. Name </p>
                 <input
                   type="text"
                   className="bg-transparent border-b border-[#1F4694] w-full xl:w-[26%] p-3"
+                  {...register(`sibling.${index}.name`)}
                 />
 
                 <p>Age</p>
                 <input
                   type="text"
                   className="bg-white border border-[#1F4694] rounded-md p-3"
+                  {...register(`sibling.${index}.age`)}
                 />
 
                 <p>DOB</p>
                 <input
                   type="date"
                   className="bg-white border border-[#1F4694] rounded-md p-3"
+                  {...register(`sibling.${index}.date_of_birth`)}
                 />
               </div>
+              ))}
               <div className="flex flex-col xl:flex-row mt-10 items-center justify-end gap-5">
+            
                 <Image
                   src={"/remove_btn.png"}
                   height={100}
                   width={200}
                   className="h-[30px] w-auto cursor-pointer"
                   alt="add more"
+                  onClick={handleRemoveSiblings}
                 />
                 <Image
                   src={"/add_more.png"}
@@ -262,6 +341,7 @@ export default function page() {
                   width={200}
                   className="h-[30px] w-auto cursor-pointer"
                   alt="add more"
+                  onClick={handleAddSiblings}
                 />
               </div>
             </div>
@@ -275,6 +355,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[60%] px-3 outline-none bg-transparent"
+                    {...register('father_name')}
                   />
                 </div>
                 <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
@@ -282,6 +363,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[60%] px-3 outline-none bg-transparent"
+                    {...register('mother_name')}
                   />
                 </div>
               </div>
@@ -291,6 +373,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[70%] px-3 outline-none bg-transparent"
+                    {...register('father_contact')}
                   />
                 </div>
                 <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
@@ -298,6 +381,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[70%] px-3 outline-none bg-transparent"
+                    {...register('mother_contact')}
                   />
                 </div>
               </div>
@@ -307,6 +391,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[80%] px-3 outline-none bg-transparent"
+                    {...register('father_email')}
                   />
                 </div>
                 <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
@@ -314,6 +399,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[80%] px-3 outline-none bg-transparent"
+                    {...register('mother_email')}
                   />
                 </div>
               </div>
@@ -324,9 +410,8 @@ export default function page() {
                      {" "}
                     <input
                       type="radio"
-                      id="html"
-                      name="fav_language"
-                      value="HTML"
+                      value="Word of Mouth"
+                      {...register('know_about')}
                     />
                     <p>Word of mouth</p>
                   </div>
@@ -334,9 +419,8 @@ export default function page() {
                      {" "}
                     <input
                       type="radio"
-                      id="html"
-                      name="fav_language"
-                      value="HTML"
+                      value="Flyer"
+                      {...register('know_about')}
                     />
                     <p>Flyer</p>
                   </div>
@@ -344,9 +428,8 @@ export default function page() {
                      {" "}
                     <input
                       type="radio"
-                      id="html"
-                      name="fav_language"
-                      value="HTML"
+                      value="Friend"
+                      {...register('know_about')}
                     />
                     <p>Friend</p>
                   </div>
@@ -354,9 +437,8 @@ export default function page() {
                      {" "}
                     <input
                       type="radio"
-                      id="html"
-                      name="fav_language"
-                      value="HTML"
+                      value="Social Media"
+                      {...register('know_about')}
                     />
                     <p>Social Media</p>
                   </div>
@@ -365,8 +447,8 @@ export default function page() {
                     <input
                       type="radio"
                       id="html"
-                      name="fav_language"
-                      value="HTML"
+                      value="website"
+                      {...register('know_about')}
                     />
                     <p>Website</p>
                   </div>
@@ -375,8 +457,8 @@ export default function page() {
                     <input
                       type="radio"
                       id="html"
-                      name="fav_language"
-                      value="HTML"
+                      value="other"
+                      {...register('know_about')}
                     />
                     <p>Other</p>
                   </div>
@@ -385,14 +467,15 @@ export default function page() {
             </div>
           </div>
           <div className="w-full flex justify-center ">
-            <button className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white">
+            <button type="submit" className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white">
               Submit
             </button>
           </div>
-        </div>
+        </form>
       </section>
       <Image
         src={"/interest_formbg.png"}
+
         height={1500}
         width={1500}
         alt="bg"
