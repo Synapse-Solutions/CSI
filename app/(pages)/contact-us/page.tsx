@@ -1,5 +1,6 @@
 "use client";
 import Footer from "@/app/sharecomponents/Footer";
+import Map from "@/app/sharecomponents/Map";
 //import Map from "@/app/sharecomponents/Map";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
@@ -130,7 +131,9 @@ export default function page() {
                     alt="phone"
                   />
                 </div>
-                <p>info@csi.edu.pk, info.centralschoolinternational@gmail.com</p>{" "}
+                <p>
+                  info@csi.edu.pk, info.centralschoolinternational@gmail.com
+                </p>{" "}
               </div>
               <div className="flex items-center gap-2 mt-5">
                 <div className="h-[30px] w-[30px] bg-[#009c93] p-2 rounded-full flex items-center justify-center">
@@ -148,7 +151,7 @@ export default function page() {
         </div>
       </section>
       <section className="mt-20">
-        
+        <Map />
       </section>
       <footer className="mt-[250px]">
         <Footer />
