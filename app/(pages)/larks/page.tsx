@@ -17,14 +17,8 @@ export default function page() {
     <div className="text-black overflow-hidden">
       <Navbar />
       <div className="md:h-[calc(70vh)] px-[40px] mb-[50px] md:mb-0  flex flex-col xl:flex-row w-screen items-center justify-center gap-20 mt-[150px] xl:mt-20 2xl:mt-0">
-        <Image
-          src={"/01.webp"}
-          height={200}
-          width={200}
-          data-aos="fade-right"
-          alt="vector"
-        />
-        <div data-aos="fade-left" className="xl:w-[50%] 2xl:w-[40%]">
+        <Image src={"/01.webp"} height={200} width={200} alt="vector" />
+        <div className="xl:w-[50%] 2xl:w-[40%]">
           <h1 className="text-[28px] 2xl:text-[35px] font-bold">CSI Larks</h1>
           <h1 className="text-[28px] 2xl:text-[35px] font-bold text-[#355496]">
             Global Learning, Local Insights

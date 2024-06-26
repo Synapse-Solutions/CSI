@@ -236,7 +236,7 @@ export default function Navbar() {
                 target="_black"
               >
                 <Image
-                  src={"/LinkedinLogo.webp"}
+                  src={"/LinkedinLogo.png"}
                   width={20}
                   height={20}
                   alt="xlogo"
@@ -247,7 +247,7 @@ export default function Navbar() {
                 target="_blank"
               >
                 <Image
-                  src={"/InstagramLogo.webp"}
+                  src={"/InstagramLogo.png"}
                   width={20}
                   height={20}
                   alt="xlogo"
@@ -258,7 +258,7 @@ export default function Navbar() {
                 target="_blank"
               >
                 <Image
-                  src={"/FacebookLogo.webp"}
+                  src={"/FacebookLogo.png"}
                   width={20}
                   height={20}
                   alt="xlogo"

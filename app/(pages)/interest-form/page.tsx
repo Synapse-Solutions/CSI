@@ -120,7 +120,6 @@ export default function page() {
       <Navbar />
       <section>
         <div
-          data-aos="fade-right"
           style={{
             backgroundImage: "url(/interest_hero_bg.webp)",
             backgroundSize: "contain",

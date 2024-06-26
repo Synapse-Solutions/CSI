@@ -41,7 +41,6 @@ export default function Page() {
         <div className="flex  items-center">
           <div className="w-1/2 flex justify-center">
             <Image
-              data-aos="fade-right"
               src={"/three_birds.webp"}
               height={500}
               width={500}
@@ -50,10 +49,7 @@ export default function Page() {
             />
           </div>
           <div className="w-1/2">
-            <h1
-              data-aos="fade-left"
-              className="text-[20px] xl:text-[30px] font-bold"
-            >
+            <h1 className="text-[20px] xl:text-[30px] font-bold">
               Clarity By CSI
             </h1>
           </div>
@@ -76,7 +72,6 @@ export default function Page() {
             return (
               <div
                 key={index}
-                data-aos="fade-right"
                 className="border border-black p-5 w-full xl:w-[47%] flex flex-col items-end"
               >
                 <Image

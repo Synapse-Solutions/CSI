@@ -26,24 +26,18 @@ export default function page() {
             className="absolute top-0 left-0 w-screen h-[400px] xl:h-auto"
           />
 
-          <h1
-            data-aos="fade-down"
-            className="text-[25px] xl:text-[58px] font-[700px] absolute top-[55%] xl:top-[20%] left-0 w-full text-center z-20 text-white"
-          >
+          <h1 className="text-[25px] xl:text-[58px] font-[700px] absolute top-[55%] xl:top-[20%] left-0 w-full text-center z-20 text-white">
             See the campus
           </h1>
           <Link href="https://csi.edu.pk/contact-us">
-            <button
-              data-aos="fade-right"
-              className="bg-white rounded-full px-10 py-2 text-black uppercase text-[20px] xl:text-[28px] font-[400] absolute left-20 z-20 top-[70%] xl:top-[80%]"
-            >
+            <button className="bg-white rounded-full px-10 py-2 text-black uppercase text-[20px] xl:text-[28px] font-[400] absolute left-20 z-20 top-[70%] xl:top-[80%]">
               Book A tour
             </button>
           </Link>
         </div>
       </section>
       <section className="mt-[10%]">
-        <div data-aos="fade-down" className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full">
           <p style={{ color: "black", fontSize: "24px" }}>
             Purpose Built Flagship Campus
           </p>
@@ -60,7 +54,6 @@ export default function page() {
         <div className="flex px-[5%] gap-10">
           <div className="w-[60%]">
             <Image
-              data-aos="fade-right"
               src={"/KI8A7197.webp"}
               height={500}
               width={500}
@@ -81,7 +74,6 @@ export default function page() {
           </div>
           <div className="w-[60%]">
             <Image
-              data-aos="fade-left"
               src={"/seecampus_1.webp"}
               height={500}
               width={500}
@@ -93,7 +85,6 @@ export default function page() {
         <div className="flex px-[5%] gap-10">
           <div className="w-[60%]">
             <Image
-              data-aos="fade-right"
               src={"/seecampus_2.webp"}
               height={500}
               width={500}
@@ -116,7 +107,6 @@ export default function page() {
           </div>
           <div className="w-[60%]">
             <Image
-              data-aos="fade-left"
               src={"/seecampus_3.webp"}
               height={500}
               width={500}
@@ -128,7 +118,6 @@ export default function page() {
         <div className="flex px-[5%] gap-10">
           <div className="w-[60%]">
             <Image
-              data-aos="fade-right"
               src={"/seecampus_4.webp"}
               height={500}
               width={500}
@@ -151,7 +140,6 @@ export default function page() {
           </div>
           <div className="w-[60%]">
             <Image
-              data-aos="fade-left"
               src={"/seecampus_5.webp"}
               height={500}
               width={500}
@@ -163,7 +151,6 @@ export default function page() {
         <div className="flex px-[5%] gap-10">
           <div className="w-[60%]">
             <Image
-              data-aos="fade-right"
               src={"/seecampus_6.webp"}
               height={500}
               width={500}
@@ -185,7 +172,6 @@ export default function page() {
           </div>
           <div className="w-[60%]">
             <Image
-              data-aos="fade-left"
               src={"/seecampus_7.webp"}
               height={500}
               width={500}
@@ -197,7 +183,6 @@ export default function page() {
         <div className="flex px-[5%] gap-10">
           <div className="w-[60%]">
             <Image
-              data-aos="fade-right"
               src={"/seecampus_8.webp"}
               height={500}
               width={500}
@@ -220,7 +205,6 @@ export default function page() {
           </div>
           <div className="w-[60%]">
             <Image
-              data-aos="fade-left"
               src={"/seecampus_9.webp"}
               height={500}
               width={500}
@@ -232,7 +216,6 @@ export default function page() {
         <div className="flex px-[5%] gap-10">
           <div className="w-[60%]">
             <Image
-              data-aos="fade-right"
               src={"/seecampus_10.webp"}
               height={500}
               width={500}
@@ -256,7 +239,6 @@ export default function page() {
           </div>
           <div className="w-[60%]">
             <Image
-              data-aos="fade-left"
               src={"/seecampus_11.webp"}
               height={500}
               width={500}

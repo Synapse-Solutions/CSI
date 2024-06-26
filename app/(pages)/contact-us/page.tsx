@@ -53,7 +53,6 @@ export default function page() {
       <section className="px-[10%] mt-[5%] text-[#1F4694]">
         <div className="flex flex-col-reverse xl:flex-row justify-between gap-10">
           <form
-            data-aos="fade-right"
             onSubmit={handleSubmit(sendEmail)}
             className="border border-[#1F4694] rounded-md p-10 w-full xl:w-1/2"
           >
@@ -108,7 +107,7 @@ export default function page() {
               Submit
             </button>
           </form>
-          <div data-aos="fade-left" className="w-full xl:w-1/2">
+          <div className="w-full xl:w-1/2">
             <h1 className="font-[700] text-[30px] 2xl:text-[45px]">
               Contact Us!
             </h1>

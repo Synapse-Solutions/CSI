@@ -109,7 +109,6 @@ export default function page() {
       <Navbar />
       <section>
         <div
-          data-aos="fade-down"
           style={{
             backgroundImage: "url(/teacher_traning_bg.webp)",
             backgroundSize: "contain",

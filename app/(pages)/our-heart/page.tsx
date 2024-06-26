@@ -30,7 +30,6 @@ export default function Page() {
       <section className="flex justify-center items-center h-2/5 md:h-screen pt-10 md:mt-0 md:p-20">
         <div className="w-1/2 flex justify-center md:justify-end md:mt-0 ">
           <Image
-            data-aos="fade-right"
             src={"/our-heart.webp"}
             height={1000}
             width={1000}
@@ -38,7 +37,7 @@ export default function Page() {
             alt="leaf"
           />
         </div>
-        <div data-aos="fade-left" className="w-3/5 mr-4 md:mr-0 md:w-1/2">
+        <div className="w-3/5 mr-4 md:mr-0 md:w-1/2">
           <h4 className="text-[30px] md:text-[40px] font-semibold">
             Our Heart
           </h4>

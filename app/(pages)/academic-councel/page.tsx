@@ -16,7 +16,7 @@ export default function page() {
     <div>
       <Navbar />
       <div className="h-[130px]"></div>
-      <section data-aos="fade-down" className="w-full px-10">
+      <section className="w-full px-10">
         <Image
           src={"/academic_1.webp"}
           height={2000}
@@ -45,7 +45,6 @@ export default function page() {
         <div className="flex flex-col xl:flex-row items-center gap-10 mt-20">
           <div className="w-full xl:w-[20%]">
             <Image
-              data-aos="fade-right"
               src={"/academic_2.webp"}
               height={500}
               width={500}
@@ -53,7 +52,7 @@ export default function page() {
               className="h-auto w-[90%] object-contain "
             />
           </div>
-          <p data-aos="fade-left" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Sohail received his Ph.D in Sociology from Paris Nanterre
             University, France and joined the civil service in 1984. He has
             since been actively involved in research and teaching. He has taught
@@ -70,7 +69,7 @@ export default function page() {
           </p>
         </div>
         <div className="flex items-center flex-col-reverse xl:flex-row gap-10 mt-20">
-          <p data-aos="fade-right" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Shams, received his Ph.D/EdD from the world renowened Institute
             of Education, University College London (IOE-UCL), UK and his M.Sc.
             in Economic History from London School of Economics & Political
@@ -88,7 +87,6 @@ export default function page() {
           </p>
           <div className="w-full xl:w-[20%]">
             <Image
-              data-aos="fade-left"
               src={"/academic_3.webp"}
               height={500}
               width={500}
@@ -100,7 +98,6 @@ export default function page() {
         <div className="flex items-center flex-col xl:flex-row gap-10 mt-20">
           <div className="w-full xl:w-[20%]">
             <Image
-              data-aos="fade-right"
               src={"/academic_4.webp"}
               height={500}
               width={500}
@@ -108,7 +105,7 @@ export default function page() {
               className="h-auto w-full xl:w-[90%] object-contain "
             />
           </div>
-          <p data-aos="fade-left" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Shahzad, received her Ph.D from Deakin University, Australia and
             is a known expert on the techniques of designing student
             assessments, and the preparation of cuttig edge teaching and

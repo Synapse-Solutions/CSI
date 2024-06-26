@@ -21,10 +21,9 @@ export default function page() {
           src={"/vector_smart_object_4.webp"}
           height={200}
           width={200}
-          data-aos="fade-right"
           alt="vector"
         />
-        <div data-aos="fade-left" className="xl:w-[40%] 2xl:w-[30%]">
+        <div className="xl:w-[40%] 2xl:w-[30%]">
           <h1 className="text-[28px] 2xl:text-[35px] font-bold">CSI Robins</h1>
           <h1 className="text-[28px] 2xl:text-[35px] font-bold text-[#355496]">
             Helping Young Minds take Flight

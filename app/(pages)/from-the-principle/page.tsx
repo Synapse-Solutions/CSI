@@ -19,7 +19,6 @@ export default function page() {
       <section>
         <div className="flex flex-col items-end relative">
           <Image
-            data-aos="fade-left"
             src={"/fakhra_shahid.webp"}
             height={2500}
             width={1500}
@@ -35,14 +34,10 @@ export default function page() {
           />
 
           <div className="xl:absolute xl:top-0  w-full mt-10 xl:mt-0 px-20 xl:px-0">
-            <h1
-              data-aos="fade-right"
-              className="text-[52px] text-center xl:text-start font-[700] xl:ml-10"
-            >
+            <h1 className="text-[52px] text-center xl:text-start font-[700] xl:ml-10">
               From the desk <br /> of the principal
             </h1>
             <div
-              data-aos="fade-right"
               style={{
                 backgroundImage: "url(/from_principles_bg.webp)",
                 backgroundSize: "cover",

@@ -78,13 +78,13 @@ export default function Home() {
             className="h-auto w-full"
             alt="tree-of-programs"
           />
-          <div className="absolute top-[35%] left-[40%]  lg:left-[43%] text-[15px] md:text-[32px] lg:text-[45px] font-bold text-center">
+          <div className="absolute top-[25%] left-[40%]  lg:left-[43%] text-[15px] md:text-[32px] lg:text-[45px] font-bold text-center">
             <h4>
               The CSI <br />
               Advantage
             </h4>
           </div>
-          <div className="absolute top-[35%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[25%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(1)}
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute top-[80%] h-[100px] w-[150px] right-[8%] md:right-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
+          <div className="absolute top-[75%] h-[100px] w-[150px] right-[8%] md:right-[38%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-20">
             <div
               className="h-[100px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(3)}
@@ -137,7 +137,7 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="absolute top-[38%] left-[75%] md:left[0%] md:right-[10%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
+          <div className="absolute top-[30%] left-[75%] md:left[0%] md:right-[10%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(4)}
