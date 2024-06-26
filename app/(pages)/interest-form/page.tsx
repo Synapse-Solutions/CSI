@@ -170,11 +170,8 @@ export default function page() {
                 Step 2
               </h1>
               <p>
-                Registrations are accepted via the website or in person. After
-                the registration fee deposit, you will receive an admission
-                assessment and interview date. The assessment benchmarks are
-                also shared for the relevant class level at the time of
-                on-campus registration
+                An interview with the principal or the relevant section head is 
+                scheduled on the day the admission assessment is conducted.
               </p>
               <Image
                 src={"/left_arrow.png"}
@@ -189,11 +186,10 @@ export default function page() {
                 Step 3
               </h1>
               <p>
-                Registrations are accepted via the website or in person. After
-                the registration fee deposit, you will receive an admission
-                assessment and interview date. The assessment benchmarks are
-                also shared for the relevant class level at the time of
-                on-campus registration
+                After completing the above steps, the school office will contact 
+                you regarding the status of your child's application. Please allow 1-3 business 
+                days from the time your admission assessment and interview has been processed to 
+                receive an admission decision.
               </p>
               <Image
                 src={"/left_arrow.png"}
@@ -209,11 +205,11 @@ export default function page() {
               Conditions of registration
             </p>
             <p>
-              Registration does not guarantee admission. <br />
-              All information and relevant documents provided must be true and
+            • Registration does not guarantee admission. <br />
+            • All information and relevant documents provided must be true and
               accurate for us to process the admission. incomplete registration
               applications (forms) will not be accepted/processed. <br />
-              The school reserves the right to accept/decline admission without
+            • The school reserves the right to accept/decline admission without
               giving any further information.
             </p>
           </div>
@@ -224,11 +220,11 @@ export default function page() {
             <div className="bg-white border-[1px] border-[#1F4694] rounded-md p-4">
               <p className="text-[22px] font-[700px]">
                 Pre Nursery To KG:{" "}
-                <span className="font-[400]">PKR 32000 per month</span>
+                <span className="font-[400]">PKR 32,000 per month</span>
               </p>
               <p className="text-[22px] font-[700px]">
                 Grade 1 - 5:{" "}
-                <span className="font-[400]">PKR 35000 per month</span>
+                <span className="font-[400]">PKR 35,000 per month</span>
               </p>
             </div>
           </div>

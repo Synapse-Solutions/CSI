@@ -107,7 +107,7 @@ export default function page() {
               We'd love to hear from you! Whether you have questions, need
               information, or want to schedule a visit, our team is here to
               assist you. Reach out to us via phone, email, or the contact form
-              to the left, and we'll get back to you promptly.{" "}
+              on this page, and we'll get back to you promptly.{" "}
             </p>
             <div className="mt-10">
               <div className="flex items-center gap-2">
