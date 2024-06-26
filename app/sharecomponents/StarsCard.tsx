@@ -15,7 +15,7 @@ export default function StarsCard(props: Props) {
     <>
       <div
         style={{
-          backgroundImage: `url(/${props.image}.png)`,
+          backgroundImage: `url(/${props.image}.webp)`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -25,7 +25,7 @@ export default function StarsCard(props: Props) {
         <div className="absolute top-10 right-3">
           <Image
             onClick={props.onClickCross}
-            src={"/X.png"}
+            src={"/X.webp"}
             height={20}
             width={20}
             alt="x"
@@ -40,7 +40,7 @@ export default function StarsCard(props: Props) {
         <div className="absolute top-4 right-3">
           <Image
             onClick={props.onClickCross}
-            src={"/X.png"}
+            src={"/X.webp"}
             height={20}
             width={20}
             alt="x"

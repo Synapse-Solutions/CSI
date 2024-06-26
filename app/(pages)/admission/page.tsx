@@ -138,7 +138,7 @@ export default function page() {
       >
         <div className="relative md:h-auto w-[calc(90vw)] md:w-[calc(50vw)]">
           <Image
-            src={"/parent_form.png"}
+            src={"/parent_form.webp"}
             width={1500}
             height={1500}
             alt="birds"
@@ -208,7 +208,7 @@ export default function page() {
       >
         <div className="relative md:h-auto w-[calc(90vw)] md:w-[calc(50vw)]">
           <Image
-            src={"/teacher_form.png"}
+            src={"/teacher_form.webp"}
             width={1500}
             height={1500}
             alt="birds"

@@ -25,7 +25,7 @@ export default function BirdCard(props: Props) {
         <div className="absolute top-10 right-3">
           <Image
             onClick={props.onClickCross}
-            src={"/X.png"}
+            src={"/X.webp"}
             height={20}
             width={20}
             alt="x"
@@ -49,7 +49,7 @@ export default function BirdCard(props: Props) {
         <div className="absolute top-4 right-3">
           <Image
             onClick={props.onClickCross}
-            src={"/X.png"}
+            src={"/X.webp"}
             height={20}
             width={20}
             alt="x"

@@ -4,12 +4,19 @@ import Map from "@/app/sharecomponents/Map";
 //import Map from "@/app/sharecomponents/Map";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function page() {
   const { register, handleSubmit, reset } = useForm();
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
 
   const sendEmail = async (data: any) => {
     try {
@@ -46,6 +53,7 @@ export default function page() {
       <section className="px-[10%] mt-[5%] text-[#1F4694]">
         <div className="flex flex-col-reverse xl:flex-row justify-between gap-10">
           <form
+            data-aos="fade-right"
             onSubmit={handleSubmit(sendEmail)}
             className="border border-[#1F4694] rounded-md p-10 w-full xl:w-1/2"
           >
@@ -100,7 +108,7 @@ export default function page() {
               Submit
             </button>
           </form>
-          <div className="w-full xl:w-1/2">
+          <div data-aos="fade-left" className="w-full xl:w-1/2">
             <h1 className="font-[700] text-[30px] 2xl:text-[45px]">
               Contact Us!
             </h1>
@@ -114,7 +122,7 @@ export default function page() {
               <div className="flex items-center gap-2">
                 <div className="h-[30px] w-[30px] bg-[#009c93] p-2 rounded-full flex items-center justify-center">
                   <Image
-                    src={"/phone_icon.png"}
+                    src={"/phone_icon.webp"}
                     height={25}
                     width={25}
                     alt="phone"
@@ -125,7 +133,7 @@ export default function page() {
               <div className="flex items-center gap-2 mt-5">
                 <div className="h-[30px] w-[30px] bg-[#009c93] p-2 rounded-full flex items-center justify-center">
                   <Image
-                    src={"/mail_icon.png"}
+                    src={"/mail_icon.webp"}
                     height={25}
                     width={25}
                     alt="phone"
@@ -138,7 +146,7 @@ export default function page() {
               <div className="flex items-center gap-2 mt-5">
                 <div className="h-[30px] w-[30px] bg-[#009c93] p-2 rounded-full flex items-center justify-center">
                   <Image
-                    src={"/location_icon.png"}
+                    src={"/location_icon.webp"}
                     height={25}
                     width={25}
                     alt="phone"

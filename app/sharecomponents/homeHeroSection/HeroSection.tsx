@@ -4,9 +4,9 @@ import "./HeroSection.css";
 import Image from "next/image";
 
 const images = [
-  "/banner_1.png",
-  "/banner_2.png",
-  "/banner_3.png",
+  "/banner_1.webp",
+  "/banner_2.webp",
+  "/banner_3.webp",
   "/banner_video.mp4",
 ];
 
@@ -29,7 +29,7 @@ export default function HeroSection() {
   }, [currentImageIndex]);
 
   return (
-    <div className="h-[calc(40vh)] image-wrap w-screen flex items-center justify-center md:h-[calc(60vh)] xl:h-[calc(100vh)] bg-black bg-opacity-75">
+    <div className="h-[calc(40vh)] image-wrap w-screen flex items-center justify-center md:h-[calc(60vh)] xl:h-[calc(100vh)] bg-white bg-opacity-75">
       <div
         className={`${
           currentImageIndex !== 3 && "animate_img"
@@ -40,7 +40,6 @@ export default function HeroSection() {
             src="/banner_video.webm"
             autoPlay
             muted
-            controls
             playsInline
             className="w-full h-auto object-contain"
           ></video>

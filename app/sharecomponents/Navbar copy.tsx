@@ -144,7 +144,7 @@ export default function Navbar() {
           </div>
           <div
             style={{
-              backgroundImage: "url(/icons_bg.png)",
+              backgroundImage: "url(/icons_bg.webp)",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -152,21 +152,21 @@ export default function Navbar() {
             className="absolute top-0 right-0 w-[180px] h-[30px] flex justify-center items-center"
           >
             <div className="flex items-center gap-3">
-              <Image src={"/XLogo.png"} width={20} height={20} alt="xlogo" />
+              <Image src={"/XLogo.webp"} width={20} height={20} alt="xlogo" />
               <Image
-                src={"/YoutubeLogo.png"}
+                src={"/YoutubeLogo.webp"}
                 width={20}
                 height={20}
                 alt="xlogo"
               />
               <Image
-                src={"/FacebookLogo.png"}
+                src={"/FacebookLogo.webp"}
                 width={20}
                 height={20}
                 alt="xlogo"
               />
               <Image
-                src={"/InstagramLogo.png"}
+                src={"/InstagramLogo.webp"}
                 width={20}
                 height={20}
                 alt="xlogo"
@@ -221,7 +221,7 @@ export default function Navbar() {
         >
           <div className="w-full flex items-end justify-end p-5">
             <Image
-              src={"/X.png"}
+              src={"/X.webp"}
               alt="logo"
               width={50}
               height={30}

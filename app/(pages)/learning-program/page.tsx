@@ -125,7 +125,7 @@ export default function page() {
           The Take Flight Academic Program at CSI
         </h1>
         <section data-aos="fade-right" className="w-full mt-10">
-          <div className="h-auto w-[90vw] xl:w-[calc(70vw)] relative ">
+          <div className="h-auto w-[90vw] xl:w-[calc(70vw)] relative  ">
             <Image
               src={"/tree.webp"}
               height={1000}
@@ -133,7 +133,7 @@ export default function page() {
               className="h-auto w-full"
               alt="tree-of-programs"
             />
-            <div className="absolute top-[14%] xl:top-[18%] 2xl:top-[20%] left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+            <div className="absolute top-[14%] xl:top-[30%] 2xl:top-[25%] left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
               <div
                 className="h-[150px] w-[150px] relative"
                 onMouseEnter={() => handleMouseEnterLast(1)}
@@ -305,10 +305,10 @@ export default function page() {
             </h1>
             <p className="mt-10 text-[18px] 2xl:text-[18px]">
               Our Project based learning program offers CSI Robins the
-              opportunity to engage in multiple projects based roles all designed
-              roles all designed to improve their cognition,social, emotional
-              emotional intelligence and confidence.
-              These roles include:
+              opportunity to engage in multiple projects based roles all
+              designed roles all designed to improve their cognition,social,
+              emotional emotional intelligence and confidence. These roles
+              include:
             </p>
           </div>
           {/* <img
@@ -331,11 +331,10 @@ export default function page() {
             Project Based Learning
           </h1>
           <p className="mt-10 text-[18px] 2xl:text-[18px]">
-            Our Project based learning program offers CSI Robins the
-            opportunity to engage in multiple projects based roles all designed
-            roles all designed to improve their cognition,social, emotional
-            emotional intelligence and confidence.
-            These roles include:
+            Our Project based learning program offers CSI Robins the opportunity
+            to engage in multiple projects based roles all designed roles all
+            designed to improve their cognition,social, emotional emotional
+            intelligence and confidence. These roles include:
           </p>
         </div>
       </div>
@@ -429,10 +428,10 @@ export default function page() {
             The CSI Athletics Program
           </h1>
           <p className="mt-10 text-[18px] 2xl:text-[18px]">
-            Extensive Research has established that sports and athletics
-            are critically important in improving learning and academic
-            performance. At CSI we provide sporting facilities and an
-            athletics program built to help your child excel. We offer:
+            Extensive Research has established that sports and athletics are
+            critically important in improving learning and academic performance.
+            At CSI we provide sporting facilities and an athletics program built
+            to help your child excel. We offer:
           </p>
         </div>
       </div>

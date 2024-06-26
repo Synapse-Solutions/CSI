@@ -2,9 +2,16 @@
 import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function page() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
   return (
     <div className="w-screen overflow-hidden">
       <Navbar />
@@ -12,27 +19,32 @@ export default function page() {
       <section>
         <div className="flex flex-col items-end relative">
           <Image
-            src={"/fakhra_shahid.png"}
+            data-aos="fade-left"
+            src={"/fakhra_shahid.webp"}
             height={2500}
             width={1500}
-            className="w-full xl:w-[65%] h-auto object-contain"
+            className="w-full xl:w-[50%] h-auto object-contain"
             alt="fakhra shahid"
           />
           <Image
-            src={"/sign.png"}
+            src={"/sign.webp"}
             height={1000}
             width={1000}
-            className="w-full xl:w-[50%] h-auto object-contain mt-20 px-20 xl:px-0"
+            className="w-full xl:w-[50%] h-auto object-contain mt-20 px-20 xl:px-20"
             alt="fakhra shahid signature"
           />
 
           <div className="xl:absolute xl:top-0  w-full mt-10 xl:mt-0 px-20 xl:px-0">
-            <h1 className="text-[52px] text-center xl:text-start font-[700] xl:ml-10">
+            <h1
+              data-aos="fade-right"
+              className="text-[52px] text-center xl:text-start font-[700] xl:ml-10"
+            >
               From the desk <br /> of the principal
             </h1>
             <div
+              data-aos="fade-right"
               style={{
-                backgroundImage: "url(/from_principles_bg.png)",
+                backgroundImage: "url(/from_principles_bg.webp)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

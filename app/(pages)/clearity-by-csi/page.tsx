@@ -16,6 +16,11 @@ export default function Page() {
   const [posts, setPosts] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState<any>(null);
   useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
+  useEffect(() => {
     getAllPosts();
   }, []);
   const getAllPosts = async () => {
@@ -36,7 +41,8 @@ export default function Page() {
         <div className="flex  items-center">
           <div className="w-1/2 flex justify-center">
             <Image
-              src={"/three_birds.png"}
+              data-aos="fade-right"
+              src={"/three_birds.webp"}
               height={500}
               width={500}
               className="w-[90%] h-auto"
@@ -44,7 +50,10 @@ export default function Page() {
             />
           </div>
           <div className="w-1/2">
-            <h1 className="text-[20px] xl:text-[30px] font-bold">
+            <h1
+              data-aos="fade-left"
+              className="text-[20px] xl:text-[30px] font-bold"
+            >
               Clarity By CSI
             </h1>
           </div>
@@ -67,6 +76,7 @@ export default function Page() {
             return (
               <div
                 key={index}
+                data-aos="fade-right"
                 className="border border-black p-5 w-full xl:w-[47%] flex flex-col items-end"
               >
                 <Image
@@ -87,7 +97,7 @@ export default function Page() {
                     {item.postMeta.description}
                   </p>
                   <Link href={"/clearity-by-csi/" + item.id}>
-                    <button className="bg-[#1F4694] rounded-md px-6 py-2 text-white mt-5">
+                    <button className="bg-[#1F4694] hover:bg-[#4d6697] rounded-md px-6 py-2 text-white mt-5">
                       Read More
                     </button>
                   </Link>
@@ -139,7 +149,7 @@ export default function Page() {
           </div>
           <button>
             <Image
-              src={"/download_btn.png"}
+              src={"/download_btn.webp"}
               height={150}
               width={200}
               className="h-[50px] w-auto object-contain mt-20"

@@ -53,7 +53,7 @@ export default function Page() {
             {block.children.map((child: any, idx: number) => (
               <p
                 key={idx}
-                className={`text-[24px] mt-10 ${
+                className={`text-[20px] mt-10 ${
                   child?.bold ? "font-bold" : ""
                 }`}
               >
@@ -79,7 +79,7 @@ export default function Page() {
         <div className="flex items-center">
           <div className="w-1/2 flex justify-center">
             <Image
-              src={"/three_birds.png"}
+              src={"/three_birds.webp"}
               height={500}
               width={500}
               className="w-[90%] h-auto"
@@ -115,7 +115,7 @@ export default function Page() {
         </div>
         {/* <button>
           <Image
-            src={"/download_btn.png"}
+            src={"/download_btn.webp"}
             height={150}
             width={200}
             className="h-[50px] w-auto object-contain mt-20"

@@ -2,16 +2,23 @@
 import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function page() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
   return (
     <div>
       <Navbar />
       <div className="h-[130px]"></div>
-      <section className="w-full px-10">
+      <section data-aos="fade-down" className="w-full px-10">
         <Image
-          src={"/academic_1.png"}
+          src={"/academic_1.webp"}
           height={2000}
           width={2000}
           alt="student well being"
@@ -23,7 +30,7 @@ export default function page() {
           <h1 className="text-[30px] xl:text-[52px] font-[700] text-center uppercase text-black">
             Academic Insights Council
           </h1>
-          <p className="mt-10 text-[16px] xl:text-[22px] text-center text-black">
+          <p className="mt-10 text-[14px] xl:text-[18px] text-center text-black">
             Our Academic Insights Council is composed solely of leading
             educationists who advise CSI in creating, adapting and implementing
             its academic programs. Our Council members all hold a doctorate and
@@ -35,17 +42,18 @@ export default function page() {
         </div>
       </section>
       <section className="px-8 xl:px-20">
-        <div className="flex flex-col xl:flex-row gap-10 mt-20">
+        <div className="flex flex-col xl:flex-row items-center gap-10 mt-20">
           <div className="w-full xl:w-[20%]">
             <Image
-              src={"/academic_2.png"}
+              data-aos="fade-right"
+              src={"/academic_2.webp"}
               height={500}
               width={500}
               alt="member"
               className="h-auto w-[90%] object-contain "
             />
           </div>
-          <p className="w-full xl:w-[80%] text-black">
+          <p data-aos="fade-left" className="w-full xl:w-[80%] text-black">
             Dr. Sohail received his Ph.D in Sociology from Paris Nanterre
             University, France and joined the civil service in 1984. He has
             since been actively involved in research and teaching. He has taught
@@ -61,8 +69,8 @@ export default function page() {
             within our students.
           </p>
         </div>
-        <div className="flex flex-col-reverse xl:flex-row gap-10 mt-20">
-          <p className="w-full xl:w-[80%] text-black">
+        <div className="flex items-center flex-col-reverse xl:flex-row gap-10 mt-20">
+          <p data-aos="fade-right" className="w-full xl:w-[80%] text-black">
             Dr. Shams, received his Ph.D/EdD from the world renowened Institute
             of Education, University College London (IOE-UCL), UK and his M.Sc.
             in Economic History from London School of Economics & Political
@@ -80,7 +88,8 @@ export default function page() {
           </p>
           <div className="w-full xl:w-[20%]">
             <Image
-              src={"/academic_3.png"}
+              data-aos="fade-left"
+              src={"/academic_3.webp"}
               height={500}
               width={500}
               alt="member"
@@ -88,17 +97,18 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row gap-10 mt-20">
+        <div className="flex items-center flex-col xl:flex-row gap-10 mt-20">
           <div className="w-full xl:w-[20%]">
             <Image
-              src={"/academic_4.png"}
+              data-aos="fade-right"
+              src={"/academic_4.webp"}
               height={500}
               width={500}
               alt="member"
               className="h-auto w-full xl:w-[90%] object-contain "
             />
           </div>
-          <p className="w-full xl:w-[80%] text-black">
+          <p data-aos="fade-left" className="w-full xl:w-[80%] text-black">
             Dr. Shahzad, received her Ph.D from Deakin University, Australia and
             is a known expert on the techniques of designing student
             assessments, and the preparation of cuttig edge teaching and

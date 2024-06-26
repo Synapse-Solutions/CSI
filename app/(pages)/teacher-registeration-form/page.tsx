@@ -5,22 +5,24 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { uploadToS3 } from "@/app/service/upload-resume";
 
 export default function page() {
+  const { register, handleSubmit, reset, setValue } = useForm();
 
-
-
-  const { register, handleSubmit, reset, setValue} = useForm();
-
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
   const sendEmail = async (data: any) => {
-
     // const formData = new FormData();
 
     // formData.append("data", JSON.stringify(data));
-    // formData.append("resume", data.resume[0]); 
+    // formData.append("resume", data.resume[0]);
 
     const resume_url = await uploadToS3(data.resume[0], data.resume[0].name);
 
@@ -33,23 +35,18 @@ export default function page() {
         headers: {
           "Content-Type": "application/json",
         },
-        body:  JSON.stringify(data)
+        body: JSON.stringify(data),
       });
 
-   
       if (response.ok) {
-      
-        toast('Thank you for contacting us !',
-        {
-          icon: '🤗',
+        toast("Thank you for contacting us !", {
+          icon: "🤗",
           style: {
-            borderRadius: '10px',
-            background: '#122749',
-            color: '#fff',
+            borderRadius: "10px",
+            background: "#122749",
+            color: "#fff",
           },
-        }
-      );
-       
+        });
       } else {
         throw new Error("Failed to send email");
       }
@@ -112,8 +109,9 @@ export default function page() {
       <Navbar />
       <section>
         <div
+          data-aos="fade-down"
           style={{
-            backgroundImage: "url(/teacher_traning_bg.png)",
+            backgroundImage: "url(/teacher_traning_bg.webp)",
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -131,7 +129,7 @@ export default function page() {
       <section className="px-[10%] hidden xl:block">
         <div className="relative text-black text-[16px] xl:text-[22px] font-bold">
           <Image
-            src={"/arrows_pic.png"}
+            src={"/arrows_pic.webp"}
             height={1000}
             width={1000}
             alt="arrows"
@@ -193,7 +191,10 @@ export default function page() {
         <h1 className="text-[35px] font-bold text-center ">
           Teacher’s Registration Form
         </h1>
-        <form onSubmit={handleSubmit(sendEmail)} className="border border-[#1F4694] rounded-md p-5 xl:p-10">
+        <form
+          onSubmit={handleSubmit(sendEmail)}
+          className="border border-[#1F4694] rounded-md p-5 xl:p-10"
+        >
           <div className="flex flex-col xl:flex-row gap-3 xl:gap-0 xl:items-center justify-between">
             <div className="flex items-center gap-3">
               <button
@@ -252,7 +253,6 @@ export default function page() {
                     placeholder="First Name"
                     className="bg-[#d2daea] rounded-md w-full xl:w-1/2 p-3"
                     {...register("father_first_name")}
-
                   />
                   <input
                     type="text"
@@ -301,62 +301,122 @@ export default function page() {
                 <div className="flex items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Reading</p>
                   <div className="flex items-center gap-2">
-      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("reading_proficiency")} />
-      <p>Proficient</p>
-    </div>
-    <div className="flex items-center gap-2">
-      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("reading_proficiency")} />
-      <p>Intermediate</p>
-    </div>
-    <div className="flex items-center gap-2">
-      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("reading_proficiency")} />
-      <p>Beginner</p>
-    </div>
+                    <input
+                      type="radio"
+                      value="proficient"
+                      className="bg-[#d2daea]"
+                      {...register("reading_proficiency")}
+                    />
+                    <p>Proficient</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      value="intermediate"
+                      className="bg-[#d2daea]"
+                      {...register("reading_proficiency")}
+                    />
+                    <p>Intermediate</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      value="beginner"
+                      className="bg-[#d2daea]"
+                      {...register("reading_proficiency")}
+                    />
+                    <p>Beginner</p>
+                  </div>
                 </div>
                 <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Writing</p>
                   <div className="flex items-center gap-2">
-      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("writing_proficiency")} />
-      <p>Proficient</p>
-    </div>
-    <div className="flex items-center gap-2">
-      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("writing_proficiency")} />
-      <p>Intermediate</p>
-    </div>
-    <div className="flex items-center gap-2">
-      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("writing_proficiency")} />
-      <p>Beginner</p>
-    </div>
+                    <input
+                      type="radio"
+                      value="proficient"
+                      className="bg-[#d2daea]"
+                      {...register("writing_proficiency")}
+                    />
+                    <p>Proficient</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      value="intermediate"
+                      className="bg-[#d2daea]"
+                      {...register("writing_proficiency")}
+                    />
+                    <p>Intermediate</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      value="beginner"
+                      className="bg-[#d2daea]"
+                      {...register("writing_proficiency")}
+                    />
+                    <p>Beginner</p>
+                  </div>
                 </div>
                 <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Speaking</p>
                   <div className="flex items-center gap-2">
-      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
-      <p>Proficient</p>
-    </div>
-    <div className="flex items-center gap-2">
-      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
-      <p>Intermediate</p>
-    </div>
-    <div className="flex items-center gap-2">
-      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("speaking_proficiency")} />
-      <p>Beginner</p>
-    </div>
+                    <input
+                      type="radio"
+                      value="proficient"
+                      className="bg-[#d2daea]"
+                      {...register("speaking_proficiency")}
+                    />
+                    <p>Proficient</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      value="intermediate"
+                      className="bg-[#d2daea]"
+                      {...register("speaking_proficiency")}
+                    />
+                    <p>Intermediate</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      value="beginner"
+                      className="bg-[#d2daea]"
+                      {...register("speaking_proficiency")}
+                    />
+                    <p>Beginner</p>
+                  </div>
                 </div>
                 <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Listening</p>
                   <div className="flex items-center gap-2">
-      <input type="radio" value="proficient" className="bg-[#d2daea]" {...register("listening_proficiency")} />
-      <p>Proficient</p>
-    </div>
-    <div className="flex items-center gap-2">
-      <input type="radio" value="intermediate" className="bg-[#d2daea]" {...register("listening_proficiency")} />
-      <p>Intermediate</p>
-    </div>
-    <div className="flex items-center gap-2">
-      <input type="radio" value="beginner" className="bg-[#d2daea]" {...register("listening_proficiency")} />
-      <p>Beginner</p>
-    </div>
+                    <input
+                      type="radio"
+                      value="proficient"
+                      className="bg-[#d2daea]"
+                      {...register("listening_proficiency")}
+                    />
+                    <p>Proficient</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      value="intermediate"
+                      className="bg-[#d2daea]"
+                      {...register("listening_proficiency")}
+                    />
+                    <p>Intermediate</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      value="beginner"
+                      className="bg-[#d2daea]"
+                      {...register("listening_proficiency")}
+                    />
+                    <p>Beginner</p>
+                  </div>
                 </div>
               </div>
             </>
@@ -411,7 +471,7 @@ export default function page() {
                       className="flex flex-col items-center text-[12px] justify-center cursor-pointer"
                     >
                       <Image
-                        src={"/remove_icon.png"}
+                        src={"/remove_icon.webp"}
                         height={20}
                         width={20}
                         alt="rmove"
@@ -429,7 +489,7 @@ export default function page() {
               >
                 <p>Add Row</p>
                 <img
-                  src="/circle_plus.png"
+                  src="/circle_plus.webp"
                   alt="plus"
                   className="h-[20px] w-[20px]"
                 />
@@ -478,7 +538,7 @@ export default function page() {
                       className="flex flex-col items-center text-[12px] justify-center cursor-pointer"
                     >
                       <Image
-                        src={"/remove_icon.png"}
+                        src={"/remove_icon.webp"}
                         height={20}
                         width={20}
                         alt="rmove"
@@ -496,7 +556,7 @@ export default function page() {
               >
                 <p>Add Row</p>
                 <img
-                  src="/circle_plus.png"
+                  src="/circle_plus.webp"
                   alt="plus"
                   className="h-[20px] w-[20px]"
                 />
@@ -512,7 +572,7 @@ export default function page() {
               </div>
               <div className="mt-5">
                 <p>Upload Updated Resume </p>
-                <input type="file"  {...register("resume")} />
+                <input type="file" {...register("resume")} />
                 <div className="w-full bg-[#d2daea] rounded-md flex items-center justify-center h-[100px]">
                   Choose files or drag here
                 </div>
@@ -538,16 +598,24 @@ export default function page() {
             </div>
           )}
           <div className="w-full flex justify-center">
-
-            {selectedForm === 3 ? ( <button type="submit" className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white">
-              Submit
-            </button>) : 
-            
-            <button  onClick={(e) => {e.preventDefault(); setSelectedForm(prev => prev + 1)}} className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white">
-              Next
-            </button>
-            }
-           
+            {selectedForm === 3 ? (
+              <button
+                type="submit"
+                className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white"
+              >
+                Submit
+              </button>
+            ) : (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedForm((prev) => prev + 1);
+                }}
+                className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white"
+              >
+                Next
+              </button>
+            )}
           </div>
         </form>
       </section>

@@ -30,14 +30,15 @@ export default function Page() {
       <section className="flex justify-center items-center h-2/5 md:h-screen pt-10 md:mt-0 md:p-20">
         <div className="w-1/2 flex justify-center md:justify-end md:mt-0 ">
           <Image
-            src={"/our-heart.png"}
+            data-aos="fade-right"
+            src={"/our-heart.webp"}
             height={1000}
             width={1000}
             className="object-contain w-[80%] h-[calc(60vh)] pt-10 md:pt-0"
             alt="leaf"
           />
         </div>
-        <div className="w-3/5 mr-4 md:mr-0 md:w-1/2">
+        <div data-aos="fade-left" className="w-3/5 mr-4 md:mr-0 md:w-1/2">
           <h4 className="text-[30px] md:text-[40px] font-semibold">
             Our Heart
           </h4>
@@ -60,7 +61,7 @@ export default function Page() {
         <div className="flex flex-col md:flex-row w-full md:justify-between">
           <div className="md:w-[33%] ">
             <Image
-              src={"/elam.png"}
+              src={"/elam.webp"}
               height={500}
               width={500}
               alt="elam"
@@ -70,7 +71,7 @@ export default function Page() {
               <div className=" justify-center md:justify-normal flex items-center gap-2">
                 <p className=" text-[28px]">Knowledge</p>
                 <Image
-                  src={"/elam_text.png"}
+                  src={"/elam_text.webp"}
                   height={40}
                   width={40}
                   alt="elam"
@@ -83,7 +84,7 @@ export default function Page() {
           </div>
           <div className="md:w-[33%]">
             <Image
-              src={"/amal.png"}
+              src={"/amal.webp"}
               height={500}
               width={500}
               alt="elam"
@@ -93,7 +94,7 @@ export default function Page() {
               <div className="justify-center md:justify-normal flex items-center gap-2">
                 <p className="text-[28px]">Action</p>
                 <Image
-                  src={"/amal_text.png"}
+                  src={"/amal_text.webp"}
                   height={40}
                   width={40}
                   alt="elam"
@@ -106,7 +107,7 @@ export default function Page() {
           </div>
           <div className="md:w-[33%]">
             <Image
-              src={"/azam.png"}
+              src={"/azam.webp"}
               height={500}
               width={500}
               alt="elam"
@@ -116,7 +117,7 @@ export default function Page() {
               <div className="justify-center md:justify-normal flex items-center gap-2">
                 <p className="text-[28px]">Resolve</p>
                 <Image
-                  src={"/azam_text.png"}
+                  src={"/azam_text.webp"}
                   height={40}
                   width={40}
                   alt="elam"
@@ -139,7 +140,7 @@ export default function Page() {
           </p>
           <div className="w-full relative">
             <Image
-              src={"/Stars-bg.png"}
+              src={"/Stars-bg.webp"}
               alt="stars"
               height={1000}
               width={1000}

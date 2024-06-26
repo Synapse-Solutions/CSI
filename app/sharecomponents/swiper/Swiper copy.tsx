@@ -65,7 +65,7 @@ export default function Swiper() {
   return (
     <ul ref={listRef} className="overflow-hidden ml-[50px] xl:ml-0">
       <Image
-        src={"/CaretLeft.png"}
+        src={"/CaretLeft.webp"}
         height={50}
         width={50}
         alt="left"
@@ -73,7 +73,7 @@ export default function Swiper() {
         onClick={scrollLeft}
       />
       <Image
-        src={"/CaretRight.png"}
+        src={"/CaretRight.webp"}
         height={50}
         width={50}
         alt="left"

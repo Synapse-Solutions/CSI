@@ -26,6 +26,10 @@ const array = [
     link: "/our-heart",
   },
   {
+    name: "Programs",
+    link: "/interest-form",
+  },
+  {
     name: "Contact Us",
     link: "/contact-us",
   },
@@ -150,7 +154,7 @@ export default function Navbar() {
           <div className="w-[40%] 2xl:w-[30%]  flex justify-between">
             <div
               onMouseLeave={() => setShowDropDown(false)}
-              className="flex-1 relative z-20"
+              className="flex-1 mr-5 relative z-20"
             >
               <button
                 onClick={() => setShowDropDown(!showDropDown)}
@@ -161,7 +165,7 @@ export default function Navbar() {
                   KNOW MORE
                 </h1>
                 <Image
-                  src={"/CaretDown.png"}
+                  src={"/CaretDown.webp"}
                   height={10}
                   width={10}
                   alt="caredown"
@@ -219,7 +223,7 @@ export default function Navbar() {
           </div>
           <div
             style={{
-              backgroundImage: "url(/icons_bg.png)",
+              backgroundImage: "url(/icons_bg.webp)",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -232,7 +236,7 @@ export default function Navbar() {
                 target="_black"
               >
                 <Image
-                  src={"/LinkedinLogo.png"}
+                  src={"/LinkedinLogo.webp"}
                   width={20}
                   height={20}
                   alt="xlogo"
@@ -243,7 +247,7 @@ export default function Navbar() {
                 target="_blank"
               >
                 <Image
-                  src={"/InstagramLogo.png"}
+                  src={"/InstagramLogo.webp"}
                   width={20}
                   height={20}
                   alt="xlogo"
@@ -254,7 +258,7 @@ export default function Navbar() {
                 target="_blank"
               >
                 <Image
-                  src={"/FacebookLogo.png"}
+                  src={"/FacebookLogo.webp"}
                   width={20}
                   height={20}
                   alt="xlogo"
@@ -317,7 +321,7 @@ export default function Navbar() {
               className="cursor-pointer hover:animate-pulse h-[60px] w-auto  object-contain"
             />
             <Image
-              src={"/cross_icon.png"}
+              src={"/cross_icon.webp"}
               alt="logo"
               width={50}
               height={30}

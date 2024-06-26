@@ -2,20 +2,21 @@
 import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function page() {
-
-
-  const { register, handleSubmit, reset, setValue} = useForm();
-
+  const { register, handleSubmit, reset, setValue } = useForm();
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
   const sendEmail = async (data: any) => {
-
-
     console.log(data);
-
 
     try {
       const response = await fetch("/api/interest", {
@@ -23,23 +24,18 @@ export default function page() {
         headers: {
           "Content-Type": "application/json",
         },
-        body:  JSON.stringify(data)
+        body: JSON.stringify(data),
       });
 
-   
       if (response.ok) {
-      
-        toast('Thank you for your interest!',
-        {
-          icon: '🤗',
+        toast("Thank you for your interest!", {
+          icon: "🤗",
           style: {
-            borderRadius: '10px',
-            background: '#122749',
-            color: '#fff',
+            borderRadius: "10px",
+            background: "#122749",
+            color: "#fff",
           },
-        }
-      );
-       
+        });
       } else {
         throw new Error("Failed to send email");
       }
@@ -52,7 +48,7 @@ export default function page() {
     {
       name: "",
       age: "",
-      date_of_birth: ""
+      date_of_birth: "",
     },
   ]);
 
@@ -62,19 +58,16 @@ export default function page() {
     updatedArray.push({
       name: "",
       age: "",
-      date_of_birth: ""
+      date_of_birth: "",
     });
     setSiblingDetails(updatedArray);
   };
-
 
   const handleRemoveSiblings = () => {
     let updatedArray = [...siblingDetails];
     updatedArray.pop();
     setSiblingDetails(updatedArray);
   };
-
-
 
   // const [selectedForm, setSelectedForm] = useState(1);
   // const [educationDetails, setEducationDetails] = useState([
@@ -127,8 +120,9 @@ export default function page() {
       <Navbar />
       <section>
         <div
+          data-aos="fade-right"
           style={{
-            backgroundImage: "url(/interest_hero_bg.png)",
+            backgroundImage: "url(/interest_hero_bg.webp)",
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -137,8 +131,11 @@ export default function page() {
         ></div>
       </section>
 
-      <section className="px-[10%] flex justify-center z-10 w-screen text-[#000000]">
-        <form onSubmit={handleSubmit(sendEmail)} className="border border-[#1F4694] rounded-md p-10  bg-[#F5F9FC] w-full xl:w-[80%]   ">
+      <section className="px-[10%] flex mt-[5%] justify-center z-10 w-screen text-[#000000]">
+        <form
+          onSubmit={handleSubmit(sendEmail)}
+          className="border border-[#1F4694] rounded-md p-10  bg-[#F5F9FC] w-full xl:w-[80%]   "
+        >
           <p>
             Welcome to Central School International, where your child's learning
             journey starts with 3 simple steps. Experience a hassle-free
@@ -158,7 +155,7 @@ export default function page() {
                 on-campus registration
               </p>
               <Image
-                src={"/right_arrow.png"}
+                src={"/right_arrow.webp"}
                 height={200}
                 width={200}
                 alt="arrow"
@@ -170,11 +167,11 @@ export default function page() {
                 Step 2
               </h1>
               <p>
-                An interview with the principal or the relevant section head is 
+                An interview with the principal or the relevant section head is
                 scheduled on the day the admission assessment is conducted.
               </p>
               <Image
-                src={"/left_arrow.png"}
+                src={"/left_arrow.webp"}
                 height={200}
                 width={200}
                 alt="arrow"
@@ -186,13 +183,14 @@ export default function page() {
                 Step 3
               </h1>
               <p>
-                After completing the above steps, the school office will contact 
-                you regarding the status of your child's application. Please allow 1-3 business 
-                days from the time your admission assessment and interview has been processed to 
-                receive an admission decision.
+                After completing the above steps, the school office will contact
+                you regarding the status of your child's application. Please
+                allow 1-3 business days from the time your admission assessment
+                and interview has been processed to receive an admission
+                decision.
               </p>
               <Image
-                src={"/left_arrow.png"}
+                src={"/left_arrow.webp"}
                 height={200}
                 width={200}
                 alt="arrow"
@@ -205,11 +203,11 @@ export default function page() {
               Conditions of registration
             </p>
             <p>
-            • Registration does not guarantee admission. <br />
-            • All information and relevant documents provided must be true and
+              • Registration does not guarantee admission. <br />
+              • All information and relevant documents provided must be true and
               accurate for us to process the admission. incomplete registration
-              applications (forms) will not be accepted/processed. <br />
-            • The school reserves the right to accept/decline admission without
+              applications (forms) will not be accepted/processed. <br />• The
+              school reserves the right to accept/decline admission without
               giving any further information.
             </p>
           </div>
@@ -302,33 +300,35 @@ export default function page() {
             <p>Siblings Information</p>
             <div className="border border-[#1F4694] rounded-md p-3 mt-5">
               {siblingDetails.map((item, index) => (
-              <div key={index} className="flex flex-col xl:flex-row xl:items-end gap-3 xl:gap-0 justify-between">
-                <p> 1. Name </p>
-                <input
-                  type="text"
-                  className="bg-transparent border-b border-[#1F4694] w-full xl:w-[26%] p-3"
-                  {...register(`sibling.${index}.name`)}
-                />
+                <div
+                  key={index}
+                  className="flex flex-col xl:flex-row xl:items-end gap-3 xl:gap-0 justify-between"
+                >
+                  <p> 1. Name </p>
+                  <input
+                    type="text"
+                    className="bg-transparent border-b border-[#1F4694] w-full xl:w-[26%] p-3"
+                    {...register(`sibling.${index}.name`)}
+                  />
 
-                <p>Age</p>
-                <input
-                  type="text"
-                  className="bg-white border border-[#1F4694] rounded-md p-3"
-                  {...register(`sibling.${index}.age`)}
-                />
+                  <p>Age</p>
+                  <input
+                    type="text"
+                    className="bg-white border border-[#1F4694] rounded-md p-3"
+                    {...register(`sibling.${index}.age`)}
+                  />
 
-                <p>DOB</p>
-                <input
-                  type="date"
-                  className="bg-white border border-[#1F4694] rounded-md p-3"
-                  {...register(`sibling.${index}.date_of_birth`)}
-                />
-              </div>
+                  <p>DOB</p>
+                  <input
+                    type="date"
+                    className="bg-white border border-[#1F4694] rounded-md p-3"
+                    {...register(`sibling.${index}.date_of_birth`)}
+                  />
+                </div>
               ))}
               <div className="flex flex-col xl:flex-row mt-10 items-center justify-end gap-5">
-            
                 <Image
-                  src={"/remove_btn.png"}
+                  src={"/remove_btn.webp"}
                   height={100}
                   width={200}
                   className="h-[30px] w-auto cursor-pointer"
@@ -336,7 +336,7 @@ export default function page() {
                   onClick={handleRemoveSiblings}
                 />
                 <Image
-                  src={"/add_more.png"}
+                  src={"/add_more.webp"}
                   height={100}
                   width={200}
                   className="h-[30px] w-auto cursor-pointer"
@@ -355,7 +355,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[60%] px-3 outline-none bg-transparent"
-                    {...register('father_name')}
+                    {...register("father_name")}
                   />
                 </div>
                 <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
@@ -363,7 +363,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[60%] px-3 outline-none bg-transparent"
-                    {...register('mother_name')}
+                    {...register("mother_name")}
                   />
                 </div>
               </div>
@@ -373,7 +373,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[70%] px-3 outline-none bg-transparent"
-                    {...register('father_contact')}
+                    {...register("father_contact")}
                   />
                 </div>
                 <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
@@ -381,7 +381,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[70%] px-3 outline-none bg-transparent"
-                    {...register('mother_contact')}
+                    {...register("mother_contact")}
                   />
                 </div>
               </div>
@@ -391,7 +391,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[80%] px-3 outline-none bg-transparent"
-                    {...register('father_email')}
+                    {...register("father_email")}
                   />
                 </div>
                 <div className="flex flex-col xl:flex-row w-full xl:w-1/2 xl:items-end">
@@ -399,7 +399,7 @@ export default function page() {
                   <input
                     type="text"
                     className="border-b border-[#1F4694] w-full xl:w-[80%] px-3 outline-none bg-transparent"
-                    {...register('mother_email')}
+                    {...register("mother_email")}
                   />
                 </div>
               </div>
@@ -411,7 +411,7 @@ export default function page() {
                     <input
                       type="radio"
                       value="Word of Mouth"
-                      {...register('know_about')}
+                      {...register("know_about")}
                     />
                     <p>Word of mouth</p>
                   </div>
@@ -420,7 +420,7 @@ export default function page() {
                     <input
                       type="radio"
                       value="Flyer"
-                      {...register('know_about')}
+                      {...register("know_about")}
                     />
                     <p>Flyer</p>
                   </div>
@@ -429,7 +429,7 @@ export default function page() {
                     <input
                       type="radio"
                       value="Friend"
-                      {...register('know_about')}
+                      {...register("know_about")}
                     />
                     <p>Friend</p>
                   </div>
@@ -438,7 +438,7 @@ export default function page() {
                     <input
                       type="radio"
                       value="Social Media"
-                      {...register('know_about')}
+                      {...register("know_about")}
                     />
                     <p>Social Media</p>
                   </div>
@@ -448,7 +448,7 @@ export default function page() {
                       type="radio"
                       id="html"
                       value="website"
-                      {...register('know_about')}
+                      {...register("know_about")}
                     />
                     <p>Website</p>
                   </div>
@@ -458,7 +458,7 @@ export default function page() {
                       type="radio"
                       id="html"
                       value="other"
-                      {...register('know_about')}
+                      {...register("know_about")}
                     />
                     <p>Other</p>
                   </div>
@@ -467,15 +467,17 @@ export default function page() {
             </div>
           </div>
           <div className="w-full flex justify-center ">
-            <button type="submit" className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white">
+            <button
+              type="submit"
+              className="bg-[#637eb5] rounded-md w-[60%] flex justify-center py-3 mt-5 text-white"
+            >
               Submit
             </button>
           </div>
         </form>
       </section>
       <Image
-        src={"/interest_formbg.png"}
-
+        src={"/interest_formbg.webp"}
         height={1500}
         width={1500}
         alt="bg"

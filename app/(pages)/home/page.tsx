@@ -32,7 +32,7 @@ export default function Home() {
       <header className="relative">
         <HeroSection />
         <Image
-          src={"/color-bar.png"}
+          src={"/color-bar.webp"}
           height={100}
           width={2000}
           className="hidden md:block h-[50px] w-screen"
@@ -49,7 +49,7 @@ export default function Home() {
         </a>
       </header>
       <main className="flex flex-col xl:flex-row bg-white overflow-visible relative">
-        <aside className="text-center px-[15%] md:text-start w-full xl:w-[30%] md:px-[5%] pt-[10%] text-black">
+        <aside className="text-center px-[15%] md:text-start w-full xl:w-[30%] md:px-[5%] pt-[5%] text-black">
           <section>
             <h1 className="font-bold text-[20px] md:text-[40px] ">
               The CSI Way
@@ -63,16 +63,16 @@ export default function Home() {
         </aside>
         <section
           ref={scrollRef}
-          className="w-[100%] xl:w-[70%] flex gap-10 md:mt-20 xl:z-10 "
+          className="w-[100%] xl:w-[70%] flex gap-10 md:mt-0 xl:z-10 "
         >
           <Swiper />
         </section>
         <div className="bg-[#EEEEEE] hidden xl:block w-screen h-[50%] absolute -bottom-[10%] left-0 z-0"></div>
       </main>
-      <section className="w-full mt-0 md:mt-[150px] xl:mt-[15%]">
-        <div className="h-auto w-[100vw] xl:w-[calc(100vw)] relative">
+      <section className="w-full mt-0 md:mt-[150px] ">
+        <div className="h-auto w-[100vw] xl:w-[calc(100vw)] relative ">
           <Image
-            src={"/section001.png"}
+            src={"/section001.webp"}
             height={1000}
             width={2000}
             className="h-auto w-full"
