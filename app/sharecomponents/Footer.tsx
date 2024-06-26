@@ -32,16 +32,16 @@ export default function Footer() {
         />
         <h1 className="font-bold text-[22px] mt-5">Quick Links</h1>
         <div className="flex gap-3 xl:gap-10 mt-5 text-[15px]">
-          <Link href={"/coming-soon"}>
+          <Link href={"/learning-program"}>
             <p className="hover:text-[#028676]">Programs</p>
           </Link>
-          <Link href={"/coming-soon"}>
+          <Link href={"/see-the-campus"}>
             <p className="hover:text-[#028676]">See The campus</p>
           </Link>
-          <Link href={"/coming-soon"}>
+          <Link href={"/interest-form"}>
             <p className="hover:text-[#028676]">Admissions</p>
           </Link>
-          <Link href={"/coming-soon"}>
+          <Link href={"/clearity-by-csi"}>
             <p className="hover:text-[#028676]">Clarity by CSI</p>
           </Link>
         </div>
@@ -85,7 +85,7 @@ export default function Footer() {
       </div>
       <div className="w-full xl:w-[30%] flex flex-col items-center justify-center gap-10 mt-20 xl:mt-0">
         <p className="text-center">
-          The care, safety and wellbeing of all children and vulnerable people
+          The care, safety and wellbeing of all children, and vulnerable people,
           is a core and fundamental responsibility for our community.
         </p>
         {/* <Image
