@@ -25,7 +25,7 @@ export default function HeroSection() {
   }, [intervalDuration]);
 
   useEffect(() => {
-    setIntervalDuration(currentImageIndex === 2 ? 12000 : 8000);
+    setIntervalDuration(currentImageIndex === 3 ? 12000 : 8000);
   }, [currentImageIndex]);
 
   return (
@@ -37,7 +37,7 @@ export default function HeroSection() {
       >
         {currentImageIndex === 3 ? (
           <video
-            src="/banner_video.mp4"
+            src="/banner_video.webm"
             autoPlay
             muted
             controls
