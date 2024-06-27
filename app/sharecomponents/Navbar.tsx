@@ -27,7 +27,7 @@ const array = [
   },
   {
     name: "Programs",
-    link: "/interest-form",
+    link: "/learning-program",
   },
   {
     name: "Contact Us",
@@ -50,6 +50,10 @@ let knowMoreArray = [
   {
     name: "Academic Council",
     link: "/academic-councel",
+  },
+  {
+    name: "Our Advisory Board",
+    link: "/advisory-board",
   },
   {
     name: "Student Well-Being",

@@ -45,9 +45,7 @@ const Map = () => {
           center={center}
           zoom={14}
           options={{
-            styles: [
-              { stylers: [{ saturation: -100 }, { invert_lightness: true }] },
-            ],
+            styles: [{ stylers: [{ saturation: -100 }] }],
             disableDefaultUI: true,
             gestureHandling: "greedy",
             scrollwheel: false,

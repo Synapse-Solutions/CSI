@@ -54,7 +54,7 @@ export default function Home() {
             <h1 className="font-bold text-[20px] md:text-[40px] ">
               The CSI Way
             </h1>
-            <p className="text-[14px] md:text-[18px]">
+            <p className="text-[14px] 2xl:text-[18px]">
               CSI’s Approach takes the best from international best practics,
               local expertise & the latest in research to deliver an education
               best suited for 21st century.
@@ -84,7 +84,7 @@ export default function Home() {
               Advantage
             </h4>
           </div>
-          <div className="absolute top-[25%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          <div className="absolute top-[25%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(1)}

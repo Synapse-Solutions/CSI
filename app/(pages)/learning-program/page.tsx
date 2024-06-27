@@ -4,7 +4,9 @@ import Footer from "@/app/sharecomponents/Footer";
 import Navbar from "@/app/sharecomponents/Navbar";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const array = [
   {
@@ -110,7 +112,11 @@ const array_two = [
 ];
 export default function page() {
   const [activeHoverIndex, setActiveHoverIndex] = useState<any>(0);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   function handleMouseEnterLast(index: number) {
     setActiveHoverIndex(index);
   }
@@ -284,7 +290,10 @@ export default function page() {
           </p>
         </div>
       </div> */}
-      <div className=" justify-between relative overflow-hidden w-screen">
+      <div
+        data-aos="fade-down"
+        className=" justify-between relative overflow-hidden w-screen"
+      >
         <div className="w-full">
           <div className="hidden absolute -top-[80px] 2xl:top-0 left-0 xl:flex flex-col w-full items-center ">
             <div className="mt-20  w-[80%] xl:w-[50%]">
@@ -361,7 +370,10 @@ export default function page() {
       </div>
       <div className="justify-between xl:relative overflow-hidden w-screen">
         <div className="w-full">
-          <div className="absolute xl:block hidden right-0 top-20 2xl:top-[50%] w-1/2 px-[10%]">
+          <div
+            data-aos="fade-left"
+            className="absolute xl:block hidden right-0 top-20 2xl:top-[50%] w-1/2 px-[10%]"
+          >
             <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
               The CSI Co-Curricular Program
             </h1>
@@ -422,7 +434,7 @@ export default function page() {
           </div>
         ))}
       </div>
-      <div className="flex w-full mt-[10%]">
+      <div data-aos="fade-right" className="flex w-full mt-[10%]">
         <div className="xl:w-[60%] px-[10%]">
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Athletics Program

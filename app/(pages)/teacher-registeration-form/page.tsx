@@ -15,7 +15,7 @@ export default function page() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1500,
+      duration: 1000,
     });
   }, []);
   const sendEmail = async (data: any) => {
@@ -117,7 +117,10 @@ export default function page() {
           }}
           className="h-[400px] xl:h-[700px] w-screen relative"
         >
-          <div className="text-white hidden xl:block absolute bottom-[30%] right-[15%]">
+          <div
+            data-aos="fade-left"
+            className="text-white hidden xl:block absolute bottom-[30%] right-[15%]"
+          >
             <h1 className="text-[20px] xl:text-[35px] font-bold">
               Our Teacher’s Training
             </h1>
@@ -125,8 +128,8 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section className="px-[10%] hidden xl:block">
-        <div className="relative text-black text-[16px] xl:text-[22px] font-bold">
+      <section className="px-[10%] ">
+        <div className="relative text-black text-[10px] xl:text-[22px] font-bold">
           <Image
             src={"/arrows_pic.webp"}
             height={1000}
@@ -134,14 +137,14 @@ export default function page() {
             alt="arrows"
             className="w-full h-auto object-contain "
           />
-          <div className="absolute top-8 left-12">
+          <div className="absolute top-0 xl:top-8 left-2 xl:left-12">
             <h1>
               Reach Out <br />
               through the <br />
               form below
             </h1>
           </div>
-          <div className="absolute top-[5%] left-[65%]">
+          <div className="absolute top-[5%] left-[63%] xl:left-[65%]">
             <h1>Interview</h1>
           </div>
           <div className="absolute top-[30%] left-[63%]">
@@ -170,7 +173,7 @@ export default function page() {
               Partners
             </h1>
           </div>
-          <div className="absolute top-[55%] left-[80%]">
+          <div className="absolute top-[55%] left-[78%] xl:left-[80%]">
             <h1>
               Gain a <br />
               Charter by <br />
@@ -297,7 +300,7 @@ export default function page() {
                 <p className="text-[18px] font-[600]">
                   English Language Proficiency*
                 </p>
-                <div className="flex items-center gap-3 mt-5">
+                <div className="flex flex-col xl:flex-row xl:items-center gap-3 mt-5">
                   <p className="font-[600] w-[100px] mr-10">Reading</p>
                   <div className="flex items-center gap-2">
                     <input

@@ -14,7 +14,7 @@ export default function page() {
   const { register, handleSubmit, reset } = useForm();
   useEffect(() => {
     AOS.init({
-      duration: 1500,
+      duration: 1000,
     });
   }, []);
 

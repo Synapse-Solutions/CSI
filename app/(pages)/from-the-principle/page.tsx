@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 export default function page() {
   useEffect(() => {
     AOS.init({
-      duration: 1500,
+      duration: 1000,
     });
   }, []);
   return (
@@ -33,8 +33,11 @@ export default function page() {
             alt="fakhra shahid signature"
           />
 
-          <div className="xl:absolute xl:top-0  w-full mt-10 xl:mt-0 px-20 xl:px-0">
-            <h1 className="text-[52px] text-center xl:text-start font-[700] xl:ml-10">
+          <div
+            data-aos="fade-right"
+            className="xl:absolute xl:top-0  w-full mt-10 xl:mt-0 px-5 xl:px-0"
+          >
+            <h1 className="text-[30px] xl:text-[52px] text-center xl:text-start font-[700] xl:ml-10">
               From the desk <br /> of the principal
             </h1>
             <div
@@ -88,7 +91,7 @@ export default function page() {
                   global citizens of the future.
                 </p>
               </div>
-              <div className="h-[400px]"></div>
+              <div className="h-[200px] xl:h-[400px]"></div>
               <div className="absolute right-0 bottom-0 w-full">
                 <Image
                   src={"/fly2.gif"}

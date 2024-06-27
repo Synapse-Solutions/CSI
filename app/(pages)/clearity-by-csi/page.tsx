@@ -17,7 +17,7 @@ export default function Page() {
   const [selectedBlog, setSelectedBlog] = useState<any>(null);
   useEffect(() => {
     AOS.init({
-      duration: 1500,
+      duration: 1000,
     });
   }, []);
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Page() {
       <div className="relative z-10 h-[130px]"></div>
       <section className="pb-[10%] px-[5%] ">
         <div className="flex  items-center">
-          <div className="w-1/2 flex justify-center">
+          <div data-aos="fade-right" className="w-1/2 flex justify-center">
             <Image
               src={"/three_birds.webp"}
               height={500}
@@ -48,7 +48,7 @@ export default function Page() {
               alt="birds"
             />
           </div>
-          <div className="w-1/2">
+          <div data-aos="fade-left" className="w-1/2">
             <h1 className="text-[20px] xl:text-[30px] font-bold">
               Clarity By CSI
             </h1>
