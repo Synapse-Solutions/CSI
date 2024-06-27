@@ -210,7 +210,7 @@ export default function page() {
                 1
               </button>
               <p>General Details</p>
-              <div className="h-[1px] w-[100px] bg-[#1F4694] hidden xl:block"></div>
+              {/* <div className="h-[1px] w-[100px] bg-[#1F4694] hidden xl:block"></div> */}
             </div>
             <div className="flex items-center gap-3">
               <button
@@ -224,7 +224,7 @@ export default function page() {
                 2
               </button>
               <p>Education Details</p>
-              <div className="h-[1px] w-[100px] bg-[#1F4694] hidden xl:block"></div>
+              {/* <div className="h-[1px] w-[100px] bg-[#1F4694] hidden xl:block"></div> */}
             </div>
             <div className="flex items-center gap-3">
               <button
