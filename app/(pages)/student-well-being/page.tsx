@@ -10,7 +10,18 @@ export default function page() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
+      once: true,
     });
+
+    const handleLoad = () => {
+      AOS.refresh();
+    };
+
+    window.addEventListener("load", handleLoad);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+
   }, []);
   return (
     <div>
@@ -28,6 +39,8 @@ export default function page() {
               width={1000}
               alt="student well being"
               className="w-full h-auto object-contain"
+              loading="lazy"
+              onLoad={() => AOS.refresh()}
             />
           </div>
         </div>
@@ -58,6 +71,8 @@ export default function page() {
             width={1500}
             alt="student well being"
             className="w-full h-auto object-contain "
+            loading="lazy"
+            onLoad={() => AOS.refresh()}
           />
           <div className="w-[30%] absolute top-0 h-full flex items-center left-5 xl:left-20 text-black">
             <p data-aos="fade-right">
@@ -94,6 +109,8 @@ export default function page() {
             width={1500}
             alt="student well being"
             className="w-full h-auto object-contain "
+            loading="lazy"
+            onLoad={() => AOS.refresh()}
           />
           <div className="w-[35%] absolute top-0 h-full flex items-center left-5 xl:left-20 text-black">
             <p data-aos="fade-right">
@@ -113,6 +130,8 @@ export default function page() {
             width={1500}
             alt="student well being"
             className="w-full h-auto object-contain "
+            loading="lazy"
+            onLoad={() => AOS.refresh()}
           />
           <div className="w-[35%] absolute top-0 h-full flex items-center right-5 xl:right-20 text-black">
             <p data-aos="fade-left">
