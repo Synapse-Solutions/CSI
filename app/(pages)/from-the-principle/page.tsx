@@ -13,7 +13,7 @@ export default function page() {
     });
   }, []);
   return (
-    <div className="w-screen overflow-hidden">
+    <div className="w-screen overflow-hidden text-black">
       <Navbar />
       <div className="h-[130px]"></div>
       <section>
