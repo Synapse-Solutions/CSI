@@ -118,7 +118,7 @@ export default function page() {
   return (
     <div className="w-screen overflow-hidden">
       <Navbar />
-      <section>
+      <section data-aos="fade-down">
         <div
           style={{
             backgroundImage: "url(/interest_hero_bg.webp)",

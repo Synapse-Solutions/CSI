@@ -16,7 +16,7 @@ export default function page() {
     <div>
       <Navbar />
       <div className="h-[200px]"></div>
-      <section className="w-full px-10">
+      <section data-aos="fade-down" className="w-full px-10">
         <h1 className="text-[30px] xl:text-[68px] font-[400] text-center text-black">
           Student <span className="font-[700] "> Well-Being</span>
         </h1>
@@ -33,7 +33,7 @@ export default function page() {
         </div>
       </section>
       <section className="text-[8px] xl:text-[20px] text-center">
-        <div className="relative w-full h-auto">
+        <div className="relative w-full h-auto mt-5">
           <Image
             src={"/student_wellb_2.webp"}
             height={1500}

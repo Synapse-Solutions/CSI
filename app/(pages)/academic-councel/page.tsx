@@ -11,7 +11,6 @@ export default function page() {
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: true, // animations will only happen once while scrolling down
     });
     AOS.refresh();
   }, []);
@@ -28,8 +27,8 @@ export default function page() {
           className="w-full h-auto object-contain"
         />
       </section>
-      <section>
-        <div data-aos="zoom-in" className="bg-[#F1F1F1] w-full p-8 xl:p-20 ">
+      <section className="mt-5">
+        <div className="bg-[#F1F1F1] w-full p-8 xl:p-20 ">
           <h1 className="text-[30px] xl:text-[52px] font-[700] text-center uppercase text-black">
             Academic Insights Council
           </h1>
@@ -44,7 +43,7 @@ export default function page() {
           </p>
         </div>
       </section>
-      <section data-aos="fade-right" className="px-8 xl:px-20">
+      <section className="px-8 xl:px-20 mt-5">
         <div className="flex flex-col xl:flex-row items-center gap-10 mt-20">
           <div className="w-full xl:w-[20%]">
             <Image
@@ -55,7 +54,7 @@ export default function page() {
               className="h-auto w-[90%] object-contain "
             />
           </div>
-          <p data-aos="fade-left" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Sohail received his Ph.D in Sociology from Paris Nanterre
             University, France and joined the civil service in 1984. He has
             since been actively involved in research and teaching. He has taught
@@ -72,7 +71,7 @@ export default function page() {
           </p>
         </div>
         <div className="flex items-center flex-col-reverse xl:flex-row gap-10 mt-20">
-          <p data-aos="fade-right" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Shams, received his Ph.D/EdD from the world renowened Institute
             of Education, University College London (IOE-UCL), UK and his M.Sc.
             in Economic History from London School of Economics & Political
@@ -88,7 +87,7 @@ export default function page() {
             team of teachers and improve the learning environment of students
             within the classrooms.
           </p>
-          <div data-aos="fade-left" className="w-full xl:w-[20%]">
+          <div className="w-full xl:w-[20%]">
             <Image
               src={"/academic_3.webp"}
               height={500}
@@ -99,7 +98,7 @@ export default function page() {
           </div>
         </div>
         <div className="flex items-center flex-col xl:flex-row gap-10 mt-20">
-          <div data-aos="fade-right" className="w-full xl:w-[20%]">
+          <div className="w-full xl:w-[20%]">
             <Image
               src={"/academic_4.webp"}
               height={500}
@@ -108,7 +107,7 @@ export default function page() {
               className="h-auto w-full xl:w-[90%] object-contain "
             />
           </div>
-          <p data-aos="fade-left" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Shahzad, received her Ph.D from Deakin University, Australia and
             is a known expert on the techniques of designing student
             assessments, and the preparation of cuttig edge teaching and

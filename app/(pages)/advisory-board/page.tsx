@@ -11,7 +11,7 @@ export default function page() {
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: false, // animations will only happen once while scrolling down
+      once: false,
     });
     AOS.refresh();
   }, []);
@@ -28,8 +28,8 @@ export default function page() {
           className="w-full h-auto object-contain"
         />
       </section>
-      <section>
-        <div data-aos="fade-right" className="bg-[#F1F1F1] w-full p-20 ">
+      <section className="mt-5">
+        <div className="bg-[#F1F1F1] w-full p-20 ">
           <h1 className="text-[40px] xl:text-[52px] font-[700] text-center text-black">
             Advisory Board
           </h1>
@@ -45,9 +45,9 @@ export default function page() {
           </p>
         </div>
       </section>
-      <section className="px-8 xl:px-20">
+      <section className="px-8 xl:px-20 mt-5">
         <div className="flex items-center flex-col xl:flex-row gap-10 mt-20">
-          <div data-aos="fade-right" className="w-full xl:w-[20%]">
+          <div className="w-full xl:w-[20%]">
             <Image
               src={"/adv_board_2.webp"}
               height={500}
@@ -56,7 +56,7 @@ export default function page() {
               className="h-auto w-[90%] object-contain "
             />
           </div>
-          <p data-aos="fade-left" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Akbar Hussain Durrani, Tamgha-e-Imtiaz, is currently serving as the
             Chairman of the Federal Public Service Commission. Over the span of
             his illustrious career, Mr. Durrani has served as the Chief
@@ -74,7 +74,7 @@ export default function page() {
           </p>
         </div>
         <div className="flex items-center flex-col-reverse xl:flex-row gap-10 mt-20">
-          <p data-aos="fade-right" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Dr. Faisal Bari has served as the Dean of the School of Education at
             the Lahore University of Management Science (LUMS), Pakistan and as
             a Board Member of the Punjab Examination Commission. Dr. Bari
@@ -87,7 +87,7 @@ export default function page() {
             our students develop the cognitive capabilities, and habits of
             thought needed to succeed in today's world.
           </p>
-          <div data-aos="fade-left" className="w-full xl:w-[20%]">
+          <div className="w-full xl:w-[20%]">
             <Image
               src={"/adv_board_3.webp"}
               height={500}
@@ -98,7 +98,7 @@ export default function page() {
           </div>
         </div>
         <div className="flex items-center flex-col xl:flex-row gap-10 mt-20">
-          <div data-aos="fade-right" className="w-full xl:w-[20%]">
+          <div className="w-full xl:w-[20%]">
             <Image
               src={"/adv_board_4.webp"}
               height={500}
@@ -107,7 +107,7 @@ export default function page() {
               className="h-auto w-[90%] object-contain "
             />
           </div>
-          <p data-aos="fade-left" className="w-full xl:w-[80%] text-black">
+          <p className="w-full xl:w-[80%] text-black">
             Qualified in Curriculum and Teaching, with a special focus on Early
             Childhood from the world leading Teachers College, Columbia
             University, USA, Ms. Umbreen Arif has more than two decades of

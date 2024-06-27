@@ -28,7 +28,10 @@ export default function Page() {
       <Navbar />
       <div className="relative z-10"></div>
       <section className="flex justify-center items-center h-2/5 md:h-screen pt-10 md:mt-0 md:p-20">
-        <div className="w-1/2 flex justify-center md:justify-end md:mt-0 ">
+        <div
+          data-aos="fade-right"
+          className="w-1/2 flex justify-center md:justify-end md:mt-0 "
+        >
           <Image
             src={"/our-heart.webp"}
             height={1000}
@@ -37,7 +40,7 @@ export default function Page() {
             alt="leaf"
           />
         </div>
-        <div className="w-3/5 mr-4 md:mr-0 md:w-1/2">
+        <div data-aos="fade-left" className="w-3/5 mr-4 md:mr-0 md:w-1/2">
           <h4 className="text-[30px] md:text-[40px] font-semibold">
             Our Heart
           </h4>
