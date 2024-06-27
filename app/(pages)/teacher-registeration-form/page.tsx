@@ -128,8 +128,8 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section className="px-[10%] ">
-        <div className="relative text-black text-[10px] xl:text-[22px] font-bold">
+      <section className="px-[10%] hidden xl:block ">
+        <div className="relative text-black text-[8px] xl:text-[22px] font-bold">
           <Image
             src={"/arrows_pic.webp"}
             height={1000}
@@ -137,7 +137,7 @@ export default function page() {
             alt="arrows"
             className="w-full h-auto object-contain "
           />
-          <div className="absolute top-0 xl:top-8 left-2 xl:left-12">
+          <div className="absolute top-0 xl:top-8 left-4 xl:left-12">
             <h1>
               Reach Out <br />
               through the <br />
@@ -201,7 +201,11 @@ export default function page() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setSelectedForm(1)}
-                className="bg-[#028676] text-white border border-[#1F4694] rounded-full h-[40px] w-[40px] flex items-center justify-center"
+                style={{
+                  backgroundColor: selectedForm === 1 ? "#028676" : "#d2daea",
+                  color: selectedForm === 1 ? "#fff" : "#1F4694",
+                }}
+                className=" text-white border border-[#1F4694] rounded-full h-[40px] w-[40px] flex items-center justify-center"
               >
                 1
               </button>
@@ -211,7 +215,11 @@ export default function page() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setSelectedForm(2)}
-                className="bg-[#028676] text-white border border-[#1F4694] rounded-full h-[40px] w-[40px] flex items-center justify-center"
+                style={{
+                  backgroundColor: selectedForm === 2 ? "#028676" : "#d2daea",
+                  color: selectedForm === 2 ? "#fff" : "#1F4694",
+                }}
+                className=" text-white border border-[#1F4694] rounded-full h-[40px] w-[40px] flex items-center justify-center"
               >
                 2
               </button>
@@ -221,7 +229,11 @@ export default function page() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setSelectedForm(3)}
-                className="bg-[#028676] text-white border border-[#1F4694] rounded-full h-[40px] w-[40px] flex items-center justify-center"
+                style={{
+                  backgroundColor: selectedForm === 3 ? "#028676" : "#d2daea",
+                  color: selectedForm === 3 ? "#fff" : "#1F4694",
+                }}
+                className=" text-white border border-[#1F4694] rounded-full h-[40px] w-[40px] flex items-center justify-center"
               >
                 3
               </button>

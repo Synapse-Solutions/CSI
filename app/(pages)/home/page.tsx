@@ -57,7 +57,7 @@ export default function Home() {
             <p className="text-[14px] 2xl:text-[18px]">
               CSI’s Approach takes the best from international best practics,
               local expertise & the latest in research to deliver an education
-              best suited for 21st century.
+              best suited forthe 21st century.
             </p>
           </section>
         </aside>

@@ -35,21 +35,29 @@ export default function page() {
 
           <div
             data-aos="fade-right"
-            className="xl:absolute xl:top-0  w-full mt-10 xl:mt-0 px-5 xl:px-0"
+            className="xl:absolute xl:top-10  w-full mt-10 xl:mt-0 px-5 xl:px-0"
           >
             <h1 className="text-[30px] xl:text-[52px] text-center xl:text-start font-[700] xl:ml-10">
               From the desk <br /> of the principal
             </h1>
-            <div
-              style={{
-                backgroundImage: "url(/from_principles_bg.webp)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-              className="w-full xl:w-[45%] xl:ml-10 h-auto pt-20 text-white text-[22px] flex flex-col items-center relative"
-            >
-              <div className="px-10 mt-10 2xl:mt-20 flex flex-col gap-5 text-[14px] 2xl:text-[24px]">
+            <div className="w-full xl:w-[45%] xl:ml-10 h-auto mt-10 xl:mt-20 text-white text-[22px] flex flex-col items-center relative bg-[#00ae95]">
+              <Image
+                src={"/cornerarrow.png"}
+                height={1000}
+                width={1000}
+                className="w-[40px] hidden xl:block h-[40px] right-0 -top-[38px] absolute"
+                alt="fakhra shahid signature"
+              />
+              <div className=" right-0 -top-[35px] absolute flex justify-center w-full xl:hidden">
+                <Image
+                  src={"/middlearrow.png"}
+                  height={1000}
+                  width={1000}
+                  className="w-[60px] h-[60px] object-contain"
+                  alt="fakhra shahid signature"
+                />
+              </div>
+              <div className="px-10 mt-10 2xl:mt-10 flex flex-col gap-5 text-[14px] 2xl:text-[24px]">
                 <p>
                   It is my honour and privilege as the Principal of the first
                   campus of Central School International to welcome you to our
