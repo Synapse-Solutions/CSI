@@ -370,10 +370,7 @@ export default function page() {
       </div>
       <div className="justify-between xl:relative overflow-hidden w-screen">
         <div className="w-full">
-          <div
-            data-aos="fade-left"
-            className="absolute xl:block hidden right-0 top-20 2xl:top-[50%] w-1/2 px-[10%]"
-          >
+          <div className="absolute xl:block hidden right-0 top-20 2xl:top-[50%] w-1/2 px-[10%]">
             <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
               The CSI Co-Curricular Program
             </h1>
@@ -434,7 +431,7 @@ export default function page() {
           </div>
         ))}
       </div>
-      <div data-aos="fade-right" className="flex w-full mt-[10%]">
+      <div className="flex w-full mt-[10%]">
         <div className="xl:w-[60%] px-[10%]">
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Athletics Program
