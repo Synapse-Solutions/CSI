@@ -26,7 +26,10 @@ export default function page() {
             className="absolute top-0 left-0 w-screen h-[400px] xl:h-auto"
           />
 
-          <h1 className="text-[25px] xl:text-[58px] font-[700px] absolute top-[55%] xl:top-[20%] left-0 w-full text-center z-20 text-white">
+          <h1
+            data-aos="fade-down"
+            className="text-[25px] xl:text-[58px] font-[700px] absolute top-[55%] xl:top-[20%] left-0 w-full text-center z-20 text-white"
+          >
             See the campus
           </h1>
           <Link href="https://csi.edu.pk/contact-us">

@@ -482,7 +482,7 @@ export default function page() {
         alt="bg"
         className="w-[100%] h-auto -top-[-10%] z-0"
       />
-      <footer className="mt-[250px]">
+      <footer className="mt-[0px]">
         <Footer />
       </footer>
     </div>

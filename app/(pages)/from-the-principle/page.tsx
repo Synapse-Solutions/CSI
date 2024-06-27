@@ -29,7 +29,7 @@ export default function page() {
             src={"/sign.webp"}
             height={1000}
             width={1000}
-            className="w-full xl:w-[50%] h-auto object-contain mt-20 px-20 xl:px-0"
+            className="w-full xl:w-[50%] hidden xl:block h-auto object-contain mt-20 px-20 xl:px-0"
             alt="fakhra shahid signature"
           />
 
@@ -102,11 +102,18 @@ export default function page() {
                 />
               </div>
             </div>
+            <Image
+              src={"/sign.webp"}
+              height={1000}
+              width={1000}
+              className="w-full xl:hidden xl:w-[50%] h-auto object-contain mt-5 "
+              alt="fakhra shahid signature"
+            />
           </div>
         </div>
       </section>
 
-      <footer className="mt-[250px]">
+      <footer className="mt-[100px] xl:mt-[250px]">
         <Footer />
       </footer>
     </div>

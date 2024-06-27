@@ -42,7 +42,7 @@ export default function page() {
             className="w-full h-auto object-contain "
           />
           <div className="w-[40%] absolute top-0 h-full flex items-center right-5 xl:right-20 text-black">
-            <p>
+            <p data-aos="fade-left">
               We offer state of the art transport facilities for our students.
               Our technology driven service allows parents to use a
               user-friendly app to monitor their children's journey, the
@@ -60,7 +60,7 @@ export default function page() {
             className="w-full h-auto object-contain "
           />
           <div className="w-[30%] absolute top-0 h-full flex items-center left-5 xl:left-20 text-black">
-            <p>
+            <p data-aos="fade-right">
               We offer Day-Boarding to ensure that CSI students feel at home
               when taking part in the varied and unique courses offered as part
               of our Extended Learning
@@ -76,7 +76,7 @@ export default function page() {
             className="w-full h-auto object-contain "
           />
           <div className="w-[35%] absolute top-0 h-full flex items-center right-5 xl:right-20 text-black">
-            <p>
+            <p data-aos="fade-left">
               At CSI, every student's everyday matters. We use state of the art
               digital architecture to monitor and document the social and
               emotional wellbeing, academic progress, interests and strengths of
@@ -96,7 +96,7 @@ export default function page() {
             className="w-full h-auto object-contain "
           />
           <div className="w-[35%] absolute top-0 h-full flex items-center left-5 xl:left-20 text-black">
-            <p>
+            <p data-aos="fade-right">
               We believe that it takes a village to raise a child. As such, at
               CSI we have made sure that parents have a regular meeting with the
               principal that places the child at the center. We use real life
@@ -115,7 +115,7 @@ export default function page() {
             className="w-full h-auto object-contain "
           />
           <div className="w-[35%] absolute top-0 h-full flex items-center right-5 xl:right-20 text-black">
-            <p>
+            <p data-aos="fade-left">
               Nutrition is a critically important and often under discussed part
               of a child's education. CSI has a purpose-built in-house kitchen
               which adheres to the highest standards of hygiene which provides

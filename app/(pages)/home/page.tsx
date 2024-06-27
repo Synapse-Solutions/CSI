@@ -164,7 +164,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="pt-[10px]">
+      <footer className="mt-[100px]">
         <Footer />
       </footer>
     </div>

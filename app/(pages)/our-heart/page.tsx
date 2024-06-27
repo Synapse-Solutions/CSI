@@ -61,7 +61,7 @@ export default function Page() {
           Our Guiding Principles
         </h4>
         <div className="flex flex-col md:flex-row w-full md:justify-between">
-          <div className="md:w-[33%] ">
+          <div data-aos="zoom-in" className="md:w-[33%] ">
             <Image
               src={"/elam.webp"}
               height={500}
@@ -84,7 +84,7 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <div className="md:w-[33%]">
+          <div data-aos="zoom-in" className="md:w-[33%]">
             <Image
               src={"/amal.webp"}
               height={500}
@@ -107,7 +107,7 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <div className="md:w-[33%]">
+          <div data-aos="zoom-in" className="md:w-[33%]">
             <Image
               src={"/azam.webp"}
               height={500}

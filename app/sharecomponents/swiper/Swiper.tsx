@@ -86,14 +86,14 @@ export default function SwiperCompoenent() {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="ml-[25px] xl:ml-0 bg-transparent w-[100%] relative"
+      className="ml-[25px] xl:ml-0 bg-transparent w-[100%] flex justify-center relative"
     >
       <div
         style={{
           opacity: isMobile ? 1 : isHovered ? 1 : 0,
           transition: "opacity 1s ease",
         }}
-        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] left-[15px] z-10 cursor-pointer"
+        className="bg-[#EEEEEE] hover:bg-[#028676]  h-[50px] w-[50px] rounded-full flex items-center justify-center left_arrow absolute top-[45%] -left-[10px] xl:left-[15px] z-10 cursor-pointer"
       >
         <Image
           src={"/left_arr.webp"}
@@ -108,7 +108,7 @@ export default function SwiperCompoenent() {
           opacity: isMobile ? 1 : isHovered ? 1 : 0,
           transition: "opacity 1s ease",
         }}
-        className="bg-[#EEEEEE] hover:bg-[#028676] h-[50px] w-[50px] rounded-full flex items-center justify-center right_arrow absolute top-[45%] right-[70px] xl:right-20 z-10 cursor-pointer"
+        className="bg-[#EEEEEE] hover:bg-[#028676] h-[50px] w-[50px] rounded-full flex items-center justify-center right_arrow absolute top-[45%] right-[40px] xl:right-20 z-10 cursor-pointer"
       >
         <Image
           src={"/left_arr.webp"}
@@ -118,96 +118,97 @@ export default function SwiperCompoenent() {
           className="h-[20px] w-auto object-contain rotate-180"
         />
       </div>
+      <div className="w-[80%] xl:w-full h-full">
+        <Swiper
+          slidesPerView={isMobile ? 1 : 3}
+          // spaceBetween={50}
+          modules={[Navigation, Autoplay]}
+          navigation={{
+            nextEl: ".left_arrow",
+            prevEl: ".right_arrow",
+          }}
+          className="bg-transparent"
+          autoplay={{
+            delay: 2000,
+            pauseOnMouseEnter: true,
+            disableOnInteraction: false,
+          }}
+        >
+          {array.map((item, index) => (
+            <SwiperSlide
+              key={index}
+              className={`w-[350px] 2xl:w-[450px]  bg-transparent `}
+              data-aos={fadeAnimation}
+            >
+              <>
+                {selectedIndex === index ? (
+                  <div
+                    className={`bg-[#028676] mb-5 xl:mb-0 h-[100%]  ml-[10px] mt-[40px] 2xl:mt-[80px] w-[85%] xl:w-[90%] rounded-md p-3 duration-500 `}
+                  >
+                    <div className="h-[50px] w-full flex justify-end px-5">
+                      <p
+                        onClick={() => setSelectedIndex(null)}
+                        className="text-white font-bold text-[20px] cursor-pointer"
+                      >
+                        ╳
+                      </p>
+                    </div>
 
-      <Swiper
-        slidesPerView={isMobile ? 1 : 3}
-        // spaceBetween={50}
-        modules={[Navigation, Autoplay]}
-        navigation={{
-          nextEl: ".left_arrow",
-          prevEl: ".right_arrow",
-        }}
-        className="bg-transparent"
-        autoplay={{
-          delay: 2000,
-          pauseOnMouseEnter: true,
-          disableOnInteraction: false,
-        }}
-      >
-        {array.map((item, index) => (
-          <SwiperSlide
-            key={index}
-            className={`w-[350px] 2xl:w-[450px]  bg-transparent `}
-            data-aos={fadeAnimation}
-          >
-            <>
-              {selectedIndex === index ? (
-                <div
-                  className={`bg-[#028676] mb-5 xl:mb-0 h-[100%]  ml-[10px] mt-[40px] 2xl:mt-[80px] w-[85%] xl:w-[90%] rounded-md p-3 duration-500 `}
-                >
-                  <div className="h-[50px] w-full flex justify-end px-5">
-                    <p
-                      onClick={() => setSelectedIndex(null)}
-                      className="text-white font-bold text-[20px] cursor-pointer"
-                    >
-                      ╳
+                    <p className="text-white px-5 font-bold text-[15px] 2xl:text-[20px] text-start">
+                      {item.description.split(":")[0] + ":"}
+                    </p>
+                    <p className="text-white mt-2 px-5  text-[13px] 2xl:text-[17px] text-start">
+                      {item.description.split(":")[1]}
                     </p>
                   </div>
-
-                  <p className="text-white px-5 font-bold text-[15px] 2xl:text-[20px] text-start">
-                    {item.description.split(":")[0] + ":"}
-                  </p>
-                  <p className="text-white mt-2 px-5  text-[13px] 2xl:text-[17px] text-start">
-                    {item.description.split(":")[1]}
-                  </p>
-                </div>
-              ) : (
-                <div
-                  style={{
-                    boxShadow: "0 0 5px 1px #CCC",
-                  }}
-                  className=" bg-white rounded mb-5 xl:mb-0 mr-[60px] xl:mr-[40px] ml-[10px] max-h-[570px]"
-                >
-                  <div className="w-full h-[160px] 2xl:h-[260px] overflow-hidden mt-10 2xl:mt-20 flex items-center">
-                    <Image
-                      alt="image"
-                      src={item.image}
-                      height={500}
-                      width={500}
-                      objectFit="contain"
-                      style={{
-                        objectFit: "contain",
-                      }}
-                      className="w-[80%] h-[140px] 2xl:h-[240px] object-contain  hover:scale-125 duration-1000 ease-in-out "
-                    />
-                  </div>
-                  <div className="px-10 mt-5 w-full flex flex-col items-start ">
-                    <div className="h-[150px] 2xl:h-[200px]">
-                      {item.title.split("\n").map((line, i) => (
-                        <h1
-                          key={i}
-                          className="font-bold text-black text-[20px] 2xl:text-[30px] text-start "
-                        >
-                          {line}
-                        </h1>
-                      ))}
+                ) : (
+                  <div
+                    style={{
+                      boxShadow: "0 0 5px 1px #CCC",
+                    }}
+                    className=" bg-white rounded mb-5 xl:mb-0 mr-[60px] xl:mr-[40px] ml-[10px] max-h-[570px]"
+                  >
+                    <div className="w-full h-[160px] 2xl:h-[260px] overflow-hidden mt-10 2xl:mt-20 flex items-center">
+                      <Image
+                        alt="image"
+                        src={item.image}
+                        height={500}
+                        width={500}
+                        objectFit="contain"
+                        style={{
+                          objectFit: "contain",
+                        }}
+                        className="w-[80%] h-[140px] 2xl:h-[240px] object-contain  hover:scale-125 duration-1000 ease-in-out "
+                      />
                     </div>
-                    <button
-                      onClick={() => {
-                        setSelectedIndex(index);
-                        setFadeAnimation;
-                      }}
-                      className="bg-[#028676] hover:bg-[#25524c] text-[14px] 2xl:text-[20px] rounded-full text-white px-10 py-3 mb-5 2xl:mb-10"
-                    >
-                      See More
-                    </button>
+                    <div className="px-10 mt-5 w-full flex flex-col items-start ">
+                      <div className="h-[150px] 2xl:h-[200px]">
+                        {item.title.split("\n").map((line, i) => (
+                          <h1
+                            key={i}
+                            className="font-bold text-black text-[20px] 2xl:text-[30px] text-start "
+                          >
+                            {line}
+                          </h1>
+                        ))}
+                      </div>
+                      <button
+                        onClick={() => {
+                          setSelectedIndex(index);
+                          setFadeAnimation;
+                        }}
+                        className="bg-[#028676] hover:bg-[#25524c] text-[14px] 2xl:text-[20px] rounded-full text-white px-10 py-3 mb-5 2xl:mb-10"
+                      >
+                        See More
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
-            </>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+                )}
+              </>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }
