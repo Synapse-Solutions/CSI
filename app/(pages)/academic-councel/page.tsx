@@ -18,14 +18,15 @@ export default function page() {
     <div>
       <Navbar />
       <div className="h-[130px]"></div>
-      <section data-aos="fade-down" className="w-full px-10">
-        <Image
-          src={"/academic_1.webp"}
-          height={2000}
-          width={2000}
-          alt="student well being"
-          className="w-full h-auto object-contain"
-        />
+      <section data-aos="fade-down" className="w-full px-4 md:px-10 flex justify-center items-center">
+        <div className="relative w-full max-w-[1200px] h-[200px] sm:h-[300px] md:h-[400px] overflow-hidden">
+          <Image
+            src="/academic_1.webp"
+            layout="fill"
+            objectFit="cover"
+            alt="student well being"
+          />
+        </div>
       </section>
       <section className="mt-5">
         <div className="bg-[#F1F1F1] w-full p-8 xl:p-20 ">
