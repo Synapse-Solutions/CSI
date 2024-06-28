@@ -106,7 +106,7 @@ export default function Navbar() {
     }, 1000);
   };
   return (
-    <header>
+    <header style={{ zIndex: 9 }}>
       <div
         style={{
           backgroundColor: isHeaderShow ? "white" : "transparent",

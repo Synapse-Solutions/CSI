@@ -64,7 +64,10 @@ export default function HeroSection() {
       ))}
 
       {(currentImageIndex === 0 || currentImageIndex === 1) && (
-        <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center mt-[70px] xl:mt-0 z-50">
+        <div
+          style={{ zIndex: 2 }}
+          className="absolute top-0 left-0 w-full flex h-full items-center justify-center mt-[70px] xl:mt-0 "
+        >
           <div className="flex flex-col items-center">
             <h1 className="text-[#fff] text-[25px] xl:text-[45px]">
               Knowledge, Action, Resolve
