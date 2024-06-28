@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./HomeHero.css"; // Ensure this file exists for styling
+import Image from "next/image";
 
 const images = [
   "/banner_1.webp",
@@ -29,13 +30,36 @@ export default function HeroSection() {
 
   return (
     <div className="h-[calc(40vh)] image-wrap w-screen flex items-center justify-center md:h-[calc(60vh)] xl:h-[calc(100vh)] bg-white bg-opacity-75">
-      <ul className="slideshow">
+      <ul className="hidden xl:block slideshow">
         {images.map((image, index) => (
           <li key={index}>
             <span></span>
           </li>
         ))}
       </ul>
+      <div
+        className={`${
+          currentImageIndex !== 3 && "animate_img"
+        } h-[calc(60vh)] xl:h-[calc(100vh)] mt-80 md:mt-0 xl:hidden`}
+      >
+        {currentImageIndex === 3 ? (
+          <video
+            src="/banner_video.webm"
+            autoPlay
+            muted
+            playsInline
+            className="w-full h-auto object-contain"
+          ></video>
+        ) : (
+          <Image
+            height={1500}
+            width={1500}
+            alt="image"
+            src={images[currentImageIndex]}
+            className="w-full h-auto object-contain"
+          />
+        )}
+      </div>
       {currentImageIndex === 0 || currentImageIndex === 1 ? (
         <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center mt-[70px] xl:mt-0 ">
           <div className="flex flex-col items-center">
