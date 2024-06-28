@@ -301,9 +301,9 @@ export default function page() {
               {siblingDetails.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col xl:flex-row xl:items-end gap-3 xl:gap-0 justify-between"
+                  className="flex flex-col xl:flex-row xl:items-end gap-3 xl:gap-0 justify-between mt-2"
                 >
-                  <p> 1. Name </p>
+                  <p> {index + 1}. Name </p>
                   <input
                     type="text"
                     className="bg-transparent border-b border-[#1F4694] w-full xl:w-[26%] p-3"

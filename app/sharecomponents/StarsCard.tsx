@@ -48,13 +48,6 @@ export default function StarsCard(props: Props) {
         </div>
         <h1 className="mt-2 text-[13px] md:text-[17px]">{props.title}</h1>
         <p className="text-[10px] md:text-[14px] mt-3">{props.description}</p>
-        <div className="w-full text-end mt-3 flex justify-end">
-          <Link href={props.link}>
-            <p className="bg-white text-black rounded-[30px] px-2 hover:bg-[#dbd5d5] cursor-pointer text-[12px] hover:scale-105">
-              Read more
-            </p>
-          </Link>
-        </div>
       </div>
     </>
   );

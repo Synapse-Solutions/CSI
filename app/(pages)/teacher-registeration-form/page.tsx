@@ -516,32 +516,32 @@ export default function page() {
               {experienceArray.map((item, index) => (
                 <div
                   key={index}
-                  className="mt-5 flex items-center justify-between gap-5"
+                  className="mt-5 flex flex-col xl:flex-row xl:items-center justify-between gap-5 w-full"
                 >
-                  <div>
+                  <div className="w-full xl:w-[30%]">
                     <p>Organization</p>
                     <input
                       type="text"
                       placeholder="Enter Organization Name"
-                      className="bg-[#d2daea] rounded-md p-3"
+                      className="bg-[#d2daea] rounded-md p-3 w-full"
                       {...register(`experience.${index}.organization`)}
                     />
                   </div>
-                  <div>
+                  <div className="w-full xl:w-[30%]">
                     <p>Position/Designation</p>
                     <input
                       type="text"
                       placeholder="Enter Your Position/Designation"
-                      className="bg-[#d2daea] rounded-md p-3"
+                      className="bg-[#d2daea] rounded-md p-3 w-full"
                       {...register(`experience.${index}.position`)}
                     />
                   </div>
-                  <div>
+                  <div className="w-full xl:w-[30%]">
                     <p>Tenure</p>
                     <input
                       type="text"
                       placeholder="Enter the tenure time spent"
-                      className="bg-[#d2daea] rounded-md p-3"
+                      className="bg-[#d2daea] rounded-md p-3 w-full"
                       {...register(`experience.${index}.tenure`)}
                     />
                   </div>
