@@ -42,7 +42,7 @@ export default function page() {
             </h1>
             <div className="w-full xl:w-[45%] xl:ml-10 h-auto mt-10 xl:mt-20 text-white text-[22px] flex flex-col items-center relative bg-[#00ae95]">
               <Image
-                src={"/cornerarrow.png"}
+                src={"/cornerarrow.webp"}
                 height={1000}
                 width={1000}
                 className="w-[40px] hidden xl:block h-[40px] right-0 -top-[38px] absolute"
@@ -50,7 +50,7 @@ export default function page() {
               />
               <div className=" right-0 -top-[35px] absolute flex justify-center w-full xl:hidden">
                 <Image
-                  src={"/middlearrow.png"}
+                  src={"/middlearrow.webp"}
                   height={1000}
                   width={1000}
                   className="w-[60px] h-[60px] object-contain"

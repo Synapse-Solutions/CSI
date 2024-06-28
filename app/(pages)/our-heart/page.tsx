@@ -27,17 +27,19 @@ export default function Page() {
     <div className="text-black w-screen overflow-hidden">
       <Navbar />
       <div className="relative z-10"></div>
-      <section className="flex justify-center items-center h-2/5 md:h-screen pt-10 md:mt-0 md:p-20">
+      <section className="flex justify-center items-center h-2/5 md:h-screen pt-10 md:mt-0 md:p-20"
+        style = {{ maxHeight: '850px' }}
+      >
         <div
           data-aos="fade-right"
-          className="w-1/2 flex justify-center md:justify-end md:mt-0 "
+          className="w-1/2 flex justify-center md:justify-end md:mt-0 pt-16"
         >
           <Image
             src={"/our-heart.webp"}
             height={1000}
             width={1000}
             className="object-contain w-[80%] h-[calc(60vh)] pt-10 md:pt-0"
-            alt="leaf"
+            alt="about us"
           />
         </div>
         <div data-aos="fade-left" className="w-3/5 mr-4 md:mr-0 md:w-1/2">
@@ -57,7 +59,7 @@ export default function Page() {
         </div>
       </section>
       <section className="bg-[#1f4694] px-[5%] py-[5%] text-white pb-[15%] ">
-        <h4 className="text-center font-bold md:font-normal md:text-left ">
+        <h4 className="text-[42px] px-[45px] text-center font-bold md:font-normal md:text-left">
           Our Guiding Principles
         </h4>
         <div className="flex flex-col md:flex-row w-full md:justify-between">
@@ -133,10 +135,10 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <h3 className="text-center md:text-start text-[18px] md:text-[35px] font-bold mt-20 ">
+          <h3 className="text-center md:text-start text-[24px] md:text-[35px] font-bold mt-20 md:mt-20 px-[45px]">
             CSI’s Constellation of Character
           </h3>
-          <p className="mx-5 text-center md:text-start ml-10 md:ml-0 md:mx-0">
+          <p className="text-center md:text-start mt-4 mx-4 md:mx-0 md:pl-[45px]">
             CSI seeks to include the following constellation of values in all of
             our students.
           </p>
