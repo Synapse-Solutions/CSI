@@ -7,7 +7,7 @@ const images = [
   "/banner_1.webp",
   "/banner_2.webp",
   "/banner_3.webp",
-  "/banner_video.mp4", // Assuming this is your video file path
+  "/banner_video.webm", // Assuming this is your video file path
 ];
 
 export default function HeroSection() {
@@ -81,7 +81,7 @@ export default function HeroSection() {
           muted
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src={images[currentImageIndex]} type="video/mp4" />
+          <source src={"/banner_video.webm"} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       )}
