@@ -7,6 +7,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -48,6 +49,25 @@ export default function page() {
 
   return (
     <div>
+      <Head>
+        <title>Contact Us - CSI</title>
+        <meta
+          name="description"
+          content="Get in touch with CSI for any inquiries, questions, or feedback. Our team is here to assist you with all your needs."
+        />
+        <meta
+          name="keywords"
+          content="CSI, Contact, Inquiries, Questions, Feedback, Support"
+        />
+        <meta name="author" content="CSI - Center for Student Innovation" />
+        <meta property="og:title" content="Contact Us - CSI" />
+        <meta
+          property="og:description"
+          content="Get in touch with CSI for any inquiries, questions, or feedback. Our team is here to assist you with all your needs."
+        />
+        <meta property="og:url" content="https://csi.edu.pk/contact-us" />
+        <link rel="canonical" href="https://csi.edu.pk/contact-us" />
+      </Head>
       <Navbar />
       <div className="h-[120px]"></div>
       <section className="px-[10%] mt-[5%] text-[#1F4694]">

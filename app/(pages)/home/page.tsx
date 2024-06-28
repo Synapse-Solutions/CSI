@@ -7,6 +7,7 @@ import Swiper from "@/app/sharecomponents/swiper/Swiper";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Head from 'next/head';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -27,6 +28,25 @@ export default function Home() {
   }
   return (
     <div className="text-black w-screen overflow-hidden">
+      <Head>
+        <title>CSI - Center for Student Innovation</title>
+        <meta
+          name="description"
+          content="Welcome to CSI, where we foster holistic education through innovative approaches. Discover our unique programs and dedicated support for student well-being."
+        />
+        <meta
+          name="keywords"
+          content="CSI, Student Innovation, Education, Holistic Education, Well-being, Critical Thinking"
+        />
+        <meta name="author" content="CSI - Center for Student Innovation" />
+        <meta property="og:title" content="CSI - Center for Student Innovation" />
+        <meta
+          property="og:description"
+          content="Welcome to CSI, where we foster holistic education through innovative approaches. Discover our unique programs and dedicated support for student well-being."
+        />
+        <meta property="og:url" content="https://www.csi.edu.pk" />
+        <link rel="canonical" href="https://www.csi.edu.pk" />
+      </Head>
       <Navbar />
       <div className="relative z-10"></div>
       <header className="relative">
