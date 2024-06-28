@@ -279,7 +279,7 @@ export default function Navbar() {
             transition: "background-color 1s ease",
             borderBottom: isHeaderShow ? "1px solid grey" : "",
           }}
-          className="py-5 h-[120px] flex justify-between items-center px-7"
+          className="py-5 h-[80px] flex justify-between items-center px-7"
         >
           <Link href={"/"}>
             <Image

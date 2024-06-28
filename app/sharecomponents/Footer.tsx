@@ -78,6 +78,18 @@ export default function Footer() {
               alt="logo"
             />
           </a>
+          <a
+            href="https://pk.linkedin.com/company/central-school-international?trk=public_post_main-feed-card-text"
+            target="_black"
+          >
+            <Image
+              src={"/LinkedinLogo.png"}
+              height={100}
+              width={100}
+              className="h-[30px] w-auto object-contain"
+              alt="xlogo"
+            />
+          </a>
         </div>
         <p className="mt-5 text-[14px]">
           © Central School International 2024 | Terms & Privacy 

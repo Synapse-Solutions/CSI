@@ -124,7 +124,7 @@ export default function page() {
     setActiveHoverIndex(null);
   }
   return (
-    <div className="pt-[200px] text-black w-screen overflow-hidden">
+    <div className="pt-[120px] xl:pt-[200px] text-black w-screen overflow-hidden">
       <Navbar />
       <section>
         <h1 className="text-[25px] text-center 2xl:text-[35px] font-bold">
@@ -236,7 +236,7 @@ export default function page() {
                     alt="02"
                   />
                 </Link>
-                <h1 className="  text-black font-bold text-[12px] xl:text-[17px]">
+                <h1 className="  text-black font-bold text-[12px] xl:text-[17px] mt-2 xl:mt-5">
                   CSI Sparrows
                 </h1>
               </div>
@@ -278,18 +278,7 @@ export default function page() {
           </div>
         </section>
       </section>
-      {/* <div className="xl:hidden flex flex-col w-full items-center mt-20 ">
-        <div className="w-[80%] xl:w-[50%]">
-          <h1 className="text-[25px] text-center 2xl:text-[35px] font-bold">
-            The CSI Extended Learning Program
-          </h1>
-          <p className="text-center mt-5 text-[18px] xl:text-[18px]">
-            At CSI, learning takes place both inside & outside the classroom.
-            Our extended learning program makes sure that our students learn
-            through play, projects, co-curriculars and athletics.
-          </p>
-        </div>
-      </div> */}
+
       <div
         data-aos="fade-down"
         className=" justify-between relative overflow-hidden w-screen"
@@ -431,7 +420,7 @@ export default function page() {
           </div>
         ))}
       </div>
-      <div className="flex w-full mt-[10%]">
+      <div className="flex flex-col xl:flex-row w-full mt-[10%]">
         <div className="xl:w-[60%] px-[10%]">
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Athletics Program
@@ -443,8 +432,16 @@ export default function page() {
             to help your child excel. We offer:
           </p>
         </div>
+        <Image
+          src={"/animation-bird2.gif"}
+          width={1500}
+          height={1500}
+          className="w-full xl:w-[40%] h-auto object-contain"
+          unoptimized={true}
+          alt="animation"
+        />
       </div>
-      <div className="mt-20 flex flex-wrap justify-between px-[5%]">
+      <div className="xl:mt-20 flex flex-wrap justify-between px-[5%]">
         {array_two.map((item, index) => (
           <div
             key={index}

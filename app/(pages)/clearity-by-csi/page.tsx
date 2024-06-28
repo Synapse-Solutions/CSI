@@ -81,7 +81,7 @@ export default function Page() {
                   }
                   height={1000}
                   width={1000}
-                  className="w-full h-[250px]"
+                  className="w-full h-[250px] object-contain bg-white"
                   alt="frame"
                 />
                 <div className="max-w-[80%] flex flex-col items-end">

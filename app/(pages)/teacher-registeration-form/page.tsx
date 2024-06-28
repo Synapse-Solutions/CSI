@@ -12,11 +12,15 @@ import { uploadToS3 } from "@/app/service/upload-resume";
 
 export default function page() {
   const { register, handleSubmit, reset, setValue } = useForm();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
+    if (window.innerWidth < 767) {
+      setIsMobile(true);
+    }
   }, []);
   const sendEmail = async (data: any) => {
     // const formData = new FormData();
@@ -110,12 +114,14 @@ export default function page() {
       <section>
         <div
           style={{
-            backgroundImage: "url(/teacher_traning_bg.webp)",
+            backgroundImage: isMobile
+              ? "url(/teacher_traning_bg_1.webp)"
+              : "url(/teacher_traning_bg.webp)",
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-          className="h-[400px] xl:h-[700px] w-screen relative"
+          className="h-[300px] xl:h-[700px] w-screen relative"
         >
           <div
             data-aos="fade-left"
@@ -633,7 +639,7 @@ export default function page() {
           </div>
         </form>
       </section>
-      <footer className="mt-[370px]">
+      <footer className="mt-[100px] xl:mt-[370px]">
         <Footer />
       </footer>
     </div>

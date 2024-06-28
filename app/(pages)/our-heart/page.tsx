@@ -27,8 +27,9 @@ export default function Page() {
     <div className="text-black w-screen overflow-hidden">
       <Navbar />
       <div className="relative z-10"></div>
-      <section className="flex justify-center items-center h-2/5 md:h-screen pt-10 md:mt-0 md:p-20"
-        style = {{ maxHeight: '850px' }}
+      <section
+        className="flex justify-center items-center  md:h-screen xl:pt-10 md:mt-0 md:p-20"
+        style={{ maxHeight: "850px" }}
       >
         <div
           data-aos="fade-right"
@@ -167,7 +168,7 @@ export default function Page() {
                     bgColor="bg-[#00889C]"
                     description="Honour in being kind, honour in affirming human dignity, honour in lifelong learning, the students of CSI derive a sense of honour from being the best versions of themselves."
                     image="honour_bgCard"
-                    link="/eagles"
+                    link=""
                   />
                 </div>
                 <h1 className="text-[#fff] uppercase  font-bold text-[12px] xl:text-[20px]">
@@ -182,7 +183,7 @@ export default function Page() {
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] right-[-0px] xl:right-[120px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] right-[-90px] xl:right-[120px] w-[400px] ${
                     activeHoverIndex === 2 ? "block" : "hidden"
                   }`}
                 >
@@ -192,7 +193,7 @@ export default function Page() {
                     bgColor="bg-[#00889C]"
                     description="Respect for themselves, respect for those around them, respect for their beliefs, respect for the environment and respect for their communities. The students of CSI remain in respect of the things which hold the most value."
                     image="honour_bgCard"
-                    link="/eagles"
+                    link=""
                   />
                 </div>
                 <h1 className="text-[#fff] uppercase  font-bold text-[12px] xl:text-[20px]">
@@ -207,7 +208,7 @@ export default function Page() {
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] right-[-120px] z-20 xl:-right-[70px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] right-[-160px] z-20 xl:-right-[70px] w-[400px] ${
                     activeHoverIndex === 3 ? "block" : "hidden"
                   }`}
                 >
@@ -217,7 +218,7 @@ export default function Page() {
                     bgColor="bg-[#00889C]"
                     description="Aware of the importance of maintaining a balanced proportion between the many facets of life, the students of CSI value proportionality. This extends to maintaining a harmony between their health and studies, their ambitions and values, action and reflection."
                     image="balance_starbg"
-                    link="/eagles"
+                    link=""
                   />
                 </div>
                 <h1 className="text-[#fff] uppercase  font-bold text-[12px] xl:text-[20px]">
@@ -242,7 +243,7 @@ export default function Page() {
                     bgColor="bg-[#00889C]"
                     description="Compassionate, caring, empathetic and deeply committed to helping others, the students of CSI see themselves as part of a shared humanity with those around them and those around the world. "
                     image="empath_starbg"
-                    link="/eagles"
+                    link=""
                   />
                 </div>
                 <h1 className="text-[#fff] uppercase  font-bold text-[12px] xl:text-[20px]">
@@ -250,14 +251,14 @@ export default function Page() {
                 </h1>
               </div>
             </div>
-            <div className="absolute top-[60%] left-[40%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+            <div className="absolute top-[70%] xl:top-[60%] left-[40%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
               <div
                 className="h-[150px] w-[150px] relative"
                 onMouseEnter={() => handleMouseEnterLast(5)}
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[100px] xl:-right-[70px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[130px] xl:-right-[70px] w-[400px] ${
                     activeHoverIndex === 5 ? "block" : "hidden"
                   }`}
                 >
@@ -267,7 +268,7 @@ export default function Page() {
                     bgColor="bg-[#00889C]"
                     description="Compassionate, caring, empathetic and deeply committed to helping others, the students of CSI see themselves as part of a shared humanity with those around them and those around the world. "
                     image="balance_starbg"
-                    link="/eagles"
+                    link=""
                   />
                 </div>
                 <h1 className="text-[#fff] uppercase  font-bold text-[12px] xl:text-[20px]">
@@ -275,14 +276,14 @@ export default function Page() {
                 </h1>
               </div>
             </div>
-            <div className="absolute top-[70%] right-[30%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+            <div className="absolute top-[90%] xl:top-[70%] right-[30%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
               <div
                 className="h-[150px] w-[150px] relative"
                 onMouseEnter={() => handleMouseEnterLast(6)}
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[120px] xl:-right-[70px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[160px] xl:-right-[70px] w-[400px] ${
                     activeHoverIndex === 6 ? "block" : "hidden"
                   }`}
                 >
@@ -292,7 +293,7 @@ export default function Page() {
                     bgColor="bg-[#00889C]"
                     description="Compassionate, caring, empathetic and deeply committed to helping others, the students of CSI see themselves as part of a shared humanity with those around them and those around the world. "
                     image="balance_starbg"
-                    link="/eagles"
+                    link=""
                   />
                 </div>
                 <h1 className="text-[#fff] uppercase  font-bold text-[12px] xl:text-[20px]">
@@ -300,14 +301,14 @@ export default function Page() {
                 </h1>
               </div>
             </div>
-            <div className="absolute top-[50%] right-[10%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+            <div className="absolute top-[50%] -right-10 xl:right-[10%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
               <div
                 className="h-[150px] w-[150px] relative"
                 onMouseEnter={() => handleMouseEnterLast(7)}
                 onMouseLeave={() => handleMouseEnterLast(null)}
               >
                 <div
-                  className={`absolute -top-[180px]  xl:-top-[280px] -right-[70px] w-[400px] ${
+                  className={`absolute -top-[180px]  xl:-top-[280px] -right-10 xl:-right-[70px] w-[400px] ${
                     activeHoverIndex === 7 ? "block" : "hidden"
                   }`}
                 >
@@ -317,7 +318,7 @@ export default function Page() {
                     bgColor="bg-[#00889C]"
                     description="Compassionate, caring, empathetic and deeply committed to helping others, the students of CSI see themselves as part of a shared humanity with those around them and those around the world. "
                     image="balance_starbg"
-                    link="/eagles"
+                    link=""
                   />
                 </div>
                 <h1 className="text-[#fff] uppercase  font-bold text-[12px] xl:text-[20px]">

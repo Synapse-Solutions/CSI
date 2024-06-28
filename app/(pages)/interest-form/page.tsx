@@ -189,11 +189,11 @@ export default function page() {
                 decision.
               </p>
               <Image
-                src={"/left_arrow.webp"}
+                src={"/right_arrow.webp"}
                 height={200}
                 width={200}
                 alt="arrow"
-                className="h-[150px] w-auto absolute -left-[70px] -bottom-[50px]"
+                className="h-[150px] w-auto absolute -right-[70px] -bottom-[50px]"
               />
             </div>
           </div>

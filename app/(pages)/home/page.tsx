@@ -84,7 +84,7 @@ export default function Home() {
               Advantage
             </h4>
           </div>
-          <div className="absolute top-[25%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
+          <div className="absolute top-[20%] xl:top-[25%] left-[4%] md:left-[13%] cursor-pointer hover:scale-110 duration-300 ease-in-out z-10">
             <div
               className="h-[150px] w-[150px] relative"
               onMouseEnter={() => handleMouseEnterLast(1)}
