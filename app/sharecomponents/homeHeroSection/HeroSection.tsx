@@ -1,13 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "./HeroSection.css";
-import Image from "next/image";
+import "./HomeHero.css"; // Ensure this file exists for styling
 
 const images = [
   "/banner_1.webp",
   "/banner_2.webp",
   "/banner_3.webp",
-  "/banner_video.mp4",
+  "/banner_video.mp4", // Assuming this is your video file path
 ];
 
 export default function HeroSection() {
@@ -25,36 +24,20 @@ export default function HeroSection() {
   }, [intervalDuration]);
 
   useEffect(() => {
-    setIntervalDuration(currentImageIndex === 3 ? 12000 : 8000);
+    setIntervalDuration(currentImageIndex === 3 ? 12000 : 6000);
   }, [currentImageIndex]);
 
   return (
     <div className="h-[calc(40vh)] image-wrap w-screen flex items-center justify-center md:h-[calc(60vh)] xl:h-[calc(100vh)] bg-white bg-opacity-75">
-      <div
-        className={`${
-          currentImageIndex !== 3 && "animate_img"
-        } h-[calc(60vh)] xl:h-[calc(100vh)] mt-80 md:mt-0`}
-      >
-        {currentImageIndex === 3 ? (
-          <video
-            src="/banner_video.webm"
-            autoPlay
-            muted
-            playsInline
-            className="w-full h-auto object-contain"
-          ></video>
-        ) : (
-          <Image
-            height={1500}
-            width={1500}
-            alt="image"
-            src={images[currentImageIndex]}
-            className="w-full h-auto object-contain"
-          />
-        )}
-      </div>
-      {(currentImageIndex === 0 || currentImageIndex === 1) && (
-        <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center mt-[70px] xl:mt-0">
+      <ul className="slideshow">
+        {images.map((image, index) => (
+          <li key={index}>
+            <span></span>
+          </li>
+        ))}
+      </ul>
+      {currentImageIndex === 0 || currentImageIndex === 1 ? (
+        <div className="absolute top-0 left-0 w-full flex h-full items-center justify-center mt-[70px] xl:mt-0 ">
           <div className="flex flex-col items-center">
             <h1 className="text-[#fff] text-[25px] xl:text-[45px]">
               Knowledge, Action, Resolve
@@ -66,6 +49,17 @@ export default function HeroSection() {
             </p>
           </div>
         </div>
+      ) : null}
+      {currentImageIndex === 3 && (
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src={images[currentImageIndex]} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       )}
     </div>
   );

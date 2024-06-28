@@ -35,7 +35,8 @@ export default function Home() {
           src={"/color-bar.webp"}
           height={100}
           width={2000}
-          className="hidden md:block h-[50px] w-screen"
+          style={{ zIndex: 1 }}
+          className="hidden md:block h-[50px] w-screen absolute bottom-0 left-0 "
           alt="bar"
         />
         <a
@@ -43,7 +44,10 @@ export default function Home() {
           target="_blank"
           className="hidden md:block"
         >
-          <button className="bg-[#028676] rounded-full px-10 py-5 text-white absolute bottom-5 right-10">
+          <button
+            style={{ zIndex: 999 }}
+            className="bg-[#028676] rounded-full px-10 py-5 text-white absolute bottom-5 right-10"
+          >
             Join Our Summer Camp!
           </button>
         </a>
