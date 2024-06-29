@@ -179,13 +179,10 @@ export default function page() {
               Partners
             </h1>
           </div>
-          <div className="absolute top-[55%] left-[78%] xl:left-[80%]">
+          <div className="absolute top-[60%] left-[78%] xl:left-[80%]">
             <h1>
               Gain a <br />
-              Charter by <br />
-              the Charter <br />
-              College of <br />
-              Teaching, UK
+              Charter <br />
             </h1>
           </div>
           <div className="absolute top-[85%] left-[50%]">

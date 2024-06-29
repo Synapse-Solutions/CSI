@@ -29,8 +29,8 @@ export default function page() {
             Helping Young Minds take Flight
           </h1>
           <p className="mt-10">
-            CSI Robins is our early years program. Designed by world leaders
-            Trehaus Singapore, the CSI Robins Program wll ensure that your
+            CSI Robins is our early years program. Designed with our
+            Singapore partners, the CSI Robins Program wll ensure that your
             child's development is gentle, holistic and informed by the best
             practices.
           </p>
