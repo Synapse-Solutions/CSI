@@ -30,6 +30,7 @@ export default function Footer() {
               : "/animation-white-small-k.gif"
           }
           alt="tree"
+          className=" xl:hidden"
           style={{ width: "100%", height: "auto", objectFit: "contain" }}
         />
       </div>
