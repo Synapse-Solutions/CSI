@@ -15,7 +15,7 @@ export default function page() {
   return (
     <div className="w-screen overflow-hidden text-black">
       <Navbar />
-      <div className="h-[130px]"></div>
+      <div className="h-[80px] xl:h-[130px]"></div>
       <section>
         <div className="flex flex-col items-end relative">
           <Image

@@ -326,6 +326,31 @@ export default function Page() {
                 </h1>
               </div>
             </div>
+            <div className="absolute top-[75%] -right-10 xl:right-[10%] cursor-pointer hover:scale-110 duration-300 ease-in-out">
+              <div
+                className="h-[150px] w-[150px] relative"
+                onMouseEnter={() => handleMouseEnterLast(8)}
+                onMouseLeave={() => handleMouseEnterLast(null)}
+              >
+                <div
+                  className={`absolute -top-[180px]  xl:-top-[280px] -right-10 xl:-right-[70px] w-[400px] ${
+                    activeHoverIndex === 8 ? "block" : "hidden"
+                  }`}
+                >
+                  <StarsCard
+                    onClickCross={() => setActiveHoverIndex(null)}
+                    title="Innovative"
+                    bgColor="bg-[#00889C]"
+                    description="Engaged in critical thinking, open to new ways of thinking, and fostering an optimistic view of technology, the students of CSI constantly seek to build and improve what they already know, and what already exists."
+                    image="balance_starbg"
+                    link=""
+                  />
+                </div>
+                <h1 className="text-[#fff] uppercase  font-bold text-[12px] xl:text-[20px]">
+                  Innovative
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
       </section>

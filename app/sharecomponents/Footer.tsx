@@ -18,6 +18,18 @@ export default function Footer() {
               : "/animation003-new-white-bg.gif"
           }
           alt="tree"
+          className="hidden xl:block"
+          style={{ width: "100%", height: "auto", objectFit: "contain" }}
+        />
+        <img
+          src={
+            pathname === "/our-heart"
+              ? "/animation-blue-small-k.gif"
+              : pathname === "/coming-soon"
+              ? "/animation-white-small-k.gif"
+              : "/animation-white-small-k.gif"
+          }
+          alt="tree"
           style={{ width: "100%", height: "auto", objectFit: "contain" }}
         />
       </div>

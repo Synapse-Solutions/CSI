@@ -38,34 +38,42 @@ const array_one = [
   {
     image: "/p2_1.webp",
     title: "Culinary Arts",
+    color: "#028676",
   },
   {
     image: "/p2_2.webp",
     title: "Mindful Gardening",
+    color: "#355496",
   },
   {
     image: "/p2_3.webp",
     title: "Pottery",
+    color: "#028676",
   },
   {
     image: "/p2_4.webp",
     title: "Stargazing",
+    color: "#355496",
   },
   {
     image: "/p2_5.webp",
     title: "Yoga",
+    color: "#355496",
   },
   {
     image: "/p2_6.webp",
     title: "Meditation",
+    color: "#028676",
   },
   {
     image: "/p2_7.webp",
     title: "Calligraphy",
+    color: "#355496",
   },
   {
     image: "/p2_8.webp",
     title: "Drama",
+    color: "#028676",
   },
 ];
 const array_two = [
@@ -411,7 +419,7 @@ export default function page() {
 
             <p
               style={{
-                color: index % 2 ? "#028676" : "#355496",
+                color: item.color,
               }}
               className="text-[#028676] font-bold text-[25px] 2xl:text-[32px]"
             >
@@ -420,8 +428,19 @@ export default function page() {
           </div>
         ))}
       </div>
-      <div className="flex flex-col xl:flex-row w-full mt-[10%]">
-        <div className="xl:w-[60%] px-[10%]">
+      <div className="flex flex-col xl:flex-row w-full mt-[10%] relative">
+        <div className="xl:hidden px-[10%]">
+          <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
+            The CSI Athletics Program
+          </h1>
+          <p className="mt-10 text-[18px] 2xl:text-[18px]">
+            Extensive Research has established that sports and athletics are
+            critically important in improving learning and academic performance.
+            At CSI we provide sporting facilities and an athletics program built
+            to help your child excel. We offer:
+          </p>
+        </div>
+        <div className="hidden xl:flex absolute top-0 left-0 xl:w-[60%] px-[10%] h-full  flex-col justify-center">
           <h1 className="text-[25px] text-[#028676] 2xl:text-[38px] font-bold">
             The CSI Athletics Program
           </h1>
@@ -433,14 +452,15 @@ export default function page() {
           </p>
         </div>
         <Image
-          src={"/animation-bird2.gif"}
+          src={"/animation-bird2new.gif"}
           width={1500}
           height={1500}
-          className="w-full xl:w-[40%] h-auto object-contain"
+          className="w-full h-auto object-contain"
           unoptimized={true}
           alt="animation"
         />
       </div>
+
       <div className="xl:mt-20 flex flex-wrap justify-between px-[5%]">
         {array_two.map((item, index) => (
           <div

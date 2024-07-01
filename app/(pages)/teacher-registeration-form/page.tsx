@@ -128,7 +128,7 @@ export default function page() {
             className="text-white hidden xl:block absolute bottom-[30%] right-[15%]"
           >
             <h1 className="text-[20px] xl:text-[35px] font-bold">
-              Our Teacher’s Training
+              Our Teacher Training and
             </h1>
             <p className="text-[20px] xl:text-[35px]">Empowerment Process</p>
           </div>

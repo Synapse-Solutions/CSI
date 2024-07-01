@@ -21,31 +21,32 @@ export default function page() {
     return () => {
       window.removeEventListener("load", handleLoad);
     };
-
   }, []);
   return (
-    <div>
+    <div className="w-screen overflow-hidden">
       <Navbar />
-      <div className="h-[200px]"></div>
-      <section data-aos="fade-down" className="w-full px-10">
-        <h1 className="text-[30px] xl:text-[68px] font-[400] text-center text-black">
+
+      <section
+        data-aos="fade-down"
+        className="w-full bg-[#214395] pt-[100px] xl:pt-[200px] pb-10"
+      >
+        <h1 className="text-[30px] xl:text-[68px] font-[400] text-center text-white px-10">
           Student <span className="font-[700] "> Well-Being</span>
         </h1>
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-[300px] sm:max-w-[500px] lg:max-w-[2000px] xl:max-w-[1200px]">
-            <Image
-              src={"/student_wellb_1.webp"}
-              height={1000}
-              width={1000}
-              alt="student well being"
-              className="w-full h-auto object-contain"
-              loading="lazy"
-              onLoad={() => AOS.refresh()}
-            />
-          </div>
+
+        <div className="w-screen  flex justify-center">
+          <Image
+            src={"/student_wellb_1.webp"}
+            height={1000}
+            width={1000}
+            alt="student well being"
+            className="w-full xl:w-[60%] h-auto object-contain"
+            loading="lazy"
+            onLoad={() => AOS.refresh()}
+          />
         </div>
       </section>
-      <section className="text-[8px] xl:text-[20px] text-center">
+      <section className="text-[8px] xl:text-[20px] text-center flex flex-col gap-10 xl:gap-0">
         <div className="relative w-full h-auto mt-5">
           <Image
             src={"/student_wellb_2.webp"}
@@ -145,7 +146,7 @@ export default function page() {
         </div>
       </section>
 
-      <footer className="mt-[250px]">
+      <footer className="mt-[50px] xl:mt-[250px]">
         <Footer />
       </footer>
     </div>

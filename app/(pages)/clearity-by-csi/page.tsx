@@ -39,16 +39,16 @@ export default function Page() {
       <div className="relative z-10 h-[130px]"></div>
       <section className="pb-[10%] px-[5%] ">
         <div className="flex  items-center">
-          <div data-aos="fade-right" className="w-1/2 flex justify-center">
+          <div data-aos="fade-right" className="w-[60%] flex justify-center">
             <Image
               src={"/three_birds.webp"}
-              height={500}
-              width={500}
+              height={1000}
+              width={1000}
               className="w-[90%] h-auto"
               alt="birds"
             />
           </div>
-          <div data-aos="fade-left" className="w-1/2">
+          <div data-aos="fade-left" className="w-[40%]">
             <h1 className="text-[20px] xl:text-[30px] font-bold">
               Clarity By CSI
             </h1>
@@ -153,7 +153,7 @@ export default function Page() {
           </button>
         </section>
       )}
-      <footer className="pt-[50px] mt-[350px]">
+      <footer className="pt-[50px] mt-[100px] xl:mt-[350px]">
         <Footer />
       </footer>
     </div>
